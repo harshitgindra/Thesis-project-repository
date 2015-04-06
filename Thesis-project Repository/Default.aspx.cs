@@ -18,58 +18,14 @@ namespace Thesis_project_Repository
 
         }
 
-        //protected void loginButton_Click(object sender, EventArgs e)
-        //{
 
-        //    //verifying the login in credentials
-        //    string connectionString = "Data Source=itksqlexp8;Initial Catalog=hgindraLoginInfo;"
-        //                              + "Integrated Security=true";
-
-
-        //    string queryString = "SELECT * from LoginInfo "
-        //                + "WHERE username = @username "
-        //                + "and password = @password";
-
-        //    string user = userid.Text;
-        //    string pwd = loginpassword.Text;
-        //    //string tempOutStr = "";
-
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-
-        //        SqlCommand command = new SqlCommand(queryString, connection);
-        //        command.Parameters.AddWithValue("@username", user);
-        //        command.Parameters.AddWithValue("@password", pwd);
-
-        //        try
-        //        {
-        //            connection.Open();
-        //            SqlDataReader reader = command.ExecuteReader();
-
-        //            if (reader.Read())
-        //            {
-        //                Session["usernameid"] = user;
-        //                Response.Redirect("EditProfileSession.aspx");
-        //            }
-        //            else
-        //            {
-        //                loginResult.Text = "<h2>Login Unsuccessful</h2>";
-        //            }
-        //            reader.Close();
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine(ex.Message);
-        //        }
-        //    }
-        //}
-        //This is a demo.....
-        protected void signUpSubmit_Click(object sender, EventArgs e)
+        protected void SignUpSubmit(object sender, EventArgs e)
         {
             //Generating random string for email verification
             string randomString = Path.GetRandomFileName();
             randomString = randomString.Replace(".", "");
 
+            //This method is not parametrized. We need to chage it to paramaterized.
 
             string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                       + "Integrated Security=true";
@@ -124,8 +80,6 @@ namespace Thesis_project_Repository
            + "<h3>Thank you</h3>";
             return message;
         }
-
-
 
         protected Boolean sendEmail(string receiver, string subject, string message)
         {

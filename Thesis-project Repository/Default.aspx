@@ -80,7 +80,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><asp:button Text="Submit" id="signUpSubmit" runat="server" OnClick="signUpSubmit_Click"></asp:button>
+                    <td><asp:button Text="Submit" id="signUpSubmit" runat="server" OnClick="SignUpSubmit"></asp:button>
                     </td>                   
                 </tr>
             </table>
