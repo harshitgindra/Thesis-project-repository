@@ -63,7 +63,7 @@ namespace Thesis_project_Repository
         //        }
         //    }
         //}
-
+        //This is a demo.....
         protected void signUpSubmit_Click(object sender, EventArgs e)
         {
             //Generating random string for email verification
