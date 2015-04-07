@@ -12,6 +12,7 @@ namespace Thesis_project_Repository
 {
     public partial class ForgotPassword : System.Web.UI.Page
     {
+        EmailClass email = new EmailClass();
         protected void Page_Load(object sender, EventArgs e)
         {
             retrievepassword.ActiveViewIndex = 0;
@@ -37,7 +38,7 @@ namespace Thesis_project_Repository
                         string randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         updateLogininfowtrdmstr(username, randomString);
-                        if (sendEmail(forgotEmailId.Text, "Retrieve Lost Password", emailBody(randomString)))
+                        if (email.sendEmail(forgotEmailId.Text, "Retrieve Lost Password", emailBody(randomString)))
                         {
                             confimationmsg.Text = "Email Sent Successfully. Please check your inbox";
                         }
@@ -97,42 +98,6 @@ namespace Thesis_project_Repository
            + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString + "' >Click Here</a>"
            + "<h3>Thank you</h3>";
             return message;
-        }
-
-
-
-        protected Boolean sendEmail(string receiver, string subject, string message)
-        {
-
-            MailAddress messageFrom = new MailAddress("hgindra@ilstu.edu", "Harshit Gindra");
-            //                    MailAddress messageTo = new MailAddress(to.Text);
-            MailMessage emailMessage = new MailMessage();
-            emailMessage.From = messageFrom;
-
-            MailAddress messageTo = new MailAddress(receiver);
-            emailMessage.To.Add(messageTo.Address);
-
-            string messageSubject = subject;
-            string messageBody = message;
-            emailMessage.Subject = messageSubject;
-            emailMessage.Body = messageBody;
-            emailMessage.IsBodyHtml = true;
-            //       SmtpClient mailClient = new SmtpClient();
-            SmtpClient mailClient = new SmtpClient("smtp.ilstu.edu");
-            // Credentials are necessary if the server requires the client 
-            // to authenticate before it will send e-mail on the client's behalf.
-            // Do this in the web.config file
-            try
-            {
-
-                mailClient.UseDefaultCredentials = true;// false;
-                mailClient.Send(emailMessage);
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

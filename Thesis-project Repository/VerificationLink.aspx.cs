@@ -33,8 +33,15 @@ namespace Thesis_project_Repository
                         reader.Close();
                         try
                         {
-                            int i = command2.ExecuteNonQuery();
-                            Response.Write("Congratulations");
+                            if (command2.ExecuteNonQuery() == 1)
+                            {
+                                verificationstatus.Text = "Congratulations";
+                            }
+                            else
+                            {
+                                verificationstatus.Text = "Something went wrong. Please contact admin";
+                            }
+
                         }
                         catch (Exception ex)
                         {
@@ -43,7 +50,7 @@ namespace Thesis_project_Repository
                     }
                     else
                     {
-                        Response.Write("invalid Link");
+                        verificationstatus.Text = "invalid Link";
                     }
                 }
                 catch (Exception ex)
@@ -52,6 +59,6 @@ namespace Thesis_project_Repository
                 }
                 connection.Close();
             }
-        }        
+        }
     }
 }

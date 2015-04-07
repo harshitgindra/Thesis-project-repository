@@ -11,6 +11,7 @@
         <div>
             <h1>Login Form</h1>
             <table>
+                
                 <tr>
                     <td>User Name</td>
                     <td>
@@ -23,10 +24,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="loginButton" runat="server" Text="Login"  />
+                        <asp:Button ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click"  />
                     </td>
                     <td>
                         <asp:Button ID="forgotpassword" runat="server" OnClick="forgotpassword_Click" Text="Forgot Password"/>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" ID="accstatus"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -37,6 +41,17 @@
         <h1>Sign Up Form</h1>
         <div>
             <table>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="fname"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="lname"></asp:TextBox></td>
+                </tr>
+                
                 <tr>
                     <td>User name:
                     </td>
@@ -68,6 +83,17 @@
                         <asp:TextBox ID="signUpEmail" runat="server"></asp:TextBox>
                     </td>
                 </tr>
+                <tr>
+                    <td>Security Question</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="secques"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Security Answer</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="secans"></asp:TextBox></td>
+                </tr>
+                
                 <tr>
                     <td>Type of Account:
                     </td>
