@@ -31,21 +31,39 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.Button CheckListforApproval;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// approvalList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource approvalList;
         
         /// <summary>
-        /// GridView1 control.
+        /// approvalwaitinglist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView approvalwaitinglist;
+        
+        /// <summary>
+        /// DetailedInfoList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DetailedInfoList;
+        
+        /// <summary>
+        /// DetailedInfoApprovalAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailedInfoApprovalAccount;
     }
 }

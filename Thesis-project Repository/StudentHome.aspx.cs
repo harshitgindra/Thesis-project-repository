@@ -11,6 +11,20 @@ namespace Thesis_project_Repository
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = "";
+            if (Session["username"] != null)
+            {//session active
+
+                if (!Page.IsPostBack)
+                {
+
+                    username = (Session["username"].ToString());
+                }
+            }
+            else
+            {
+                Response.Redirect("Default.aspx", false);
+            }
 
         }
     }
