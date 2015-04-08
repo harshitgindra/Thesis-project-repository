@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="AdminApproveAccount.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DownloadFile.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ProfessorHome.aspx" />
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmailClass.cs" />
     <Compile Include="ForgotPassword.aspx.cs">

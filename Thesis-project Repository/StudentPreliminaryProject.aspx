@@ -6,6 +6,11 @@
     <h1>Project Preliminary Submissions</h1>
     <table>
         <tr>
+            <td>Project Title: </td>
+            <td>
+                <asp:TextBox ID="projecttitle" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
             <td>Course Number</td>
             <td>
                 <asp:TextBox ID="courseNumber" runat="server"></asp:TextBox></td>
@@ -23,12 +28,15 @@
         <tr>
             <td>Abstract: </td>
             <td>
-                <asp:TextBox ID="projectabstract" runat="server" Rows="5"></asp:TextBox></td>
+                <asp:TextBox ID="projectabstract" TextMode="multiline" runat="server" Rows="5"></asp:TextBox></td>
         </tr>
         <tr>
             <td>Preliminary Report: </td>
             <td>
                 <asp:FileUpload ID="preliminaryreport" runat="server" /></td>
+            <td>
+                <asp:PlaceHolder ID="preliminaryreportdownload" runat="server"></asp:PlaceHolder>
+            </td>
         </tr>
         <tr>
             <td>Screenshots/Screencast: </td>
@@ -67,4 +75,5 @@
             </td>
         </tr>
     </table>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
 </asp:Content>

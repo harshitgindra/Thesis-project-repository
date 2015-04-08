@@ -13,6 +13,15 @@ namespace Thesis_project_Repository {
     public partial class WebForm4 {
         
         /// <summary>
+        /// projecttitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox projecttitle;
+        
+        /// <summary>
         /// courseNumber control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload preliminaryreport;
+        
+        /// <summary>
+        /// preliminaryreportdownload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder preliminaryreportdownload;
         
         /// <summary>
         /// screencasts control.
@@ -110,5 +128,14 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
+        
+        /// <summary>
+        /// PlaceHolder1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
     }
 }
