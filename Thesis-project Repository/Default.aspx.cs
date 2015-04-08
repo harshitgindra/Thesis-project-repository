@@ -153,7 +153,7 @@ namespace Thesis_project_Repository
                         }
                         else
                         {
-                            Response.Redirect("AdminHome.aspx", false);
+                            Response.Redirect("AdminHomePage.aspx", false);
                         }
                         Session["username"] = loginusername.Text;
                     }

@@ -10,7 +10,16 @@
 namespace Thesis_project_Repository {
     
     
-    public partial class AdminHome {
+    public partial class Student {
+        
+        /// <summary>
+        /// head control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// form1 control.
@@ -22,48 +31,57 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CheckListforApproval control.
+        /// home control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckListforApproval;
+        protected global::System.Web.UI.WebControls.Button home;
         
         /// <summary>
-        /// approvalList control.
+        /// preliminaryProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource approvalList;
+        protected global::System.Web.UI.WebControls.Button preliminaryProject;
         
         /// <summary>
-        /// approvalwaitinglist control.
+        /// finalProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView approvalwaitinglist;
+        protected global::System.Web.UI.WebControls.Button finalProject;
         
         /// <summary>
-        /// DetailedInfoList control.
+        /// CheckStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DetailedInfoList;
+        protected global::System.Web.UI.WebControls.Button CheckStatus;
         
         /// <summary>
-        /// DetailedInfoApprovalAccount control.
+        /// logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailedInfoApprovalAccount;
+        protected global::System.Web.UI.WebControls.Button logout;
+        
+        /// <summary>
+        /// student control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder student;
     }
 }

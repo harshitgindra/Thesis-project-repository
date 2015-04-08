@@ -58,30 +58,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminApproveAccount.aspx" />
-    <Content Include="AdminHome.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ProfessorHome.aspx" />
     <Content Include="Search.aspx" />
-    <Content Include="StudentHome.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="Web.config" />
+    <Content Include="AdminApprovalList.aspx" />
+    <Content Include="AdminHomePage.aspx" />
+    <Content Include="StudentHome.aspx" />
+    <Content Include="StudentPreliminaryProject.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="AdminApproveAccount.aspx.cs">
       <DependentUpon>AdminApproveAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminApproveAccount.aspx.designer.cs">
       <DependentUpon>AdminApproveAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminHome.aspx.cs">
-      <DependentUpon>AdminHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminHome.aspx.designer.cs">
-      <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatabaseMethods.cs" />
     <Compile Include="Default.aspx.cs">
@@ -126,12 +128,12 @@
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentHome.aspx.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
+    <Compile Include="Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StudentHome.aspx.designer.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
+    <Compile Include="Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
     </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -145,11 +147,40 @@
     <Compile Include="VerificationLink.aspx.designer.cs">
       <DependentUpon>VerificationLink.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminApprovalList.aspx.cs">
+      <DependentUpon>AdminApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminApprovalList.aspx.designer.cs">
+      <DependentUpon>AdminApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.designer.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPreliminaryProject.aspx.cs">
+      <DependentUpon>StudentPreliminaryProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentPreliminaryProject.aspx.designer.cs">
+      <DependentUpon>StudentPreliminaryProject.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoginDS.xsc">
       <DependentUpon>LoginDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Admin.Master" />
     <None Include="LoginDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>LoginDS.Designer.cs</LastGenOutput>
@@ -161,6 +192,7 @@
     <Content Include="UserDS.xsc">
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Student.Master" />
     <None Include="UserDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>UserDS.Designer.cs</LastGenOutput>

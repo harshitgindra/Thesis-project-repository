@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="Thesis_project_Repository.Student" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Button ID="home" runat="server" OnClick="home_Click" Text="Home" />  
+        <asp:Button ID="preliminaryProject" runat="server" OnClick="preliminaryProject_Click" Text="Preliminary Submission" /> 
+        <asp:Button ID="finalProject" runat="server" Text="Final Project" OnClick="finalProject_Click"/>
+        <asp:Button ID="CheckStatus" runat="server" Text="Check Approval Status" /> 
+        <asp:Button ID="logout" runat="server" Text="Logout" OnClick="logout_Click" />
+        <asp:ContentPlaceHolder ID="student" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
