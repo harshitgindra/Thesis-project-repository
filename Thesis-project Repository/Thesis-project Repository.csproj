@@ -70,6 +70,7 @@
     <Content Include="AdminHomePage.aspx" />
     <Content Include="StudentHome.aspx" />
     <Content Include="StudentPreliminaryProject.aspx" />
+    <Content Include="WebForm5.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.Master.cs">
@@ -182,6 +183,9 @@
     </Compile>
     <Compile Include="StudentPreliminaryProject.aspx.designer.cs">
       <DependentUpon>StudentPreliminaryProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

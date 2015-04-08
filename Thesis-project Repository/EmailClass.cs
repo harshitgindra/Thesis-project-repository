@@ -15,7 +15,7 @@ namespace Thesis_project_Repository
         public Boolean sendEmail(string receiver, string subject, string message)
         {
 
-            MailAddress messageFrom = new MailAddress("hgindra@ilstu.edu", "Harshit Gindra");
+            MailAddress messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
             //                    MailAddress messageTo = new MailAddress(to.Text);
             MailMessage emailMessage = new MailMessage();
             emailMessage.From = messageFrom;

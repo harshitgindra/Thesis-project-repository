@@ -98,7 +98,7 @@
                     <td>Type of Account:
                     </td>
                     <td>
-                        <asp:RadioButtonList ID="accType" runat="server">
+                        <asp:RadioButtonList ID="accType" runat="server" RepeatDirection="Horizontal" >
                             <asp:ListItem Text="Student" Value="S" />
                             <asp:ListItem Text="Professor" Value="P" />
                             <asp:ListItem Text="Viewer" Value="V" />

@@ -16,7 +16,7 @@ namespace Thesis_project_Repository
 
         protected void CheckListforApproval_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminApprovalList.aspx", false);
+            Response.Redirect("/Admin/AdminApprovalList.aspx", false);
         }
 
         protected void logout_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace Thesis_project_Repository
 
         protected void home_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminHomePage.aspx", false);
+            Response.Redirect("/Admin/AdminHomePage.aspx", false);
         }
     }
 }
