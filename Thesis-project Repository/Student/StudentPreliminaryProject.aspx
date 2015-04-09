@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student.Master" AutoEventWireup="true" CodeBehind="StudentPreliminaryProject.aspx.cs" Inherits="Thesis_project_Repository.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/Student.Master" AutoEventWireup="true" CodeBehind="~/Student/StudentPreliminaryProject.aspx.cs" Inherits="Thesis_project_Repository.WebForm4" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

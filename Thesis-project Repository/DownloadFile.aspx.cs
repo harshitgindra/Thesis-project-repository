@@ -57,6 +57,7 @@ namespace Thesis_project_Repository
                 SqlCommand cmd2 = new SqlCommand(query2, connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd2.Parameters.AddWithValue("@username", username);
+                byte[] z = cmd.ExecuteScalar() as byte[];
                 SqlDataReader reader = cmd2.ExecuteReader();
                 if (reader.Read())
                 {
@@ -64,8 +65,7 @@ namespace Thesis_project_Repository
                     fileName = reader.GetString(8);
                 }
                 reader.Close();
-                byte[] z = cmd.ExecuteScalar() as byte[];
-                return cmd.ExecuteScalar() as byte[];
+                return z;
             }
         }
     }

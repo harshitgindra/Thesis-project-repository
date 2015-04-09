@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="Thesis_project_Repository.Student" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Student/Student.master.cs" Inherits="Thesis_project_Repository.Student" %>
 
 <!DOCTYPE html>
 

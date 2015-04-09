@@ -18,11 +18,12 @@ namespace Thesis_project_Repository
 
         }
 
+        protected void SendSMS() { 
+              
+        }
 
         protected void SignUpSubmit(object sender, EventArgs e)
         {
-            
-            
             
             //Generating random string for email verification
             string randomString = Path.GetRandomFileName();
@@ -153,7 +154,7 @@ namespace Thesis_project_Repository
                         }
                         else
                         {
-                            Response.Redirect("AdminHomePage.aspx", false);
+                            Response.Redirect("/Admin/AdminHomePage.aspx", false);
                         }
                         Session["username"] = loginusername.Text;
                     }

@@ -49,7 +49,8 @@ namespace Thesis_project_Repository
             }
             else
             {
-                Response.Redirect("Default.aspx", false);
+                //need to test.
+                Response.Redirect("../Default.aspx", false);
             }
 
 

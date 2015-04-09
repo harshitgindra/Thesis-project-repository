@@ -10,6 +10,7 @@ namespace Thesis_project_Repository
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
+        //need to check the session
         string username = "hgindra";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,7 +40,7 @@ namespace Thesis_project_Repository
                         reportName = reader.GetString(8);
                         HyperLink hyp = new HyperLink();
                         hyp.ID = "hyp1";
-                        hyp.NavigateUrl = "DownloadFile.aspx?username=" + username + "&file=P";
+                        hyp.NavigateUrl = "../DownloadFile.aspx?username=" + username + "&file=P";
                         hyp.Text = reportName;
                         preliminaryreportdownload.Controls.Add(hyp);
                     }

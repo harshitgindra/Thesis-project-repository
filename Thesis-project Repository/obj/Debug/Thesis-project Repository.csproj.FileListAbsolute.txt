@@ -7,3 +7,4 @@ D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-reposito
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
+D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache

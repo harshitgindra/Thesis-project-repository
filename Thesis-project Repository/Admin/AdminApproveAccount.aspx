@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminApproveAccount.aspx.cs" Inherits="Thesis_project_Repository.AdminApproveAccount" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="~/Admin/AdminApproveAccount.aspx.cs" Inherits="Thesis_project_Repository.AdminApproveAccount" %>
 
 <!DOCTYPE html>
 
