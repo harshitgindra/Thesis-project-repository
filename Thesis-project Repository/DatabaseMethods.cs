@@ -49,5 +49,10 @@ namespace Thesis_project_Repository
             return result;
         }
 
+        public Boolean SignUp(string username, string password) {
+
+            return true;
+        }
+
     }
 }

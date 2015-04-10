@@ -32,6 +32,7 @@ namespace Thesis_project_Repository
                         if (reader.Read())
                         {
                             username = reader.GetString(0);
+                            
                             ChangePasswordmultiview.ActiveViewIndex = 0;
                             reader.Close();
                         }

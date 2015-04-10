@@ -18,6 +18,7 @@ namespace Thesis_project_Repository
         {
 
             DatabaseMethods databaseMethods = new DatabaseMethods();
+          
             bool result = databaseMethods.LoginMethod(UserName.Text, Password.Text);
 
             if (result.Equals(true))

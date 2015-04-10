@@ -73,7 +73,6 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
-    <Content Include="RetrieveLostPassword.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -119,7 +118,6 @@
     <Compile Include="DownloadFile.aspx.designer.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EmailClass.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,13 +156,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="RetrieveLostPassword.aspx.cs">
-      <DependentUpon>RetrieveLostPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RetrieveLostPassword.aspx.designer.cs">
-      <DependentUpon>RetrieveLostPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>

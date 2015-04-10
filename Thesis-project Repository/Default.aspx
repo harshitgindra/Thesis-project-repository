@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+      <link href="../css/layout.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -93,6 +94,16 @@
                     <td>
                         <asp:TextBox runat="server" ID="secans"></asp:TextBox></td>
                 </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="phoneNumber"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Provider</td>
+                    <td>
+                        <asp:TextBox runat="server" ID="provider"></asp:TextBox></td>
+                </tr>
                 
                 <tr>
                     <td>Type of Account:
@@ -106,7 +117,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><asp:button Text="Submit" id="signUpSubmit" runat="server" OnClick="SignUpSubmit"></asp:button>
+                    <td><asp:button Text="Submit" id="signUp" runat="server" OnClick="SignUp"></asp:button>
                     </td>                   
                 </tr>
             </table>

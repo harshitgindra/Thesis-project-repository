@@ -12,19 +12,22 @@ namespace Thesis_project_Repository
 {
     public partial class Default : System.Web.UI.Page
     {
-        EmailClass email = new EmailClass();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void SendSMS() { 
-              
+        //Needs to be implement.
+        protected void SendSMS()
+        {
+
         }
 
-        protected void SignUpSubmit(object sender, EventArgs e)
+        protected void SignUp(object sender, EventArgs e)
         {
-            
+            DatabaseMethods asd = new DatabaseMethods();
+
             //Generating random string for email verification
             string randomString = Path.GetRandomFileName();
             randomString = randomString.Replace(".", "");
@@ -58,7 +61,7 @@ namespace Thesis_project_Repository
                     int check = command1.ExecuteNonQuery() + command2.ExecuteNonQuery();
                     if (check == 2)
                     {
-                       
+
                         if (email.sendEmail(signUpEmail.Text, "Welcome", emailBody(randomString)))
                         {
                             Response.Write("Mail Successfully Sent. Please Check your inbox.");
@@ -91,8 +94,6 @@ namespace Thesis_project_Repository
            + "<h3>Thank you</h3>";
             return message;
         }
-
-        
 
         protected void forgotpassword_Click(object sender, EventArgs e)
         {
@@ -142,12 +143,12 @@ namespace Thesis_project_Repository
                                 acctype = reader.GetString(2);
                                 if (acctype.Equals("P"))
                                 {
-                                   
+
                                     Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
                                 }
                                 else
                                 {
-                                    
+
                                     Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
                                 }
                             }
@@ -174,5 +175,41 @@ namespace Thesis_project_Repository
                 }
             }
         }
+
+        protected Boolean sendEmail(string receiver, string subject, string message)
+        {
+
+            MailAddress messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
+            //                    MailAddress messageTo = new MailAddress(to.Text);
+            MailMessage emailMessage = new MailMessage();
+            emailMessage.From = messageFrom;
+
+            MailAddress messageTo = new MailAddress(receiver);
+            emailMessage.To.Add(messageTo.Address);
+
+            string messageSubject = subject;
+            string messageBody = message;
+            emailMessage.Subject = messageSubject;
+            emailMessage.Body = messageBody;
+            emailMessage.IsBodyHtml = true;
+            //       SmtpClient mailClient = new SmtpClient();
+            SmtpClient mailClient = new SmtpClient("smtp.ilstu.edu");
+            // Credentials are necessary if the server requires the client 
+            // to authenticate before it will send e-mail on the client's behalf.
+            // Do this in the web.config file
+            try
+            {
+
+                mailClient.UseDefaultCredentials = true;// false;
+                mailClient.Send(emailMessage);
+            }
+            catch (Exception e)
+            {
+                Console.Write(e);
+                return false;
+            }
+            return true;
+        }
     }
+
 }
