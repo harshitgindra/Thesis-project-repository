@@ -137,6 +137,7 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modals\FacultyModels.cs" />
     <Compile Include="ProfessorFiles\Professor.Master.cs">
       <DependentUpon>Professor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

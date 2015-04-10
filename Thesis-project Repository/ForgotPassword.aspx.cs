@@ -1,21 +1,55 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net.Mail;
 using System.Web.UI;
 
 namespace Thesis_project_Repository
 {
     public partial class ForgotPassword : Page
     {
-        private readonly EmailClass email = new EmailClass();
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
             retrievepassword.ActiveViewIndex = 0;
         }
 
+        protected Boolean sendEmail(string receiver, string subject, string message)
+        {
+            var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
+            //                    MailAddress messageTo = new MailAddress(to.Text);
+            var emailMessage = new MailMessage();
+            emailMessage.From = messageFrom;
+
+            var messageTo = new MailAddress(receiver);
+            emailMessage.To.Add(messageTo.Address);
+
+            var messageSubject = subject;
+            var messageBody = message;
+            emailMessage.Subject = messageSubject;
+            emailMessage.Body = messageBody;
+            emailMessage.IsBodyHtml = true;
+            //       SmtpClient mailClient = new SmtpClient();
+            var mailClient = new SmtpClient("smtp.ilstu.edu");
+            // Credentials are necessary if the server requires the client 
+            // to authenticate before it will send e-mail on the client's behalf.
+            // Do this in the web.config file
+            try
+            {
+                mailClient.UseDefaultCredentials = true; // false;
+                mailClient.Send(emailMessage);
+            }
+            catch (Exception e)
+            {
+                Console.Write(e);
+                return false;
+            }
+            return true;
+        }
         protected void forgotpwdemail_Click(object sender, EventArgs e)
         {
+            
             retrievepassword.ActiveViewIndex = 1;
             var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                    + "Integrated Security=true";
@@ -34,7 +68,7 @@ namespace Thesis_project_Repository
                         var randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         updateLogininfowtrdmstr(username, randomString);
-                        if (email.sendEmail(forgotEmailId.Text, "Retrieve Lost Password", emailBody(randomString)))
+                        if (sendEmail(forgotEmailId.Text, "Retrieve Lost Password", emailBody(randomString)))
                         {
                             confimationmsg.Text = "Email Sent Successfully. Please check your inbox";
                         }

@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Net.Mail;
 using System.Web.UI;
+using Thesis_project_Repository.Modals;
 
 namespace Thesis_project_Repository
 {
@@ -19,7 +20,10 @@ namespace Thesis_project_Repository
 
         protected void SignUp(object sender, EventArgs e)
         {
-            var asd = new DatabaseMethods();
+            FacultyModels _facultyModels = new FacultyModels();
+            strinf UserName = signUpUsername.Text;
+
+            DatabaseMethods databaseMethods = new DatabaseMethods();
 
             //Generating random string for email verification
             var randomString = Path.GetRandomFileName();
@@ -54,7 +58,7 @@ namespace Thesis_project_Repository
                     var check = command1.ExecuteNonQuery() + command2.ExecuteNonQuery();
                     if (check == 2)
                     {
-                        if (email.sendEmail(signUpEmail.Text, "Welcome", emailBody(randomString)))
+                        if (sendEmail(signUpEmail.Text, "Welcome", emailBody(randomString)))
                         {
                             Response.Write("Mail Successfully Sent. Please Check your inbox.");
                         }
@@ -195,5 +199,12 @@ namespace Thesis_project_Repository
             }
             return true;
         }
+
+        protected void SignUpLink(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 1;
+        }
+
+       
     }
 }
