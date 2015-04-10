@@ -94,8 +94,8 @@ namespace Thesis_project_Repository
         protected string emailBody(string rdmString)
         {
             string message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
-           + " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-           + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString + "' >Click Here</a>"
+           + " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id which will help you change your password.</p><br />"
+           + "<a href='http://localhost:60443/RetrievePassword.aspx?verify=" + rdmString + "' >Click Here</a>"
            + "<h3>Thank you</h3>";
             return message;
         }

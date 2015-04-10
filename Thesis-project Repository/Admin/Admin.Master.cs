@@ -14,20 +14,11 @@ namespace Thesis_project_Repository
 
         }
 
-        protected void CheckListforApproval_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Admin/AdminApprovalList.aspx", false);
-        }
-
         protected void logout_Click(object sender, EventArgs e)
         {
             Session["username"] = null;
             Response.Redirect("../Default.aspx", false);
         }
 
-        protected void home_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Admin/AdminHomePage.aspx", false);
-        }
     }
 }

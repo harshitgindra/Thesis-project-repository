@@ -143,12 +143,12 @@ namespace Thesis_project_Repository
                                 if (acctype.Equals("P"))
                                 {
                                    
-                                    Response.Redirect("ProfessorHome.aspx", false);
+                                    Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
                                 }
                                 else
                                 {
                                     
-                                    Response.Redirect("StudentHome.aspx", false);
+                                    Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
                                 }
                             }
                         }

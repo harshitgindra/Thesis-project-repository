@@ -6,11 +6,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.StudentFiles
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
-        //need to check the session
         string username = "hgindra";
         protected void Page_Load(object sender, EventArgs e)
         {

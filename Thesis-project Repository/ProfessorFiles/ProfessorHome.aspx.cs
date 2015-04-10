@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.ProfessorFiles
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //need to check the session
+
         }
     }
 }

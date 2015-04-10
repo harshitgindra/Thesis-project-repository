@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/Student.Master" AutoEventWireup="true" CodeBehind="~/Student/StudentPreliminaryProject.aspx.cs" Inherits="Thesis_project_Repository.WebForm4" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentFiles/StudentMain.Master" AutoEventWireup="true" CodeBehind="PreliminaryProposal.aspx.cs" Inherits="Thesis_project_Repository.StudentFiles.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="student" runat="server">
-    <h1>Project Preliminary Submissions</h1>
+     <h1>Project Preliminary Submissions</h1>
     <table>
         <tr>
             <td>Project Title: </td>
@@ -75,5 +74,4 @@
             </td>
         </tr>
     </table>
-    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
 </asp:Content>

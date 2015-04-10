@@ -19,20 +19,5 @@ namespace Thesis_project_Repository
             Session["username"] = null;
             Response.Redirect("../Default.aspx", false);
         }
-
-        protected void home_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("StudentHome.aspx", false);
-        }
-
-        protected void preliminaryProject_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("StudentPreliminaryProject.aspx", false);
-        }
-
-        protected void finalProject_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("StudentHome.aspx", false);
-        }
     }
 }

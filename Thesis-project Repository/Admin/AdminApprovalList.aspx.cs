@@ -11,7 +11,7 @@ namespace Thesis_project_Repository
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (!IsPostBack)
             {
                 MultiView1.ActiveViewIndex = 0;
                 approvalwaitinglist.Visible = true;

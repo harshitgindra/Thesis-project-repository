@@ -60,12 +60,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminApproveAccount.aspx" />
+    <Content Include="css\forms.css" />
+    <Content Include="css\gallery.css" />
+    <Content Include="css\homepage.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\navi.css" />
+    <Content Include="css\portfolio.css" />
+    <Content Include="css\tables.css" />
     <Content Include="Default.aspx" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MyStyleSheet.css" />
-    <Content Include="ProfessorHome.aspx" />
+    <Content Include="ProfessorFiles\ProfessorHome.aspx" />
+    <Content Include="RetrieveLostPassword.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -74,12 +82,12 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
     <Content Include="SQL Queries.txt" />
+    <Content Include="StudentFiles\StudentHomePage.aspx" />
+    <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="Web.config" />
     <Content Include="Admin\AdminApprovalList.aspx" />
     <Content Include="Admin\AdminHomePage.aspx" />
-    <Content Include="Student\StudentHome.aspx" />
-    <Content Include="Student\StudentPreliminaryProject.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Admin.Master.cs">
@@ -131,11 +139,18 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProfessorHome.aspx.cs">
+    <Compile Include="ProfessorFiles\Professor.Master.cs">
+      <DependentUpon>Professor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfessorFiles\Professor.Master.designer.cs">
+      <DependentUpon>Professor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorFiles\ProfessorHome.aspx.cs">
       <DependentUpon>ProfessorHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProfessorHome.aspx.designer.cs">
+    <Compile Include="ProfessorFiles\ProfessorHome.aspx.designer.cs">
       <DependentUpon>ProfessorHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +158,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveLostPassword.aspx.cs">
+      <DependentUpon>RetrieveLostPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetrieveLostPassword.aspx.designer.cs">
+      <DependentUpon>RetrieveLostPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
@@ -156,12 +178,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Student\Student.Master.cs">
-      <DependentUpon>Student.Master</DependentUpon>
+    <Compile Include="StudentFiles\StudentMain.Master.cs">
+      <DependentUpon>StudentMain.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\Student.Master.designer.cs">
-      <DependentUpon>Student.Master</DependentUpon>
+    <Compile Include="StudentFiles\StudentMain.Master.designer.cs">
+      <DependentUpon>StudentMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\StudentHomePage.aspx.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\StudentHomePage.aspx.designer.cs">
+      <DependentUpon>StudentHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\PreliminaryProposal.aspx.cs">
+      <DependentUpon>PreliminaryProposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\PreliminaryProposal.aspx.designer.cs">
+      <DependentUpon>PreliminaryProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -189,20 +225,6 @@
     <Compile Include="Admin\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentHome.aspx.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Student\StudentHome.aspx.designer.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Student\StudentPreliminaryProject.aspx.cs">
-      <DependentUpon>StudentPreliminaryProject.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Student\StudentPreliminaryProject.aspx.designer.cs">
-      <DependentUpon>StudentPreliminaryProject.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoginDS.xsc">
@@ -220,12 +242,13 @@
     <Content Include="UserDS.xsc">
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Content>
-    <Content Include="Student\Student.Master" />
+    <Content Include="StudentFiles\StudentMain.Master" />
     <Content Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </Content>
     <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
+    <Content Include="ProfessorFiles\Professor.Master" />
     <None Include="Service References\ServiceReference1\ISUSMS.xsd">
       <SubType>Designer</SubType>
     </None>

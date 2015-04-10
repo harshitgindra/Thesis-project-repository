@@ -1,31 +1,31 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Thesis_project_Repository.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Professor.master.cs" Inherits="Thesis_project_Repository.Professor" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="../css/layout.css" rel="stylesheet" />
-    <title></title>
+    <title>Professor</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         
     </asp:ContentPlaceHolder>
 </head>
-<body id="top">
+<body>
     <form id="form1" runat="server">
         <div class="wrapper col2">
             <div id="header" class="clear">
                 <div class="fl_left">
-                    <h1><a href="AdminHomePage.aspx">Need of a logo here</a></h1>
+                    <h1><a href="ProfessorHome.aspx">Need of a logo here</a></h1>
                 </div>
                 <div id="topnav">
                     <ul>
                         <li>
-                            <asp:LinkButton ID="Logsout" OnClick="logout_Click" runat="server">Log out</asp:LinkButton></li>
+                            <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton></li>
                         <li>
-                            <a href="AdminApprovalList.aspx">Approval List</a>
+                            <a href="#">More Features COming soon</a>
                         </li>
                         <li class="active">
-                            <a href="AdminHomePage.aspx">Home</a>
+                            <a href="ProfessorHome.aspx">Home</a>
                         </li>
                     </ul>
                 </div>
@@ -36,10 +36,10 @@
         <div>
 
 
-
-            <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
+            <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+
 </body>
 </html>
