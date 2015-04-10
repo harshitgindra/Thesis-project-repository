@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Thesis_project_Repository
 {
     public class DatabaseMethods
     {
-
         public Boolean LoginMethod(string username, string password)
         {
-            bool result = false;
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
+            var result = false;
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command1 = new SqlCommand("Getstudentname", connection);
+                var command1 = new SqlCommand("Getstudentname", connection);
                 command1.CommandType = CommandType.StoredProcedure;
 
 
@@ -26,11 +22,11 @@ namespace Thesis_project_Repository
                 try
                 {
                     connection.Open();
-                    SqlDataReader rd = command1.ExecuteReader();
+                    var rd = command1.ExecuteReader();
                     while (rd.Read())
                     {
-                        string dbusername = rd.GetString(0);
-                        string dbpassword = rd.GetString(1);
+                        var dbusername = rd.GetString(0);
+                        var dbpassword = rd.GetString(1);
                         if (username.Equals(dbusername) && password.Equals(dbpassword))
                         {
                             result = true;
@@ -49,10 +45,9 @@ namespace Thesis_project_Repository
             return result;
         }
 
-        public Boolean SignUp(string username, string password) {
-
+        public Boolean SignUp(string username, string password)
+        {
             return true;
         }
-
     }
 }

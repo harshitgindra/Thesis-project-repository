@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://ISU/" targetNamespace="http://ISU/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:tns="http://ISU/" targetNamespace="http://ISU/" version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="getCarriers" type="tns:getCarriers" />
   <xs:element name="getCarriersResponse" type="tns:getCarriersResponse" />
   <xs:element name="sendSMS" type="tns:sendSMS" />

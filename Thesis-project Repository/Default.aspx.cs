@@ -1,67 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Net.Mail;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         //Needs to be implement.
         protected void SendSMS()
         {
-
         }
 
         protected void SignUp(object sender, EventArgs e)
         {
-            DatabaseMethods asd = new DatabaseMethods();
+            var asd = new DatabaseMethods();
 
             //Generating random string for email verification
-            string randomString = Path.GetRandomFileName();
+            var randomString = Path.GetRandomFileName();
             randomString = randomString.Replace(".", "");
 
             //This method is not parametrized. We need to chage it to paramaterized.
 
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
             //Query for login table
-            string queryString1 = "INSERT INTO LOGININFO (USERNAME, PASSWORD, ACCTYPE, RDM_STR, ADMIN_APPROVAL) VALUES ( '"
-                + signUpUsername.Text + "','"
-                + signUpPassword.Text + "','"
-                + accType.Text + "','"
-                + randomString + "','N');";
+            var queryString1 = "INSERT INTO LOGININFO (USERNAME, PASSWORD, ACCTYPE, RDM_STR, ADMIN_APPROVAL) VALUES ( '"
+                               + signUpUsername.Text + "','"
+                               + signUpPassword.Text + "','"
+                               + accType.Text + "','"
+                               + randomString + "','N');";
             //query for userinfo table
-            string queryString2 = "Insert into USERINFO(FIRSTNAME, LASTNAME, username, emailid, SECQUES, SECANS)  values ('"
-                + fname.Text + "','"
-                + lname.Text + "','"
-                + signUpUsername.Text + "','"
-                + signUpEmail.Text + "','"
-                + secques.Text + "','"
-                + secans.Text + "');";
+            var queryString2 = "Insert into USERINFO(FIRSTNAME, LASTNAME, username, emailid, SECQUES, SECANS)  values ('"
+                               + fname.Text + "','"
+                               + lname.Text + "','"
+                               + signUpUsername.Text + "','"
+                               + signUpEmail.Text + "','"
+                               + secques.Text + "','"
+                               + secans.Text + "');";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command1 = new SqlCommand(queryString1, connection);
-                SqlCommand command2 = new SqlCommand(queryString2, connection);
+                var command1 = new SqlCommand(queryString1, connection);
+                var command2 = new SqlCommand(queryString2, connection);
                 try
                 {
                     connection.Open();
-                    int check = command1.ExecuteNonQuery() + command2.ExecuteNonQuery();
+                    var check = command1.ExecuteNonQuery() + command2.ExecuteNonQuery();
                     if (check == 2)
                     {
-
                         if (email.sendEmail(signUpEmail.Text, "Welcome", emailBody(randomString)))
                         {
                             Response.Write("Mail Successfully Sent. Please Check your inbox.");
@@ -71,7 +63,6 @@ namespace Thesis_project_Repository
                             Response.Write("Something went wrong. Retry");
                         }
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -88,10 +79,12 @@ namespace Thesis_project_Repository
 
         protected string emailBody(string rdmString)
         {
-            string message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
-           + " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-           + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString + "' >Click Here</a>"
-           + "<h3>Thank you</h3>";
+            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+                          +
+                          " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
+                          + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString +
+                          "' >Click Here</a>"
+                          + "<h3>Thank you</h3>";
             return message;
         }
 
@@ -102,24 +95,23 @@ namespace Thesis_project_Repository
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
+            var acctype = "";
 
-            string acctype = "";
-
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
 
             //Query for login table
-            string queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password";
+            var queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString1, connection);
+                var command = new SqlCommand(queryString1, connection);
                 command.Parameters.AddWithValue("@username", loginusername.Text);
                 command.Parameters.AddWithValue("@password", loginPassword.Text);
                 try
                 {
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    var reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         //checking for admin login
@@ -143,12 +135,10 @@ namespace Thesis_project_Repository
                                 acctype = reader.GetString(2);
                                 if (acctype.Equals("P"))
                                 {
-
                                     Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
                                 }
                                 else
                                 {
-
                                     Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
                                 }
                             }
@@ -159,9 +149,6 @@ namespace Thesis_project_Repository
                         }
                         Session["username"] = loginusername.Text;
                     }
-
-
-
                 }
                 catch (Exception ex)
                 {
@@ -178,29 +165,27 @@ namespace Thesis_project_Repository
 
         protected Boolean sendEmail(string receiver, string subject, string message)
         {
-
-            MailAddress messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
+            var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
             //                    MailAddress messageTo = new MailAddress(to.Text);
-            MailMessage emailMessage = new MailMessage();
+            var emailMessage = new MailMessage();
             emailMessage.From = messageFrom;
 
-            MailAddress messageTo = new MailAddress(receiver);
+            var messageTo = new MailAddress(receiver);
             emailMessage.To.Add(messageTo.Address);
 
-            string messageSubject = subject;
-            string messageBody = message;
+            var messageSubject = subject;
+            var messageBody = message;
             emailMessage.Subject = messageSubject;
             emailMessage.Body = messageBody;
             emailMessage.IsBodyHtml = true;
             //       SmtpClient mailClient = new SmtpClient();
-            SmtpClient mailClient = new SmtpClient("smtp.ilstu.edu");
+            var mailClient = new SmtpClient("smtp.ilstu.edu");
             // Credentials are necessary if the server requires the client 
             // to authenticate before it will send e-mail on the client's behalf.
             // Do this in the web.config file
             try
             {
-
-                mailClient.UseDefaultCredentials = true;// false;
+                mailClient.UseDefaultCredentials = true; // false;
                 mailClient.Send(emailMessage);
             }
             catch (Exception e)
@@ -211,5 +196,4 @@ namespace Thesis_project_Repository
             return true;
         }
     }
-
 }

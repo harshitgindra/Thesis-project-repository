@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
 namespace Thesis_project_Repository {
     
     
@@ -19,7 +22,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -28,7 +31,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected HtmlForm form1;
         
         /// <summary>
         /// TextBox1 control.
@@ -37,7 +40,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected TextBox TextBox1;
         
         /// <summary>
         /// Label6 control.
@@ -46,7 +49,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected Label Label6;
         
         /// <summary>
         /// Button1 control.
@@ -55,7 +58,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected Button Button1;
         
         /// <summary>
         /// DropDownList1 control.
@@ -64,7 +67,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected DropDownList DropDownList1;
         
         /// <summary>
         /// div1 control.
@@ -73,7 +76,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div1;
+        protected HtmlGenericControl div1;
         
         /// <summary>
         /// RadioButtonList1 control.
@@ -82,7 +85,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected RadioButtonList RadioButtonList1;
         
         /// <summary>
         /// TextBox2 control.
@@ -91,7 +94,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected TextBox TextBox2;
         
         /// <summary>
         /// Label1 control.
@@ -100,7 +103,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected Label Label1;
         
         /// <summary>
         /// div2 control.
@@ -109,7 +112,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div2;
+        protected HtmlGenericControl div2;
         
         /// <summary>
         /// RadioButtonList2 control.
@@ -118,7 +121,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected RadioButtonList RadioButtonList2;
         
         /// <summary>
         /// DropDownList2 control.
@@ -127,7 +130,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected DropDownList DropDownList2;
         
         /// <summary>
         /// TypeSqlDataSource control.
@@ -136,7 +139,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource TypeSqlDataSource;
+        protected SqlDataSource TypeSqlDataSource;
         
         /// <summary>
         /// Label2 control.
@@ -145,7 +148,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected Label Label2;
         
         /// <summary>
         /// div3 control.
@@ -154,7 +157,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div3;
+        protected HtmlGenericControl div3;
         
         /// <summary>
         /// RadioButtonList3 control.
@@ -163,7 +166,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected RadioButtonList RadioButtonList3;
         
         /// <summary>
         /// TextBox3 control.
@@ -172,7 +175,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected TextBox TextBox3;
         
         /// <summary>
         /// Label3 control.
@@ -181,7 +184,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected Label Label3;
         
         /// <summary>
         /// Button2 control.
@@ -190,7 +193,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected Button Button2;
         
         /// <summary>
         /// Label4 control.
@@ -199,7 +202,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected Label Label4;
         
         /// <summary>
         /// div4 control.
@@ -208,7 +211,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div4;
+        protected HtmlGenericControl div4;
         
         /// <summary>
         /// GridView1 control.
@@ -217,7 +220,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected GridView GridView1;
         
         /// <summary>
         /// DetailsView1 control.
@@ -226,7 +229,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        protected DetailsView DetailsView1;
         
         /// <summary>
         /// DetailsView2 control.
@@ -235,7 +238,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView2;
+        protected DetailsView DetailsView2;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -244,7 +247,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// UserDetailsSqlDataSource control.
@@ -253,7 +256,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserDetailsSqlDataSource;
+        protected SqlDataSource UserDetailsSqlDataSource;
         
         /// <summary>
         /// UserInfoSqlDataSource control.
@@ -262,7 +265,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserInfoSqlDataSource;
+        protected SqlDataSource UserInfoSqlDataSource;
         
         /// <summary>
         /// div5 control.
@@ -271,7 +274,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div5;
+        protected HtmlGenericControl div5;
         
         /// <summary>
         /// GridView2 control.
@@ -280,7 +283,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected GridView GridView2;
         
         /// <summary>
         /// Label5 control.
@@ -289,6 +292,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected Label Label5;
     }
 }

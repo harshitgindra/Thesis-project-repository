@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
 namespace Thesis_project_Repository {
     
     
@@ -19,7 +22,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected HtmlForm form1;
         
         /// <summary>
         /// retrievepassword control.
@@ -28,7 +31,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView retrievepassword;
+        protected MultiView retrievepassword;
         
         /// <summary>
         /// forgotpwdview control.
@@ -37,7 +40,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View forgotpwdview;
+        protected View forgotpwdview;
         
         /// <summary>
         /// forgotEmailId control.
@@ -46,7 +49,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox forgotEmailId;
+        protected TextBox forgotEmailId;
         
         /// <summary>
         /// forgotpwdemail control.
@@ -55,7 +58,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forgotpwdemail;
+        protected Button forgotpwdemail;
         
         /// <summary>
         /// confirmationview control.
@@ -64,7 +67,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View confirmationview;
+        protected View confirmationview;
         
         /// <summary>
         /// confimationmsg control.
@@ -73,6 +76,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label confimationmsg;
+        protected Label confimationmsg;
     }
 }

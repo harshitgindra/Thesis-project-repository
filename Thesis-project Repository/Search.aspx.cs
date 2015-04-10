@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI;
+using Thesis_project_Repository.LoginDSTableAdapters;
+using Thesis_project_Repository.UserDSTableAdapters;
 
 namespace Thesis_project_Repository
 {
-    public partial class Search : System.Web.UI.Page
+    public partial class Search : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,13 +34,11 @@ namespace Thesis_project_Repository
                 Label4.Text = "";
                 Label3.Text = "";
                 Label6.Text = "";
-
             }
             else
             {
                 Label6.Text = "Please enter a keyword";
                 div4.Visible = false;
-
             }
         }
 
@@ -61,20 +55,20 @@ namespace Thesis_project_Repository
             DetailsView1.Visible = false;
             DetailsView2.Visible = false;
             TextBox1.Text = "";
-            string criterion = DropDownList1.Text;
+            var criterion = DropDownList1.Text;
             int choice;
             string userInput;
-            string keyword = "";
+            var keyword = "";
             if (DropDownList1.SelectedIndex != 0)
             {
-                if (RadioButtonList1.SelectedItem != null || RadioButtonList2.SelectedItem != null || RadioButtonList3.SelectedItem != null)
+                if (RadioButtonList1.SelectedItem != null || RadioButtonList2.SelectedItem != null ||
+                    RadioButtonList3.SelectedItem != null)
                 {
                     if (criterion.Equals("account type"))
                     {
                         choice = RadioButtonList2.SelectedIndex;
                         if (choice != 0)
                         {
-
                             if (DropDownList2.SelectedIndex != 0)
                             {
                                 userInput = DropDownList2.Text;
@@ -85,7 +79,6 @@ namespace Thesis_project_Repository
                                 Label2.Text = "Please select a type.";
                                 keyword = "0";
                             }
-
                         }
                     }
                     else if (criterion.Equals("username"))
@@ -116,11 +109,8 @@ namespace Thesis_project_Repository
                             {
                                 Label1.Text = "Please enter a keyword into the textbox.";
                                 keyword = "0";
-
                             }
-
                         }
-
                     }
                     GetResultsByCriterion(criterion, keyword);
                 }
@@ -135,18 +125,17 @@ namespace Thesis_project_Repository
                 Label4.Text = "Please select a search criterion";
             }
         }
+
         public void GetResultsByCriterion(string criterion, string keyword)
         {
-            LoginDSTableAdapters.LOGININFOTableAdapter loginInfoTableAdapter = new LoginDSTableAdapters.LOGININFOTableAdapter();
-            UserDSTableAdapters.USERINFOTableAdapter userInfoTableAdapter = new UserDSTableAdapters.USERINFOTableAdapter();
+            var loginInfoTableAdapter = new LOGININFOTableAdapter();
+            var userInfoTableAdapter = new USERINFOTableAdapter();
             if (criterion.Equals("username"))
             {
                 if (!string.IsNullOrWhiteSpace(keyword))
                 {
                     GridView2.DataSource = userInfoTableAdapter.GetDataByUsername(keyword);
                 }
-
-
             }
             else if (criterion.Equals("first name"))
             {
@@ -154,7 +143,6 @@ namespace Thesis_project_Repository
                 {
                     if (!keyword.Equals("0"))
                     {
-
                         GridView2.DataSource = userInfoTableAdapter.GetDataByFirstName(keyword);
                     }
                 }
@@ -169,7 +157,6 @@ namespace Thesis_project_Repository
                 {
                     if (!keyword.Equals("0"))
                     {
-
                         GridView2.DataSource = userInfoTableAdapter.GetDataByLastName(keyword);
                     }
                 }
@@ -260,6 +247,7 @@ namespace Thesis_project_Repository
                 TextBox2.Visible = false;
             }
         }
+
         protected void RadioButtonList2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Label1.Text = "";
@@ -290,9 +278,8 @@ namespace Thesis_project_Repository
 
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            string selectedLink = GridView2.SelectedRow.Cells[3].Text;
-            string result = GetDetailsForAdvancedSearch(selectedLink);
+            var selectedLink = GridView2.SelectedRow.Cells[3].Text;
+            var result = GetDetailsForAdvancedSearch(selectedLink);
             Label5.Text = result;
         }
 
@@ -300,29 +287,28 @@ namespace Thesis_project_Repository
         {
             // string connectionString = "Data Source=itksqlexp8;Initial Catalog=AJAIN5_ConservationSchool;"
             //                            + "Integrated Security=true";
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                         + "Integrated Security=true";
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
 
-            string queryString = "SELECT * from userinfo "
-                          + "WHERE username = '" + userInput + "';";
+            var queryString = "SELECT * from userinfo "
+                              + "WHERE username = '" + userInput + "';";
 
-            string result = "";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var result = "";
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString, connection);
+                var command = new SqlCommand(queryString, connection);
 
                 try
                 {
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        result += "First name:" + reader[0].ToString() + "<br />";
-                        result += "Last name is :" + reader[1].ToString() + "<br />";
-                        result += "Username:" + reader[2].ToString() + "<br />";
-                        result += "Email :" + reader[3].ToString() + "<br />";
-                        result += "Phone Number :" + reader[5].ToString() + "<br />";
-
+                        result += "First name:" + reader[0] + "<br />";
+                        result += "Last name is :" + reader[1] + "<br />";
+                        result += "Username:" + reader[2] + "<br />";
+                        result += "Email :" + reader[3] + "<br />";
+                        result += "Phone Number :" + reader[5] + "<br />";
                     }
 
                     connection.Close();
@@ -334,23 +320,22 @@ namespace Thesis_project_Repository
             }
 
             connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                         + "Integrated Security=true";
+                               + "Integrated Security=true";
 
             queryString = "SELECT acctype from logininfo "
                           + "WHERE username = '" + userInput + "';";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString, connection);
+                var command = new SqlCommand(queryString, connection);
 
                 try
                 {
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        result += "Account Type:" + reader[0].ToString() + "<br />";
-
+                        result += "Account Type:" + reader[0] + "<br />";
                     }
 
                     connection.Close();

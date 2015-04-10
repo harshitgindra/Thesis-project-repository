@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /*
 Template Name: PhotoProwess
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -8,9 +9,30 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Gallery CSS
 */
 
-.gallery{display:block; width:100%; margin-bottom:30px;}
-.gallery ul{margin:0; padding:0; list-style:none;}
-.gallery li{float:left; margin:0 0 10px 10px;}
-.gallery li a img{width:174px; height:150px; padding:4px; border:1px solid #D8D9DE;}
-.gallery li a:hover img{border-color:#B86365;}
-.gallery li.first{margin-left:0;}
+.gallery {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery li {
+    float: left;
+    margin: 0 0 10px 10px;
+}
+
+.gallery li a img {
+    border: 1px solid #D8D9DE;
+    height: 150px;
+    padding: 4px;
+    width: 174px;
+}
+
+.gallery li a:hover img { border-color: #B86365; }
+
+.gallery li.first { margin-left: 0; }

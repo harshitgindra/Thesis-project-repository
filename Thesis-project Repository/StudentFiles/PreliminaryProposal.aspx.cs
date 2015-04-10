@@ -1,30 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.StudentFiles
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm2 : Page
     {
-        string username = "hgindra";
+        private readonly string username = "hgindra";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            string reportName = "";
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
-            string query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var reportName = "";
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
+            var query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(query, connection);
+                var command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 try
                 {
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    var reader = command.ExecuteReader();
                     if (reader.Read())
                     {
                         projecttitle.Text = reader.GetString(1);
@@ -37,7 +35,7 @@ namespace Thesis_project_Repository.StudentFiles
                         graduateAdvisor.Text = reader.GetString(14);
                         semester.Text = reader.GetString(15);
                         reportName = reader.GetString(8);
-                        HyperLink hyp = new HyperLink();
+                        var hyp = new HyperLink();
                         hyp.ID = "hyp1";
                         hyp.NavigateUrl = "../DownloadFile.aspx?username=" + username + "&file=P";
                         hyp.Text = reportName;
@@ -55,28 +53,28 @@ namespace Thesis_project_Repository.StudentFiles
                     connection.Close();
                 }
             }
-
         }
 
         protected void submit_Click(object sender, EventArgs e)
         {
+            var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
+            var reportLength = preliminaryreport.PostedFile.ContentLength;
+            var reportName = preliminaryreport.PostedFile.FileName;
+            var screencastLength = screencasts.PostedFile.ContentLength;
+            var screencastName = screencasts.PostedFile.FileName;
 
-            string todaydate = DateTime.Now.ToString("yyyy-MM-dd");
-            int reportLength = preliminaryreport.PostedFile.ContentLength;
-            string reportName = preliminaryreport.PostedFile.FileName;
-            int screencastLength = screencasts.PostedFile.ContentLength;
-            string screencastName = screencasts.PostedFile.FileName;
-
-            string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
+            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                   + "Integrated Security=true";
 
 
-            string query = "INSERT INTO PRELIMINARY_PROJECT_SUBMISSION "
-                + "(USERNAME, PROJECT_TITLE, COURSE_NO, LIVE_LINK, KEYWORDS, ABSTRACT, DOCUMENT, DOCUMENT_LENGTH, DOCUMENT_NAME, SCREENCAST, SCREENCAST_LENGTH, SCREENCAST_NAME, COMMITTEE_CHAIR, COMMITTEE_MEMBERS, GRADUATE_ADVISOR, SEMESTER_COMPLETED, DATE_UPLOADED)"
-                + "VALUES ( @username, @project_title, @course_no, @livelink, @keywords, @abstract, @preliminary_report, @report_length, @report_name, @screencast, @screencast_length, @screencast_name, @committee_chair, @committee_member, @graduate_advisor, @semester, @date);";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var query = "INSERT INTO PRELIMINARY_PROJECT_SUBMISSION "
+                        +
+                        "(USERNAME, PROJECT_TITLE, COURSE_NO, LIVE_LINK, KEYWORDS, ABSTRACT, DOCUMENT, DOCUMENT_LENGTH, DOCUMENT_NAME, SCREENCAST, SCREENCAST_LENGTH, SCREENCAST_NAME, COMMITTEE_CHAIR, COMMITTEE_MEMBERS, GRADUATE_ADVISOR, SEMESTER_COMPLETED, DATE_UPLOADED)"
+                        +
+                        "VALUES ( @username, @project_title, @course_no, @livelink, @keywords, @abstract, @preliminary_report, @report_length, @report_name, @screencast, @screencast_length, @screencast_name, @committee_chair, @committee_member, @graduate_advisor, @semester, @date);";
+            using (var connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(query, connection);
+                var command = new SqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@project_title", projecttitle.Text);
@@ -114,18 +112,14 @@ namespace Thesis_project_Repository.StudentFiles
             }
         }
 
-
         public byte[] convertUploadedFile(FileUpload file)
         {
-            int lenght = file.PostedFile.ContentLength;
-            string contenttype = file.PostedFile.ContentType;
-            string name = file.PostedFile.FileName;
-            byte[] data = new byte[lenght];
+            var lenght = file.PostedFile.ContentLength;
+            var contenttype = file.PostedFile.ContentType;
+            var name = file.PostedFile.FileName;
+            var data = new byte[lenght];
             file.PostedFile.InputStream.Read(data, 0, lenght);
             return data;
         }
-
-
-
     }
 }

@@ -4,50 +4,53 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet"/>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-       
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
 
-        <div class="wrapper col2">
-            <div id="header" class="clear">
-                <div class="fl_left">
-                    <h1><a href="StudentHomePage.aspx">Need of a logo here</a></h1>
-                </div>
-                <div id="topnav">
-                    <ul>
-                        <li>
-                            <asp:LinkButton ID="logout" OnClick="logout_Click" runat="server">Log out</asp:LinkButton></li>
-                        <li>
-                            <a href="PreliminaryProposal.aspx">Preliminary Project Submission</a>
-                        </li>
-                        <li>
-                            <a href="#">Final Project Submission</a>
-                        </li>
-                        <li>
-                            <a href="#">Thesis Submission</a>
-                        </li>
-                        <li>
-                            <a href="#">Schedule a presentation</a>
-                        </li>
-                        <li>
-                            <a href="#">Check approval Status</a>
-                        </li>
-                        <li class="active">
-                            <a href="StudentHomePage.aspx">Home</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="wrapper col2">
+        <div id="header" class="clear">
+            <div class="fl_left">
+                <h1>
+                    <a href="StudentHomePage.aspx">Need of a logo here</a>
+                </h1>
+            </div>
+            <div id="topnav">
+                <ul>
+                    <li>
+                        <asp:LinkButton ID="logout" OnClick="logout_Click" runat="server">Log out</asp:LinkButton>
+                    </li>
+                    <li>
+                        <a href="PreliminaryProposal.aspx">Preliminary Project Submission</a>
+                    </li>
+                    <li>
+                        <a href="#">Final Project Submission</a>
+                    </li>
+                    <li>
+                        <a href="#">Thesis Submission</a>
+                    </li>
+                    <li>
+                        <a href="#">Schedule a presentation</a>
+                    </li>
+                    <li>
+                        <a href="#">Check approval Status</a>
+                    </li>
+                    <li class="active">
+                        <a href="StudentHomePage.aspx">Home</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div>
-            <asp:ContentPlaceHolder ID="student" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="student" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
 </body>
 </html>

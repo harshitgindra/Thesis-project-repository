@@ -4,42 +4,45 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet"/>
     <title>Professor</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-        
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="wrapper col2">
-            <div id="header" class="clear">
-                <div class="fl_left">
-                    <h1><a href="ProfessorHome.aspx">Need of a logo here</a></h1>
-                </div>
-                <div id="topnav">
-                    <ul>
-                        <li>
-                            <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton></li>
-                        <li>
-                            <a href="#">More Features COming soon</a>
-                        </li>
-                        <li class="active">
-                            <a href="ProfessorHome.aspx">Home</a>
-                        </li>
-                    </ul>
-                </div>
+<form id="form1" runat="server">
+    <div class="wrapper col2">
+        <div id="header" class="clear">
+            <div class="fl_left">
+                <h1>
+                    <a href="ProfessorHome.aspx">Need of a logo here</a>
+                </h1>
+            </div>
+            <div id="topnav">
+                <ul>
+                    <li>
+                        <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
+                    </li>
+                    <li>
+                        <a href="#">More Features COming soon</a>
+                    </li>
+                    <li class="active">
+                        <a href="ProfessorHome.aspx">Home</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
 
 
-        <div>
+    <div>
 
 
-            <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+        <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
 
 </body>
 </html>

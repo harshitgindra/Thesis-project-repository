@@ -1,33 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository
 {
-    public partial class AdminApproveAccount : System.Web.UI.Page
+    public partial class AdminApproveAccount : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string adminUsername = "";
-            string username = "";
+            var adminUsername = "";
+            var username = "";
             if (Session["username"] != null)
-            {//session active
+            {
+//session active
 
                 if (!Page.IsPostBack)
                 {
-
                     adminUsername = (Session["username"].ToString());
                     username = Request.QueryString["username"];
-                    string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                      + "Integrated Security=true";
-                    string query = "update logininfo set admin_approval = 'Y' where username = '" + username + "';";
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                           + "Integrated Security=true";
+                    var query = "update logininfo set admin_approval = 'Y' where username = '" + username + "';";
+                    using (var connection = new SqlConnection(connectionString))
                     {
-                        SqlCommand command = new SqlCommand(query, connection);
+                        var command = new SqlCommand(query, connection);
                         try
                         {
                             connection.Open();
@@ -52,8 +48,6 @@ namespace Thesis_project_Repository
                 //need to test.
                 Response.Redirect("../Default.aspx", false);
             }
-
-
         }
     }
 }
