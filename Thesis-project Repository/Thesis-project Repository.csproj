@@ -78,7 +78,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="SQL Queries.txt" />
+    <Content Include="Admin\SQL Queries.txt" />
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="VerificationLink.aspx" />

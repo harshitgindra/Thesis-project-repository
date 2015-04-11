@@ -157,7 +157,7 @@ namespace Thesis_project_Repository
 
         protected void ForgotPassword(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 0;
+            MultiView1.ActiveViewIndex = 2;
         }
 
         protected void LoginLink(object sender, EventArgs e)
@@ -172,15 +172,15 @@ namespace Thesis_project_Repository
 
         protected void RetrieveForgotPassword(object sender, EventArgs e)
         {
-            const string query = "SELECT * FROM USERINFO WHERE EMAILID = @forgotPassword;";
+            const string query = "SELECT * FROM logininfo WHERE username = @forgotPassword;";
             using (var connection = new SqlConnection(ConnectionString))
             {
-                var command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@forgotPassword", forgotEmailId.Text);
+                var command0 = new SqlCommand(query, connection);
+                command0.Parameters.AddWithValue("@forgotPassword", forgotEmailId.Text);
                 try
                 {
                     connection.Open();
-                    var reader = command.ExecuteReader();
+                    var reader = command0.ExecuteReader();
                     if (reader.Read())
                     {
                         var usernameDb = reader.GetString(2);

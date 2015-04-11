@@ -256,13 +256,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.TextBox forgotEmailId;
         
         /// <summary>
-        /// forgotpwdemail control.
+        /// forgotpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forgotpwdemail;
+        protected global::System.Web.UI.WebControls.Button forgotpassword;
         
         /// <summary>
         /// confirationMessage control.

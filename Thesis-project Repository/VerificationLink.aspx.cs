@@ -29,10 +29,10 @@ namespace Thesis_project_Repository
                         //  var randomStringFromDatabase = reader.GetString(3);
                         // if (randomStringFromDatabase.Equals(randomString))
 
-                        var query2 = "UPDATE LOGININFO SET RDM_STR = '' WHERE RDM_STR = '" + randomString + "';";
-                        var command2 = new SqlCommand(query2, connection);
+                        const string query1 = "UPDATE LOGININFO SET RDM_STR = '' WHERE rdm_str = @rdmString;";
 
-                        reader.Close();
+                        var command2 = new SqlCommand(query1, connection);
+                        command.Parameters.AddWithValue("@randomString", randomString);
                         try
                         {
                             if (command2.ExecuteNonQuery() == 1)

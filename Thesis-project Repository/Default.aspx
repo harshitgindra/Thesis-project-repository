@@ -178,7 +178,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="forgotpwdemail" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword"/>
+                        <asp:Button ID="forgotpassword" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword"/>
                     </td>
                     <td>
                         <asp:Label ID="confirationMessage" runat="server"></asp:Label>
