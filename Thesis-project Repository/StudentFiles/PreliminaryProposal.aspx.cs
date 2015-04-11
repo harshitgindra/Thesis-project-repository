@@ -82,10 +82,14 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@livelink", livelink.Text);
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", projectabstract.Text);
+#pragma warning disable 618
                 command.Parameters.Add("@preliminary_report", convertUploadedFile(preliminaryreport));
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
+#pragma warning disable 618
                 command.Parameters.Add("@screencast", convertUploadedFile(screencasts));
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);

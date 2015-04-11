@@ -6,6 +6,7 @@ using System.Net.Mail;
 using System.Web.UI;
 using Thesis_project_Repository.Modals;
 
+
 namespace Thesis_project_Repository
 {
     public partial class Default : Page
@@ -34,7 +35,7 @@ namespace Thesis_project_Repository
             using (var connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(queryString1, connection);
-                command.Parameters.AddWithValue("@username", loginusername.Text);
+                command.Parameters.AddWithValue("@username", loginUserName.Text);
                 command.Parameters.AddWithValue("@password", loginPassword.Text);
                 try
                 {
@@ -48,18 +49,18 @@ namespace Thesis_project_Repository
                             //Checking for email verification
                             if (!reader.GetString(3).Equals(""))
                             {
-                                accstatus.Text = "Email not verified. Please verify the account.";
+                                loginResult.Text = "Email not verified. Please verify the account.";
                             }
                             //checking for admin approval
                             else if (reader.GetString(4).Equals("N"))
                             {
-                                accstatus.Text = "Admin has not approved your account.";
+                                loginResult.Text = "Admin has not approved your account.";
                             }
                             //satisfied email and admin approval
                             //now redirect to appropriate page
                             else
                             {
-                                accstatus.Text = "Successful login";
+                                loginResult.Text = "Successful login";
                                 acctype = reader.GetString(2);
                                 if (acctype.Equals("P"))
                                 {
@@ -75,7 +76,7 @@ namespace Thesis_project_Repository
                         {
                             Response.Redirect("/Admin/AdminHomePage.aspx", false);
                         }
-                        Session["username"] = loginusername.Text;
+                        Session["username"] = loginUserName.Text;
                     }
                 }
                 catch (Exception ex)
