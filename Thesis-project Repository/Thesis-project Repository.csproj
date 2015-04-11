@@ -69,7 +69,6 @@
     <Content Include="css\tables.css" />
     <Content Include="Default.aspx" />
     <Content Include="DownloadFile.aspx" />
-    <Content Include="ForgotPassword.aspx" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="Search.aspx" />
@@ -116,13 +115,6 @@
     </Compile>
     <Compile Include="DownloadFile.aspx.designer.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginDS.Designer.cs">
       <AutoGen>True</AutoGen>
