@@ -120,6 +120,17 @@ namespace Thesis_project_Repository
             return message;
         }
 
+        protected string EmailBodyForChangePassword(string rdmString)
+        {
+            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+                          +
+                          " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
+                          + "<a href='http://localhost:60443/ChangePassword.aspx?verify=" + rdmString +
+                          "' >Click Here</a>"
+                          + "<h3>Thank you</h3>";
+            return message;
+        }
+
         protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
@@ -165,7 +176,7 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 0;
         }
 
-        //Needs to be implement.
+        //Needs to be implement this method and integrate with signup and forgot password methods.
         protected void SendSms()
         {
         }
@@ -188,7 +199,7 @@ namespace Thesis_project_Repository
                         randomString = randomString.Replace(".", "");
                         _databaseMethods.UpdateLogininfordmstr(usernameDb, randomString);
                         confirationMessage.Text = SendEmail(forgotEmailId.Text, "Retrieve Lost Password",
-                            EmailBody(randomString))
+                            EmailBodyForChangePassword(randomString))
                             ? "Email Sent Successfully. Please check your inbox"
                             : "Something went wront. Please retry.";
                     }

@@ -1,0 +1,7 @@
+﻿1. User SignUp {done}
+2. User Login {done}
+3. Admin Login {done}
+4. Verification Link {done}
+5. Forgot Password {done}
+6. Admin Approval {Needs to be changed}
+7. 
