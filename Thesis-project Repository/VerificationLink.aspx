@@ -7,22 +7,22 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <asp:Label ID="verificationstatus" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:LinkButton ID="TakeToLogin" runat="server" OnClick="TakeToLoginPage">Login</asp:LinkButton>
-                    </td>
-                </tr>
-            </table>
+<form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <asp:Label ID="verificationstatus" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:LinkButton ID="TakeToLogin" runat="server" OnClick="TakeToLoginPage">Login</asp:LinkButton>
+                </td>
+            </tr>
+        </table>
 
-        </div>
-    </form>
+    </div>
+</form>
 </body>
 </html>

@@ -1,37 +1,28 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Globalization;
 using System.IO;
 using System.Net.Mail;
 using System.Web.UI;
 using Thesis_project_Repository.Modals;
 
-
 namespace Thesis_project_Repository
 {
     public partial class Default : Page
     {
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                                + "Integrated Security=true";
+
+        private readonly DatabaseMethods _databaseMethods = new DatabaseMethods();
 
         protected void Page_Load(object sender, EventArgs e)
         {
         }
 
-        //Needs to be implement.
-        protected void SendSMS()
-        {
-        }
-
         protected void Login(object sender, EventArgs e)
         {
-            var acctype = "";
+            const string queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password";
 
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
-
-            //Query for login table
-            var queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password";
-
-            using (var connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(queryString1, connection);
                 command.Parameters.AddWithValue("@username", loginUserName.Text);
@@ -60,19 +51,16 @@ namespace Thesis_project_Repository
                             else
                             {
                                 loginResult.Text = "Successful login";
-                                acctype = reader.GetString(2);
-                                if (acctype.Equals("P"))
-                                {
-                                    Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
-                                }
-                                else
-                                {
-                                    Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
-                                }
+                                var acctype = reader.GetString(2);
+                                Response.Redirect(
+                                    acctype.Equals("P")
+                                        ? "/ProfessorFiles/ProfessorHome.aspx"
+                                        : "/StudentFiles/StudentHomePage.aspx", false);
                             }
                         }
                         else
                         {
+                            //What is the use of false here?
                             Response.Redirect("/Admin/AdminHomePage.aspx", false);
                         }
                         Session["username"] = loginUserName.Text;
@@ -80,8 +68,6 @@ namespace Thesis_project_Repository
                 }
                 catch (Exception ex)
                 {
-                    //in case of duplicate user id
-                    usernameerror.Text = "Duplicate user id, Please retry";
                     Console.WriteLine(ex.Message);
                 }
                 finally
@@ -95,25 +81,27 @@ namespace Thesis_project_Repository
         {
             var randomString = Path.GetRandomFileName();
             randomString = randomString.Replace(".", "");
-            string username = signUpUsername.Text;
-            string password = signUpPassword.Text;
-            char accountType = Convert.ToChar(accType.SelectedValue);
-            string adminApproval = "N";
-            string secQuestion = secques.Text;
-            string secAnswer = secans.Text;
-            string firstName = fname.Text;
-            string lastName = lname.Text;
-            string phnNumber = phoneNumber.Text;
-            string carrier = ntwrkprovider.SelectedValue;
+            var username = signUpUsername.Text;
+            var password = signUpPassword.Text;
+            var accountType = Convert.ToChar(accType.SelectedValue);
+            const string adminApproval = "N";
+            var secQuestion = secques.Text;
+            var secAnswer = secans.Text;
+            var firstName = fname.Text;
+            var lastName = lname.Text;
+            var phnNumber = phoneNumber.Text;
+            var carrier = ntwrkprovider.SelectedValue;
 
-            UserModels userinfoModels = new UserModels(username, password, accountType, randomString, adminApproval, secQuestion, secAnswer, firstName, lastName, phnNumber, carrier);
+            var userinfoModels = new UserModels(username, password, accountType, randomString, adminApproval,
+                secQuestion, secAnswer, firstName, lastName, phnNumber, carrier);
 
-            DatabaseMethods databaseMethods = new DatabaseMethods();
-            var result = databaseMethods.SignUp(userinfoModels);
+            var result = _databaseMethods.SignUp(userinfoModels);
 
             if (result == 2 || result == 5)
             {
-                SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString)) ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox." : "Something went wrong. Retry";
+                SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString))
+                    ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox."
+                    : "Something went wrong. Retry";
             }
             else
             {
@@ -131,10 +119,10 @@ namespace Thesis_project_Repository
                           + "<h3>Thank you</h3>";
             return message;
         }
+
         protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
-            //                    MailAddress messageTo = new MailAddress(to.Text);
             var emailMessage = new MailMessage {From = messageFrom};
 
             var messageTo = new MailAddress(receiver);
@@ -145,7 +133,6 @@ namespace Thesis_project_Repository
             emailMessage.Subject = messageSubject;
             emailMessage.Body = messageBody;
             emailMessage.IsBodyHtml = true;
-            //       SmtpClient mailClient = new SmtpClient();
             var mailClient = new SmtpClient("smtp.ilstu.edu");
             // Credentials are necessary if the server requires the client 
             // to authenticate before it will send e-mail on the client's behalf.
@@ -170,7 +157,7 @@ namespace Thesis_project_Repository
 
         protected void ForgotPassword(object sender, EventArgs e)
         {
-            Response.Redirect("ForgotPassword.aspx");
+            MultiView1.ActiveViewIndex = 0;
         }
 
         protected void LoginLink(object sender, EventArgs e)
@@ -178,5 +165,44 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 0;
         }
 
+        //Needs to be implement.
+        protected void SendSms()
+        {
+        }
+
+        protected void RetrieveForgotPassword(object sender, EventArgs e)
+        {
+            const string query = "SELECT * FROM USERINFO WHERE EMAILID = @forgotPassword;";
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@forgotPassword", forgotEmailId.Text);
+                try
+                {
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        var usernameDb = reader.GetString(2);
+                        var randomString = Path.GetRandomFileName();
+                        randomString = randomString.Replace(".", "");
+                        _databaseMethods.UpdateLogininfordmstr(usernameDb, randomString);
+                        confirationMessage.Text = SendEmail(forgotEmailId.Text, "Retrieve Lost Password",
+                            EmailBody(randomString))
+                            ? "Email Sent Successfully. Please check your inbox"
+                            : "Something went wront. Please retry.";
+                    }
+                    else
+                    {
+                        confirationMessage.Text = "Email Id not in DB";
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

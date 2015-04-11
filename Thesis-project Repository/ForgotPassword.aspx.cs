@@ -8,14 +8,12 @@ namespace Thesis_project_Repository
 {
     public partial class ForgotPassword : Page
     {
-       
-
         protected void Page_Load(object sender, EventArgs e)
         {
             retrievepassword.ActiveViewIndex = 0;
         }
 
-        protected Boolean sendEmail(string receiver, string subject, string message)
+        protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
             //                    MailAddress messageTo = new MailAddress(to.Text);
@@ -47,12 +45,12 @@ namespace Thesis_project_Repository
             }
             return true;
         }
+
         protected void forgotpwdemail_Click(object sender, EventArgs e)
         {
-            
             retrievepassword.ActiveViewIndex = 1;
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
+            const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                            + "Integrated Security=true";
             var query = "SELECT * FROM USERINFO WHERE EMAILID = '" + forgotEmailId.Text + "';";
             using (var connection = new SqlConnection(connectionString))
             {
@@ -68,7 +66,7 @@ namespace Thesis_project_Repository
                         var randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         updateLogininfowtrdmstr(username, randomString);
-                        if (sendEmail(forgotEmailId.Text, "Retrieve Lost Password", emailBody(randomString)))
+                        if (SendEmail(forgotEmailId.Text, "Retrieve Lost Password", EmailBody(randomString)))
                         {
                             confimationmsg.Text = "Email Sent Successfully. Please check your inbox";
                         }
@@ -94,8 +92,8 @@ namespace Thesis_project_Repository
 
         private void updateLogininfowtrdmstr(string username, string randomstring)
         {
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
+            const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                            + "Integrated Security=true";
             var query = "UPDATE LOGININFO SET RDM_STR = '" + randomstring + "' WHERE USERNAME = '" + username + "';";
             using (var connection = new SqlConnection(connectionString))
             {
@@ -118,13 +116,13 @@ namespace Thesis_project_Repository
             }
         }
 
-        protected string emailBody(string rdmString)
+        protected string EmailBody(string rdmString)
         {
             var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
                           +
                           " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id which will help you change your password.</p><br />"
-                          + "<a href='http://localhost:60443/RetrievePassword.aspx?verify=" + rdmString +
-                          "' >Click Here</a>"
+                          + "<a href='http://localhost:60443/RetrievePassword.aspx?verify=" + rdmString
+                          + "' >Click Here</a>"
                           + "<h3>Thank you</h3>";
             return message;
         }

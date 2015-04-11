@@ -7,18 +7,18 @@ namespace Thesis_project_Repository.StudentFiles
 {
     public partial class WebForm2 : Page
     {
-        private readonly string username = "hgindra";
+        private const string Username = "hgindra";
+
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                                + "Integrated Security=true";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var reportName = "";
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
-            var query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
-            using (var connection = new SqlConnection(connectionString))
+            const string query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
+            using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@username", Username);
                 try
                 {
                     connection.Open();
@@ -34,11 +34,13 @@ namespace Thesis_project_Repository.StudentFiles
                         committeemember.Text = reader.GetString(13);
                         graduateAdvisor.Text = reader.GetString(14);
                         semester.Text = reader.GetString(15);
-                        reportName = reader.GetString(8);
-                        var hyp = new HyperLink();
-                        hyp.ID = "hyp1";
-                        hyp.NavigateUrl = "../DownloadFile.aspx?username=" + username + "&file=P";
-                        hyp.Text = reportName;
+                        var reportName = reader.GetString(8);
+                        var hyp = new HyperLink
+                        {
+                            ID = "hyp1",
+                            NavigateUrl = "../DownloadFile.aspx?username=" + Username + "&file=P",
+                            Text = reportName
+                        };
                         preliminaryreportdownload.Controls.Add(hyp);
                     }
 
@@ -63,32 +65,28 @@ namespace Thesis_project_Repository.StudentFiles
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
 
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
-
-
-            var query = "INSERT INTO PRELIMINARY_PROJECT_SUBMISSION "
-                        +
-                        "(USERNAME, PROJECT_TITLE, COURSE_NO, LIVE_LINK, KEYWORDS, ABSTRACT, DOCUMENT, DOCUMENT_LENGTH, DOCUMENT_NAME, SCREENCAST, SCREENCAST_LENGTH, SCREENCAST_NAME, COMMITTEE_CHAIR, COMMITTEE_MEMBERS, GRADUATE_ADVISOR, SEMESTER_COMPLETED, DATE_UPLOADED)"
-                        +
-                        "VALUES ( @username, @project_title, @course_no, @livelink, @keywords, @abstract, @preliminary_report, @report_length, @report_name, @screencast, @screencast_length, @screencast_name, @committee_chair, @committee_member, @graduate_advisor, @semester, @date);";
-            using (var connection = new SqlConnection(connectionString))
+            const string query = "INSERT INTO PRELIMINARY_PROJECT_SUBMISSION "
+                                 +
+                                 "(USERNAME, PROJECT_TITLE, COURSE_NO, LIVE_LINK, KEYWORDS, ABSTRACT, DOCUMENT, DOCUMENT_LENGTH, DOCUMENT_NAME, SCREENCAST, SCREENCAST_LENGTH, SCREENCAST_NAME, COMMITTEE_CHAIR, COMMITTEE_MEMBERS, GRADUATE_ADVISOR, SEMESTER_COMPLETED, DATE_UPLOADED)"
+                                 +
+                                 "VALUES ( @username, @project_title, @course_no, @livelink, @keywords, @abstract, @preliminary_report, @report_length, @report_name, @screencast, @screencast_length, @screencast_name, @committee_chair, @committee_member, @graduate_advisor, @semester, @date);";
+            using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@username", Username);
                 command.Parameters.AddWithValue("@project_title", projecttitle.Text);
                 command.Parameters.AddWithValue("@course_no", courseNumber.Text);
                 command.Parameters.AddWithValue("@livelink", livelink.Text);
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", projectabstract.Text);
 #pragma warning disable 618
-                command.Parameters.Add("@preliminary_report", convertUploadedFile(preliminaryreport));
+                command.Parameters.Add("@preliminary_report", ConvertUploadedFile(preliminaryreport));
 #pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
 #pragma warning disable 618
-                command.Parameters.Add("@screencast", convertUploadedFile(screencasts));
+                command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
 #pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
@@ -116,7 +114,7 @@ namespace Thesis_project_Repository.StudentFiles
             }
         }
 
-        public byte[] convertUploadedFile(FileUpload file)
+        public byte[] ConvertUploadedFile(FileUpload file)
         {
             var lenght = file.PostedFile.ContentLength;
             var contenttype = file.PostedFile.ContentType;

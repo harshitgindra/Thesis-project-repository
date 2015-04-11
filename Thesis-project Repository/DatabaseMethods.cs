@@ -7,30 +7,21 @@ namespace Thesis_project_Repository
 {
     public class DatabaseMethods
     {
-        public Boolean LoginMethod(string username, string password)
-        {
-            var result = false;
-            const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                            + "Integrated Security=true";
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                                + "Integrated Security=true";
 
-            using (var connection = new SqlConnection(connectionString))
+        public void UpdateLogininfordmstr(string username, string randomstring)
+        {
+            const string query = "UPDATE LOGININFO SET RDM_STR = @randomString WHERE USERNAME = @userName;";
+            using (var connection = new SqlConnection(ConnectionString))
             {
-                var command1 = new SqlCommand("Getstudentname", connection);
-                command1.CommandType = CommandType.StoredProcedure;
-                command1.Parameters.Add(new SqlParameter("@username", username));
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userName", username);
+                command.Parameters.AddWithValue("@randomString", randomstring);
                 try
                 {
                     connection.Open();
-                    var rd = command1.ExecuteReader();
-                    while (rd.Read())
-                    {
-                        var dbusername = rd.GetString(0);
-                        var dbpassword = rd.GetString(1);
-                        if (username.Equals(dbusername) && password.Equals(dbpassword))
-                        {
-                            result = true;
-                        }
-                    }
+                    command.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -41,17 +32,12 @@ namespace Thesis_project_Repository
                     connection.Close();
                 }
             }
-            return result;
         }
 
         public int SignUp(UserModels userInfoModels)
         {
             var count = 0;
-
-
-            const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                            + "Integrated Security=true";
-            using (var connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(ConnectionString))
             {
                 try
                 {
@@ -134,7 +120,7 @@ namespace Thesis_project_Repository
                         var finalProjectProposalInsert = command7.ExecuteNonQuery();
 
                         count = loginInfoSignUpInsert + studentProfileSignUpInsert + thesisSubmissionInsert
-                            + preliminaryProjectSubmissionInsert + finalProjectProposalInsert;
+                                + preliminaryProjectSubmissionInsert + finalProjectProposalInsert;
                     }
                 }
                 catch (Exception ex)

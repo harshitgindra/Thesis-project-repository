@@ -70,7 +70,6 @@
     <Content Include="Default.aspx" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="ForgotPassword.aspx" />
-    <Content Include="LoginPage.aspx" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="Search.aspx" />
@@ -129,13 +128,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginDS.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModels.cs" />
     <Compile Include="ProfessorFiles\Professor.Master.cs">

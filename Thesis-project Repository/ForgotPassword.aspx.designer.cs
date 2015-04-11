@@ -7,75 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository {
     
     
     public partial class ForgotPassword {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlForm form1;
-        
-        /// <summary>
-        /// retrievepassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected MultiView retrievepassword;
-        
-        /// <summary>
-        /// forgotpwdview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected View forgotpwdview;
-        
-        /// <summary>
-        /// forgotEmailId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected TextBox forgotEmailId;
-        
-        /// <summary>
-        /// forgotpwdemail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected Button forgotpwdemail;
-        
-        /// <summary>
-        /// confirmationview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected View confirmationview;
-        
-        /// <summary>
-        /// confimationmsg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected Label confimationmsg;
     }
 }

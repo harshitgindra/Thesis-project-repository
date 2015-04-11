@@ -26,12 +26,12 @@ namespace Thesis_project_Repository
                     var reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                      //  var randomStringFromDatabase = reader.GetString(3);
-                       // if (randomStringFromDatabase.Equals(randomString))
-                        
-                            var query2 = "UPDATE LOGININFO SET RDM_STR = '' WHERE RDM_STR = '" + randomString + "';";
-                            var command2 = new SqlCommand(query2, connection);
-                        
+                        //  var randomStringFromDatabase = reader.GetString(3);
+                        // if (randomStringFromDatabase.Equals(randomString))
+
+                        var query2 = "UPDATE LOGININFO SET RDM_STR = '' WHERE RDM_STR = '" + randomString + "';";
+                        var command2 = new SqlCommand(query2, connection);
+
                         reader.Close();
                         try
                         {

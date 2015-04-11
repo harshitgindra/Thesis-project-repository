@@ -31,13 +31,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
-        /// View1 control.
+        /// loginPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected global::System.Web.UI.WebControls.View loginPage;
         
         /// <summary>
         /// loginUserName control.
@@ -103,13 +103,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.Label loginResult;
         
         /// <summary>
-        /// View2 control.
+        /// signUpPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.View signUpPage;
         
         /// <summary>
         /// fname control.
@@ -236,5 +236,41 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label SignUpReply;
+        
+        /// <summary>
+        /// forgotPasswordPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View forgotPasswordPage;
+        
+        /// <summary>
+        /// forgotEmailId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox forgotEmailId;
+        
+        /// <summary>
+        /// forgotpwdemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button forgotpwdemail;
+        
+        /// <summary>
+        /// confirationMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label confirationMessage;
     }
 }
