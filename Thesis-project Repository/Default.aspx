@@ -96,13 +96,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Email ID
-                        </td>
-                        <td>
-                            <asp:TextBox ID="signUpEmail" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
                         <td>Security Question</td>
                         <td>
                             <asp:TextBox runat="server" ID="secques"></asp:TextBox>
@@ -123,7 +116,23 @@
                     <tr>
                         <td>Provider</td>
                         <td>
-                            <asp:TextBox runat="server" ID="provider"></asp:TextBox>
+                            <asp:DropDownList ID="ntwrkprovider" runat="server">
+                                <asp:ListItem Selected="True">Select One</asp:ListItem>
+                                <asp:ListItem>boost mobile</asp:ListItem>
+                                <asp:ListItem>t-mobile</asp:ListItem>
+                                <asp:ListItem>virgin mobile</asp:ListItem>
+                                <asp:ListItem>cingular</asp:ListItem>
+                                <asp:ListItem>sprint nextel</asp:ListItem>
+                                <asp:ListItem>verizon</asp:ListItem>
+                                <asp:ListItem>nextel</asp:ListItem>
+                                <asp:ListItem>us cellular</asp:ListItem>
+                                <asp:ListItem>suncom</asp:ListItem>
+                                <asp:ListItem>powertel</asp:ListItem>
+                                <asp:ListItem>att cingular</asp:ListItem>
+                                <asp:ListItem>alltel</asp:ListItem>
+                                <asp:ListItem>metro pcs</asp:ListItem>
+                                <asp:ListItem></asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                     </tr>
 
@@ -132,9 +141,9 @@
                         </td>
                         <td>
                             <asp:RadioButtonList ID="accType" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Text="Student" Value="S" />
-                                <asp:ListItem Text="Professor" Value="P" />
-                                <asp:ListItem Text="Viewer" Value="V" />
+                                <asp:ListItem Text="Student" Value='S' />
+                                <asp:ListItem Text="Professor" Value='P' />
+                                <asp:ListItem Text="Viewer" Value='V' />
                             </asp:RadioButtonList>
                         </td>
                     </tr>
@@ -142,6 +151,11 @@
                         <td>
                             <asp:Button Text="Submit" ID="signUp" runat="server" OnClick="SignUp"></asp:Button>
                         </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <asp:Label ID="SignUpReply" runat="server" Text=""></asp:Label>
+                                 </td>
                     </tr>
                 </table>
             </asp:View>

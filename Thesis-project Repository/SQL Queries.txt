@@ -117,3 +117,100 @@ DATE_UPLOADED DATE
 );
 
 
+
+Create  PROCEDURE loginInfoSignUp
+(
+@username VARCHAR(15),              
+@password VARCHAR(20),
+@accttype CHAR(1),
+@rndmStr VARCHAR(30),
+@adminapproval VARCHAR(1),
+@secquestion VARCHAR(50),
+@secanswer VARCHAR(50)
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO LOGININFO (USERNAME, PASSWORD, ACCTYPE, RDM_STR, ADMIN_APPROVAL, SECQUES, SECANS) 
+VALUES ( @username, @password, @accttype, @rndmStr, @adminapproval, @secquestion, @secanswer)
+END
+
+Create  PROCEDURE facultyProfileSignUp
+(
+@username VARCHAR(15),              
+@firstname VARCHAR(20),  
+@lastname VARCHAR(20),
+@phonenumber VARCHAR(10),
+@carrier VARCHAR(15)
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO FACULTYPROFILE (USERNAME, FIRSTNAME, LASTNAME, PHONENUMBER, CARRIER) 
+VALUES ( @username, @firstname, @lastname, @phonenumber, @carrier)
+END
+
+Create  PROCEDURE studentProfileSignUp
+(
+@username VARCHAR(15),              
+@firstname VARCHAR(20),  
+@lastname VARCHAR(20),
+@phonenumber VARCHAR(10),
+@carrier VARCHAR(15)
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO STUDENTPROFILE (USERNAME, FIRSTNAME, LASTNAME, PHONENUMBER, CARRIER) 
+VALUES ( @username, @firstname, @lastname, @phonenumber, @carrier)
+END
+
+Create  PROCEDURE viewerProfileSignUp
+(
+@username VARCHAR(15),              
+@firstname VARCHAR(20),  
+@lastname VARCHAR(20),
+@phonenumber VARCHAR(10),
+@carrier VARCHAR(15)
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO VIEWERPROFILE (USERNAME, FIRSTNAME, LASTNAME, PHONENUMBER, CARRIER) 
+VALUES ( @username, @firstname, @lastname, @phonenumber, @carrier)
+END
+
+Create  PROCEDURE thesisSubmission
+(
+@username VARCHAR(15),              
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO THESIS_SUBMISSION (USERNAME)
+VALUES (@username)
+END
+
+Create  PROCEDURE preliminaryProjectSubmission
+(
+@username VARCHAR(15),              
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO PRELIMINARY_PROJECT_SUBMISSION (USERNAME)
+VALUES (@username)
+END
+
+Create  PROCEDURE finalProjectProposal
+(
+@username VARCHAR(15),              
+)
+AS
+BEGIN
+SET NOCOUNT ON 
+INSERT INTO FINAL_PROJECT_PROPOSAL (USERNAME)
+VALUES (@username)
+END
+
+

@@ -7,82 +7,97 @@ namespace Thesis_project_Repository.Modals
 {
     public class FacultyModels
     {
-        private string userName;
-        private string password;
-        private char accountType;
-        private string randomString;
-        private string adminApproval;
-        private string secQuestion;
-        private string secAnswer;
-        private string firstName;
-        private string lastName;
-        private string phoneNumber;
-        private string carrier;
+        private string _userName;
+        private string _password;
+        private char _accountType;
+        private string _randomString;
+        private string _adminApproval;
+        private string _secQuestion;
+        private string _secAnswer;
+        private string _firstName;
+        private string _lastName;
+        private string _phoneNumber;
+        private string _carrier;
+
+        public FacultyModels(string userName, string password, char accountType, string randomString, string adminApproval, string secQuestion, string secAnswer, string firstName, string lastName, string phoneNumber, string carrier)
+        {
+            _userName = userName;
+            _password = password;
+            _accountType = accountType;
+            _randomString = randomString;
+            _adminApproval = adminApproval;
+            _secQuestion = secQuestion;
+            _secAnswer = secAnswer;
+            _firstName = firstName;
+            _lastName = lastName;
+            _phoneNumber = phoneNumber;
+            _carrier = carrier;
+        }
 
         public string UserName
         {
-            get { return userName; }
-            set { userName = value; }
+            get { return _userName; }
+            set { _userName = value; }
         }
 
         public string Password
         {
-            get { return password; }
-            set { password = value; }
+            get { return _password; }
+            set { _password = value; }
         }
 
         public char AccountType
         {
-            get { return accountType; }
-            set { accountType = value; }
+            get { return _accountType; }
+            set { _accountType = value; }
         }
 
         public string RandomString
         {
-            get { return randomString; }
-            set { randomString = value; }
+            get { return _randomString; }
+            set { _randomString = value; }
         }
 
         public string AdminApproval
         {
-            get { return adminApproval; }
-            set { adminApproval = value; }
+            get { return _adminApproval; }
+            set { _adminApproval = value; }
         }
 
         public string SecQuestion
         {
-            get { return secQuestion; }
-            set { secQuestion = value; }
+            get { return _secQuestion; }
+            set { _secQuestion = value; }
         }
 
         public string SecAnswer
         {
-            get { return secAnswer; }
-            set { secAnswer = value; }
+            get { return _secAnswer; }
+            set { _secAnswer = value; }
         }
 
         public string FirstName
         {
-            get { return firstName; }
-            set { firstName = value; }
+            get { return _firstName; }
+            set { _firstName = value; }
         }
 
         public string LastName
         {
-            get { return lastName; }
-            set { lastName = value; }
+            get { return _lastName; }
+            set { _lastName = value; }
         }
-      
+
         public string PhoneNumber
         {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
+            get { return _phoneNumber; }
+            set { _phoneNumber = value; }
         }
-        
+
         public string Carrier
         {
-            get { return carrier; }
-            set { carrier = value; }
+            get { return _carrier; }
+            set { _carrier = value; }
         }
     }
 }

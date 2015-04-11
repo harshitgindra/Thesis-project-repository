@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.IO;
 using System.Net.Mail;
 using System.Web.UI;
@@ -9,6 +10,7 @@ namespace Thesis_project_Repository
 {
     public partial class Default : Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
         }
@@ -20,65 +22,43 @@ namespace Thesis_project_Repository
 
         protected void SignUp(object sender, EventArgs e)
         {
-            FacultyModels _facultyModels = new FacultyModels();
-            strinf UserName = signUpUsername.Text;
-
-            DatabaseMethods databaseMethods = new DatabaseMethods();
-
-            //Generating random string for email verification
             var randomString = Path.GetRandomFileName();
             randomString = randomString.Replace(".", "");
+            string username = signUpUsername.Text;
+            string password = signUpPassword.Text;
+            char accountType = Convert.ToChar(accType.SelectedValue);
+            string adminApproval = "N";
+            string secQuestion = secques.Text;
+            string secAnswer = secans.Text;
+            string firstName = fname.Text;
+            string lastName = lname.Text;
+            string phnNumber = phoneNumber.Text;
+            string carrier = ntwrkprovider.SelectedValue;
+
+            FacultyModels _facultyLogininfoModels = new FacultyModels(username, password, accountType, randomString, adminApproval, secQuestion, secAnswer, firstName, lastName, phnNumber, carrier);
+          
+            DatabaseMethods databaseMethods = new DatabaseMethods();
+           var result = databaseMethods.SignUp(_facultyLogininfoModels);
+
+            if (result == 2)
+            {
+                if (sendEmail(username, "Welcome", emailBody(randomString)))
+                {
+                    Response.Write("Mail Successfully Sent. Please Check your inbox.");
+                }
+                else
+                {
+                    Response.Write("Something went wrong. Retry");
+                }
+            }
+            else
+            {
+                SignUpReply.Text = "Something went wrong while signing you up!!";
+            }
 
             //This method is not parametrized. We need to chage it to paramaterized.
 
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
-            //Query for login table
-            var queryString1 = "INSERT INTO LOGININFO (USERNAME, PASSWORD, ACCTYPE, RDM_STR, ADMIN_APPROVAL) VALUES ( '"
-                               + signUpUsername.Text + "','"
-                               + signUpPassword.Text + "','"
-                               + accType.Text + "','"
-                               + randomString + "','N');";
-            //query for userinfo table
-            var queryString2 = "Insert into USERINFO(FIRSTNAME, LASTNAME, username, emailid, SECQUES, SECANS)  values ('"
-                               + fname.Text + "','"
-                               + lname.Text + "','"
-                               + signUpUsername.Text + "','"
-                               + signUpEmail.Text + "','"
-                               + secques.Text + "','"
-                               + secans.Text + "');";
 
-            using (var connection = new SqlConnection(connectionString))
-            {
-                var command1 = new SqlCommand(queryString1, connection);
-                var command2 = new SqlCommand(queryString2, connection);
-                try
-                {
-                    connection.Open();
-                    var check = command1.ExecuteNonQuery() + command2.ExecuteNonQuery();
-                    if (check == 2)
-                    {
-                        if (sendEmail(signUpEmail.Text, "Welcome", emailBody(randomString)))
-                        {
-                            Response.Write("Mail Successfully Sent. Please Check your inbox.");
-                        }
-                        else
-                        {
-                            Response.Write("Something went wrong. Retry");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //in case of duplicate user id
-                    usernameerror.Text = "Duplicate user id, Please retry";
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
         }
 
         protected string emailBody(string rdmString)
@@ -205,6 +185,6 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 1;
         }
 
-       
+
     }
 }

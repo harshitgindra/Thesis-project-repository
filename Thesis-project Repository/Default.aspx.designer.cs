@@ -166,15 +166,6 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.TextBox signUpPassword2;
         
         /// <summary>
-        /// signUpEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signUpEmail;
-        
-        /// <summary>
         /// secques control.
         /// </summary>
         /// <remarks>
@@ -202,13 +193,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.TextBox phoneNumber;
         
         /// <summary>
-        /// provider control.
+        /// ntwrkprovider control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox provider;
+        protected global::System.Web.UI.WebControls.DropDownList ntwrkprovider;
         
         /// <summary>
         /// accType control.
@@ -227,5 +218,14 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button signUp;
+        
+        /// <summary>
+        /// SignUpReply control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SignUpReply;
     }
 }
