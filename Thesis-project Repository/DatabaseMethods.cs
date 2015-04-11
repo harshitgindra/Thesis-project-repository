@@ -44,7 +44,7 @@ namespace Thesis_project_Repository
             return result;
         }
 
-        public int SignUp(FacultyModels _facultyLogininfoModels)
+        public int SignUp(UserModels userInfoModels)
         {
             var count = 0;
 
@@ -57,76 +57,76 @@ namespace Thesis_project_Repository
                 {
                     connection.Open();
 
-                    var command1 = new SqlCommand("loginInfoSignUp", connection);
-                    command1.CommandType = CommandType.StoredProcedure;
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Password));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.AccountType));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.RandomString));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.AdminApproval));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.SecQuestion));
-                    command1.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.SecAnswer));
+                    var command1 = new SqlCommand("loginInfoSignUp", connection)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
+                    command1.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
+                    command1.Parameters.Add(new SqlParameter("@password", userInfoModels.Password));
+                    command1.Parameters.Add(new SqlParameter("@accttype", userInfoModels.AccountType));
+                    command1.Parameters.Add(new SqlParameter("@rndmStr", userInfoModels.RandomString));
+                    command1.Parameters.Add(new SqlParameter("@adminapproval", userInfoModels.AdminApproval));
+                    command1.Parameters.Add(new SqlParameter("@secquestion", userInfoModels.SecQuestion));
+                    command1.Parameters.Add(new SqlParameter("@secanswer", userInfoModels.SecAnswer));
                     var loginInfoSignUpInsert = command1.ExecuteNonQuery();
 
-                    if (_facultyLogininfoModels.AccountType.Equals('P'))
+                    if (userInfoModels.AccountType.Equals('P'))
                     {
-                        var command2 = new SqlCommand("facultyProfileSignUp", connection);
-                        command2.CommandType = CommandType.StoredProcedure;
-                        command2.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command2.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command2.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command2.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command2.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
+                        var command2 = new SqlCommand("facultyProfileSignUp", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command2.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
+                        command2.Parameters.Add(new SqlParameter("@firstname", userInfoModels.FirstName));
+                        command2.Parameters.Add(new SqlParameter("@lastname", userInfoModels.LastName));
+                        command2.Parameters.Add(new SqlParameter("@phonenumber", userInfoModels.PhoneNumber));
+                        command2.Parameters.Add(new SqlParameter("@carrier", userInfoModels.Carrier));
                         var facultyProfileSignUpInsert = command2.ExecuteNonQuery();
                         count = loginInfoSignUpInsert + facultyProfileSignUpInsert;
                     }
-                    else if (_facultyLogininfoModels.AccountType.Equals('V'))
+                    else if (userInfoModels.AccountType.Equals('V'))
                     {
-                        var command3 = new SqlCommand("viewerProfileSignUp", connection);
-                        command3.CommandType = CommandType.StoredProcedure;
-                        command3.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command3.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command3.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command3.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command3.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
+                        var command3 = new SqlCommand("viewerProfileSignUp", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command3.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
+                        command3.Parameters.Add(new SqlParameter("@firstname", userInfoModels.FirstName));
+                        command3.Parameters.Add(new SqlParameter("@lastname", userInfoModels.LastName));
+                        command3.Parameters.Add(new SqlParameter("@phonenumber", userInfoModels.PhoneNumber));
+                        command3.Parameters.Add(new SqlParameter("@carrier", userInfoModels.Carrier));
                         var viewerProfileSignUpInsert = command3.ExecuteNonQuery();
                         count = loginInfoSignUpInsert + viewerProfileSignUpInsert;
                     }
                     else
                     {
-                        var command4 = new SqlCommand("studentProfileSignUp", connection);
-                        command4.CommandType = CommandType.StoredProcedure;
-                        command4.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command4.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command4.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command4.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command4.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
+                        var command4 = new SqlCommand("studentProfileSignUp", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command4.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
+                        command4.Parameters.Add(new SqlParameter("@firstname", userInfoModels.FirstName));
+                        command4.Parameters.Add(new SqlParameter("@lastname", userInfoModels.LastName));
+                        command4.Parameters.Add(new SqlParameter("@phonenumber", userInfoModels.PhoneNumber));
+                        command4.Parameters.Add(new SqlParameter("@carrier", userInfoModels.Carrier));
 
-                        var command5 = new SqlCommand("thesisSubmission", connection);
-                        command5.CommandType = CommandType.StoredProcedure;
-                        command5.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command5.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command5.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command5.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command5.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
+                        var command5 = new SqlCommand("thesisSubmission", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command5.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
 
-                        var command6 = new SqlCommand("preliminaryProjectSubmission", connection);
-                        command6.CommandType = CommandType.StoredProcedure;
-                        command6.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command6.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command6.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command6.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command6.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
+                        var command6 = new SqlCommand("preliminaryProjectSubmission", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command6.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
 
-                        var command7 = new SqlCommand("finalProjectProposal", connection);
-                        command7.CommandType = CommandType.StoredProcedure;
-                        command7.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.UserName));
-                        command7.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.FirstName));
-                        command7.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.LastName));
-                        command7.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.PhoneNumber));
-                        command7.Parameters.Add(new SqlParameter("@username", _facultyLogininfoModels.Carrier));
-
-
+                        var command7 = new SqlCommand("finalProjectProposal", connection)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        command7.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
 
                         var studentProfileSignUpInsert = command4.ExecuteNonQuery();
                         var thesisSubmissionInsert = command5.ExecuteNonQuery();

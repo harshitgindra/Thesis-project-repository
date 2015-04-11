@@ -20,63 +20,7 @@ namespace Thesis_project_Repository
         {
         }
 
-        protected void SignUp(object sender, EventArgs e)
-        {
-            var randomString = Path.GetRandomFileName();
-            randomString = randomString.Replace(".", "");
-            string username = signUpUsername.Text;
-            string password = signUpPassword.Text;
-            char accountType = Convert.ToChar(accType.SelectedValue);
-            string adminApproval = "N";
-            string secQuestion = secques.Text;
-            string secAnswer = secans.Text;
-            string firstName = fname.Text;
-            string lastName = lname.Text;
-            string phnNumber = phoneNumber.Text;
-            string carrier = ntwrkprovider.SelectedValue;
-
-            FacultyModels _facultyLogininfoModels = new FacultyModels(username, password, accountType, randomString, adminApproval, secQuestion, secAnswer, firstName, lastName, phnNumber, carrier);
-          
-            DatabaseMethods databaseMethods = new DatabaseMethods();
-           var result = databaseMethods.SignUp(_facultyLogininfoModels);
-
-            if (result == 2)
-            {
-                if (sendEmail(username, "Welcome", emailBody(randomString)))
-                {
-                    Response.Write("Mail Successfully Sent. Please Check your inbox.");
-                }
-                else
-                {
-                    Response.Write("Something went wrong. Retry");
-                }
-            }
-            else
-            {
-                SignUpReply.Text = "Something went wrong while signing you up!!";
-            }
-
-            //This method is not parametrized. We need to chage it to paramaterized.
-
-
-        }
-
-        protected string emailBody(string rdmString)
-        {
-            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
-                          +
-                          " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-                          + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString +
-                          "' >Click Here</a>"
-                          + "<h3>Thank you</h3>";
-            return message;
-        }
-
-        protected void forgotpassword_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ForgotPassword.aspx");
-        }
-
+        //need to change the method name.
         protected void loginButton_Click(object sender, EventArgs e)
         {
             var acctype = "";
@@ -147,12 +91,51 @@ namespace Thesis_project_Repository
             }
         }
 
-        protected Boolean sendEmail(string receiver, string subject, string message)
+        protected void SignUp(object sender, EventArgs e)
+        {
+            var randomString = Path.GetRandomFileName();
+            randomString = randomString.Replace(".", "");
+            string username = signUpUsername.Text;
+            string password = signUpPassword.Text;
+            char accountType = Convert.ToChar(accType.SelectedValue);
+            string adminApproval = "N";
+            string secQuestion = secques.Text;
+            string secAnswer = secans.Text;
+            string firstName = fname.Text;
+            string lastName = lname.Text;
+            string phnNumber = phoneNumber.Text;
+            string carrier = ntwrkprovider.SelectedValue;
+
+            UserModels userinfoModels = new UserModels(username, password, accountType, randomString, adminApproval, secQuestion, secAnswer, firstName, lastName, phnNumber, carrier);
+
+            DatabaseMethods databaseMethods = new DatabaseMethods();
+            var result = databaseMethods.SignUp(userinfoModels);
+
+            if (result == 2 || result == 5)
+            {
+                SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString)) ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox." : "Something went wrong. Retry";
+            }
+            else
+            {
+                SignUpReply.Text = "Something went wrong while signing you up!!";
+            }
+        }
+
+        protected string EmailBody(string rdmString)
+        {
+            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+                          +
+                          " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
+                          + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString +
+                          "' >Click Here</a>"
+                          + "<h3>Thank you</h3>";
+            return message;
+        }
+        protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
             //                    MailAddress messageTo = new MailAddress(to.Text);
-            var emailMessage = new MailMessage();
-            emailMessage.From = messageFrom;
+            var emailMessage = new MailMessage {From = messageFrom};
 
             var messageTo = new MailAddress(receiver);
             emailMessage.To.Add(messageTo.Address);
@@ -185,6 +168,11 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 1;
         }
 
+        //need to change the name of the method
+        protected void forgotpassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ForgotPassword.aspx");
+        }
 
     }
 }

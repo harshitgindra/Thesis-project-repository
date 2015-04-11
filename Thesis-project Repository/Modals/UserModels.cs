@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Thesis_project_Repository.Modals
 {
-    public class FacultyModels
+    public class UserModels
     {
         private string _userName;
         private string _password;
@@ -19,7 +19,7 @@ namespace Thesis_project_Repository.Modals
         private string _phoneNumber;
         private string _carrier;
 
-        public FacultyModels(string userName, string password, char accountType, string randomString, string adminApproval, string secQuestion, string secAnswer, string firstName, string lastName, string phoneNumber, string carrier)
+        public UserModels(string userName, string password, char accountType, string randomString, string adminApproval, string secQuestion, string secAnswer, string firstName, string lastName, string phoneNumber, string carrier)
         {
             _userName = userName;
             _password = password;
