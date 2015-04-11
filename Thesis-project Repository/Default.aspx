@@ -32,12 +32,10 @@
                         </td>
                         <td>
                             <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Login" />
-                        </td>
-                        <tr>
-                            <td>
+                      
                                 <asp:LinkButton ID="Button2" runat="server" OnClick="ForgotPassword" Text="Forgot Password" />
                             </td>
-                        </tr>
+                        
                         <tr>
                             <td>
                                 <asp:LinkButton ID="Button3" runat="server" OnClick="SignUpLink" Text="SignUp" />
@@ -48,7 +46,7 @@
                                 <asp:Label runat="server" ID="loginResult"></asp:Label>
                             </td>
                         </tr>
-                    </tr>
+                    
                 </table>
             </asp:View>
 
@@ -152,6 +150,11 @@
                             <asp:Button Text="Submit" ID="signUp" runat="server" OnClick="SignUp"></asp:Button>
                         </td>
                     </tr>
+                     <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LoginLink" Text="Log In" />
+                            </td>
+                        </tr>
                      <tr>
                         <td>
                             <asp:Label ID="SignUpReply" runat="server" Text=""></asp:Label>

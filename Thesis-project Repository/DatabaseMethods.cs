@@ -57,7 +57,7 @@ namespace Thesis_project_Repository
                 {
                     connection.Open();
 
-                    var command1 = new SqlCommand("loginInfoSignUp", connection)
+                    var command1 = new SqlCommand("spLoginInfoSignUp", connection)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
@@ -72,7 +72,7 @@ namespace Thesis_project_Repository
 
                     if (userInfoModels.AccountType.Equals('P'))
                     {
-                        var command2 = new SqlCommand("facultyProfileSignUp", connection)
+                        var command2 = new SqlCommand("spFacultyProfileSignUp", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
@@ -86,7 +86,7 @@ namespace Thesis_project_Repository
                     }
                     else if (userInfoModels.AccountType.Equals('V'))
                     {
-                        var command3 = new SqlCommand("viewerProfileSignUp", connection)
+                        var command3 = new SqlCommand("spViewerProfileSignUp", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
@@ -100,7 +100,7 @@ namespace Thesis_project_Repository
                     }
                     else
                     {
-                        var command4 = new SqlCommand("studentProfileSignUp", connection)
+                        var command4 = new SqlCommand("spStudentProfileSignUp", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
@@ -110,19 +110,19 @@ namespace Thesis_project_Repository
                         command4.Parameters.Add(new SqlParameter("@phonenumber", userInfoModels.PhoneNumber));
                         command4.Parameters.Add(new SqlParameter("@carrier", userInfoModels.Carrier));
 
-                        var command5 = new SqlCommand("thesisSubmission", connection)
+                        var command5 = new SqlCommand("spThesisSubmission", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
                         command5.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
 
-                        var command6 = new SqlCommand("preliminaryProjectSubmission", connection)
+                        var command6 = new SqlCommand("spPreliminaryProjectSubmission", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
                         command6.Parameters.Add(new SqlParameter("@username", userInfoModels.UserName));
 
-                        var command7 = new SqlCommand("finalProjectProposal", connection)
+                        var command7 = new SqlCommand("spFinalProjectProposal", connection)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
@@ -131,7 +131,7 @@ namespace Thesis_project_Repository
                         var studentProfileSignUpInsert = command4.ExecuteNonQuery();
                         var thesisSubmissionInsert = command5.ExecuteNonQuery();
                         var preliminaryProjectSubmissionInsert = command6.ExecuteNonQuery();
-                        var finalProjectProposalInsert = command6.ExecuteNonQuery();
+                        var finalProjectProposalInsert = command7.ExecuteNonQuery();
 
                         count = loginInfoSignUpInsert + studentProfileSignUpInsert + thesisSubmissionInsert
                             + preliminaryProjectSubmissionInsert + finalProjectProposalInsert;

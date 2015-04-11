@@ -21,8 +21,7 @@ namespace Thesis_project_Repository
         {
         }
 
-        //need to change the method name.
-        protected void loginButton_Click(object sender, EventArgs e)
+        protected void Login(object sender, EventArgs e)
         {
             var acctype = "";
 
@@ -169,10 +168,14 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 1;
         }
 
-        //need to change the name of the method
-        protected void forgotpassword_Click(object sender, EventArgs e)
+        protected void ForgotPassword(object sender, EventArgs e)
         {
             Response.Redirect("ForgotPassword.aspx");
+        }
+
+        protected void LoginLink(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 0;
         }
 
     }
