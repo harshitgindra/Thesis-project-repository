@@ -76,13 +76,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.TextBox CnfrmPassword;
         
         /// <summary>
-        /// UpdatePassword control.
+        /// UpdatePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdatePassword;
+        protected global::System.Web.UI.WebControls.Button UpdatePass;
         
         /// <summary>
         /// View3 control.
@@ -103,12 +103,12 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.Label result;
         
         /// <summary>
-        /// loginPage control.
+        /// LoginPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton loginPage;
+        protected global::System.Web.UI.WebControls.LinkButton LoginPage;
     }
 }

@@ -6,7 +6,9 @@ namespace Thesis_project_Repository
 {
     public partial class VerificationLink : Page
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
+        private const string ConnectionString =
+            "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //Getting the random string from the database.
@@ -27,7 +29,9 @@ namespace Thesis_project_Repository
                         command.Parameters.AddWithValue("@randomString", randomString);
                         try
                         {
-                            verificationstatus.Text = command2.ExecuteNonQuery() == 1 ? "Congratulations!! Your email has been verified successfully." : "Something went wrong. Please contact admin";
+                            verificationstatus.Text = command2.ExecuteNonQuery() == 1
+                                ? "Congratulations!! Your email has been verified successfully."
+                                : "Something went wrong. Please contact admin";
                         }
                         catch (Exception ex)
                         {

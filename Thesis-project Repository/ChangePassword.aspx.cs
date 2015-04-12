@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository
 {
-    public partial class ChangePassword : System.Web.UI.Page
+    public partial class ChangePassword : Page
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
-       
+        private const string ConnectionString =
+            "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,7 +25,7 @@ namespace Thesis_project_Repository
                         var reader = command.ExecuteReader();
                         if (reader.Read())
                         {
-                          string  _usernameDb = reader.GetString(0);
+                            var _usernameDb = reader.GetString(0);
                             Session["username"] = _usernameDb;
                         }
                         else
@@ -43,7 +40,9 @@ namespace Thesis_project_Repository
                             const string query1 = "UPDATE LOGININFO SET RDM_STR = '' WHERE rdm_str = @rdmString;";
                             var command2 = new SqlCommand(query1, connection);
                             command2.Parameters.AddWithValue("@rdmString", randomString);
-                            TestMessage.Text = command2.ExecuteNonQuery() == 1 ? "Congratulations!! Your email has been verified successfully." : "Something went wrong. Please contact admin";
+                            TestMessage.Text = command2.ExecuteNonQuery() == 1
+                                ? "Congratulations!! Your email has been verified successfully."
+                                : "Something went wrong. Please contact admin";
                             MultiView1.ActiveViewIndex = 1;
                         }
                         catch (Exception ex)
@@ -62,8 +61,8 @@ namespace Thesis_project_Repository
 
         protected void UpdatePassword(object sender, EventArgs e)
         {
-            string newPassword = NewPassword.Text;
-          string  name = Session["username"].ToString();
+            var newPassword = NewPassword.Text;
+            var name = Session["username"].ToString();
             using (var connection = new SqlConnection(ConnectionString))
             {
                 try
@@ -77,7 +76,6 @@ namespace Thesis_project_Repository
                     result.Text =
                         "Your password has been changed successfully. Please click on the login button to login to your account.";
                     MultiView1.ActiveViewIndex = 2;
-
                 }
                 catch (Exception ex)
                 {
