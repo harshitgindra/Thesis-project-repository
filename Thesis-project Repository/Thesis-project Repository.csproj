@@ -59,7 +59,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AdminApproveAccount.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="css\forms.css" />
     <Content Include="css\gallery.css" />
@@ -85,7 +84,6 @@
     <Content Include="Completed Use Cases.txt" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Admin\AdminApprovalList.aspx" />
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -95,13 +93,6 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AdminApproveAccount.aspx.cs">
-      <DependentUpon>AdminApproveAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminApproveAccount.aspx.designer.cs">
-      <DependentUpon>AdminApproveAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -195,13 +186,6 @@
     </Compile>
     <Compile Include="VerificationLink.aspx.designer.cs">
       <DependentUpon>VerificationLink.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AdminApprovalList.aspx.cs">
-      <DependentUpon>AdminApprovalList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminApprovalList.aspx.designer.cs">
-      <DependentUpon>AdminApprovalList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>

@@ -7,14 +7,11 @@ namespace Thesis_project_Repository.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"].Equals(null))
+            if (Session["username"] == null)
             {
                 Response.Redirect("../Default.aspx");
             }
-            else
-            {
-                MultiView1.ActiveViewIndex = 0;
-            }
+          
         }
 
         protected void Logout(object sender, EventArgs e)
@@ -25,14 +22,13 @@ namespace Thesis_project_Repository.Admin
 
         protected void UserApproval(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                MultiView1.ActiveViewIndex = 0;
-                approvalwaitinglist.Visible = true;
-                DetailedInfoApprovalAccount.Visible = true;
-                approvalList.SelectCommand =
-                    "SELECT [username], [password] FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'";
-            }
+
+            MultiView1.ActiveViewIndex = 1;
+            approvalwaitinglist.Visible = true;
+            DetailedInfoApprovalAccount.Visible = true;
+            approvalList.SelectCommand =
+                "SELECT [username] FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'";
+
         }
     }
 }

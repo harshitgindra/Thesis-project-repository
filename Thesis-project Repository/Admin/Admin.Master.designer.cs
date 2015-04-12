@@ -67,15 +67,6 @@ namespace Thesis_project_Repository.Admin {
         protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
-        /// View3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View3;
-        
-        /// <summary>
         /// View1 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace Thesis_project_Repository.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View View1;
+        
+        /// <summary>
+        /// View2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View View2;
         
         /// <summary>
         /// approvalList control.

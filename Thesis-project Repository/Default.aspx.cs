@@ -44,7 +44,7 @@ namespace Thesis_project_Repository
                             //checking for admin approval
                             else if (reader.GetString(4).Equals("N"))
                             {
-                                loginResult.Text = "Admin has not approved your account.";
+                                loginResult.Text = "Admin has not approved your account yet. Please try after sometime. Sorry for the inconvinience.";
                             }
                             //satisfied email and admin approval
                             //now redirect to appropriate page
