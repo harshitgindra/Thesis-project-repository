@@ -22,13 +22,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// MultiView2 control.
+        /// MultiView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView2;
+        protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
         /// View1 control.
@@ -85,13 +85,13 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.Button UpdatePassword;
         
         /// <summary>
-        /// loginPage control.
+        /// View3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton loginPage;
+        protected global::System.Web.UI.WebControls.View View3;
         
         /// <summary>
         /// result control.
@@ -101,5 +101,14 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label result;
+        
+        /// <summary>
+        /// loginPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton loginPage;
     }
 }

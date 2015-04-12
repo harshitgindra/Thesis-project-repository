@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:MultiView ID="MultiView2" runat="server" ActiveViewIndex="0">
+        <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
             <asp:View ID="View1" runat="server">
                 <asp:Label ID="TestMessage" runat="server"></asp:Label>
             </asp:View>
@@ -30,26 +30,26 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="UpdatePassword" runat="server" Text="Button" OnClick="UpdatePassword_Click" />
+                            <asp:Button ID="UpdatePassword" runat="server" Text="Change Password" OnClick="UpdatePassword" />
                         </td>
-                    </tr>
-                     <tr>
-                        <td>
-                            <asp:LinkButton ID="loginPage" runat="server" OnClick="loginPage_Click">SignIn</asp:LinkButton>
-                                 </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="result" runat="server" Text=""></asp:Label>
-                                 </td>
                     </tr>
                 </table>
             </asp:View>
-
+            <asp:View ID="View3" runat="server">
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="result" runat="server" Text=""></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="loginPage" runat="server" OnClick="loginPage">SignIn</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </asp:View>
         </asp:MultiView>
-
-        <div>
-        </div>
     </form>
 </body>
 </html>

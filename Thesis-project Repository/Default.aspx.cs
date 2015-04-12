@@ -194,7 +194,7 @@ namespace Thesis_project_Repository
                     var reader = command0.ExecuteReader();
                     if (reader.Read())
                     {
-                        var usernameDb = reader.GetString(2);
+                        var usernameDb = reader.GetString(0);
                         var randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         _databaseMethods.UpdateLogininfordmstr(usernameDb, randomString);

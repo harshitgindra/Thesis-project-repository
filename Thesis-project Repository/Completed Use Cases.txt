@@ -4,4 +4,13 @@
 4. Verification Link {done}
 5. Forgot Password {done}
 6. Admin Approval {Needs to be changed}
-7. 
+7. Update Profile => This will allow the user to upload the documents also.
+8. Search
+9. View details of the user. => linked to the user search as when the user search there will be an option to
+see the details or profile of the selected student.
+10. Dashboard that is accessible to admin only.
+11. Check approval status
+12. Export Thesis/Project (to XML/JSON format)
+13. Highlight/Showcase Thesis/Project 
+14. Subscribe
+15. Unsubscribe
