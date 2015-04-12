@@ -1,47 +1,76 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Thesis_project_Repository.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Thesis_project_Repository.Admin.Admin" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../css/layout.css" rel="stylesheet"/>
+    <%-- <link href="../css/layout.css" rel="stylesheet"/>--%>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body id="top">
-<form id="form1" runat="server">
-    <div class="wrapper col2">
-        <div id="header" class="clear">
-            <div class="fl_left">
-                <h1>
-                    <a href="AdminHomePage.aspx">Need of a logo here</a>
-                </h1>
-            </div>
-            <div id="topnav">
-                <ul>
-                    <li>
-                        <asp:LinkButton ID="Logsout" OnClick="logout_Click" runat="server">Log out</asp:LinkButton>
-                    </li>
-                    <li>
-                        <a href="AdminApprovalList.aspx">Approval List</a>
-                    </li>
-                    <li class="active">
-                        <a href="AdminHomePage.aspx">Home</a>
-                    </li>
-                </ul>
+    <form id="form1" runat="server">
+        <div class="wrapper col2">
+            <div id="header" class="clear">
+                <div class="fl_left">
+                    <h1>
+                        <a href="AdminHomePage.aspx">Need of a logo here</a>
+                    </h1>
+                </div>
+                <div id="topnav">
+                    <ul>
+                        <li class="active">
+                            <a href="AdminHomePage.aspx">Home</a>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="approval" OnClick="UserApproval" runat="server">Approve User</asp:LinkButton>
+
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
+                <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
+                    <asp:View ID="View3" runat="server">
+                        Please select from the above tabs.
+                    </asp:View>
+                    <asp:View ID="View1" runat="server">
+                        <h2>View 1</h2>
+                        <asp:SqlDataSource ID="approvalList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT [username], [password] FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'"></asp:SqlDataSource>
 
-
-    <div>
-
-
-        <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-</form>
+                        <asp:GridView ID="approvalwaitinglist" runat="server" AutoGenerateColumns="False" DataSourceID="approvalList" DataKeyNames="username">
+                            <Columns>
+                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                                <asp:HyperLinkField DataNavigateUrlFields="username" DataNavigateUrlFormatString="AdminApproveAccount.aspx?username={0}" Text="Approve Account" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="DetailedInfoList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM [userinfo] WHERE ([username] = @username)">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="approvalwaitinglist" Name="username" PropertyName="SelectedValue" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <asp:DetailsView ID="DetailedInfoApprovalAccount" runat="server" AutoGenerateRows="False" DataSourceID="DetailedInfoList" Height="50px" Width="125px">
+                            <Fields>
+                                <asp:BoundField DataField="firstname" HeaderText="firstname" SortExpression="firstname" />
+                                <asp:BoundField DataField="lastname" HeaderText="lastname" SortExpression="lastname" />
+                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                            </Fields>
+                        </asp:DetailsView>
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                    </asp:View>
+                </asp:MultiView>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ExtraContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
 </body>
 </html>

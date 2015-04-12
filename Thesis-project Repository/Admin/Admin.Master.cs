@@ -1,18 +1,38 @@
 ﻿using System;
 using System.Web.UI;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.Admin
 {
     public partial class Admin : MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"].Equals(null))
+            {
+                Response.Redirect("../Default.aspx");
+            }
+            else
+            {
+                MultiView1.ActiveViewIndex = 0;
+            }
         }
 
-        protected void logout_Click(object sender, EventArgs e)
+        protected void Logout(object sender, EventArgs e)
         {
             Session["username"] = null;
             Response.Redirect("../Default.aspx", false);
+        }
+
+        protected void UserApproval(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                MultiView1.ActiveViewIndex = 0;
+                approvalwaitinglist.Visible = true;
+                DetailedInfoApprovalAccount.Visible = true;
+                approvalList.SelectCommand =
+                    "SELECT [username], [password] FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'";
+            }
         }
     }
 }

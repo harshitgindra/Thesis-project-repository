@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Thesis_project_Repository {
+namespace Thesis_project_Repository.Admin {
     
     
     public partial class WebForm2 {

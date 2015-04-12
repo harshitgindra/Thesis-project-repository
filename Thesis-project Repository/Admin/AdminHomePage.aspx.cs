@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Web.UI;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.Admin
 {
     public partial class WebForm2 : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Check whether session is working or not. As session checking method is imlemented in masterpage.
         }
 
-        protected void CheckListforApproval_Click(object sender, EventArgs e)
+        protected void CheckListforApproval(object sender, EventArgs e)
         {
             Response.Redirect("AdminApprovalList.aspx", false);
         }
