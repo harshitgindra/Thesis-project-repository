@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminUserApproval.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="css\forms.css" />
     <Content Include="css\gallery.css" />
@@ -93,6 +94,13 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminUserApproval.aspx.cs">
+      <DependentUpon>AdminUserApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminUserApproval.aspx.designer.cs">
+      <DependentUpon>AdminUserApproval.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
