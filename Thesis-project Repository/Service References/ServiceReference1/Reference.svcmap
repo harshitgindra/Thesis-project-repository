@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6dd0530-f045-4ccb-ada4-54960c2e457f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6c82fe5f-110b-417e-94ca-3c6922d42836" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://gfish.it.ilstu.edu:8080/ISUTextSMS/ISUSMS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ISUSMS.xsd" MetadataType="Schema" ID="85a653a8-355f-4e29-b9ed-55c60499b444" SourceId="1" SourceUrl="http://gfish.it.ilstu.edu:8080/ISUTextSMS/ISUSMS?xsd=1" />
-    <MetadataFile FileName="ISUSMS.wsdl" MetadataType="Wsdl" ID="91abdfeb-be05-441b-9602-08697c9378d1" SourceId="1" SourceUrl="http://gfish.it.ilstu.edu:8080/ISUTextSMS/ISUSMS?wsdl" />
+    <MetadataFile FileName="ISUSMS.xsd" MetadataType="Schema" ID="b9d5315d-d16e-4379-8ffe-ca487ef16e80" SourceId="1" SourceUrl="http://gfish.it.ilstu.edu:8080/ISUTextSMS/ISUSMS?xsd=1" />
+    <MetadataFile FileName="ISUSMS.wsdl" MetadataType="Wsdl" ID="27249e34-ae46-4c59-a03f-85fedbb7e5d8" SourceId="1" SourceUrl="http://gfish.it.ilstu.edu:8080/ISUTextSMS/ISUSMS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -4,13 +4,17 @@
 4. Verification Link {done}
 5. Forgot Password {done}
 6. Admin Approval {done}
-7. Update Profile => This will allow the user to upload the documents also.
-8. Search {Kaveh}
-9. View details of the user. => linked to the user search as when the user search there will be an option to
-see the details or profile of the selected student.
-10. Dashboard that is accessible to admin only.
-11. Check approval status {done}
-12. Export Thesis/Project (to XML/JSON format) {Harshit}
+7. Check approval status {done}
+8. Unsubscribe {done} 
+
+10. Subscribe {Amitesh}
+12. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
 13. Highlight/Showcase Thesis/Project 
-14. Subscribe {kaveh}
-15. Unsubscribe {kaveh}
+14. Update Profile => This will allow the user to upload the documents also. {harshit}
+15. View details of the user. => linked to the user search as when the user search there will be an option to
+see the details or profile of the selected student. {kaveh}
+16. Search {Kaveh}
+17. Dashboard that is accessible to admin only.
+
+SMS for forgot password {done}
+SMS for signup {done}

@@ -62,6 +62,9 @@ namespace Thesis_project_Repository
         protected void UpdatePassword(object sender, EventArgs e)
         {
             var newPassword = NewPassword.Text;
+            // I think instead of session we can send the username with the string 
+            //Here we are geeting the username from the database using the random string and then
+            //saving the username to the session.
             var name = Session["username"].ToString();
             using (var connection = new SqlConnection(ConnectionString))
             {

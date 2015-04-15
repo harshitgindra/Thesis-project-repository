@@ -7,8 +7,51 @@ namespace Thesis_project_Repository
 {
     public class DatabaseMethods
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                                 + "Integrated Security=true";
+
+        public int UpdatePasswordFromSMS(string randomString, string password)
+        {
+            var _usernameDb = "";
+            var result = 0;
+            const string query = "SELECT * FROM LOGININFO WHERE RDM_STR = @rdmString;";
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@rdmString", randomString);
+                try
+                {
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                   
+                    if (reader.Read())
+                    {
+                        _usernameDb = reader.GetString(0);
+                    }
+                    try
+                    {
+                        const string query1 = "UPDATE LOGININFO SET RDM_STR = '' , password = @password WHERE username = @username;";
+                        var command2 = new SqlCommand(query1, connection);
+                        command2.Parameters.AddWithValue("@username", _usernameDb);
+                        command2.Parameters.AddWithValue("@password", password);
+
+                        result = command2.ExecuteNonQuery();
+                          
+                        // MultiView1.ActiveViewIndex = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                connection.Close();
+            } 
+            return result;
+        }
 
         public void UpdateLogininfordmstr(string username, string randomstring)
         {

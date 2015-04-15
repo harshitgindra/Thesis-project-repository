@@ -73,17 +73,18 @@
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="Admin\SQL Queries.txt" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
     <Content Include="Service References\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Admin\SQL Queries.txt" />
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="Completed Use Cases.txt" />
     <Content Include="VerificationLink.aspx" />
+    <Content Include="ViewerHomePage.aspx" />
     <Content Include="Web.config" />
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
@@ -202,6 +203,13 @@
     <Compile Include="Admin\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewerHomePage.aspx.cs">
+      <DependentUpon>ViewerHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewerHomePage.aspx.designer.cs">
+      <DependentUpon>ViewerHomePage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoginDS.xsc">
@@ -224,8 +232,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </Content>
-    <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
     <Content Include="ProfessorFiles\Professor.Master" />
+    <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
     <None Include="Service References\ServiceReference1\ISUSMS.xsd">
       <SubType>Designer</SubType>
     </None>

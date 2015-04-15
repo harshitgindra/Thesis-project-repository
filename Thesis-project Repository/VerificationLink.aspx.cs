@@ -7,7 +7,7 @@ namespace Thesis_project_Repository
     public partial class VerificationLink : Page
     {
         private const string ConnectionString =
-            "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
+            "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" + "Integrated Security=true";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,9 +24,11 @@ namespace Thesis_project_Repository
                     var reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        const string query1 = "UPDATE LOGININFO SET RDM_STR = '' WHERE rdm_str = @rdmString;";
+                      string rdnstring =  reader.GetString(3);
+                      const string query1 = "UPDATE LOGININFO SET RDM_STR = '' WHERE rdm_str = @randomString;";
                         var command2 = new SqlCommand(query1, connection);
-                        command.Parameters.AddWithValue("@randomString", randomString);
+                        command2.Parameters.AddWithValue("@randomString", randomString);
+                       
                         try
                         {
                             verificationstatus.Text = command2.ExecuteNonQuery() == 1
@@ -53,7 +55,7 @@ namespace Thesis_project_Repository
 
         protected void TakeToLoginPage(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Default.aspx", false);
         }
     }
 }

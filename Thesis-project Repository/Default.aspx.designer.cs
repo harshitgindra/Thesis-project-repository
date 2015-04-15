@@ -256,6 +256,24 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.TextBox forgotEmailId;
         
         /// <summary>
+        /// FpAccntType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList FpAccntType;
+        
+        /// <summary>
+        /// retrievelMethodRadioList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList retrievelMethodRadioList;
+        
+        /// <summary>
         /// forgotpassword control.
         /// </summary>
         /// <remarks>
@@ -272,5 +290,59 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label confirationMessage;
+        
+        /// <summary>
+        /// changePasswordMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View changePasswordMessage;
+        
+        /// <summary>
+        /// VerificationCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox VerificationCode;
+        
+        /// <summary>
+        /// NewPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewPassword;
+        
+        /// <summary>
+        /// CnfrmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CnfrmPassword;
+        
+        /// <summary>
+        /// UpdatePass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdatePass;
+        
+        /// <summary>
+        /// UpdatePasswordFromSMSConfirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UpdatePasswordFromSMSConfirmation;
     }
 }

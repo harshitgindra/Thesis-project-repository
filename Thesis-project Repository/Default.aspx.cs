@@ -9,7 +9,7 @@ namespace Thesis_project_Repository
 {
     public partial class Default : Page
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                                 + "Integrated Security=true";
 
         private readonly DatabaseMethods _databaseMethods = new DatabaseMethods();
@@ -20,7 +20,7 @@ namespace Thesis_project_Repository
 
         protected void Login(object sender, EventArgs e)
         {
-            const string queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password";
+            const string queryString1 = "SELECT * FROM LOGININFO WHERE USERNAME = @username AND PASSWORD = @password;";
 
             using (var connection = new SqlConnection(ConnectionString))
             {
@@ -52,10 +52,18 @@ namespace Thesis_project_Repository
                             {
                                 loginResult.Text = "Successful login";
                                 var acctype = reader.GetString(2);
-                                Response.Redirect(
-                                    acctype.Equals("P")
-                                        ? "/ProfessorFiles/ProfessorHome.aspx"
-                                        : "/StudentFiles/StudentHomePage.aspx", false);
+                                if (acctype.Equals("P"))
+                                {
+                                    Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
+                                }
+                                else if (acctype.Equals("S"))
+                                {
+                                    Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
+                                }
+                                else if (acctype.Equals("V"))
+                                {
+                                    Response.Redirect("/ViewerHomePage.aspx", false);
+                                }
                             }
                         }
                         else
@@ -102,6 +110,8 @@ namespace Thesis_project_Repository
                 SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString))
                     ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox."
                     : "Something went wrong. Retry";
+                string message = "Thank you for siging up with us!!";
+                SendSms(carrier, phnNumber, message);
             }
             else
             {
@@ -134,7 +144,7 @@ namespace Thesis_project_Repository
         protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
-            var emailMessage = new MailMessage {From = messageFrom};
+            var emailMessage = new MailMessage { From = messageFrom };
 
             var messageTo = new MailAddress(receiver);
             emailMessage.To.Add(messageTo.Address);
@@ -176,18 +186,35 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 0;
         }
 
-        //Needs to be implement this method and integrate with signup and forgot password methods.
-        protected void SendSms()
+        protected void SendSms(string provider, string number, string message)
         {
+            ServiceReference1.SUSMSClient sms = new ServiceReference1.SUSMSClient();
+            sms.sendSMS(provider, number, message);
         }
 
         protected void RetrieveForgotPassword(object sender, EventArgs e)
         {
-            const string query = "SELECT * FROM logininfo WHERE username = @forgotPassword;";
+            //    const string query = "SELECT * FROM logininfo WHERE username = @username;";
+            var phnNumber = "";
+            var Carrier = "";
+            var randomString = "";
+            string query1 = "";
             using (var connection = new SqlConnection(ConnectionString))
             {
-                var command0 = new SqlCommand(query, connection);
-                command0.Parameters.AddWithValue("@forgotPassword", forgotEmailId.Text);
+                if (FpAccntType.SelectedValue.Equals("S"))
+                {
+                    query1 = "SELECT * FROM LOGININFO INNER JOIN STUDENTPROFILE ON LOGININFO.USERNAME = STUDENTPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                }
+                else if (FpAccntType.SelectedValue.Equals("P"))
+                {
+                    query1 = "SELECT * FROM LOGININFO INNER JOIN FACULTYPROFILE ON LOGININFO.USERNAME = FACULTYPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                }
+                else if (FpAccntType.SelectedValue.Equals("V"))
+                {
+                    query1 = "SELECT * FROM LOGININFO INNER JOIN VIEWERPROFILE ON LOGININFO.USERNAME = VIEWERPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                }
+                var command0 = new SqlCommand(query1, connection);
+                command0.Parameters.AddWithValue("@username", forgotEmailId.Text);
                 try
                 {
                     connection.Open();
@@ -195,13 +222,25 @@ namespace Thesis_project_Repository
                     if (reader.Read())
                     {
                         var usernameDb = reader.GetString(0);
-                        var randomString = Path.GetRandomFileName();
+                        phnNumber = reader.GetString(10);
+                        Carrier = reader.GetString(11);
+                        randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         _databaseMethods.UpdateLogininfordmstr(usernameDb, randomString);
-                        confirationMessage.Text = SendEmail(forgotEmailId.Text, "Retrieve Lost Password",
-                            EmailBodyForChangePassword(randomString))
-                            ? "Email Sent Successfully. Please check your inbox"
-                            : "Something went wront. Please retry.";
+
+                        if (retrievelMethodRadioList.SelectedValue.Equals("E"))
+                        {
+                            confirationMessage.Text = SendEmail(forgotEmailId.Text, "Retrieve Lost Password",
+                                EmailBodyForChangePassword(randomString))
+                                ? "Email Sent Successfully. Please check your inbox"
+                                : "Something went wront. Please retry.";
+                        }
+                        else if (retrievelMethodRadioList.SelectedValue.Equals("M"))
+                        {
+                            var message = "Your Verification code is: " + randomString;
+                            SendSms(Carrier, phnNumber, message);
+                            MultiView1.ActiveViewIndex = 3;
+                        }
                     }
                     else
                     {
@@ -214,6 +253,32 @@ namespace Thesis_project_Repository
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        protected void UpdatePasswordFromSMS(object sender, EventArgs e)
+        {
+            var randomString = VerificationCode.Text;
+            var password = NewPassword.Text;
+            var result = 0;
+            DatabaseMethods methods = new DatabaseMethods();
+            if (string.IsNullOrEmpty(randomString) == true || string.IsNullOrWhiteSpace(randomString) == true)
+            {
+                UpdatePasswordFromSMSConfirmation.Text = "Please write the verification code.";
+            }
+            else
+            {
+                result = methods.UpdatePasswordFromSMS(randomString, password);
+                if (result == 1)
+                {
+                    UpdatePasswordFromSMSConfirmation.Text = "Your password has been changed successfully";
+                }
+                else
+                {
+                    UpdatePasswordFromSMSConfirmation.Text = "Something went wrong. Please try again later.";
+                }
+            }
+
+
         }
     }
 }
