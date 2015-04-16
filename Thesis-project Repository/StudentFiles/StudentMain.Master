@@ -29,10 +29,10 @@
                         <a href="PreliminaryProposal.aspx">Preliminary Project Submission</a>
                     </li>
                     <li>
-                        <a href="#">Final Project Submission</a>
+                        <a href="FinalProposal.aspx">Final Project Submission</a>
                     </li>
                     <li>
-                        <a href="#">Thesis Submission</a>
+                        <a href="Thesis.aspx">Thesis Submission</a>
                     </li>
                     <li>
                         <a href="#">Schedule a presentation</a>

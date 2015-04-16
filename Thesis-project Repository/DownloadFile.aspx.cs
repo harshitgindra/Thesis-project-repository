@@ -9,6 +9,8 @@ namespace Thesis_project_Repository
     {
         private int fileLength;
         private string fileName = "";
+        int fileLenghtColumnNo = 0;
+        int fileNameColumnNo = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,10 +38,24 @@ namespace Thesis_project_Repository
                 query = "SELECT document FROM PRELIMINARY_PROJECT_SUBMISSION "
                         + "WHERE username=@username";
                 query2 = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE username = @username";
+                fileLenghtColumnNo = 7;
+                fileNameColumnNo = 8;
             }
             else if (type.Equals("F"))
             {
-                //project final
+                query = "SELECT document FROM FINAL_PROJECT_PROPOSAL "
+                        + "WHERE username=@username";
+                query2 = "SELECT * FROM FINAL_PROJECT_PROPOSAL WHERE username = @username";
+                fileLenghtColumnNo = 2;
+                fileNameColumnNo = 3;
+            }
+            else
+            {
+                query = "SELECT document FROM THESIS_SUBMISSION "
+                        + "WHERE username=@username";
+                query2 = "SELECT * FROM THESIS_SUBMISSION WHERE username = @username";
+                fileLenghtColumnNo = 6;
+                fileNameColumnNo = 7;
             }
             using (var connection = new SqlConnection(connectionString))
             {
@@ -52,8 +68,8 @@ namespace Thesis_project_Repository
                 var reader = cmd2.ExecuteReader();
                 if (reader.Read())
                 {
-                    fileLength = reader.GetInt32(7);
-                    fileName = reader.GetString(8);
+                    fileLength = reader.GetInt32(fileLenghtColumnNo);
+                    fileName = reader.GetString(fileNameColumnNo);
                 }
                 reader.Close();
                 return z;

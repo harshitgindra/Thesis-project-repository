@@ -85,6 +85,8 @@
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="Completed Use Cases.txt" />
     <Content Include="StudentFiles\UpdateStudentProfile.aspx" />
+    <Content Include="StudentFiles\FinalProposal.aspx" />
+    <Content Include="StudentFiles\Thesis.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="ViewerHomePage.aspx" />
@@ -200,6 +202,20 @@
     </Compile>
     <Compile Include="StudentFiles\UpdateStudentProfile.aspx.designer.cs">
       <DependentUpon>UpdateStudentProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\FinalProposal.aspx.cs">
+      <DependentUpon>FinalProposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\FinalProposal.aspx.designer.cs">
+      <DependentUpon>FinalProposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\Thesis.aspx.cs">
+      <DependentUpon>Thesis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\Thesis.aspx.designer.cs">
+      <DependentUpon>Thesis.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>

@@ -8,10 +8,14 @@ namespace Thesis_project_Repository.StudentFiles
     {
         protected void Page_Init(object sender, EventArgs e)
         {
+            Session["username"] = "hgindra@ilstu.edu";
+
             if (Session["username"] == null)
             {
                 Response.Redirect("../Default.aspx");
             }
+
+                
             else
             {
                 if (!IsPostBack)
