@@ -4,13 +4,15 @@ using System.IO;
 using System.Net.Mail;
 using System.Web.UI;
 using Thesis_project_Repository.Modals;
+using Thesis_project_Repository.ServiceReference1;
 
 namespace Thesis_project_Repository
 {
     public partial class Default : Page
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
-                                                + "Integrated Security=true";
+        private const string ConnectionString =
+            "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
+            + "Integrated Security=true";
 
         private readonly DatabaseMethods _databaseMethods = new DatabaseMethods();
 
@@ -44,7 +46,8 @@ namespace Thesis_project_Repository
                             //checking for admin approval
                             else if (reader.GetString(4).Equals("N"))
                             {
-                                loginResult.Text = "Admin has not approved your account yet. Please try after sometime. Sorry for the inconvinience.";
+                                loginResult.Text =
+                                    "Admin has not approved your account yet. Please try after sometime. Sorry for the inconvinience.";
                             }
                             //satisfied email and admin approval
                             //now redirect to appropriate page
@@ -110,7 +113,7 @@ namespace Thesis_project_Repository
                 SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString))
                     ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox."
                     : "Something went wrong. Retry";
-                string message = "Thank you for siging up with us!!";
+                var message = "Thank you for siging up with us!!";
                 SendSms(carrier, phnNumber, message);
             }
             else
@@ -144,7 +147,7 @@ namespace Thesis_project_Repository
         protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
-            var emailMessage = new MailMessage { From = messageFrom };
+            var emailMessage = new MailMessage {From = messageFrom};
 
             var messageTo = new MailAddress(receiver);
             emailMessage.To.Add(messageTo.Address);
@@ -188,7 +191,7 @@ namespace Thesis_project_Repository
 
         protected void SendSms(string provider, string number, string message)
         {
-            ServiceReference1.SUSMSClient sms = new ServiceReference1.SUSMSClient();
+            var sms = new SUSMSClient();
             sms.sendSMS(provider, number, message);
         }
 
@@ -198,20 +201,23 @@ namespace Thesis_project_Repository
             var phnNumber = "";
             var Carrier = "";
             var randomString = "";
-            string query1 = "";
+            var query1 = "";
             using (var connection = new SqlConnection(ConnectionString))
             {
                 if (FpAccntType.SelectedValue.Equals("S"))
                 {
-                    query1 = "SELECT * FROM LOGININFO INNER JOIN STUDENTPROFILE ON LOGININFO.USERNAME = STUDENTPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                    query1 =
+                        "SELECT * FROM LOGININFO INNER JOIN STUDENTPROFILE ON LOGININFO.USERNAME = STUDENTPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
                 }
                 else if (FpAccntType.SelectedValue.Equals("P"))
                 {
-                    query1 = "SELECT * FROM LOGININFO INNER JOIN FACULTYPROFILE ON LOGININFO.USERNAME = FACULTYPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                    query1 =
+                        "SELECT * FROM LOGININFO INNER JOIN FACULTYPROFILE ON LOGININFO.USERNAME = FACULTYPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
                 }
                 else if (FpAccntType.SelectedValue.Equals("V"))
                 {
-                    query1 = "SELECT * FROM LOGININFO INNER JOIN VIEWERPROFILE ON LOGININFO.USERNAME = VIEWERPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
+                    query1 =
+                        "SELECT * FROM LOGININFO INNER JOIN VIEWERPROFILE ON LOGININFO.USERNAME = VIEWERPROFILE.USERNAME WHERE (LOGININFO.USERNAME = @username);";
                 }
                 var command0 = new SqlCommand(query1, connection);
                 command0.Parameters.AddWithValue("@username", forgotEmailId.Text);
@@ -260,8 +266,8 @@ namespace Thesis_project_Repository
             var randomString = VerificationCode.Text;
             var password = NewPassword.Text;
             var result = 0;
-            DatabaseMethods methods = new DatabaseMethods();
-            if (string.IsNullOrEmpty(randomString) == true || string.IsNullOrWhiteSpace(randomString) == true)
+            var methods = new DatabaseMethods();
+            if (string.IsNullOrEmpty(randomString) || string.IsNullOrWhiteSpace(randomString))
             {
                 UpdatePasswordFromSMSConfirmation.Text = "Please write the verification code.";
             }
@@ -277,8 +283,6 @@ namespace Thesis_project_Repository
                     UpdatePasswordFromSMSConfirmation.Text = "Something went wrong. Please try again later.";
                 }
             }
-
-
         }
     }
 }

@@ -7,12 +7,37 @@ namespace Thesis_project_Repository
 {
     public class DatabaseMethods
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
-                                                + "Integrated Security=true";
+        private const string ConnectionString =
+            "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
+            + "Integrated Security=true";
 
+        public int SubscribeUnsubscribeMethod(string query, string username)
+        {
+            const string connectionString =
+                "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +
+                "Integrated Security=true";
+            var reader = 0;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@USERNAME", username);
+
+                try
+                {
+                    connection.Open();
+                    reader = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                connection.Close();
+            }
+            return reader;
+        }
         public int UpdatePasswordFromSMS(string randomString, string password)
         {
-            var _usernameDb = "";
+            var usernameDb = "";
             var result = 0;
             const string query = "SELECT * FROM LOGININFO WHERE RDM_STR = @rdmString;";
             using (var connection = new SqlConnection(ConnectionString))
@@ -23,20 +48,21 @@ namespace Thesis_project_Repository
                 {
                     connection.Open();
                     var reader = command.ExecuteReader();
-                   
+
                     if (reader.Read())
                     {
-                        _usernameDb = reader.GetString(0);
+                        usernameDb = reader.GetString(0);
                     }
                     try
                     {
-                        const string query1 = "UPDATE LOGININFO SET RDM_STR = '' , password = @password WHERE username = @username;";
+                        const string query1 =
+                            "UPDATE LOGININFO SET RDM_STR = '' , password = @password WHERE username = @username;";
                         var command2 = new SqlCommand(query1, connection);
-                        command2.Parameters.AddWithValue("@username", _usernameDb);
+                        command2.Parameters.AddWithValue("@username", usernameDb);
                         command2.Parameters.AddWithValue("@password", password);
 
                         result = command2.ExecuteNonQuery();
-                          
+
                         // MultiView1.ActiveViewIndex = 1;
                     }
                     catch (Exception ex)
@@ -49,7 +75,7 @@ namespace Thesis_project_Repository
                     Console.WriteLine(ex.Message);
                 }
                 connection.Close();
-            } 
+            }
             return result;
         }
 

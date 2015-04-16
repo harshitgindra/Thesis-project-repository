@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Web.UI;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.StudentFiles
 {
     public partial class Student : MasterPage
     {
@@ -17,10 +17,10 @@ namespace Thesis_project_Repository
                 if (!IsPostBack)
                 {
                     var username = Session["username"].ToString();
-                    const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                    const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                                     + "Integrated Security=true";
                     const string queryString1 = "SELECT * FROM SUBSCRIPTION WHERE USERNAME = @username;";
-                    using (var connection = new SqlConnection(ConnectionString))
+                    using (var connection = new SqlConnection(connectionString))
                     {
                         var command = new SqlCommand(queryString1, connection);
                         command.Parameters.AddWithValue("@username", username);
@@ -60,7 +60,8 @@ namespace Thesis_project_Repository
         {
             var username = Session["username"].ToString();
             const string query = "INSERT INTO SUBSCRIPTION (USERNAME, SUBSCRIPTIONSTATUS) VALUES (@USERNAME, 'Y');";
-            var result = SubscribeUnsubscribeMethod(query, username);
+            DatabaseMethods subscribeMethod = new DatabaseMethods();
+            var result = subscribeMethod.SubscribeUnsubscribeMethod(query, username);
             if (result == 1)
             {
                 FooterMultiView.ActiveViewIndex = 1;
@@ -71,34 +72,12 @@ namespace Thesis_project_Repository
         {
             var username = Session["username"].ToString();
             const string query = "DELETE FROM SUBSCRIPTION WHERE USERNAME = @USERNAME;";
-            var result = SubscribeUnsubscribeMethod(query, username);
+            DatabaseMethods unSubscribeMethod = new DatabaseMethods();
+            var result = unSubscribeMethod.SubscribeUnsubscribeMethod(query, username);
             if (result == 1)
             {
                 FooterMultiView.ActiveViewIndex = 0;
             }
-        }
-
-        protected int SubscribeUnsubscribeMethod(string query, string username)
-        {
-            const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" + "Integrated Security=true";
-            var reader = 0;
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                var command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@USERNAME", username);
-
-                try
-                {
-                    connection.Open();
-                    reader = command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                connection.Close();
-            }
-            return reader;
         }
     }
 }

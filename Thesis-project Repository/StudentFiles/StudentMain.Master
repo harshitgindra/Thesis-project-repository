@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMain.Master.cs" Inherits="Thesis_project_Repository.Student" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMain.Master.cs" Inherits="Thesis_project_Repository.StudentFiles.Student" %>
 
 <!DOCTYPE html>
 
@@ -51,17 +51,17 @@
         <asp:ContentPlaceHolder ID="student" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    
-     <div id="footer" class="clear">
-         <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
-             <asp:View ID="SubscribeView" runat="server">
-                 <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
-             </asp:View>
-             <asp:View ID="UnsubscribeView" runat="server">
-                 <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
-             </asp:View>
-         </asp:MultiView>
-         </div>
+
+    <div id="footer" class="clear">
+        <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
+            <asp:View ID="SubscribeView" runat="server">
+                <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
+            </asp:View>
+            <asp:View ID="UnsubscribeView" runat="server">
+                <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
+            </asp:View>
+        </asp:MultiView>
+    </div>
 </form>
 </body>
 </html>

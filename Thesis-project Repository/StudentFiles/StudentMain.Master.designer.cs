@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Thesis_project_Repository {
+namespace Thesis_project_Repository.StudentFiles {
     
     
     public partial class Student {

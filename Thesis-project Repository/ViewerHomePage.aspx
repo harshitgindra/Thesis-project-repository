@@ -7,10 +7,10 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
     <div>
-    Viewer Home
+        Viewer Home
     </div>
-    </form>
+</form>
 </body>
 </html>
