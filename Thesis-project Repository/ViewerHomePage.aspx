@@ -11,7 +11,7 @@
     <div>
       <ul>
           <li>
-                        <a href="~/DeleteProfile.aspx">Delete Profile</a>
+                        <a href="../DeleteProfile.aspx">Delete Profile</a>
                     </li>
       </ul>
     </div>

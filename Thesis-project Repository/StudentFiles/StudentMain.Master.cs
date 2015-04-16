@@ -8,7 +8,7 @@ namespace Thesis_project_Repository.StudentFiles
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            Session["username"] = "hgindra@ilstu.edu";
+          //  Session["username"] = "hgindra@ilstu.edu";
 
             if (Session["username"] == null)
             {

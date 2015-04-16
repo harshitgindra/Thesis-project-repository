@@ -22,7 +22,7 @@ namespace Thesis_project_Repository
 
         protected int DeleteAccount()
         {
-           
+
             var user = Session["username"].ToString();
             var result = 0;
             const string query = " SELECT * FROM LOGININFO WHERE username = @username;";
@@ -60,22 +60,27 @@ namespace Thesis_project_Repository
                     }
                     else if (_accountType.Equals("S"))
                     {
-                        const string studentThesisDelete = "Delete from studentprofile where username = @username;";
-                        const string studentFinalProjectDelete = "Delete from studentprofile where username = @username;";
-                        const string studentPreliminaryDelete = "Delete from studentprofile where username = @username;";
+                        const string studentThesisDelete = "Delete from thesis_submission where username = @username;";
+                        const string studentFinalProjectDelete = "Delete from final_project_proposal where username = @username;";
+                        const string studentPreliminaryDelete = "Delete from preliminary_project_submission where username = @username;";
                         userProfileDeleteQuery = "Delete from studentprofile where username = @username;";
-                        var command2 = new SqlCommand(userProfileDeleteQuery, connection);
-                        command2.Parameters.AddWithValue("@username", user);
-                        result += command2.ExecuteNonQuery();
                         var command3 = new SqlCommand(studentThesisDelete, connection);
                         command3.Parameters.AddWithValue("@username", user);
-                        result += command3.ExecuteNonQuery();
+
                         var command4 = new SqlCommand(studentFinalProjectDelete, connection);
                         command4.Parameters.AddWithValue("@username", user);
-                        result += command4.ExecuteNonQuery();
+
                         var command5 = new SqlCommand(studentPreliminaryDelete, connection);
                         command5.Parameters.AddWithValue("@username", user);
+
+                        var command2 = new SqlCommand(userProfileDeleteQuery, connection);
+                        command2.Parameters.AddWithValue("@username", user);
+
+                        result += command3.ExecuteNonQuery();
+                        result += command4.ExecuteNonQuery();
                         result += command5.ExecuteNonQuery();
+                        result += command2.ExecuteNonQuery();
+
                     }
                     else if (_accountType.Equals("V"))
                     {
@@ -109,23 +114,6 @@ namespace Thesis_project_Repository
                 status.Text = "Something went wrong!! Not able to delete your account. Please try again later.";
 
             }
-        }
-
-        protected void No(object sender, EventArgs e)
-        {
-            if (_accountType.Equals("P"))
-            {
-                Response.Redirect("ProfessorFiles/ProfessorHome.aspx");
-            }
-            else if (_accountType.Equals("S"))
-            {
-                Response.Redirect("StudentFiles/StudentHomePage.aspx");
-            }
-            else if (_accountType.Equals("V"))
-            {
-                Response.Redirect("ViewerHomePage.aspx");
-            }
-           
         }
     }
 }

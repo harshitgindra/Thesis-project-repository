@@ -100,6 +100,7 @@ namespace Thesis_project_Repository
             }
             return reader;
         }
+        
         public int UpdatePasswordFromSms(string randomString, string password)
         {
             var usernameDb = "";

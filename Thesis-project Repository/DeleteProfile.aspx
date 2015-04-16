@@ -18,8 +18,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="yes" runat="server" Text="Yes" OnClick="Yes" /> &nbsp;&nbsp;
-                        <asp:Button ID="no" runat="server" Text="No" OnClick="No" />
+                        <asp:Button ID="yes" runat="server" Text="Yes" OnClick="Yes" />
                     </td>
                 </tr>
                 <tr>

@@ -6,6 +6,7 @@
 6. Subscribe {done} Need to implement in viewer
 7. Update Profile {done} Need to implement in viewer
 8. SMS web service {done}
+10. Delete Profile User {done}
 
 9. Dashboard that is accessible to admin only. {Amitesh} Column to count the number of clicks
 10. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
@@ -13,7 +14,7 @@
 see the details or profile of the selected student. {kaveh}
 12. Search {Kaveh}
 13. Highlight/Showcase Thesis/Project  {harshit}
-14. Delete Profile User/Admin
+14. 
 15. Check approval status 
 
 Not Use Case:
