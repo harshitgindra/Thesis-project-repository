@@ -1,21 +1,21 @@
 ﻿1. User SignUp {done}
 2. User Login {done}
-3. Admin Login {done}
-4. Verification Link {done}
-5. Forgot Password {done}
-6. Admin Approval {done}
-7. Check approval status {done}
-8. Unsubscribe {done} 
-9. Subscribe {done} Need to implement in viewer
-10. Update Profile {done} Need to implement in viewer
-11. Dashboard that is accessible to admin only. {Amitesh}
-12. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
+3. Forgot Password {done}
+4. Admin Approval {done}
+5. Unsubscribe {done} 
+6. Subscribe {done} Need to implement in viewer
+7. Update Profile {done} Need to implement in viewer
+8. SMS web service {done}
 
-
-13. View details of the user. => linked to the user search as when the user search there will be an option to
+9. Dashboard that is accessible to admin only. {Amitesh} Column to count the number of clicks
+10. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
+11. View details of the user. => linked to the user search as when the user search there will be an option to
 see the details or profile of the selected student. {kaveh}
-14. Search {Kaveh}
-15. Highlight/Showcase Thesis/Project  {harshit}
+12. Search {Kaveh}
+13. Highlight/Showcase Thesis/Project  {harshit}
+14. Delete Profile User/Admin
+15. Check approval status 
 
-
-16. SMS web service
+Not Use Case:
+//Verification Link {done} 
+//Admin Login {done}
