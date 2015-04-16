@@ -17,3 +17,4 @@ H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-projec
 H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
 H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
 H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache

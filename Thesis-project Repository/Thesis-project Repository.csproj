@@ -69,6 +69,7 @@
     <Content Include="css\portfolio.css" />
     <Content Include="css\tables.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DeleteProfile.aspx" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProfile.aspx.cs">
+      <DependentUpon>DeleteProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteProfile.aspx.designer.cs">
+      <DependentUpon>DeleteProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="DownloadFile.aspx.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>
