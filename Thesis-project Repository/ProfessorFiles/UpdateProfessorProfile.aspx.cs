@@ -16,66 +16,93 @@ namespace Thesis_project_Repository.ProfessorFiles
         {
             if (Session["username"] != null)
             {
-                var user = Session["username"].ToString();
-                var getInformationQuery = "";
-                const string query = " SELECT * FROM LOGININFO WHERE username = @username;";
-                using (var connection = new SqlConnection(ConnectionString))
+                if (!IsPostBack)
                 {
-                    var command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@username", user);
-                    try
+                    var user = Session["username"].ToString();
+                    var getInformationQuery = "";
+                    const string query = " SELECT * FROM LOGININFO WHERE username = @username;";
+                    using (var connection = new SqlConnection(ConnectionString))
                     {
-                        connection.Open();
-                        var reader = command.ExecuteReader();
-                        if (reader.Read())
+                        var command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@username", user);
+                        try
                         {
-                            _accountType = reader.GetString(2);
+                            connection.Open();
+                            var reader = command.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                _accountType = reader.GetString(2);
+                            }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    if (_accountType.Equals("P"))
-                    {
-                        getInformationQuery = "SELECT * FROM LOGININFO inner join facultyprofile on " +
-                                              "LOGININFO.username = facultyprofile.username " +
-                                              "WHERE LOGININFO.username = @username;";
-                    }
-                    else if (_accountType.Equals("S"))
-                    {
-                        getInformationQuery = "SELECT * FROM LOGININFO inner join studentprofile on " +
-                                                 "LOGININFO.username = studentprofile.username " +
-                                                 "WHERE LOGININFO.username = @username;";
-                    }
-                    else if (_accountType.Equals("V"))
-                    {
-                        getInformationQuery = "SELECT * FROM LOGININFO inner join viewerprofile on " +
-                                                     "LOGININFO.username = viewerprofile.username " +
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        if (_accountType.Equals("P"))
+                        {
+                            getInformationQuery = "SELECT * FROM LOGININFO inner join facultyprofile on " +
+                                                  "LOGININFO.username = facultyprofile.username " +
+                                                  "WHERE LOGININFO.username = @username;";
+                        }
+                        else if (_accountType.Equals("S"))
+                        {
+                            getInformationQuery = "SELECT * FROM LOGININFO inner join studentprofile on " +
+                                                     "LOGININFO.username = studentprofile.username " +
                                                      "WHERE LOGININFO.username = @username;";
-                    }
-                    var command2 = new SqlCommand(getInformationQuery, connection);
-                    command2.Parameters.AddWithValue("@username", user);
-                    try
-                    {
-                        var reader1 = command2.ExecuteReader();
-                        if (reader1.Read())
-                        {
-                            username.Text = reader1.GetString(0);
-                            password.Text = reader1.GetString(1);
-                            secQuestion.Text = reader1.GetString(5);
-                            secAnswer.Text = reader1.GetString(6);
-                            fname.Text = reader1.GetString(8);
-                            lname.Text = reader1.GetString(9);
-                            phnNumber.Text = reader1.GetString(10);
-                            provider.Text = reader1.GetString(11);
                         }
+                        else if (_accountType.Equals("V"))
+                        {
+                            getInformationQuery = "SELECT * FROM LOGININFO inner join viewerprofile on " +
+                                                         "LOGININFO.username = viewerprofile.username " +
+                                                         "WHERE LOGININFO.username = @username;";
+                        }
+                        var command2 = new SqlCommand(getInformationQuery, connection);
+                        command2.Parameters.AddWithValue("@username", user);
+                        try
+                        {
+                            var reader1 = command2.ExecuteReader();
+                            if (reader1.Read())
+                            {
+                                username.Text = reader1.GetString(0);
+                                password.Text = reader1.GetString(1);
+                                secQuestion.Text = reader1.GetString(5);
+                                secAnswer.Text = reader1.GetString(6);
+                                fname.Text = reader1.GetString(8);
+                                lname.Text = reader1.GetString(9);
+                                phnNumber.Text = reader1.GetString(10);
+                                provider.Text = reader1.GetString(11);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        connection.Close();
                     }
-                    catch (Exception ex)
+                }
+                else
+                {
+                    var user = Session["username"].ToString();
+                    const string query = " SELECT * FROM LOGININFO WHERE username = @username;";
+                    using (var connection = new SqlConnection(ConnectionString))
                     {
-                        Console.WriteLine(ex.Message);
+                        var command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@username", user);
+                        try
+                        {
+                            connection.Open();
+                            var reader = command.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                _accountType = reader.GetString(2);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        connection.Close();
                     }
-                    connection.Close();
                 }
             }
             else

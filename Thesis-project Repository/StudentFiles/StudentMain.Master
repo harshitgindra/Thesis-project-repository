@@ -44,7 +44,7 @@
                         <a href="StudentHomePage.aspx">Home</a>
                     </li>
                      <li>
-                        <a href="~/StudentFiles/UpdateStudentProfile.aspx">Update Profile</a>
+                        <a href="UpdateStudentProfile.aspx">Update Profile</a>
                     </li>
                 </ul>
             </div>
