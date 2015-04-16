@@ -1,4 +1,4 @@
-﻿namespace Thesis_project_Repository.Modals
+﻿namespace Thesis_project_Repository.Models
 {
     public class UserModels
     {
@@ -10,6 +10,18 @@
             AccountType = accountType;
             RandomString = randomString;
             AdminApproval = adminApproval;
+            SecQuestion = secQuestion;
+            SecAnswer = secAnswer;
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            Carrier = carrier;
+        }
+
+        public UserModels(string userName, string password, string secQuestion, string secAnswer, string firstName, string lastName, string phoneNumber, string carrier)
+        {
+            UserName = userName;
+            Password = password;
             SecQuestion = secQuestion;
             SecAnswer = secAnswer;
             FirstName = firstName;
@@ -30,4 +42,6 @@
         public string PhoneNumber { get; set; }
         public string Carrier { get; set; }
     }
+
+
 }

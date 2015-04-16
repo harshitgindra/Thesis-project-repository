@@ -83,6 +83,7 @@
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="Completed Use Cases.txt" />
+    <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="ViewerHomePage.aspx" />
     <Content Include="Web.config" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="StudentFiles\PreliminaryProposal.aspx.designer.cs">
       <DependentUpon>PreliminaryProposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>

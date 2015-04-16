@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Net.Mail;
 using System.Web.UI;
-using Thesis_project_Repository.Modals;
+using Thesis_project_Repository.Models;
 using Thesis_project_Repository.ServiceReference1;
 
 namespace Thesis_project_Repository
@@ -198,7 +198,6 @@ namespace Thesis_project_Repository
         protected void RetrieveForgotPassword(object sender, EventArgs e)
         {
             //    const string query = "SELECT * FROM logininfo WHERE username = @username;";
-            var phnNumber = "";
             var Carrier = "";
             var randomString = "";
             var query1 = "";
@@ -228,7 +227,7 @@ namespace Thesis_project_Repository
                     if (reader.Read())
                     {
                         var usernameDb = reader.GetString(0);
-                        phnNumber = reader.GetString(10);
+                        var phnNumber = reader.GetString(10);
                         Carrier = reader.GetString(11);
                         randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
@@ -261,7 +260,7 @@ namespace Thesis_project_Repository
             }
         }
 
-        protected void UpdatePasswordFromSMS(object sender, EventArgs e)
+        protected void UpdatePasswordUsingSms(object sender, EventArgs e)
         {
             var randomString = VerificationCode.Text;
             var password = NewPassword.Text;
@@ -273,7 +272,7 @@ namespace Thesis_project_Repository
             }
             else
             {
-                result = methods.UpdatePasswordFromSMS(randomString, password);
+                result = methods.UpdatePasswordFromSms(randomString, password);
                 if (result == 1)
                 {
                     UpdatePasswordFromSMSConfirmation.Text = "Your password has been changed successfully";

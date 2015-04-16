@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using Thesis_project_Repository.Modals;
+using Thesis_project_Repository.Models;
 
 namespace Thesis_project_Repository
 {
@@ -10,6 +10,71 @@ namespace Thesis_project_Repository
         private const string ConnectionString =
             "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
             + "Integrated Security=true";
+
+        public int UpdateUserProfile(UserModels userModels, string accountType)
+        {
+            var username = userModels.UserName;
+            var password = userModels.Password;
+            var secQuestion = userModels.SecQuestion;
+            var secAnswer = userModels.SecAnswer;
+            var firstName = userModels.FirstName;
+            var lastName = userModels.LastName;
+            var phoneNumber = userModels.PhoneNumber;
+            var carrier = userModels.Carrier;
+            var result = 0;
+            var updateQuery2 = "";
+
+            const string query = "UPDATE LOGININFO SET " +
+                                 "PASSWORD = @PASSWORD, SECQUES = @SECQUES, SECANS = @SECANS " +
+                                 "WHERE USERNAME = @USERNAME ;";
+
+            if (accountType.Equals("P"))
+            {
+                updateQuery2 = "UPDATE FACULTYPROFILE SET " +
+                    "FIRSTNAME = @FIRSTNAME, LASTNAME = @LASTNAME, PHONENUMBER = @PHONENUMBER, CARRIER = @CARRIER " +
+                                  "WHERE USERNAME = @USERNAME ;";
+            }
+            else if (accountType.Equals("S"))
+            {
+                updateQuery2 = "UPDATE STUDENTPROFILE SET " +
+                                "FIRSTNAME = @FIRSTNAME, LASTNAME = @LASTNAME, PHONENUMBER = @PHONENUMBER, CARRIER = @CARRIER " +
+                                  "WHERE USERNAME = @USERNAME ;";
+            }
+            else if (accountType.Equals("V"))
+            {
+                updateQuery2 = "UPDATE VIEWERPROFILE SET " +
+                                  "FIRSTNAME = @FIRSTNAME, LASTNAME = @LASTNAME, PHONENUMBER = @PHONENUMBER, CARRIER = @CARRIER " +
+                                 "WHERE USERNAME = @USERNAME ;";
+            }
+
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command1 = new SqlCommand(query, connection);
+                command1.Parameters.AddWithValue("@USERNAME", username);
+                command1.Parameters.AddWithValue("@PASSWORD", password);
+                command1.Parameters.AddWithValue("@SECQUES", secQuestion);
+                command1.Parameters.AddWithValue("@SECANS", secAnswer);
+
+                var command2 = new SqlCommand(updateQuery2, connection);
+                command2.Parameters.AddWithValue("@USERNAME", username);
+                command2.Parameters.AddWithValue("@FIRSTNAME", firstName);
+                command2.Parameters.AddWithValue("@LASTNAME", lastName);
+                command2.Parameters.AddWithValue("@PHONENUMBER", phoneNumber);
+                command2.Parameters.AddWithValue("@CARRIER", carrier);
+                try
+                {
+                    connection.Open();
+                    result = command1.ExecuteNonQuery();
+                    result += command2.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                connection.Close();
+            }
+            return result;
+        }
 
         public int SubscribeUnsubscribeMethod(string query, string username)
         {
@@ -35,7 +100,7 @@ namespace Thesis_project_Repository
             }
             return reader;
         }
-        public int UpdatePasswordFromSMS(string randomString, string password)
+        public int UpdatePasswordFromSms(string randomString, string password)
         {
             var usernameDb = "";
             var result = 0;
@@ -60,10 +125,7 @@ namespace Thesis_project_Repository
                         var command2 = new SqlCommand(query1, connection);
                         command2.Parameters.AddWithValue("@username", usernameDb);
                         command2.Parameters.AddWithValue("@password", password);
-
                         result = command2.ExecuteNonQuery();
-
-                        // MultiView1.ActiveViewIndex = 1;
                     }
                     catch (Exception ex)
                     {
@@ -74,7 +136,10 @@ namespace Thesis_project_Repository
                 {
                     Console.WriteLine(ex.Message);
                 }
-                connection.Close();
+                finally
+                {
+                    connection.Close();
+                }
             }
             return result;
         }

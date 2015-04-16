@@ -238,7 +238,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="UpdatePass" runat="server" Text="Change Password" OnClick="UpdatePasswordFromSMS"/>
+                <asp:Button ID="UpdatePass" runat="server" Text="Change Password" OnClick="UpdatePasswordUsingSms"/>
             </td>
         </tr>
         <tr>
