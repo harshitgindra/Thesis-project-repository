@@ -33,6 +33,9 @@
                      <li>
                         <a href="UpdateProfessorProfile.aspx">Update Profile</a>
                     </li>
+                    <li>
+                        <a href="~/DeleteProfile.aspx">Delete Profile</a>
+                    </li>
                 </ul>
             </div>
         </div>

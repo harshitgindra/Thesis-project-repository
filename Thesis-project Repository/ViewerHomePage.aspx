@@ -9,7 +9,11 @@
 <body>
 <form id="form1" runat="server">
     <div>
-        Viewer Home
+      <ul>
+          <li>
+                        <a href="~/DeleteProfile.aspx">Delete Profile</a>
+                    </li>
+      </ul>
     </div>
 </form>
 </body>
