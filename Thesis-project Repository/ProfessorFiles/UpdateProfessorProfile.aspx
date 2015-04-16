@@ -1,13 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateProfile.aspx.cs" Inherits="Thesis_project_Repository.UpdateProfile" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ProfessorFiles/Professor.Master" AutoEventWireup="true" CodeBehind="UpdateProfessorProfile.aspx.cs" Inherits="Thesis_project_Repository.ProfessorFiles.UpdateProfessorProfile" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ProfessorTemplate" runat="server">
+     <form id="form1" runat="server">
     <div>
     <table>
         <tr><td>UserName: </td>
@@ -59,5 +54,4 @@
     </table>
     </div>
     </form>
-</body>
-</html>
+</asp:Content>

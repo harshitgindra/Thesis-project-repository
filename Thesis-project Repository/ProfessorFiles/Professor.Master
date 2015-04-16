@@ -31,7 +31,7 @@
                         <a href="ProfessorHome.aspx">Home</a>
                     </li>
                      <li>
-                        <a href="~/UpdateProfile.aspx">Update Profile</a>
+                        <a href="~/ProfessorFiles/UpdateProfessorProfile.aspx">Update Profile</a>
                     </li>
                 </ul>
             </div>

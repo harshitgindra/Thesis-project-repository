@@ -3,13 +3,13 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using Thesis_project_Repository.Models;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.ProfessorFiles
 {
-    public partial class UpdateProfile : Page
+    public partial class UpdateProfessorProfile : Page
     {
         private const string ConnectionString =
-          "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +
-          "Integrated Security=true";
+       "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +
+       "Integrated Security=true";
 
         private string _accountType = "";
         protected void Page_Load(object sender, EventArgs e)
@@ -82,9 +82,7 @@ namespace Thesis_project_Repository
             {
                 Response.Redirect("Default.aspx", false);
             }
-
         }
-
         protected void UpdateUserProfile(object sender, EventArgs e)
         {
             var result = 0;

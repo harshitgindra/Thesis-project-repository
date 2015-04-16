@@ -6,18 +6,16 @@
 6. Admin Approval {done}
 7. Check approval status {done}
 8. Unsubscribe {done} 
-9. Subscribe {done}
-
-14. Update Profile => This will allow the user to upload the documents also. {Amitesh}
-17. Dashboard that is accessible to admin only. {Amitesh}
+9. Subscribe {done} Need to implement in viewer
+10. Update Profile {done} Need to implement in viewer
+11. Dashboard that is accessible to admin only. {Amitesh}
 12. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
 
 
-15. View details of the user. => linked to the user search as when the user search there will be an option to
+13. View details of the user. => linked to the user search as when the user search there will be an option to
 see the details or profile of the selected student. {kaveh}
-16. Search {Kaveh}
-13. Highlight/Showcase Thesis/Project  {harshit}
+14. Search {Kaveh}
+15. Highlight/Showcase Thesis/Project  {harshit}
 
 
-SMS for forgot password {done}
-SMS for signup {done}
+16. SMS web service

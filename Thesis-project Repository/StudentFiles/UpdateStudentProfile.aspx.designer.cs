@@ -10,10 +10,10 @@
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
-namespace Thesis_project_Repository {
+namespace Thesis_project_Repository.StudentFiles {
     
     
-    public partial class UpdateProfile {
+    public partial class UpdateStudentProfile {
         
         /// <summary>
         /// form1 control.

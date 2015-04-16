@@ -8,65 +8,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 namespace Thesis_project_Repository.ServiceReference1 {
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ISU/", ConfigurationName="ServiceReference1.ISUSMS")]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [ServiceContract(Namespace="http://ISU/", ConfigurationName="ServiceReference1.ISUSMS")]
     public interface ISUSMS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/sendSMSISURequest", ReplyAction="http://ISU/ISUSMS/sendSMSISUResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Thesis_project_Repository.ServiceReference1.sendSMSISUResponse sendSMSISU(Thesis_project_Repository.ServiceReference1.sendSMSISURequest request);
+        [OperationContract(Action="http://ISU/ISUSMS/sendSMSISURequest", ReplyAction="http://ISU/ISUSMS/sendSMSISUResponse")]
+        [XmlSerializerFormat(SupportFaults=true)]
+        [return: MessageParameter(Name="return")]
+        sendSMSISUResponse sendSMSISU(sendSMSISURequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/sendSMSISURequest", ReplyAction="http://ISU/ISUSMS/sendSMSISUResponse")]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSISUResponse> sendSMSISUAsync(Thesis_project_Repository.ServiceReference1.sendSMSISURequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/sendSMSRequest", ReplyAction="http://ISU/ISUSMS/sendSMSResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Thesis_project_Repository.ServiceReference1.sendSMSResponse sendSMS(Thesis_project_Repository.ServiceReference1.sendSMSRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/sendSMSRequest", ReplyAction="http://ISU/ISUSMS/sendSMSResponse")]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSResponse> sendSMSAsync(Thesis_project_Repository.ServiceReference1.sendSMSRequest request);
+        [OperationContract(Action="http://ISU/ISUSMS/sendSMSISURequest", ReplyAction="http://ISU/ISUSMS/sendSMSISUResponse")]
+        Task<sendSMSISUResponse> sendSMSISUAsync(sendSMSISURequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/getCarriersRequest", ReplyAction="http://ISU/ISUSMS/getCarriersResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Thesis_project_Repository.ServiceReference1.getCarriersResponse getCarriers(Thesis_project_Repository.ServiceReference1.getCarriersRequest request);
+        [OperationContract(Action="http://ISU/ISUSMS/sendSMSRequest", ReplyAction="http://ISU/ISUSMS/sendSMSResponse")]
+        [XmlSerializerFormat(SupportFaults=true)]
+        [return: MessageParameter(Name="return")]
+        sendSMSResponse sendSMS(sendSMSRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ISU/ISUSMS/getCarriersRequest", ReplyAction="http://ISU/ISUSMS/getCarriersResponse")]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.getCarriersResponse> getCarriersAsync(Thesis_project_Repository.ServiceReference1.getCarriersRequest request);
+        [OperationContract(Action="http://ISU/ISUSMS/sendSMSRequest", ReplyAction="http://ISU/ISUSMS/sendSMSResponse")]
+        Task<sendSMSResponse> sendSMSAsync(sendSMSRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [OperationContract(Action="http://ISU/ISUSMS/getCarriersRequest", ReplyAction="http://ISU/ISUSMS/getCarriersResponse")]
+        [XmlSerializerFormat(SupportFaults=true)]
+        [return: MessageParameter(Name="return")]
+        getCarriersResponse getCarriers(getCarriersRequest request);
+        
+        [OperationContract(Action="http://ISU/ISUSMS/getCarriersRequest", ReplyAction="http://ISU/ISUSMS/getCarriersResponse")]
+        Task<getCarriersResponse> getCarriersAsync(getCarriersRequest request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sendSMSISU", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="sendSMSISU", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class sendSMSISURequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=0)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string username;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=1)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string password;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=2)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string provider;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=3)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string number;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=4)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string message;
         
         public sendSMSISURequest() {
@@ -81,14 +90,14 @@ namespace Thesis_project_Repository.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sendSMSISUResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="sendSMSISUResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class sendSMSISUResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=0)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string @return;
         
         public sendSMSISUResponse() {
@@ -99,22 +108,22 @@ namespace Thesis_project_Repository.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sendSMS", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="sendSMS", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class sendSMSRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=0)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string provider;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=1)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string number;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=2)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string message;
         
         public sendSMSRequest() {
@@ -127,14 +136,14 @@ namespace Thesis_project_Repository.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sendSMSResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="sendSMSResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class sendSMSResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=0)]
+        [XmlElement(Form=XmlSchemaForm.Unqualified)]
         public string @return;
         
         public sendSMSResponse() {
@@ -145,24 +154,24 @@ namespace Thesis_project_Repository.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCarriers", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="getCarriers", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class getCarriersRequest {
         
         public getCarriersRequest() {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCarriersResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName="getCarriersResponse", WrapperNamespace="http://ISU/", IsWrapped=true)]
     public partial class getCarriersResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ISU/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        [MessageBodyMember(Namespace="http://ISU/", Order=0)]
+        [XmlElement("return", Form=XmlSchemaForm.Unqualified, IsNullable=true)]
         public string[] @return;
         
         public getCarriersResponse() {
@@ -173,13 +182,13 @@ namespace Thesis_project_Repository.ServiceReference1 {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISUSMSChannel : Thesis_project_Repository.ServiceReference1.ISUSMS, System.ServiceModel.IClientChannel {
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public interface ISUSMSChannel : ISUSMS, IClientChannel {
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SUSMSClient : System.ServiceModel.ClientBase<Thesis_project_Repository.ServiceReference1.ISUSMS>, Thesis_project_Repository.ServiceReference1.ISUSMS {
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public partial class SUSMSClient : ClientBase<ISUSMS>, ISUSMS {
         
         public SUSMSClient() {
         }
@@ -192,91 +201,91 @@ namespace Thesis_project_Repository.ServiceReference1 {
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SUSMSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SUSMSClient(string endpointConfigurationName, EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SUSMSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SUSMSClient(Binding binding, EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Thesis_project_Repository.ServiceReference1.sendSMSISUResponse Thesis_project_Repository.ServiceReference1.ISUSMS.sendSMSISU(Thesis_project_Repository.ServiceReference1.sendSMSISURequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        sendSMSISUResponse ISUSMS.sendSMSISU(sendSMSISURequest request) {
             return base.Channel.sendSMSISU(request);
         }
         
         public string sendSMSISU(string username, string password, string provider, string number, string message) {
-            Thesis_project_Repository.ServiceReference1.sendSMSISURequest inValue = new Thesis_project_Repository.ServiceReference1.sendSMSISURequest();
+            sendSMSISURequest inValue = new sendSMSISURequest();
             inValue.username = username;
             inValue.password = password;
             inValue.provider = provider;
             inValue.number = number;
             inValue.message = message;
-            Thesis_project_Repository.ServiceReference1.sendSMSISUResponse retVal = ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).sendSMSISU(inValue);
+            sendSMSISUResponse retVal = ((ISUSMS)(this)).sendSMSISU(inValue);
             return retVal.@return;
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSISUResponse> Thesis_project_Repository.ServiceReference1.ISUSMS.sendSMSISUAsync(Thesis_project_Repository.ServiceReference1.sendSMSISURequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        Task<sendSMSISUResponse> ISUSMS.sendSMSISUAsync(sendSMSISURequest request) {
             return base.Channel.sendSMSISUAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSISUResponse> sendSMSISUAsync(string username, string password, string provider, string number, string message) {
-            Thesis_project_Repository.ServiceReference1.sendSMSISURequest inValue = new Thesis_project_Repository.ServiceReference1.sendSMSISURequest();
+        public Task<sendSMSISUResponse> sendSMSISUAsync(string username, string password, string provider, string number, string message) {
+            sendSMSISURequest inValue = new sendSMSISURequest();
             inValue.username = username;
             inValue.password = password;
             inValue.provider = provider;
             inValue.number = number;
             inValue.message = message;
-            return ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).sendSMSISUAsync(inValue);
+            return ((ISUSMS)(this)).sendSMSISUAsync(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Thesis_project_Repository.ServiceReference1.sendSMSResponse Thesis_project_Repository.ServiceReference1.ISUSMS.sendSMS(Thesis_project_Repository.ServiceReference1.sendSMSRequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        sendSMSResponse ISUSMS.sendSMS(sendSMSRequest request) {
             return base.Channel.sendSMS(request);
         }
         
         public string sendSMS(string provider, string number, string message) {
-            Thesis_project_Repository.ServiceReference1.sendSMSRequest inValue = new Thesis_project_Repository.ServiceReference1.sendSMSRequest();
+            sendSMSRequest inValue = new sendSMSRequest();
             inValue.provider = provider;
             inValue.number = number;
             inValue.message = message;
-            Thesis_project_Repository.ServiceReference1.sendSMSResponse retVal = ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).sendSMS(inValue);
+            sendSMSResponse retVal = ((ISUSMS)(this)).sendSMS(inValue);
             return retVal.@return;
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSResponse> Thesis_project_Repository.ServiceReference1.ISUSMS.sendSMSAsync(Thesis_project_Repository.ServiceReference1.sendSMSRequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        Task<sendSMSResponse> ISUSMS.sendSMSAsync(sendSMSRequest request) {
             return base.Channel.sendSMSAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.sendSMSResponse> sendSMSAsync(string provider, string number, string message) {
-            Thesis_project_Repository.ServiceReference1.sendSMSRequest inValue = new Thesis_project_Repository.ServiceReference1.sendSMSRequest();
+        public Task<sendSMSResponse> sendSMSAsync(string provider, string number, string message) {
+            sendSMSRequest inValue = new sendSMSRequest();
             inValue.provider = provider;
             inValue.number = number;
             inValue.message = message;
-            return ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).sendSMSAsync(inValue);
+            return ((ISUSMS)(this)).sendSMSAsync(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Thesis_project_Repository.ServiceReference1.getCarriersResponse Thesis_project_Repository.ServiceReference1.ISUSMS.getCarriers(Thesis_project_Repository.ServiceReference1.getCarriersRequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getCarriersResponse ISUSMS.getCarriers(getCarriersRequest request) {
             return base.Channel.getCarriers(request);
         }
         
         public string[] getCarriers() {
-            Thesis_project_Repository.ServiceReference1.getCarriersRequest inValue = new Thesis_project_Repository.ServiceReference1.getCarriersRequest();
-            Thesis_project_Repository.ServiceReference1.getCarriersResponse retVal = ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).getCarriers(inValue);
+            getCarriersRequest inValue = new getCarriersRequest();
+            getCarriersResponse retVal = ((ISUSMS)(this)).getCarriers(inValue);
             return retVal.@return;
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.getCarriersResponse> Thesis_project_Repository.ServiceReference1.ISUSMS.getCarriersAsync(Thesis_project_Repository.ServiceReference1.getCarriersRequest request) {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        Task<getCarriersResponse> ISUSMS.getCarriersAsync(getCarriersRequest request) {
             return base.Channel.getCarriersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Thesis_project_Repository.ServiceReference1.getCarriersResponse> getCarriersAsync() {
-            Thesis_project_Repository.ServiceReference1.getCarriersRequest inValue = new Thesis_project_Repository.ServiceReference1.getCarriersRequest();
-            return ((Thesis_project_Repository.ServiceReference1.ISUSMS)(this)).getCarriersAsync(inValue);
+        public Task<getCarriersResponse> getCarriersAsync() {
+            getCarriersRequest inValue = new getCarriersRequest();
+            return ((ISUSMS)(this)).getCarriersAsync(inValue);
         }
     }
 }

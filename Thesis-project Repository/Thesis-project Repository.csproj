@@ -72,6 +72,7 @@
     <Content Include="DownloadFile.aspx" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
+    <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Admin\SQL Queries.txt" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
@@ -83,6 +84,7 @@
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="Completed Use Cases.txt" />
+    <Content Include="StudentFiles\UpdateStudentProfile.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="ViewerHomePage.aspx" />
@@ -146,6 +148,13 @@
     <Compile Include="ProfessorFiles\ProfessorHome.aspx.designer.cs">
       <DependentUpon>ProfessorHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProfessorFiles\UpdateProfessorProfile.aspx.cs">
+      <DependentUpon>UpdateProfessorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfessorFiles\UpdateProfessorProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfessorProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -184,6 +193,13 @@
     </Compile>
     <Compile Include="StudentFiles\PreliminaryProposal.aspx.designer.cs">
       <DependentUpon>PreliminaryProposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\UpdateStudentProfile.aspx.cs">
+      <DependentUpon>UpdateStudentProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\UpdateStudentProfile.aspx.designer.cs">
+      <DependentUpon>UpdateStudentProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>

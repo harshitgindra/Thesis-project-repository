@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.WebControls;
+
 namespace Thesis_project_Repository.Admin {
     
     
@@ -19,7 +21,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView1;
+        protected MultiView MultiView1;
         
         /// <summary>
         /// View1 control.
@@ -28,7 +30,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected View View1;
         
         /// <summary>
         /// View2 control.
@@ -37,7 +39,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected View View2;
         
         /// <summary>
         /// approvalList control.
@@ -46,7 +48,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource approvalList;
+        protected SqlDataSource approvalList;
         
         /// <summary>
         /// approvalwaitinglist control.
@@ -55,7 +57,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView approvalwaitinglist;
+        protected GridView approvalwaitinglist;
         
         /// <summary>
         /// DetailedInfoList control.
@@ -64,7 +66,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DetailedInfoList;
+        protected SqlDataSource DetailedInfoList;
         
         /// <summary>
         /// DetailedInfoApprovalAccount control.
@@ -73,7 +75,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailedInfoApprovalAccount;
+        protected DetailsView DetailedInfoApprovalAccount;
         
         /// <summary>
         /// Label1 control.
@@ -82,6 +84,6 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected Label Label1;
     }
 }
