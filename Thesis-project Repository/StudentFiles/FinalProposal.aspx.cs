@@ -123,14 +123,14 @@ namespace Thesis_project_Repository.StudentFiles
                 var command = new SqlCommand(query, connection);
                 var command2 = new SqlCommand(query2, connection);
                 command.Parameters.AddWithValue("@username", username);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@final_report", ConvertUploadedFile(finalreport));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);

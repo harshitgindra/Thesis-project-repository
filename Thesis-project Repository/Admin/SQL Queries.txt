@@ -210,4 +210,28 @@ INSERT INTO FINAL_PROJECT_PROPOSAL (USERNAME)
 VALUES (@username)
 END
 
+--view to get omni search resuts without name and it needs to create OmniSearchResultsView which joins with studentProfile
+CREATE VIEW omniSearchView
+AS
+SELECT username,document_name,'project_title' as Title,'keywoards' as keywords, date_uploaded
+FROM final_project_proposal
+union
+select username, document_name, project_title, keywords, date_uploaded
+from preliminary_project_submission
+union
+select username, document_name, title, keywords, date_uploaded
+from thesis_submission;
 
+--View to get omni search results with name
+create view  OmniSearchResultsView AS
+SELECT    omniSearchView.username, STUDENTPROFILE.FIRSTNAME + ' ' + STUDENTPROFILE.LASTNAME AS Name, 
+omniSearchView.document_name, omniSearchView.Title, omniSearchView.keywords, 
+                      omniSearchView.date_uploaded
+FROM         omniSearchView INNER JOIN
+                      STUDENTPROFILE ON omniSearchView.username = STUDENTPROFILE.USERNAME;
+
+--Query for omni search that is used in the sqldatasource1		  
+SELECT Name, document_name, title, keywords FROM OMNISEARCHRESULTSVIEW 
+WHERE (OMNISEARCHRESULTSVIEW.DOCUMENT_NAME LIKE '%' + @Document_Name + '%') 
+OR (OMNISEARCHRESULTSVIEW.Title LIKE '%' + @Title+ '%') 
+or (OMNISEARCHRESULTSVIEW.keywords LIKE '%' + @Keywords+ '%')

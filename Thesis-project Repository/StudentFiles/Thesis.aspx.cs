@@ -132,14 +132,14 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@course_no", courseNumber.Text);             
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", thesisabstract.Text);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@thesis_report", ConvertUploadedFile(thesisupload));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);

@@ -7,22 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository {
     
     
     public partial class Search {
-        
-        /// <summary>
-        /// Head1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -31,7 +19,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// TextBox1 control.
@@ -40,16 +28,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox TextBox1;
-        
-        /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected Label Label6;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// Button1 control.
@@ -58,7 +37,16 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// DropDownList1 control.
@@ -67,16 +55,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DropDownList DropDownList1;
-        
-        /// <summary>
-        /// div1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlGenericControl div1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// RadioButtonList1 control.
@@ -85,7 +64,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
         
         /// <summary>
         /// TextBox2 control.
@@ -94,7 +73,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
         
         /// <summary>
         /// Label1 control.
@@ -103,88 +82,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label Label1;
-        
-        /// <summary>
-        /// div2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlGenericControl div2;
-        
-        /// <summary>
-        /// RadioButtonList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected RadioButtonList RadioButtonList2;
-        
-        /// <summary>
-        /// DropDownList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected DropDownList DropDownList2;
-        
-        /// <summary>
-        /// TypeSqlDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected SqlDataSource TypeSqlDataSource;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected Label Label2;
-        
-        /// <summary>
-        /// div3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlGenericControl div3;
-        
-        /// <summary>
-        /// RadioButtonList3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected RadioButtonList RadioButtonList3;
-        
-        /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected TextBox TextBox3;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// Button2 control.
@@ -193,7 +91,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button Button2;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// Label4 control.
@@ -202,88 +100,70 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// div4 control.
+        /// SearchResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected HtmlGenericControl div4;
+        protected global::System.Web.UI.WebControls.MultiView SearchResults;
         
         /// <summary>
-        /// GridView1 control.
+        /// EmptyView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected GridView GridView1;
+        protected global::System.Web.UI.WebControls.View EmptyView;
         
         /// <summary>
-        /// DetailsView1 control.
+        /// OmniSearchResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DetailsView DetailsView1;
+        protected global::System.Web.UI.WebControls.View OmniSearchResults;
         
         /// <summary>
-        /// DetailsView2 control.
+        /// OmniResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DetailsView DetailsView2;
+        protected global::System.Web.UI.WebControls.GridView OmniResults;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// DocumentSqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource DocumentSqlDataSource1;
         
         /// <summary>
-        /// UserDetailsSqlDataSource control.
+        /// AdvanceSearchResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected SqlDataSource UserDetailsSqlDataSource;
+        protected global::System.Web.UI.WebControls.View AdvanceSearchResults;
         
         /// <summary>
-        /// UserInfoSqlDataSource control.
+        /// AdvanceResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected SqlDataSource UserInfoSqlDataSource;
-        
-        /// <summary>
-        /// div5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlGenericControl div5;
-        
-        /// <summary>
-        /// GridView2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView AdvanceResults;
         
         /// <summary>
         /// Label5 control.
@@ -292,6 +172,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label Label5;
+        protected global::System.Web.UI.WebControls.Label Label5;
     }
 }

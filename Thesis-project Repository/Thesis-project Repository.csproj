@@ -74,8 +74,8 @@
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
-    <Content Include="Search.aspx" />
     <Content Include="Admin\SQL Queries.txt" />
+    <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
     <Content Include="Service References\ServiceReference1\Reference.svcmap">
