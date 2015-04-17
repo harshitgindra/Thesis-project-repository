@@ -7,14 +7,14 @@ namespace Thesis_project_Repository.StudentFiles
 {
     public partial class WebForm2 : Page
     {
-        
+
 
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                                 + "Integrated Security=true";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = Session["username"].ToString();
+            var username = Session["username"].ToString();
             if (!Page.IsPostBack)
             {
                 const string query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
@@ -63,7 +63,7 @@ namespace Thesis_project_Repository.StudentFiles
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            string Username = Session["username"].ToString();
+            var username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = preliminaryreport.PostedFile.ContentLength;
             var reportName = preliminaryreport.PostedFile.FileName;
@@ -89,26 +89,26 @@ namespace Thesis_project_Repository.StudentFiles
                    + "DATE_UPLOADED = @date "
                    + "WHERE USERNAME = @username ;";
 
-           
+
 
             using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(query, connection);
-               
-                command.Parameters.AddWithValue("@username", Username);
+
+                command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@project_title", projecttitle.Text);
                 command.Parameters.AddWithValue("@course_no", courseNumber.Text);
                 command.Parameters.AddWithValue("@livelink", livelink.Text);
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", projectabstract.Text);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@preliminary_report", ConvertUploadedFile(preliminaryreport));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
-                //#pragma warning disable 618
+                #pragma warning disable 618
                 command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
-                //#pragma warning restore 618
+                #pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);
@@ -117,11 +117,11 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@semester", semester.Text);
                 command.Parameters.AddWithValue("@date", todaydate);
 
-                
+
                 try
                 {
                     connection.Open();
-                    if (command.ExecuteNonQuery()  == 2)
+                    if (command.ExecuteNonQuery() == 2)
                     {
                         Response.Write("Successfully updated the DB");
                     }
