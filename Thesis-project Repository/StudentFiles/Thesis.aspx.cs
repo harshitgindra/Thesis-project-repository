@@ -22,11 +22,11 @@ namespace Thesis_project_Repository.StudentFiles
                 if (!Page.IsPostBack)
                 {
                     const string query = "SELECT * FROM THESIS_SUBMISSION WHERE USERNAME = @username ;";
-                    
+
                     using (var connection = new SqlConnection(ConnectionString))
                     {
-                        var command = new SqlCommand(query, connection);                       
-                        command.Parameters.AddWithValue("@username", username);                      
+                        var command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@username", username);
                         try
                         {
                             connection.Open();
@@ -68,7 +68,8 @@ namespace Thesis_project_Repository.StudentFiles
                                 var reportName = "";
                                 if (!reader.IsDBNull(7))
                                 {
-                                    reportName = reader.GetString(7);
+                                    var reportNameFromDatabase = reader.GetString(7);
+                                    reportName = reportNameFromDatabase.Substring(1);
                                     var hyp = new HyperLink
                                     {
                                         ID = "hyp1",
@@ -102,13 +103,14 @@ namespace Thesis_project_Repository.StudentFiles
             string username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = thesisupload.PostedFile.ContentLength;
-            var reportName = thesisupload.PostedFile.FileName;
+            var reportNameFromUser = thesisupload.PostedFile.FileName;
+            var reportName = "T" + reportNameFromUser;
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
 
             const string query = "UPDATE THESIS_SUBMISSION "
                 + " SET TITLE = @thesis_title , "
-                + "COURSE_NO = @course_no , "              
+                + "COURSE_NO = @course_no , "
                 + "KEYWORDS = @keywords , "
                 + "ABSTRACT = @abstract , "
                 + "DOCUMENT = @thesis_report , "
@@ -129,17 +131,17 @@ namespace Thesis_project_Repository.StudentFiles
 
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@thesis_title", thesistitle.Text);
-                command.Parameters.AddWithValue("@course_no", courseNumber.Text);             
+                command.Parameters.AddWithValue("@course_no", courseNumber.Text);
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", thesisabstract.Text);
-                #pragma warning disable 618
+#pragma warning disable 618
                 command.Parameters.Add("@thesis_report", ConvertUploadedFile(thesisupload));
-                #pragma warning restore 618
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
-                #pragma warning disable 618
+#pragma warning disable 618
                 command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
-                #pragma warning restore 618
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);
@@ -150,7 +152,7 @@ namespace Thesis_project_Repository.StudentFiles
                 try
                 {
                     connection.Open();
-                    if (command.ExecuteNonQuery()== 1)
+                    if (command.ExecuteNonQuery() == 1)
                     {
                         Response.Write("Successfully updated the DB");
                     }

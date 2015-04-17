@@ -8,15 +8,15 @@ addition of the project or thesis or preliminary topic.
 7. Update Profile {done} => Need to implement in viewer
 8. SMS web service {done}
 9. Delete Profile User {done}
-10. Search {done} => Need to put session validation here and add to viewer
+10. Search {done} => Uncomment the page_load method
 11. View details of the user {done} => if possible reduce the table into pages of small records
 and provide download link to download the files.
+12. Download File {done} => We need to add code that will download the video or there shlould be a
+player that can run that video.
 
-15. Download File
-12. Check approval status {harshit}
-13. Faculty approval for the projects
-14. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
-
+13. Check approval status {harshit}
+14. Faculty approval for the projects
+15. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
 16. Highlight/Showcase Thesis/Project  {harshit}
 17. Dashboard that is accessible to admin only. {Amitesh} Column to count the number of clicks
  Need to add the cookies for saving user password

@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,12 +22,12 @@
             <br />
             <table>
                 <tr>
-                    <td valign ="top" >
-                        <asp:GridView ID="OmniResults" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="DocumentSqlDataSource1" ForeColor="#333333" GridLines="None" DataKeyNames="username" >
+                    <td valign="top">
+                        <asp:GridView ID="OmniResults" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="DocumentSqlDataSource1" ForeColor="#333333" GridLines="None" DataKeyNames="username">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" ReadOnly="True" />
-                                <asp:HyperLinkField DataNavigateUrlFields="document_name" DataNavigateUrlFormatString="DownloadFile.aspx?document_name={0}" DataTextField="document_name" HeaderText="Document Name" />
+                                <asp:HyperLinkField DataNavigateUrlFields="document_name, username" DataNavigateUrlFormatString="DownloadFile.aspx?document_name={0}&username={1}" DataTextField="document_name" HeaderText="Document Name" />
                                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                                 <asp:BoundField DataField="keywords" HeaderText="Keywords" SortExpression="keywords" />
                                 <asp:BoundField DataField="date_uploaded" HeaderText="Date Uploaded" SortExpression="date_uploaded" />
@@ -60,7 +61,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                             </SelectParameters>
                         </asp:SqlDataSource>
                     </td>
-                    <td >
+                    <td>
                         <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HeaderText="Detailed View">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />

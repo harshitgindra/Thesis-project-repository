@@ -21,7 +21,7 @@
 
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="DetailedInfoList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM [logininfo] WHERE ([username] = @username)">
+           <%-- <asp:SqlDataSource ID="DetailedInfoList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM [logininfo] WHERE ([username] = @username)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="approvalwaitinglist" Name="username" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
@@ -32,7 +32,7 @@
                     <asp:BoundField DataField="acctype" HeaderText="lastname" SortExpression="lastname" />
 
                 </Fields>
-            </asp:DetailsView>
+            </asp:DetailsView>--%>
             <asp:Label ID="Label1" runat="server"></asp:Label>
         </asp:View>
     </asp:MultiView>

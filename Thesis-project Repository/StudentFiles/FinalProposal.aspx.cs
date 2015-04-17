@@ -43,7 +43,8 @@ namespace Thesis_project_Repository.StudentFiles
                                 var reportName = "";
                                 if (!reader.IsDBNull(7))
                                 {
-                                    reportName = reader.GetString(3);
+                                    var reportNameFromDatabase = reader.GetString(3);
+                                    reportName = reportNameFromDatabase.Substring(1);
                                     var hyp = new HyperLink
                                     {
                                         ID = "hyp1",
@@ -89,7 +90,8 @@ namespace Thesis_project_Repository.StudentFiles
             string username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = finalreport.PostedFile.ContentLength;
-            var reportName = finalreport.PostedFile.FileName;
+            var reportNameFromUser = finalreport.PostedFile.FileName;
+            var reportName = "F"+reportNameFromUser;
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
 

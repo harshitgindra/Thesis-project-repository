@@ -37,7 +37,8 @@ namespace Thesis_project_Repository.StudentFiles
                             committeemember.Text = reader.GetString(15);
                             graduateAdvisor.Text = reader.GetString(18);
                             semester.Text = reader.GetString(21);
-                            var reportName = reader.GetString(8);
+                            var reportNameFromDatabase = reader.GetString(8);
+                            var reportName = reportNameFromDatabase.Substring(1);
                             var hyp = new HyperLink
                             {
                                 ID = "hyp1",
@@ -66,7 +67,8 @@ namespace Thesis_project_Repository.StudentFiles
             var username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = preliminaryreport.PostedFile.ContentLength;
-            var reportName = preliminaryreport.PostedFile.FileName;
+            var reportNameFromUser = preliminaryreport.PostedFile.FileName;
+            var reportName = "P"+reportNameFromUser;
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
 
