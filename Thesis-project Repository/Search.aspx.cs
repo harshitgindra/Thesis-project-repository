@@ -14,9 +14,6 @@ namespace Thesis_project_Repository
 
         }
 
-        protected void OmniSearchButton(object sender, EventArgs e)
-        {
-            SearchResults.ActiveViewIndex = 1;
-        }
+       
     }
 }

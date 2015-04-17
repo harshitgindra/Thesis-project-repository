@@ -49,6 +49,9 @@
                     <li>
                         <a href="../DeleteProfile.aspx">Delete Profile</a>
                     </li>
+                     <li>
+                        <a href="../Search.aspx">Search</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -3,22 +3,23 @@
 3. Forgot Password {done}
 4. Admin Approval {done}
 5. Unsubscribe {done} 
-6. Subscribe {done} Need to implement in viewer and subscribers should receive an email whenever there is an
+6. Subscribe {done} => Need to implement in viewer and subscribers should receive an email whenever there is an
 addition of the project or thesis or preliminary topic.
-7. Update Profile {done} Need to implement in viewer
+7. Update Profile {done} => Need to implement in viewer
 8. SMS web service {done}
 9. Delete Profile User {done}
+10. Search {done} => Need to put session validation here and add to viewer
+11. View details of the user {done} => if possible reduce the table into pages of small records
+and provide download link to download the files.
 
-10. Search {Kaveh & amitesh}
-15. View details of the user. => linked to the user search as when the user search there will be an option to
-see the details or profile of the selected student. {kaveh}
-11. Check approval status {harshit}
-12. Faculty approval for the projects
-13. Dashboard that is accessible to admin only. {Amitesh} Column to count the number of clicks
+15. Download File
+12. Check approval status {harshit}
+13. Faculty approval for the projects
 14. Export Thesis/Project (to XML/JSON format) {Harshit} WILL BE IMPLEMENTED AFTER SEARCH
 
 16. Highlight/Showcase Thesis/Project  {harshit}
- 
+17. Dashboard that is accessible to admin only. {Amitesh} Column to count the number of clicks
+ Need to add the cookies for saving user password
 
 Not Use Case:
 //Verification Link {done} 
