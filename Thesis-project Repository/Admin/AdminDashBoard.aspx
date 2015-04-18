@@ -1,19 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="AdminDashBoard.aspx.cs" Inherits="Thesis_project_Repository.Admin.AdminDashBoard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript" src="js/TweenLite.min.js"></script>
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/TweenLite.min.js"></script>
+    <script type="text/javascript" src="../js/TweenMax.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="js/highcharts.js"></script>
-    <script src="js/highcharts-more.js"></script>
-    <script src="js/exporting.js"></script>
+    <script src="../js/highcharts.js"></script>
+    <script src="../js/highcharts-more.js"></script>
+    <script src="../js/exporting.js"></script>
 
     <title>Download Files Dashboard</title>
     <style type="text/css">
         body {
             margin: 0;
-            background-color: #000;
+            background-color: #FFF;
         }
 
         #content {
@@ -23,6 +23,8 @@
             font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             text-align: justify;
             color: #FFF;
+            height:500px;
+            width: auto;
         }
     </style>
 </asp:Content>
@@ -38,25 +40,17 @@
                         renderTo: 'content'
                     },
                     title: {
-                        text: 'Fruit Consumption Breakdown'
+                        text: 'Download Dashboard'
                     },
-                    xAxis: {
-                        categories: ['<%=xAxisFruit[0]%>', '<%=xAxisFruit[1]%>', '<%=xAxisFruit[2]%>', '<%=xAxisFruit[3]%>', '<%=xAxisFruit[4]%>']
-		            },
-		            yAxis: {
-		                title: {
-		                    text: 'Quantity Consumed'
-		                }
-		            },
 		            tooltip: {
 		                formatter: function () {
 		                    var s;
 		                    if (this.point.name) { // the pie chart
 		                        s = '' +
-									this.point.name + ': ' + this.y + ' fruits';
+									this.point.name + ': ' + this.y + ' Downloads';
 		                    } else {
 		                        s = '' +
-									this.x + ': ' + this.y + ' fruits';
+									this.x + ': ' + this.y + ' Downloads';
 		                    }
 		                    return s;
 		                }
@@ -66,58 +60,20 @@
 		            },
 		            labels: {
 		                items: [{
-		                    html: 'Total Fruits',
+		                    html: 'Total File Downloaded',
 		                    style: {
-		                        left: '220px',
+		                        left: '0px',
 		                        top: '8px',
 		                        color: 'black'
 		                    }
 		                }]
 		            },
-		            series: [{
-		                type: 'column',
-		                name: 'Jane',
-		                data: [<%=userJane[0]%>, <%=userJane[1]%>, <%=userJane[2]%>
-                                    , <%=userJane[3]%>, <%=userJane[4]%>]
-		            }, {
-		                type: 'column',
-		                name: 'John',
-		                data: [<%=userJohn[0]%>, <%=userJohn[1]%>, <%=userJohn[2]%>
-                                    , <%=userJohn[3]%>, <%=userJohn[4]%>]
-		            }, {
-		                type: 'column',
-		                name: 'Joe',
-		                data: [<%=userJoe[0]%>, <%=userJoe[1]%>, <%=userJoe[2]%>
-                                    , <%=userJoe[3]%>, <%=userJoe[4]%>]
-		            }, {
-		                type: 'spline',
-		                name: 'Average',
-		                data: [(<%=userJane[0]%> + <%=userJohn[0]%> + <%=userJoe[0]%>)/3
-                            , (<%=userJane[1]%> + <%=userJohn[1]%> + <%=userJoe[1]%>)/3
-                            , (<%=userJane[2]%> + <%=userJohn[2]%> + <%=userJoe[2]%>)/3
-                            , (<%=userJane[3]%> + <%=userJohn[3]%> + <%=userJoe[3]%>)/3
-                            , (<%=userJane[4]%> + <%=userJohn[4]%> + <%=userJoe[4]%>)/3]
-		            }, {
+		            series: [ {
 		                type: 'pie',
-		                name: 'Fruit Totals',
-		                data: [{
-		                    name: 'Jane',
-		                    y: <%=userJane[0]%> + <%=userJane[1]%> + <%=userJane[2]%>
-                                    + <%=userJane[3]%> + <%=userJane[4]%>,
-		                    color: '#4572A7' // Jane's color
-		                }, {
-		                    name: 'John',
-		                    y: <%=userJohn[0]%> + <%=userJohn[1]%> + <%=userJohn[2]%>
-                                    + <%=userJohn[3]%> + <%=userJohn[4]%>,
-		                    color: '#AA4643' // John's color
-		                }, {
-		                    name: 'Joe',
-		                    y: <%=userJoe[0]%> + <%=userJoe[1]%> + <%=userJoe[2]%>
-                                    + <%=userJoe[3]%> + <%=userJoe[4]%>,
-		                    color: '#89A54E' // Joe's color
-		                }],
-		                center: [270, 80],
-		                size: 100,
+		                name: 'Download Dashboard',
+		                data: [<%=fileNamefromDB%>],
+		                center: [600, 200],
+		                size: 300,
 		                showInLegend: false,
 		                dataLabels: {
 		                    enabled: false

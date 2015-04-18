@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,58 +11,82 @@ namespace Thesis_project_Repository.Admin
 {
     public partial class AdminDashBoard : System.Web.UI.Page
     {
-        const int ComboChartBarGroups = 5;    //max bars to display
-        protected string[] xAxisFruit = new string[ComboChartBarGroups];
-        protected int[] userJane = new int[ComboChartBarGroups];
-        protected int[] userJohn = new int[ComboChartBarGroups];
-        protected int[] userJoe = new int[ComboChartBarGroups];
+        //var ComboChartBarGroups = 5;    //max bars to display
+
+        private const string ConnectionString =
+          "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
+          + "Integrated Security=true";
+        public string fileNamefromDB = "";
+        public string countFromDB = "";
+        public string dateFromDB = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //SqlDatabase Database = new SqlDatabase(ConfigurationManager.ConnectionStrings
-            //                                                ["ConnectionString"].ToString());
-            /////initialize Combo chart 
-            /////--------------------
-            /////Start by reading in the values from the DB
-            //DbCommand MyCommand = Database.GetStoredProcCommand("GetTopProjectServiceOrders");
-            //Database.AddInParameter(MyCommand, "@user_name_", DbType.String, Session["user_name_"].ToString());
-            //Database.AddInParameter(MyCommand, "@period_", DbType.Int32, DefaultTimeInMonths);
+            const string countString = "SELECT count(*) FROM dashboard;";
+            Int32 count = 0;
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(countString, connection);
 
-            //dataReader = Database.ExecuteReader(MyCommand);
+                try
+                {
+                    connection.Open();
+                    count = (Int32)command.ExecuteScalar();
 
-            //_cntr = 0;
-            //while (dataReader.Read()&& _cntr < ComboChartBarGroups) 
-            //{
-            //    xAxisFruit[_cntr] = dataReader["project_name_"].ToString();
-            //    userJane[_cntr] = Convert.ToInt32(dataReader["open_so_count_"]);
-            //    userJohn[_cntr] = Convert.ToInt32(dataReader["closed_so_count_"]);
-            //    userJoe[_cntr] = Convert.ToInt32(dataReader["past_due_so_count_"]);
-            //    _cntr++;
-            //}
 
-            xAxisFruit[0] = "Apples";
-            userJane[0] = 3;
-            userJohn[0] = 2;
-            userJoe[0] = 4;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
 
-            xAxisFruit[1] = "Oranges";
-            userJane[1] = 2;
-            userJohn[1] = 3;
-            userJoe[1] = 3;
+            string[] documentName = new string[count];
+            int[] downloadCount = new int[count];
+            string[] uploadedDates = new string[count];
 
-            xAxisFruit[2] = "Pears";
-            userJane[2] = 1;
-            userJohn[2] = 5;
-            userJoe[2] = 3;
 
-            xAxisFruit[3] = "Bananas";
-            userJane[3] = 3;
-            userJohn[3] = 7;
-            userJoe[3] = 9;
+            System.Array colorsArray = Enum.GetValues(typeof(KnownColor));
+            KnownColor[] allColors = new KnownColor[colorsArray.Length];
+            Array.Copy(colorsArray, allColors, colorsArray.Length);
 
-            xAxisFruit[4] = "Plums";
-            userJane[4] = 4;
-            userJohn[4] = 6;
-            userJoe[4] = 0;
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                string query2 = "select * from dashboard;";
+                var command1 = new SqlCommand(query2, connection);
+                try
+                {
+                    connection.Open();
+                    var reader = command1.ExecuteReader();
+                    var _cntr = 0;
+                    while (reader.Read())
+                    {
+                        documentName[_cntr] = reader["filename"].ToString();
+                        downloadCount[_cntr] = Convert.ToInt32(reader["count"]);
+                        uploadedDates[_cntr] = reader["date_uploaded"].ToString();
+                        _cntr++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                fileNamefromDB += "{ name: '" + documentName[i] + "' , y: " + downloadCount[i] +
+                    ", color: '" + allColors[(i+1)*10] + "' },";
+
+            }
+            fileNamefromDB = fileNamefromDB.Substring(0, fileNamefromDB.Length - 1);
         }
     }
 }
