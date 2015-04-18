@@ -104,6 +104,7 @@
     <Content Include="StudentFiles\UpdateStudentProfile.aspx" />
     <Content Include="StudentFiles\FinalProposal.aspx" />
     <Content Include="StudentFiles\Thesis.aspx" />
+    <Content Include="StudentFiles\CheckApprovalStatus.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="ViewerHomePage.aspx" />
@@ -262,6 +263,13 @@
     </Compile>
     <Compile Include="StudentFiles\Thesis.aspx.designer.cs">
       <DependentUpon>Thesis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\CheckApprovalStatus.aspx.cs">
+      <DependentUpon>CheckApprovalStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\CheckApprovalStatus.aspx.designer.cs">
+      <DependentUpon>CheckApprovalStatus.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>

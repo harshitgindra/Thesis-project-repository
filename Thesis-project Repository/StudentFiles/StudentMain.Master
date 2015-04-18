@@ -38,7 +38,7 @@
                         <a href="#">Schedule a presentation</a>
                     </li>
                     <li>
-                        <a href="#">Check approval Status</a>
+                        <a href="CheckApprovalStatus.aspx">Check approval Status</a>
                     </li>
                     <li class="active">
                         <a href="StudentHomePage.aspx">Home</a>
