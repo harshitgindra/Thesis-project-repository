@@ -25,6 +25,8 @@
                         </li>
                         <li><a href="AdminUserApproval.aspx">Approve User</a>
                         </li>
+                        <li><a href="AdminDashBoard.aspx">Dashboard</a>
+                        </li>
                         <li>
                             <asp:LinkButton ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
                         </li>

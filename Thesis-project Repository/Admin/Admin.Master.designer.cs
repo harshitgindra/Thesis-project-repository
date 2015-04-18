@@ -7,9 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository.Admin {
     
     
@@ -22,7 +19,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// form1 control.
@@ -31,7 +28,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// logout control.
@@ -40,7 +37,7 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected LinkButton logout;
+        protected global::System.Web.UI.WebControls.LinkButton logout;
         
         /// <summary>
         /// AdminMaster control.
@@ -49,6 +46,6 @@ namespace Thesis_project_Repository.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected ContentPlaceHolder AdminMaster;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder AdminMaster;
     }
 }

@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminDashBoard.aspx" />
     <Content Include="Admin\AdminUserApproval.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="css\forms.css" />
@@ -71,6 +72,13 @@
     <Content Include="Default.aspx" />
     <Content Include="DeleteProfile.aspx" />
     <Content Include="DownloadFile.aspx" />
+    <Content Include="HighChartsJavaScript.csproj.user" />
+    <Content Include="js\exporting.js" />
+    <Content Include="js\highcharts-more.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\TweenLite.min.js" />
+    <Content Include="js\TweenMax.min.js" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
@@ -101,6 +109,13 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDashBoard.aspx.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDashBoard.aspx.designer.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminUserApproval.aspx.cs">
       <DependentUpon>AdminUserApproval.aspx</DependentUpon>
