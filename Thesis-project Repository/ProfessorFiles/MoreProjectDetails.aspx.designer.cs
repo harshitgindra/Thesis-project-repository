@@ -7,10 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Thesis_project_Repository.StudentFiles {
+namespace Thesis_project_Repository.ProfessorFiles {
     
     
-    public partial class WebForm2 {
+    public partial class WebForm3 {
+        
+        /// <summary>
+        /// MultiView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView MultiView1;
+        
+        /// <summary>
+        /// View1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View View1;
+        
+        /// <summary>
+        /// stdusername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label stdusername;
         
         /// <summary>
         /// projecttitle control.
@@ -19,34 +46,16 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox projecttitle;
+        protected global::System.Web.UI.WebControls.Label projecttitle;
         
         /// <summary>
-        /// courseNumber control.
+        /// LiveLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox courseNumber;
-        
-        /// <summary>
-        /// livelink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox livelink;
-        
-        /// <summary>
-        /// keywords control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox keywords;
+        protected global::System.Web.UI.WebControls.Label LiveLink;
         
         /// <summary>
         /// projectabstract control.
@@ -55,78 +64,105 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox projectabstract;
+        protected global::System.Web.UI.WebControls.Label projectabstract;
         
         /// <summary>
-        /// preliminaryreport control.
+        /// downloadfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload preliminaryreport;
+        protected global::System.Web.UI.WebControls.PlaceHolder downloadfile;
         
         /// <summary>
-        /// preliminaryreportdownload control.
+        /// approvalstatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder preliminaryreportdownload;
+        protected global::System.Web.UI.WebControls.Label approvalstatus;
         
         /// <summary>
-        /// screencasts control.
+        /// comments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload screencasts;
+        protected global::System.Web.UI.WebControls.Label comments;
         
         /// <summary>
-        /// committeeChair control.
+        /// addComments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList committeeChair;
+        protected global::System.Web.UI.WebControls.Button addComments;
         
         /// <summary>
-        /// committeemember control.
+        /// View2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList committeemember;
+        protected global::System.Web.UI.WebControls.View View2;
         
         /// <summary>
-        /// graduateAdvisor control.
+        /// addingcomments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList graduateAdvisor;
+        protected global::System.Web.UI.WebControls.TextBox addingcomments;
         
         /// <summary>
-        /// semester control.
+        /// savecomments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList semester;
+        protected global::System.Web.UI.WebControls.Button savecomments;
         
         /// <summary>
-        /// submit control.
+        /// grantapproval1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Button grantapproval1;
+        
+        /// <summary>
+        /// goback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button goback;
+        
+        /// <summary>
+        /// savecommentsupdates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label savecommentsupdates;
+        
+        /// <summary>
+        /// approvalstatusupdates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label approvalstatusupdates;
     }
 }

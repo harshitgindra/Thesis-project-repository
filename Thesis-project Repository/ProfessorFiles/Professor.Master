@@ -25,7 +25,7 @@
                         <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
                     </li>
                     <li>
-                        <a href="#">More Features COming soon</a>
+                        <a href="ProjectList.aspx">Project Lists</a>
                     </li>
                     <li class="active">
                         <a href="ProfessorHome.aspx">Home</a>

@@ -7,9 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository {
     
     
@@ -22,7 +19,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected HtmlForm loginForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm loginForm;
         
         /// <summary>
         /// MultiView1 control.
@@ -31,7 +28,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected MultiView MultiView1;
+        protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
         /// loginPage control.
@@ -40,7 +37,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected View loginPage;
+        protected global::System.Web.UI.WebControls.View loginPage;
         
         /// <summary>
         /// loginUserName control.
@@ -49,7 +46,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox loginUserName;
+        protected global::System.Web.UI.WebControls.TextBox loginUserName;
         
         /// <summary>
         /// loginPassword control.
@@ -58,7 +55,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox loginPassword;
+        protected global::System.Web.UI.WebControls.TextBox loginPassword;
         
         /// <summary>
         /// CheckBox1 control.
@@ -67,7 +64,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
         
         /// <summary>
         /// Button1 control.
@@ -76,7 +73,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// Button2 control.
@@ -85,7 +82,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected LinkButton Button2;
+        protected global::System.Web.UI.WebControls.LinkButton Button2;
         
         /// <summary>
         /// Button3 control.
@@ -94,7 +91,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected LinkButton Button3;
+        protected global::System.Web.UI.WebControls.LinkButton Button3;
         
         /// <summary>
         /// loginResult control.
@@ -103,7 +100,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label loginResult;
+        protected global::System.Web.UI.WebControls.Label loginResult;
         
         /// <summary>
         /// signUpPage control.
@@ -112,7 +109,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected View signUpPage;
+        protected global::System.Web.UI.WebControls.View signUpPage;
         
         /// <summary>
         /// fname control.
@@ -121,7 +118,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox fname;
+        protected global::System.Web.UI.WebControls.TextBox fname;
         
         /// <summary>
         /// lname control.
@@ -130,7 +127,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox lname;
+        protected global::System.Web.UI.WebControls.TextBox lname;
         
         /// <summary>
         /// signUpUsername control.
@@ -139,7 +136,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox signUpUsername;
+        protected global::System.Web.UI.WebControls.TextBox signUpUsername;
         
         /// <summary>
         /// usernameerror control.
@@ -148,7 +145,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label usernameerror;
+        protected global::System.Web.UI.WebControls.Label usernameerror;
         
         /// <summary>
         /// signUpPassword control.
@@ -157,7 +154,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox signUpPassword;
+        protected global::System.Web.UI.WebControls.TextBox signUpPassword;
         
         /// <summary>
         /// signUpPassword2 control.
@@ -166,7 +163,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox signUpPassword2;
+        protected global::System.Web.UI.WebControls.TextBox signUpPassword2;
         
         /// <summary>
         /// secques control.
@@ -175,7 +172,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox secques;
+        protected global::System.Web.UI.WebControls.TextBox secques;
         
         /// <summary>
         /// secans control.
@@ -184,7 +181,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox secans;
+        protected global::System.Web.UI.WebControls.TextBox secans;
         
         /// <summary>
         /// phoneNumber control.
@@ -193,7 +190,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox phoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox phoneNumber;
         
         /// <summary>
         /// ntwrkprovider control.
@@ -202,7 +199,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DropDownList ntwrkprovider;
+        protected global::System.Web.UI.WebControls.DropDownList ntwrkprovider;
         
         /// <summary>
         /// accType control.
@@ -211,7 +208,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RadioButtonList accType;
+        protected global::System.Web.UI.WebControls.RadioButtonList accType;
         
         /// <summary>
         /// signUp control.
@@ -220,7 +217,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button signUp;
+        protected global::System.Web.UI.WebControls.Button signUp;
         
         /// <summary>
         /// LinkButton2 control.
@@ -229,7 +226,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
         
         /// <summary>
         /// SignUpReply control.
@@ -238,7 +235,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label SignUpReply;
+        protected global::System.Web.UI.WebControls.Label SignUpReply;
         
         /// <summary>
         /// forgotPasswordPage control.
@@ -247,7 +244,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected View forgotPasswordPage;
+        protected global::System.Web.UI.WebControls.View forgotPasswordPage;
         
         /// <summary>
         /// forgotEmailId control.
@@ -256,7 +253,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox forgotEmailId;
+        protected global::System.Web.UI.WebControls.TextBox forgotEmailId;
         
         /// <summary>
         /// FpAccntType control.
@@ -265,7 +262,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RadioButtonList FpAccntType;
+        protected global::System.Web.UI.WebControls.RadioButtonList FpAccntType;
         
         /// <summary>
         /// retrievelMethodRadioList control.
@@ -274,7 +271,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RadioButtonList retrievelMethodRadioList;
+        protected global::System.Web.UI.WebControls.RadioButtonList retrievelMethodRadioList;
         
         /// <summary>
         /// forgotpassword control.
@@ -283,7 +280,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button forgotpassword;
+        protected global::System.Web.UI.WebControls.Button forgotpassword;
         
         /// <summary>
         /// confirationMessage control.
@@ -292,7 +289,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label confirationMessage;
+        protected global::System.Web.UI.WebControls.Label confirationMessage;
         
         /// <summary>
         /// changePasswordMessage control.
@@ -301,7 +298,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected View changePasswordMessage;
+        protected global::System.Web.UI.WebControls.View changePasswordMessage;
         
         /// <summary>
         /// VerificationCode control.
@@ -310,7 +307,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox VerificationCode;
+        protected global::System.Web.UI.WebControls.TextBox VerificationCode;
         
         /// <summary>
         /// NewPassword control.
@@ -319,7 +316,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox NewPassword;
+        protected global::System.Web.UI.WebControls.TextBox NewPassword;
         
         /// <summary>
         /// CnfrmPassword control.
@@ -328,7 +325,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox CnfrmPassword;
+        protected global::System.Web.UI.WebControls.TextBox CnfrmPassword;
         
         /// <summary>
         /// UpdatePass control.
@@ -337,7 +334,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button UpdatePass;
+        protected global::System.Web.UI.WebControls.Button UpdatePass;
         
         /// <summary>
         /// UpdatePasswordFromSMSConfirmation control.
@@ -346,6 +343,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label UpdatePasswordFromSMSConfirmation;
+        protected global::System.Web.UI.WebControls.Label UpdatePasswordFromSMSConfirmation;
     }
 }

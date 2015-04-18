@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebAndConsoleApps\ImageUploadDownload\ImageUploadDownload\Dll\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -71,6 +75,8 @@
     <Content Include="css\tables.css" />
     <Content Include="Default.aspx" />
     <Content Include="DeleteProfile.aspx" />
+    <Content Include="Dll\Newtonsoft.Json.Net20.dll" />
+    <Content Include="Dll\Newtonsoft.Json.Net20.xml" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="HighChartsJavaScript.csproj.user" />
     <Content Include="js\exporting.js" />
@@ -83,6 +89,8 @@
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
     <Content Include="Admin\SQL Queries.txt" />
+    <Content Include="ProfessorFiles\ProjectList.aspx" />
+    <Content Include="ProfessorFiles\MoreProjectDetails.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -103,6 +111,7 @@
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JsonObjects.cs" />
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +188,20 @@
     </Compile>
     <Compile Include="ProfessorFiles\UpdateProfessorProfile.aspx.designer.cs">
       <DependentUpon>UpdateProfessorProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorFiles\ProjectList.aspx.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfessorFiles\ProjectList.aspx.designer.cs">
+      <DependentUpon>ProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorFiles\MoreProjectDetails.aspx.cs">
+      <DependentUpon>MoreProjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfessorFiles\MoreProjectDetails.aspx.designer.cs">
+      <DependentUpon>MoreProjectDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

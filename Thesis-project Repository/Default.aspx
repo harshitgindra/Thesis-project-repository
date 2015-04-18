@@ -13,6 +13,9 @@
 <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
 <asp:View ID="loginPage" runat="server">
 
+    <a href="Search.aspx">seach</a>
+
+
     <table>
         <tr>
             <td>User Name</td>

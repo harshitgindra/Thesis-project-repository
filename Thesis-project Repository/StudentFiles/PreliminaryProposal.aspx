@@ -52,20 +52,21 @@
         <tr>
             <td>Committee Chair: </td>
             <td>
-                <asp:TextBox ID="committeeChair" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="committeeChair" runat="server"></asp:DropDownList>
+                
             </td>
         </tr>
         <tr>
             <td>Committee Member: </td>
             <td>
-                <asp:TextBox ID="committeemember" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="committeemember" runat="server"></asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td>Graduate Advisor: </td>
             <td>
-                <asp:TextBox ID="graduateAdvisor" runat="server"></asp:TextBox>
-            </td>
+                <asp:DropDownList ID="graduateAdvisor" runat="server"></asp:DropDownList>
+            </td>graduateAdvisor
         </tr>
         <tr>
             <td>Semester Completed: </td>

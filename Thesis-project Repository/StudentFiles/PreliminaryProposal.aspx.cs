@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,6 +16,7 @@ namespace Thesis_project_Repository.StudentFiles
         protected void Page_Load(object sender, EventArgs e)
         {
             var username = Session["username"].ToString();
+            fetchProfessorListFromDB();
             if (!Page.IsPostBack)
             {
                 const string query = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @username ;";
@@ -33,9 +35,9 @@ namespace Thesis_project_Repository.StudentFiles
                             livelink.Text = reader.GetString(3);
                             keywords.Text = reader.GetString(4);
                             projectabstract.Text = reader.GetString(5);
-                            committeeChair.Text = reader.GetString(12);
-                            committeemember.Text = reader.GetString(15);
-                            graduateAdvisor.Text = reader.GetString(18);
+                            committeeChair.SelectedValue = reader.GetString(12);
+                            committeemember.SelectedValue = reader.GetString(15);
+                            graduateAdvisor.SelectedValue = reader.GetString(18);
                             semester.Text = reader.GetString(21);
                             var reportNameFromDatabase = reader.GetString(8);
                             var reportName = reportNameFromDatabase.Substring(1);
@@ -62,13 +64,48 @@ namespace Thesis_project_Repository.StudentFiles
             }
         }
 
+        private void fetchProfessorListFromDB()
+        {
+            committeeChair.Items.Add("Please Select One");
+            committeemember.Items.Add("Please Select One");
+            graduateAdvisor.Items.Add("Please Select One");
+            const string query = "SELECT * FROM FACULTYPROFILE ;";
+
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        committeeChair.Items.Add(reader.GetString(0));
+                        committeemember.Items.Add(reader.GetString(0));
+                        graduateAdvisor.Items.Add(reader.GetString(0));
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
         protected void submit_Click(object sender, EventArgs e)
         {
             var username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = preliminaryreport.PostedFile.ContentLength;
             var reportNameFromUser = preliminaryreport.PostedFile.FileName;
-            var reportName = "P"+reportNameFromUser;
+            var reportName = "P" + reportNameFromUser;
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
 
@@ -103,14 +140,14 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@livelink", livelink.Text);
                 command.Parameters.AddWithValue("@keywords", keywords.Text);
                 command.Parameters.AddWithValue("@abstract", projectabstract.Text);
-                #pragma warning disable 618
+#pragma warning disable 618
                 command.Parameters.Add("@preliminary_report", ConvertUploadedFile(preliminaryreport));
-                #pragma warning restore 618
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@report_length", reportLength);
                 command.Parameters.AddWithValue("@report_name", reportName);
-                #pragma warning disable 618
+#pragma warning disable 618
                 command.Parameters.Add("@screencast", ConvertUploadedFile(screencasts));
-                #pragma warning restore 618
+#pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
                 command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);

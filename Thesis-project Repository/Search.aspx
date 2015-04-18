@@ -44,6 +44,7 @@
                             <SortedDescendingCellStyle BackColor="#FFFDF8" />
                             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                         </asp:GridView>
+                        <asp:Button ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click"/>
                         <asp:SqlDataSource ID="DocumentSqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT *  FROM OMNISEARCHRESULTSVIEW 
 WHERE (OMNISEARCHRESULTSVIEW.DOCUMENT_NAME LIKE '%' + @Document_Name + '%') 
 OR (OMNISEARCHRESULTSVIEW.Title LIKE '%' + @Title+ '%') 
@@ -128,6 +129,8 @@ WHERE USERNAME = @USERNAME">
                 </tr>
             </table>
         </div>
+
+
     </form>
 </body>
 </html>
