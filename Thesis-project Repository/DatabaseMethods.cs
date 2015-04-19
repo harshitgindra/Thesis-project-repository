@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using Thesis_project_Repository.Models;
 
 namespace Thesis_project_Repository
@@ -268,6 +269,36 @@ namespace Thesis_project_Repository
                 }
             }
             return count;
+        }
+
+        public Boolean SendEmail(string receiver, string subject, string message)
+        {
+            var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
+            var emailMessage = new MailMessage { From = messageFrom };
+
+            var messageTo = new MailAddress(receiver);
+            emailMessage.To.Add(messageTo.Address);
+
+            var messageSubject = subject;
+            var messageBody = message;
+            emailMessage.Subject = messageSubject;
+            emailMessage.Body = messageBody;
+            emailMessage.IsBodyHtml = true;
+            var mailClient = new SmtpClient("smtp.ilstu.edu");
+            // Credentials are necessary if the server requires the client 
+            // to authenticate before it will send e-mail on the client's behalf.
+            // Do this in the web.config file
+            try
+            {
+                mailClient.UseDefaultCredentials = true; // false;
+                mailClient.Send(emailMessage);
+            }
+            catch (Exception e)
+            {
+                Console.Write(e);
+                return false;
+            }
+            return true;
         }
     }
 }

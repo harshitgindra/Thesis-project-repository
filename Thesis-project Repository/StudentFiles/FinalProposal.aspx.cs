@@ -10,9 +10,9 @@ namespace Thesis_project_Repository.StudentFiles
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+        private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                                + "Integrated Security=true";
-
+        string reportNameFromUser = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -90,10 +90,13 @@ namespace Thesis_project_Repository.StudentFiles
             string username = Session["username"].ToString();
             var todaydate = DateTime.Now.ToString("yyyy-MM-dd");
             var reportLength = finalreport.PostedFile.ContentLength;
-            var reportNameFromUser = finalreport.PostedFile.FileName;
+             reportNameFromUser = finalreport.PostedFile.FileName;
             var reportName = "F"+reportNameFromUser;
             var screencastLength = screencasts.PostedFile.ContentLength;
             var screencastName = screencasts.PostedFile.FileName;
+            var count = 0;
+            const string insertInDashboard = "INSERT INTO DASHBOARD (FILENAME, COUNT) "+
+            "VALUES (@FILENAME, @COUNT);";
 
             const string query = "UPDATE FINAL_PROJECT_PROPOSAL SET "
                 + "DOCUMENT = @final_report , "
@@ -124,6 +127,7 @@ namespace Thesis_project_Repository.StudentFiles
             {
                 var command = new SqlCommand(query, connection);
                 var command2 = new SqlCommand(query2, connection);
+                var command3 = new SqlCommand(insertInDashboard, connection);
                 command.Parameters.AddWithValue("@username", username);
                 #pragma warning disable 618
                 command.Parameters.Add("@final_report", ConvertUploadedFile(finalreport));
@@ -149,11 +153,27 @@ namespace Thesis_project_Repository.StudentFiles
                 command2.Parameters.AddWithValue("@committee_member", committeemember.Text);
                 command2.Parameters.AddWithValue("@graduate_advisor", graduateAdvisor.Text);
                 command2.Parameters.AddWithValue("@username", username);
+
+                command3.Parameters.AddWithValue("@FILENAME", reportNameFromUser);
+                command3.Parameters.AddWithValue("@COUNT", count);
                 try
                 {
                     connection.Open();
+
                     if ((command.ExecuteNonQuery() + command2.ExecuteNonQuery()) == 2)
                     {
+                        var result = command3.ExecuteNonQuery();
+                        if (result == 1) {
+                            const string getSubscribers = "SELECT USERNAME FROM SUBSCRIPTION;";
+                            var command4 = new SqlCommand(getSubscribers, connection);
+                            DatabaseMethods databaseMethods = new DatabaseMethods();
+                            var reader = command4.ExecuteReader();
+                            while (reader.Read()) {
+                                var subscriber = reader.GetString(0);
+                                databaseMethods.SendEmail(subscriber, "New Document Added in Final Proposal", EmailBody());
+                            }
+                          
+                        }
                         Response.Write("Successfully updated the DB");
                     }
                 }
@@ -167,6 +187,7 @@ namespace Thesis_project_Repository.StudentFiles
                 }
             }
         }
+
         public byte[] ConvertUploadedFile(FileUpload file)
         {
             var lenght = file.PostedFile.ContentLength;
@@ -176,6 +197,15 @@ namespace Thesis_project_Repository.StudentFiles
             file.PostedFile.InputStream.Read(data, 0, lenght);
             return data;
         }
-    }
 
+        protected string EmailBody()
+        {
+            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+                          + reportNameFromUser +
+                          " <h2>New Document has been added to the Final Proposal. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
+                          +  "' >Click Here</a>"
+                          + "<h3>Thank you</h3>";
+            return message;
+        }
+    }
 }

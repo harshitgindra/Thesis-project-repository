@@ -108,6 +108,8 @@
     <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="ViewerHomePage.aspx" />
+    <Content Include="Viewer\UpdateViewerProfile.aspx" />
+    <Content Include="Viewer\ViewerHome.aspx" />
     <Content Include="Web.config" />
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
@@ -304,6 +306,27 @@
     <Compile Include="ViewerHomePage.aspx.designer.cs">
       <DependentUpon>ViewerHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Viewer\UpdateViewerProfile.aspx.cs">
+      <DependentUpon>UpdateViewerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\UpdateViewerProfile.aspx.designer.cs">
+      <DependentUpon>UpdateViewerProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\Viewer.Master.cs">
+      <DependentUpon>Viewer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\Viewer.Master.designer.cs">
+      <DependentUpon>Viewer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\ViewerHome.aspx.cs">
+      <DependentUpon>ViewerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\ViewerHome.aspx.designer.cs">
+      <DependentUpon>ViewerHome.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoginDS.xsc">
@@ -348,6 +371,7 @@
     <Content Include="UserDS.xss">
       <DependentUpon>UserDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Viewer\Viewer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

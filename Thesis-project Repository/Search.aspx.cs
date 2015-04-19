@@ -21,10 +21,10 @@ namespace Thesis_project_Repository
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["username"] == null)
-            //{
-            //    Response.Redirect("../Default.aspx");
-            //}
+            if (Session["username"] == null)
+            {
+                Response.Redirect("../Default.aspx");
+            }
         }
 
         protected void jsonoutput_Click(object sender, EventArgs e)

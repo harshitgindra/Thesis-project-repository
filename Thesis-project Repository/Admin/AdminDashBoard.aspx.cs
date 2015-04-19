@@ -17,6 +17,8 @@ namespace Thesis_project_Repository.Admin
           "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
           + "Integrated Security=true";
         public string fileNamefromDB = "";
+        public string fileNamefromDBForBars = "";
+        public string dataForBars = "";
         public string countFromDB = "";
         public string dateFromDB = "";
         protected void Page_Load(object sender, EventArgs e)
@@ -83,10 +85,15 @@ namespace Thesis_project_Repository.Admin
             for (int i = 0; i < count; i++)
             {
                 fileNamefromDB += "{ name: '" + documentName[i] + "' , y: " + downloadCount[i] +
-                    ", color: '" + allColors[(i+1)*10] + "' },";
-
+                    ", color: '" + allColors[(i + 1) * 10] + "' },";
+                fileNamefromDBForBars += "'" + documentName[i] + "', ";
+                dataForBars += "{ type: 'column', name: '" + documentName[i] + "', data: [" + downloadCount[i] +
+                    "]},";
             }
             fileNamefromDB = fileNamefromDB.Substring(0, fileNamefromDB.Length - 1);
+            fileNamefromDBForBars = fileNamefromDBForBars.Substring(0, fileNamefromDBForBars.Length - 2);
+            dataForBars = dataForBars.Substring(0, dataForBars.Length - 1);
         }
     }
 }
+

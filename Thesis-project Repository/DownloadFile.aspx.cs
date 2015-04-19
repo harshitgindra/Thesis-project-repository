@@ -17,6 +17,7 @@ namespace Thesis_project_Repository
             var username = Request.QueryString["username"];
             var fileNameFromSearch = Request.QueryString["document_name"];
             var fileTypeFromSearch = fileNameFromSearch.Substring(0, 1);
+            var fullFileNameFromSearch = fileNameFromSearch.Substring(1);
             var type = "";
             type = Request.QueryString["file"];
             var fileToDownload = GetAFile(username, type, fileTypeFromSearch);
@@ -27,10 +28,42 @@ namespace Thesis_project_Repository
             Response.BinaryWrite(fileToDownload);
             Response.Flush();
             Response.End();
+            UpdateInDashboard(fullFileNameFromSearch, newFileName);
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "ClosePage", "window.close();", true);
         }
 
-        public byte[] GetAFile(string username, string type, string fileTypeFromSearch)
+        private void UpdateInDashboard(string fileNameFromSearch, string fileNameFromDb) 
+        {
+            if (fileNameFromSearch != null || fileNameFromDb != null)
+            {
+                var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
+                                     + "Integrated Security=true";
+                string queryForGettingCount = "SELECT COUNT FROM DASHBOARD WHERE FILENAME = @FILENAME OR FILENAME = @FILENAME1;";
+                var count = 0;
+                string forUpdatingCount = "UPDATE DASHBOARD SET COUNT = @COUNT WHERE FILENAME = @FILENAME2 OR FILENAME =@FILENAME3";
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var cmd = new SqlCommand(queryForGettingCount, connection);
+                    cmd.Parameters.AddWithValue("@FILENAME", fileNameFromSearch);
+                    cmd.Parameters.AddWithValue("@FILENAME", fileNameFromDb);
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        count = reader.GetInt32(1);
+                        count++;
+                        var command = new SqlCommand(forUpdatingCount, connection);
+                        command.Parameters.AddWithValue("@COUNT", count);
+                        command.Parameters.AddWithValue("@FILENAME2", fileNameFromSearch);
+                        command.Parameters.AddWithValue("@FILENAME3", fileNameFromDb);
+                       var result = command.ExecuteNonQuery();
+                    }
+                    reader.Close();
+                }
+            }       
+        }
+
+        private byte[] GetAFile(string username, string type, string fileTypeFromSearch)
         {
             var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                    + "Integrated Security=true";

@@ -67,7 +67,7 @@ namespace Thesis_project_Repository
                                 }
                                 else if (acctype.Equals("V"))
                                 {
-                                    Response.Redirect("/ViewerHomePage.aspx", false);
+                                    Response.Redirect("/Viewer/ViewerHome.aspx", false);
                                 }
                             }
                         }

@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Viewer.master.cs" Inherits="Thesis_project_Repository.Viewer.Viewer" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Viewer</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper col2">
+            <div id="header" class="clear">
+                <div class="fl_left">
+                    <h1>
+                        <a href="ViewerHome.aspx">Need of a logo here</a>
+                    </h1>
+                </div>
+                <div id="topnav">
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
+                        </li>
+                        <li class="active">
+                            <a href="ViewerHome.aspx">Home</a>
+                        </li>
+                        <li>
+                            <a href="UpdateViewerProfile.aspx">Update Profile</a>
+                        </li>
+                        <li>
+                            <a href="../DeleteProfile.aspx">Delete Profile</a>
+                        </li>
+                        <li>
+                            <a href="../Search.aspx">Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer" class="clear">
+            <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
+                <asp:View ID="SubscribeView" runat="server">
+                    <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
+                </asp:View>
+                <asp:View ID="UnsubscribeView" runat="server">
+                    <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
+                </asp:View>
+            </asp:MultiView>
+        </div>
+    </form>
+</body>
+</html>

@@ -23,7 +23,7 @@
             font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             text-align: justify;
             color: #FFF;
-            height:500px;
+            height: 500px;
             width: auto;
         }
     </style>
@@ -42,45 +42,54 @@
                     title: {
                         text: 'Download Dashboard'
                     },
-		            tooltip: {
-		                formatter: function () {
-		                    var s;
-		                    if (this.point.name) { // the pie chart
-		                        s = '' +
-									this.point.name + ': ' + this.y + ' Downloads';
-		                    } else {
-		                        s = '' +
-									this.x + ': ' + this.y + ' Downloads';
-		                    }
-		                    return s;
-		                }
-		            },
-		            credits: {
-		                enabled: false
-		            },
-		            labels: {
-		                items: [{
-		                    html: 'Total File Downloaded',
-		                    style: {
-		                        left: '0px',
-		                        top: '8px',
-		                        color: 'black'
-		                    }
-		                }]
-		            },
-		            series: [ {
-		                type: 'pie',
-		                name: 'Download Dashboard',
-		                data: [<%=fileNamefromDB%>],
-		                center: [600, 200],
-		                size: 300,
+                    xAxis: {
+                        categories: [<%=fileNamefromDBForBars%>]
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Total Downloads'
+                        }
+                    },
+                        tooltip: {
+                            formatter: function () {
+                                var s;
+                                if (this.point.name) { // the pie chart
+                                    s = '' +
+                                        this.point.name + ': ' + this.y + ' Downloads';
+                                } else {
+                                    s = '' +
+                                        this.x + ': ' + this.y + ' Downloads';
+                                }
+                                return s;
+                            }
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        labels: {
+                            items: [{
+                                html: 'Total File Downloaded',
+                                style: {
+                                    left: '0px',
+                                    top: '8px',
+                                    color: 'black'
+                                }
+                            }]
+                        },
+                        series: [<%=dataForBars%>,    
+                    {
+                        type: 'pie',
+                        name: 'Download Dashboard',
+                        data: [<%=fileNamefromDB%>],
+		                center: [150, 150],
+		                size: 200,
 		                showInLegend: false,
 		                dataLabels: {
 		                    enabled: false
 		                }
-		            }]
-		        });
-		    });
+                    }]
+                    });
+            });
         </script>
     </div>
 </asp:Content>
