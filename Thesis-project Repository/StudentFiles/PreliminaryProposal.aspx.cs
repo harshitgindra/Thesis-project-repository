@@ -165,7 +165,7 @@ namespace Thesis_project_Repository.StudentFiles
                 try
                 {
                     connection.Open();
-                    if (command.ExecuteNonQuery() == 2)
+                    if (command.ExecuteNonQuery() == 1)
                     {
                         var result = command3.ExecuteNonQuery();
                         if (result == 1)

@@ -26,7 +26,7 @@
                         <asp:GridView ID="OmniResults" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="DocumentSqlDataSource1" ForeColor="#333333" GridLines="None" DataKeyNames="username" Width="797px">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
-                                <asp:BoundField DataField="Name" HeaderText="Author" SortExpression="Author" ReadOnly="True" />
+                                <asp:BoundField DataField="Name" HeaderText="Author" SortExpression="Name" ReadOnly="True" />
                                 <asp:HyperLinkField DataNavigateUrlFields="document_name, username" DataNavigateUrlFormatString="DownloadFile.aspx?document_name={0}&username={1}" DataTextField="document_name" HeaderText="Document Name" />
                                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                                 <asp:BoundField DataField="keywords" HeaderText="Keywords" SortExpression="keywords" />
@@ -60,7 +60,9 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                 <asp:ControlParameter ControlID="TextBox1" Name="username" PropertyName="Text" />
                             </SelectParameters>
                         </asp:SqlDataSource>
+                        
                         <br />
+                        <asp:Button ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click" />
                         <br />
                         <asp:FormView ID="FormView1" runat="server" CellPadding="4" DataKeyNames="document_name,USERNAME" DataSourceID="SqlDataSource1" ForeColor="#333333">
                             <EditItemTemplate>
@@ -378,7 +380,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                 <table> <tr><td><b>First Name:</b></td><td>
                                 <asp:Label ID="FIRSTNAMELabel" runat="server" Text='<%# Bind("FIRSTNAME") %>' />
                                 </td><td><b>Final Project Proposal Document:</b></td><td>
-                                <asp:HyperLink ID="FPP_DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("FPP_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>' ></asp:HyperLink>
+                                <asp:HyperLink ID="FPP_DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("FPP_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "FPP_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>' ></asp:HyperLink>
 								</td>
 								</tr>
                                   
@@ -440,7 +442,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                 <asp:HyperLink ID="DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>' ></asp:HyperLink>
                                 </td>
 								<td><b>Thesis Document:</b></td><td>
-                                    <asp:HyperLink ID="TS_DOCUMENT_NAMELink" runat="server" Text='<%# Bind("TS_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>' ></asp:HyperLink>
+                                    <asp:HyperLink ID="TS_DOCUMENT_NAMELink" runat="server" Text='<%# Bind("TS_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "TS_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>' ></asp:HyperLink>
                                 </td>
 							    </tr>
 								

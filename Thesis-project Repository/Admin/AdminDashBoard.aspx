@@ -43,7 +43,7 @@
                         text: 'Download Dashboard'
                     },
                     xAxis: {
-                        categories: [<%=fileNamefromDBForBars%>]
+                        categories: ['Downloads']
                     },
                     yAxis: {
                         title: {

@@ -17,7 +17,7 @@ namespace Thesis_project_Repository
                                                + "Integrated Security=true";
         JsonObjects jsonattributes = new JsonObjects();
         List<JsonObjects> j = new List<JsonObjects>();
-        List<string> users;
+       // List<string> users;
 
         protected void Page_Load(object sender, EventArgs e)
         {

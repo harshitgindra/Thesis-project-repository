@@ -24,43 +24,41 @@ namespace Thesis_project_Repository
             Response.Clear();
             var ms = new MemoryStream(fileToDownload);
             var newFileName = fileName.Substring(1);
+            UpdateInDashboard(newFileName);
             Response.AddHeader("content-disposition", "attachment;filename=" + newFileName);
             Response.BinaryWrite(fileToDownload);
             Response.Flush();
             Response.End();
-            UpdateInDashboard(fullFileNameFromSearch, newFileName);
             Page.ClientScript.RegisterClientScriptBlock(typeof(Page), "ClosePage", "window.close();", true);
         }
 
-        private void UpdateInDashboard(string fileNameFromSearch, string fileNameFromDb) 
+        private void UpdateInDashboard(string fileNameFromDb)
         {
-            if (fileNameFromSearch != null || fileNameFromDb != null)
+            if (fileNameFromDb != null)
             {
                 var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                      + "Integrated Security=true";
-                string queryForGettingCount = "SELECT COUNT FROM DASHBOARD WHERE FILENAME = @FILENAME OR FILENAME = @FILENAME1;";
-                var count = 0;
-                string forUpdatingCount = "UPDATE DASHBOARD SET COUNT = @COUNT WHERE FILENAME = @FILENAME2 OR FILENAME =@FILENAME3";
+                string queryForGettingCount = "SELECT COUNT FROM DASHBOARD WHERE FILENAME = @FILENAME;";
+                var count1 = 0;
+                string forUpdatingCount = "UPDATE DASHBOARD SET COUNT = @COUNT WHERE FILENAME = @FILENAME2 ;";
                 using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     var cmd = new SqlCommand(queryForGettingCount, connection);
-                    cmd.Parameters.AddWithValue("@FILENAME", fileNameFromSearch);
                     cmd.Parameters.AddWithValue("@FILENAME", fileNameFromDb);
                     var reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        count = reader.GetInt32(1);
-                        count++;
+                        count1 = reader.GetInt32(0);
+                        count1++;
                         var command = new SqlCommand(forUpdatingCount, connection);
-                        command.Parameters.AddWithValue("@COUNT", count);
-                        command.Parameters.AddWithValue("@FILENAME2", fileNameFromSearch);
-                        command.Parameters.AddWithValue("@FILENAME3", fileNameFromDb);
-                       var result = command.ExecuteNonQuery();
+                        command.Parameters.AddWithValue("@COUNT", count1);
+                        command.Parameters.AddWithValue("@FILENAME2", fileNameFromDb);
+                        var result = command.ExecuteNonQuery();
                     }
                     reader.Close();
                 }
-            }       
+            }
         }
 
         private byte[] GetAFile(string username, string type, string fileTypeFromSearch)

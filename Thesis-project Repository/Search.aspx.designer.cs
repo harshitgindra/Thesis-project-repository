@@ -67,6 +67,15 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.SqlDataSource DocumentSqlDataSource1;
         
         /// <summary>
+        /// jsonoutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button jsonoutput;
+        
+        /// <summary>
         /// FormView1 control.
         /// </summary>
         /// <remarks>
