@@ -178,17 +178,17 @@ namespace Thesis_project_Repository
 
         protected void SignUpLink(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 1;
+            MultiView1.ActiveViewIndex = 2;
         }
 
         protected void ForgotPassword(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 2;
+            MultiView1.ActiveViewIndex = 3;
         }
 
         protected void LoginLink(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 0;
+            MultiView1.ActiveViewIndex = 1;
         }
 
         protected void SendSms(string provider, string number, string message)
@@ -246,7 +246,7 @@ namespace Thesis_project_Repository
                         {
                             var message = "Your Verification code is: " + randomString;
                             SendSms(Carrier, phnNumber, message);
-                            MultiView1.ActiveViewIndex = 3;
+                            MultiView1.ActiveViewIndex = 4;
                         }
                     }
                     else
@@ -285,5 +285,8 @@ namespace Thesis_project_Repository
                 }
             }
         }
+
+
+      
     }
 }

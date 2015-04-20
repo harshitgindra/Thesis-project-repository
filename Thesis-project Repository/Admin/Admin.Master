@@ -4,14 +4,30 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <%--<link href="../css/layout.css" rel="stylesheet"/>--%>
+     
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body id="top">
     <form id="form1" runat="server">
-        <div class="wrapper col2">
+
+
+<div data-role="header">
+                <div data-role="navbar" style="background-color:transparent">
+                    
+                    <div data-type="horizontal" style="text-align:center;">                        
+                        <a href="AdminHomePage.aspx">Home</a>
+                        <a href="AdminUserApproval.aspx">Approve User</a>
+                        <a href="AdminDashBoard.aspx">Dashboard</a>
+                         <asp:LinkButton ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <%--<div class="wrapper col2">
             <div id="header" class="clear">
                 <div class="fl_left">
                     <h1>
@@ -21,20 +37,20 @@
                 <div id="topnav">
                     <ul>
                         <li class="active">
-                            <a href="AdminHomePage.aspx">Home</a>
-                        </li>
-                        <li><a href="AdminUserApproval.aspx">Approve User</a>
-                        </li>
-                        <li><a href="AdminDashBoard.aspx">Dashboard</a>
+                            
                         </li>
                         <li>
-                            <asp:LinkButton ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                           
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div>
+        <div>--%>
             <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
             </asp:ContentPlaceHolder>
             

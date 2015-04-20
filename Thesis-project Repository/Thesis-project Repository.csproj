@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="Admin\AdminDashBoard.aspx" />
     <Content Include="Admin\AdminUserApproval.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -91,6 +92,19 @@
     <Content Include="Admin\SQL Queries.txt" />
     <Content Include="ProfessorFiles\ProjectList.aspx" />
     <Content Include="ProfessorFiles\MoreProjectDetails.aspx" />
+    <Content Include="Resources\css\forms.css" />
+    <Content Include="Resources\css\homepage.css" />
+    <Content Include="Resources\css\index.css" />
+    <Content Include="Resources\css\layout.css" />
+    <Content Include="Resources\css\navi.css" />
+    <Content Include="Resources\css\tables.css" />
+    <Content Include="Resources\images\amitesh.jpeg" />
+    <Content Include="Resources\images\harshit.jpg" />
+    <Content Include="Resources\images\HomePageBackground.jpg" />
+    <Content Include="Resources\images\kaveh.jpg" />
+    <Content Include="Resources\images\library.jpg" />
+    <Content Include="Resources\images\logo.jpg" />
+    <Content Include="Resources\js\index.js" />
     <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -114,6 +128,13 @@
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="JsonObjects.cs" />
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>

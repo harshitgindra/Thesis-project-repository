@@ -1,0 +1,24 @@
+﻿img {
+    
+}
+
+.bt1 {
+    display:block;
+    text-align:right;
+}
+
+.navbar button {
+    float:right;
+}
+
+/*#mainpage {
+    background-image: url("../images/library.jpg");
+  
+    background-position:center;
+}*/
+
+/*.mainview {
+    background-image: url("../images/HomePageBackground.jpg");
+    height: auto;
+    width: 100%;
+}*/
