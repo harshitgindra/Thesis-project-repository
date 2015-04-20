@@ -4,64 +4,75 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../css/layout.css" rel="stylesheet"/>
+    <link href="../css/layout.css" rel="stylesheet" />
     <title>Professor</title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
 
+    <link href="../Resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Resources/css/index.css" rel="stylesheet" />
+    <link href="../Resources/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+
+
+    <script src="../Resources/js/bootstrap.js"></script>
+    <script src="../Resources/js/bootstrap.min.js"></script>
+    <script src="../Resources/js/modernizr-2.6.2.min.js"></script>
+    <script src="../Resources/js/jquery.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-<form id="form1" runat="server">
-    <div class="wrapper col2">
-        <div id="header" class="clear">
-            <div class="fl_left">
-                <h1>
-                    <a href="ProfessorHome.aspx">Need of a logo here</a>
-                </h1>
-            </div>
-            <div id="topnav">
-                <ul>
-                    <li>
-                        <asp:LinkButton ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
-                    </li>
-                    <li>
-                        <a href="ProjectList.aspx">Project Lists</a>
-                    </li>
-                    <li class="active">
-                        <a href="ProfessorHome.aspx">Home</a>
-                    </li>
-                     <li>
-                        <a href="UpdateProfessorProfile.aspx">Update Profile</a>
-                    </li>
-                    <li>
-                        <a href="../DeleteProfile.aspx">Delete Profile</a>
-                    </li>
-                     <li>
-                        <a href="../Search.aspx">Search Projects</a>
-                    </li>
-                </ul>
+    <form id="form1" runat="server">
+
+        <div class="container" style="padding-bottom: 50px">
+            <div class="navbar navbar-fixed-top">
+              <%--  <div class="visible-sm pager">
+                    <img src="#" alt="Your Logo" />
+                </div>--%>
+                <a class="navbar-brand" href="AdminHomePage.aspx" id="websiteLogo">
+                    <%--<img class="hidden-sm" src="../Resources/images/logo.jpg" alt="Your Logo" /></a>--%>
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+
+                        <ul class="nav navbar-nav  center">
+                            <li>
+                                <a class="btn" href="ProfessorHome.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a class="btn" href="UpdateProfessorProfile.aspx">Update Profile</a>
+                            </li>
+                            <li>
+                                <a class="btn" href="SearchProjects.aspx">Search Projects</a>
+
+                            </li>
+                            <li>
+                                <a class="btn" href="ProjectList.aspx">Project Lists</a>
+
+                            </li>
+                            <li>
+                                <a class="btn" href="../DeleteProfile.aspx">Delete Profile</a>
+                            </li>
+                            <li>
+                                <asp:LinkButton class="btn" ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
             </div>
         </div>
-    </div>
-
-
-    <div>
 
 
         <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
-     <div id="footer" class="clear">
-        <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
-            <asp:View ID="SubscribeView" runat="server">
-                <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
-            </asp:View>
-            <asp:View ID="UnsubscribeView" runat="server">
-                <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
-            </asp:View>
-        </asp:MultiView>
-    </div>
-</form>
+
+        <div id="footer" class="clear" style="margin-top: 10px">
+            <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
+                <asp:View ID="SubscribeView" runat="server">
+                    <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
+                </asp:View>
+                <asp:View ID="UnsubscribeView" runat="server">
+                    <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
+                </asp:View>
+            </asp:MultiView>
+        </div>
+    </form>
 
 </body>
 </html>

@@ -1,24 +1,21 @@
-﻿img {
-    
-}
-
-.bt1 {
-    display:block;
-    text-align:right;
-}
-
-.navbar button {
-    float:right;
-}
-
-/*#mainpage {
-    background-image: url("../images/library.jpg");
-  
-    background-position:center;
-}*/
-
-/*.mainview {
-    background-image: url("../images/HomePageBackground.jpg");
+﻿img.mainimage {
     height: auto;
     width: 100%;
-}*/
+}
+
+
+
+
+.footer {
+  position: relative;
+  margin-top: -20px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+
+.defaultviews {
+    padding-top: 120px;
+    padding-left:300px;
+    position:absolute;
+}

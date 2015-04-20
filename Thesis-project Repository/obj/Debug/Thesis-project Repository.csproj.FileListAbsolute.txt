@@ -20,6 +20,5 @@ H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-projec
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.dll
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.xml
-H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
 H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
 H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb

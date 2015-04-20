@@ -4,57 +4,61 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     
-    <title></title>
+
+
+    <link href="../Resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Resources/css/index.css" rel="stylesheet" />
+    <link href="../Resources/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+
+
+    <script src="../Resources/js/bootstrap.js"></script>
+    <script src="../Resources/js/bootstrap.min.js"></script>
+    <script src="../Resources/js/modernizr-2.6.2.min.js"></script>
+    <script src="../Resources/js/jquery.min.js"></script>
+    <title>Admin</title>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body id="top">
     <form id="form1" runat="server">
+        <div class="container" style="padding-bottom: 50px">
+            <div class="navbar navbar-fixed-top">
+                <%--<div class="visible-sm pager">
+                    <img src="#" alt="Your Logo" />
+                </div>--%>
+                <a class="navbar-brand" href="AdminHomePage.aspx" id="websiteLogo">
+                    <%--<img class="hidden-sm" src="../Resources/images/logo.jpg" alt="Your Logo" /></a>--%>
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
 
+                        <ul class="nav navbar-nav  center">
+                            <li>
+                                <a class="btn" href="AdminHomePage.aspx">Home</a>
+                            </li>
+                            <li>
+                                <a class="btn" href="AdminUserApproval.aspx">Approve User</a>
+                            </li>
+                            <li>
+                                <a class="btn" href="AdminDashBoard.aspx">Dashboard</a>
 
-<div data-role="header">
-                <div data-role="navbar" style="background-color:transparent">
-                    
-                    <div data-type="horizontal" style="text-align:center;">                        
-                        <a href="AdminHomePage.aspx">Home</a>
-                        <a href="AdminUserApproval.aspx">Approve User</a>
-                        <a href="AdminDashBoard.aspx">Dashboard</a>
-                         <asp:LinkButton ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
+                            </li>
+                            <li>
+                                <a class="btn" href="SearchProject.aspx">Search Projects</a>
+
+                            </li>
+                            <li>
+                                <asp:LinkButton class="btn" ID="logout" OnClick="Logout" runat="server">Log out</asp:LinkButton>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-
-
-
-        <%--<div class="wrapper col2">
-            <div id="header" class="clear">
-                <div class="fl_left">
-                    <h1>
-                        <a href="AdminHomePage.aspx">Need of a logo here</a>
-                    </h1>
-                </div>
-                <div id="topnav">
-                    <ul>
-                        <li class="active">
-                            
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                           
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
-        <div>--%>
-            <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
-            </asp:ContentPlaceHolder>
-            
+        <div style="padding-top:20px; padding-bottom:10px;" >
+        <asp:ContentPlaceHolder ID="AdminMaster" runat="server">
+        </asp:ContentPlaceHolder>
         </div>
+
     </form>
 </body>
 </html>

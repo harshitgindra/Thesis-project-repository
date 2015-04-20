@@ -35,7 +35,7 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@username", username);
                 try
                 {
-                    result += "<table>";
+                    result += "<table class='table table-striped'>";
                     result += "<tr><th>Professor's Email ID</th><th>Professor's Role</th><th>Approval Status</th><th>Comments</th></tr>";
                     connection.Open();
                     var reader = command.ExecuteReader();
@@ -120,7 +120,7 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@username", username);
                 try
                 {
-                    result += "<table>";
+                    result += "<table class='table table-striped'>";
                     result += "<tr><th>Professor's Email ID</th><th>Professor's Role</th><th>Approval Status</th><th>Comments</th></tr>";
                     connection.Open();
                     var reader = command.ExecuteReader();
@@ -204,7 +204,7 @@ namespace Thesis_project_Repository.StudentFiles
                 command.Parameters.AddWithValue("@username", username);
                 try
                 {
-                    result += "<table>";
+                    result += "<table class='table table-striped'>";
                     result += "<tr><th>Professor's Email ID</th><th>Professor's Role</th><th>Approval Status</th><th>Comments</th></tr>";
                     connection.Open();
                     var reader = command.ExecuteReader();
