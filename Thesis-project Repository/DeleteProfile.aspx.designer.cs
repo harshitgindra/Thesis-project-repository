@@ -7,9 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository {
     
     
@@ -22,7 +19,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// Label1 control.
@@ -31,7 +28,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// yes control.
@@ -40,7 +37,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button yes;
+        protected global::System.Web.UI.WebControls.Button yes;
         
         /// <summary>
         /// status control.
@@ -49,6 +46,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label status;
+        protected global::System.Web.UI.WebControls.Label status;
     }
 }

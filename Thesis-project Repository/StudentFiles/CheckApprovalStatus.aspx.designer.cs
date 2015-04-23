@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository.StudentFiles {
     
     
@@ -21,7 +19,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label preliminaryappstatus;
+        protected global::System.Web.UI.WebControls.Label preliminaryappstatus;
         
         /// <summary>
         /// finalappstatus control.
@@ -30,7 +28,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label finalappstatus;
+        protected global::System.Web.UI.WebControls.Label finalappstatus;
         
         /// <summary>
         /// thesisappstatus control.
@@ -39,6 +37,6 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label thesisappstatus;
+        protected global::System.Web.UI.WebControls.Label thesisappstatus;
     }
 }

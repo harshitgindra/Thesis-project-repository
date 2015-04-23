@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository.StudentFiles {
     
     
@@ -21,7 +19,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox projecttitle;
+        protected global::System.Web.UI.WebControls.TextBox projecttitle;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -30,7 +28,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// courseNumber control.
@@ -39,7 +37,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox courseNumber;
+        protected global::System.Web.UI.WebControls.TextBox courseNumber;
         
         /// <summary>
         /// livelink control.
@@ -48,7 +46,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox livelink;
+        protected global::System.Web.UI.WebControls.TextBox livelink;
         
         /// <summary>
         /// keywords control.
@@ -57,7 +55,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox keywords;
+        protected global::System.Web.UI.WebControls.TextBox keywords;
         
         /// <summary>
         /// projectabstract control.
@@ -66,7 +64,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox projectabstract;
+        protected global::System.Web.UI.WebControls.TextBox projectabstract;
         
         /// <summary>
         /// preliminaryreport control.
@@ -75,7 +73,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected FileUpload preliminaryreport;
+        protected global::System.Web.UI.WebControls.FileUpload preliminaryreport;
         
         /// <summary>
         /// preliminaryreportdownload control.
@@ -84,7 +82,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected PlaceHolder preliminaryreportdownload;
+        protected global::System.Web.UI.WebControls.PlaceHolder preliminaryreportdownload;
         
         /// <summary>
         /// screencasts control.
@@ -93,7 +91,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected FileUpload screencasts;
+        protected global::System.Web.UI.WebControls.FileUpload screencasts;
         
         /// <summary>
         /// committeeChair control.
@@ -102,7 +100,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DropDownList committeeChair;
+        protected global::System.Web.UI.WebControls.DropDownList committeeChair;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -111,7 +109,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// committeemember control.
@@ -120,7 +118,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DropDownList committeemember;
+        protected global::System.Web.UI.WebControls.DropDownList committeemember;
         
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -129,7 +127,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// graduateAdvisor control.
@@ -138,7 +136,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected DropDownList graduateAdvisor;
+        protected global::System.Web.UI.WebControls.DropDownList graduateAdvisor;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -147,7 +145,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// semester control.
@@ -156,7 +154,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RadioButtonList semester;
+        protected global::System.Web.UI.WebControls.RadioButtonList semester;
         
         /// <summary>
         /// submit control.
@@ -165,6 +163,6 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button submit;
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }

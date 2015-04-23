@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using Thesis_project_Repository.Models;
 
 namespace Thesis_project_Repository.Viewer
 {
-    public partial class UpdateViewerProfile : Page
+    public partial class UpdateViewerProfile : System.Web.UI.Page
     {
         private const string ConnectionString =
       "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +

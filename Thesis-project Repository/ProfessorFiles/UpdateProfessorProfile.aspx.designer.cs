@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository.ProfessorFiles {
     
     
@@ -21,7 +19,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox username;
+        protected global::System.Web.UI.WebControls.TextBox username;
         
         /// <summary>
         /// password control.
@@ -30,7 +28,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -39,7 +37,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// cnfrmPassword control.
@@ -48,7 +46,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox cnfrmPassword;
+        protected global::System.Web.UI.WebControls.TextBox cnfrmPassword;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -57,7 +55,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// CompareValidator1 control.
@@ -66,7 +64,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// fname control.
@@ -75,7 +73,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox fname;
+        protected global::System.Web.UI.WebControls.TextBox fname;
         
         /// <summary>
         /// lname control.
@@ -84,7 +82,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox lname;
+        protected global::System.Web.UI.WebControls.TextBox lname;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -93,7 +91,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// phnNumber control.
@@ -102,7 +100,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox phnNumber;
+        protected global::System.Web.UI.WebControls.TextBox phnNumber;
         
         /// <summary>
         /// RequiredFieldValidator5 control.
@@ -111,7 +109,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// provider control.
@@ -120,7 +118,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox provider;
+        protected global::System.Web.UI.WebControls.TextBox provider;
         
         /// <summary>
         /// RequiredFieldValidator6 control.
@@ -129,7 +127,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// secQuestion control.
@@ -138,7 +136,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox secQuestion;
+        protected global::System.Web.UI.WebControls.TextBox secQuestion;
         
         /// <summary>
         /// RequiredFieldValidator7 control.
@@ -147,7 +145,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator7;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
         /// secAnswer control.
@@ -156,7 +154,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected TextBox secAnswer;
+        protected global::System.Web.UI.WebControls.TextBox secAnswer;
         
         /// <summary>
         /// RequiredFieldValidator8 control.
@@ -165,7 +163,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected RequiredFieldValidator RequiredFieldValidator8;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
         
         /// <summary>
         /// Button1 control.
@@ -174,7 +172,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// updateResult control.
@@ -183,6 +181,6 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label updateResult;
+        protected global::System.Web.UI.WebControls.Label updateResult;
     }
 }

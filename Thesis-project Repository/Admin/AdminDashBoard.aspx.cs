@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.Admin
 {
-    public partial class AdminDashBoard : Page
+    public partial class AdminDashBoard : System.Web.UI.Page
     {
         //var ComboChartBarGroups = 5;    //max bars to display
 
@@ -47,13 +51,13 @@ namespace Thesis_project_Repository.Admin
             string[] uploadedDates = new string[count];
 
 
-            Array colorsArray = Enum.GetValues(typeof(KnownColor));
+            System.Array colorsArray = Enum.GetValues(typeof(KnownColor));
             KnownColor[] allColors = new KnownColor[colorsArray.Length];
             Array.Copy(colorsArray, allColors, colorsArray.Length);
 
             using (var connection = new SqlConnection(ConnectionString))
             {
-                const string query2 = "select * from dashboard;";
+                string query2 = "select * from dashboard;";
                 var command1 = new SqlCommand(query2, connection);
                 try
                 {

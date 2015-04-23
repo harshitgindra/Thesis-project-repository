@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.StudentFiles
 {
-    public partial class WebForm4 : Page
+    public partial class WebForm4 : System.Web.UI.Page
     {
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                                + "Integrated Security=true";
@@ -186,6 +189,8 @@ namespace Thesis_project_Repository.StudentFiles
         public byte[] ConvertUploadedFile(FileUpload file)
         {
             var lenght = file.PostedFile.ContentLength;
+            var contenttype = file.PostedFile.ContentType;
+            var name = file.PostedFile.FileName;
             var data = new byte[lenght];
             file.PostedFile.InputStream.Read(data, 0, lenght);
             return data;

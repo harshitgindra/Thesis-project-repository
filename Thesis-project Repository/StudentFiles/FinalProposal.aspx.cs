@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.StudentFiles
 {
-    public partial class WebForm3 : Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
                                                + "Integrated Security=true";
@@ -37,10 +40,11 @@ namespace Thesis_project_Repository.StudentFiles
                                 {
                                     semester.Text = reader.GetString(7);
                                 }
+                                var reportName = "";
                                 if (!reader.IsDBNull(7))
                                 {
                                     var reportNameFromDatabase = reader.GetString(3);
-                                    var reportName = reportNameFromDatabase.Substring(1);
+                                    reportName = reportNameFromDatabase.Substring(1);
                                     var hyp = new HyperLink
                                     {
                                         ID = "hyp1",
@@ -187,6 +191,8 @@ namespace Thesis_project_Repository.StudentFiles
         public byte[] ConvertUploadedFile(FileUpload file)
         {
             var lenght = file.PostedFile.ContentLength;
+            var contenttype = file.PostedFile.ContentType;
+            var name = file.PostedFile.FileName;
             var data = new byte[lenght];
             file.PostedFile.InputStream.Read(data, 0, lenght);
             return data;

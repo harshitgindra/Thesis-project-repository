@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.Viewer
 {
-    public partial class Viewer : MasterPage
+    public partial class Viewer : System.Web.UI.MasterPage
     {
         protected void Page_Init(object sender, EventArgs e)
         {

@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository.ProfessorFiles {
     
     
@@ -21,7 +19,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label preliminaryprojectlist;
+        protected global::System.Web.UI.WebControls.Label preliminaryprojectlist;
         
         /// <summary>
         /// finalProjectlist control.
@@ -30,7 +28,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label finalProjectlist;
+        protected global::System.Web.UI.WebControls.Label finalProjectlist;
         
         /// <summary>
         /// thesisproject control.
@@ -39,6 +37,6 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label thesisproject;
+        protected global::System.Web.UI.WebControls.Label thesisproject;
     }
 }

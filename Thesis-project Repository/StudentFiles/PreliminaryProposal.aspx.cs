@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -197,6 +198,8 @@ namespace Thesis_project_Repository.StudentFiles
         public byte[] ConvertUploadedFile(FileUpload file)
         {
             var lenght = file.PostedFile.ContentLength;
+            var contenttype = file.PostedFile.ContentType;
+            var name = file.PostedFile.FileName;
             var data = new byte[lenght];
             file.PostedFile.InputStream.Read(data, 0, lenght);
             return data;
