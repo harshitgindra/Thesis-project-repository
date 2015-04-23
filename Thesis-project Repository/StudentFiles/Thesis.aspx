@@ -10,6 +10,9 @@
             <td>
                 <asp:TextBox ID="thesistitle" runat="server"></asp:TextBox>
             </td>
+             <td>
+                <asp:RequiredFieldValidator ControlToValidate="thesistitle" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>Course Number</td>
@@ -49,17 +52,26 @@
             <td>
                 <asp:TextBox ID="committeeChair" runat="server"></asp:TextBox>
             </td>
+             <td>
+                <asp:RequiredFieldValidator ControlToValidate="committeeChair" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>Committee Member: </td>
             <td>
                 <asp:TextBox ID="committeemember" runat="server"></asp:TextBox>
             </td>
+             <td>
+                <asp:RequiredFieldValidator ControlToValidate="committeemember" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>Department Chair: </td>
             <td>
                 <asp:TextBox ID="deptchair" runat="server"></asp:TextBox>
+            </td>
+             <td>
+                <asp:RequiredFieldValidator ControlToValidate="deptchair" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

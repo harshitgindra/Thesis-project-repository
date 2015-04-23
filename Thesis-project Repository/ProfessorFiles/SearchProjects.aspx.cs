@@ -38,12 +38,12 @@ namespace Thesis_project_Repository.ProfessorFiles
             + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
             + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
-                string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
-             + " WHERE (USERNAME LIKE '%' + @search + '%') "
-             + " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
-             + " OR (KEYWORDS LIKE '%' + @search+ '%')"
-             + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
-             + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
+             //   string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
+             //+ " WHERE (USERNAME LIKE '%' + @search + '%') "
+             //+ " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
+             //+ " OR (KEYWORDS LIKE '%' + @search+ '%')"
+             //+ " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
+             //+ " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
                 string query3 = " SELECT *  FROM THESIS_SUBMISSION "
             + " WHERE (USERNAME LIKE '%' + @search + '%') "

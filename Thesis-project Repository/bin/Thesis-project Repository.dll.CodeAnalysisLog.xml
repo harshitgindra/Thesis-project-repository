@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 11.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="11.0">
+ <Targets>
+  <Target Name="D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll">
+   <Modules>
+    <Module Name="thesis-project repository.dll">
+     <Namespaces>
+      <Namespace Name="Thesis_project_Repository">
+       <Types>
+        <Type Name="ChangePassword" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="ChangePassword.aspx.cs" Line="57">Object 'connection' can be disposed more than once in method 'ChangePassword.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 57, 58</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdatePassword(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="ChangePassword.aspx.cs" Line="88">Object 'connection' can be disposed more than once in method 'ChangePassword.UpdatePassword(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 88</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DatabaseMethods" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SignUp(Thesis_project_Repository.Models.UserModels)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="270">Object 'connection' can be disposed more than once in method 'DatabaseMethods.SignUp(UserModels)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 270</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SubscribeUnsubscribeMethod(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="101">Object 'connection' can be disposed more than once in method 'DatabaseMethods.SubscribeUnsubscribeMethod(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 101</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="88">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DatabaseMethods.SubscribeUnsubscribeMethod(string, string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateLogininfordmstr(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="170">Object 'connection' can be disposed more than once in method 'DatabaseMethods.UpdateLogininfordmstr(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 170</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdatePasswordFromSms(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="145">Object 'connection' can be disposed more than once in method 'DatabaseMethods.UpdatePasswordFromSms(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 145</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateUserProfile(Thesis_project_Repository.Models.UserModels,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DatabaseMethods.cs" Line="76">Object 'connection' can be disposed more than once in method 'DatabaseMethods.UpdateUserProfile(UserModels, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 76</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Default" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Login(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Default.aspx.cs" Line="90">Object 'connection' can be disposed more than once in method 'Default.Login(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 90</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DeleteProfile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DeleteAccount()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="DeleteProfile.aspx.cs" Line="101">Object 'connection' can be disposed more than once in method 'DeleteProfile.DeleteAccount()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 101</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LoginDS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'LoginDS'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="LoginDS+LOGININFODataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'LoginDS.LOGININFODataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Search" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchDataPreliminaryReports(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="109">Object 'connection' can be disposed more than once in method 'Search.fetchDataPreliminaryReports(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 109</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="71">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'Search.fetchDataPreliminaryReports(string)' could contain the following variables 'query1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchFinalReportDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="153">Object 'connection' can be disposed more than once in method 'Search.fetchFinalReportDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 153</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="118">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'Search.fetchFinalReportDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisReportsDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="198">Object 'connection' can be disposed more than once in method 'Search.fetchThesisReportsDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 198</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="Search.aspx.cs" Line="160">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'Search.fetchThesisReportsDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UpdateProfile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="UpdateProfile.aspx.cs" Line="79">Object 'connection' can be disposed more than once in method 'UpdateProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 79</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserDS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'UserDS'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="UserDS+USERINFODataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'UserDS.USERINFODataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="VerificationLink" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository" File="VerificationLink.aspx.cs" Line="54">Object 'connection' can be disposed more than once in method 'VerificationLink.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 54</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Thesis_project_Repository.Admin">
+       <Types>
+        <Type Name="AdminDashBoard" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="AdminDashBoard.aspx.cs" Line="47">Object 'connection' can be disposed more than once in method 'AdminDashBoard.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 47</Issue>
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="AdminDashBoard.aspx.cs" Line="83">Object 'connection' can be disposed more than once in method 'AdminDashBoard.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 83</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AdminUserApproval" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="AdminUserApproval.aspx.cs" Line="39">Object 'connection' can be disposed more than once in method 'AdminUserApproval.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 39</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="AdminUserApproval.aspx.cs" Line="20">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'AdminUserApproval.Page_Load(object, EventArgs)' could contain the following variables 'this.Request.QueryString["username"]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchDataPreliminaryReports(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="104">Object 'connection' can be disposed more than once in method 'WebForm1.fetchDataPreliminaryReports(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="66">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm1.fetchDataPreliminaryReports(string)' could contain the following variables 'query1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchFinalReportDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="148">Object 'connection' can be disposed more than once in method 'WebForm1.fetchFinalReportDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 148</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="113">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm1.fetchFinalReportDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisReportsDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="193">Object 'connection' can be disposed more than once in method 'WebForm1.fetchThesisReportsDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 193</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Admin" File="SearchProject.aspx.cs" Line="155">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm1.fetchThesisReportsDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Thesis_project_Repository.ProfessorFiles">
+       <Types>
+        <Type Name="Professor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Init(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="Professor.Master.cs" Line="44">Object 'connection' can be disposed more than once in method 'Professor.Page_Init(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 44</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UpdateProfessorProfile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="UpdateProfessorProfile.aspx.cs" Line="81">Object 'connection' can be disposed more than once in method 'UpdateProfessorProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 81</Issue>
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="UpdateProfessorProfile.aspx.cs" Line="105">Object 'connection' can be disposed more than once in method 'UpdateProfessorProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 105</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchFinalProjects()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="ProjectList.aspx.cs" Line="185">Object 'connection' can be disposed more than once in method 'WebForm2.fetchFinalProjects()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 185</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchPreliminaryreports()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="ProjectList.aspx.cs" Line="103">Object 'connection' can be disposed more than once in method 'WebForm2.fetchPreliminaryreports()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 103</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisOptions()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="ProjectList.aspx.cs" Line="262">Object 'connection' can be disposed more than once in method 'WebForm2.fetchThesisOptions()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 262</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#displayFinalReportDetails()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="236">Object 'connection' can be disposed more than once in method 'WebForm3.displayFinalReportDetails()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 236</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#displayPreliminaryDetails()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="139">Object 'connection' can be disposed more than once in method 'WebForm3.displayPreliminaryDetails()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 139</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#displayThesisReportDetails()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="326">Object 'connection' can be disposed more than once in method 'WebForm3.displayThesisReportDetails()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 326</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchingCommentsFromDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="377">Object 'connection' can be disposed more than once in method 'WebForm3.fetchingCommentsFromDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 377</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="355">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm3.fetchingCommentsFromDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#grantapproval_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="424">Object 'connection' can be disposed more than once in method 'WebForm3.grantapproval_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 424</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="401">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm3.grantapproval_Click(object, EventArgs)' could contain the following variables 'this.profcomments'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#savecomments_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="471">Object 'connection' can be disposed more than once in method 'WebForm3.savecomments_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 471</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="MoreProjectDetails.aspx.cs" Line="447">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm3.savecomments_Click(object, EventArgs)' could contain the following variables 'this.profcomments', 'this.profcomments', 'this.profcomments'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm4" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchDataPreliminaryReports(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="104">Object 'connection' can be disposed more than once in method 'WebForm4.fetchDataPreliminaryReports(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="66">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm4.fetchDataPreliminaryReports(string)' could contain the following variables 'query1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchFinalReportDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="148">Object 'connection' can be disposed more than once in method 'WebForm4.fetchFinalReportDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 148</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="113">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm4.fetchFinalReportDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisReportsDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="193">Object 'connection' can be disposed more than once in method 'WebForm4.fetchThesisReportsDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 193</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\ProfessorFiles" File="SearchProjects.aspx.cs" Line="155">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm4.fetchThesisReportsDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Thesis_project_Repository.StudentFiles">
+       <Types>
+        <Type Name="Student" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Init(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="StudentMain.Master.cs" Line="48">Object 'connection' can be disposed more than once in method 'Student.Page_Init(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 48</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UpdateStudentProfile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="UpdateStudentProfile.aspx.cs" Line="81">Object 'connection' can be disposed more than once in method 'UpdateStudentProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 81</Issue>
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="UpdateStudentProfile.aspx.cs" Line="105">Object 'connection' can be disposed more than once in method 'UpdateStudentProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 105</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchProfessorListFromDB()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="PreliminaryProposal.aspx.cs" Line="99">Object 'connection' can be disposed more than once in method 'WebForm2.fetchProfessorListFromDB()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 99</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="PreliminaryProposal.aspx.cs" Line="63">Object 'connection' can be disposed more than once in method 'WebForm2.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 63</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submit_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="PreliminaryProposal.aspx.cs" Line="195">Object 'connection' can be disposed more than once in method 'WebForm2.submit_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 195</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="FinalProposal.aspx.cs" Line="79">Object 'connection' can be disposed more than once in method 'WebForm3.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 79</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submit_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="FinalProposal.aspx.cs" Line="188">Object 'connection' can be disposed more than once in method 'WebForm3.submit_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 188</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm4" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="Thesis.aspx.cs" Line="92">Object 'connection' can be disposed more than once in method 'WebForm4.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 92</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submit_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="Thesis.aspx.cs" Line="187">Object 'connection' can be disposed more than once in method 'WebForm4.submit_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 187</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm5" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchFinalappStatus(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="CheckApprovalStatus.aspx.cs" Line="193">Object 'connection' can be disposed more than once in method 'WebForm5.fetchFinalappStatus(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 193</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchPreliminaryappstatus(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="CheckApprovalStatus.aspx.cs" Line="108">Object 'connection' can be disposed more than once in method 'WebForm5.fetchPreliminaryappstatus(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 108</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisAppStatus(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="CheckApprovalStatus.aspx.cs" Line="277">Object 'connection' can be disposed more than once in method 'WebForm5.fetchThesisAppStatus(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 277</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebForm6" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#fetchDataPreliminaryReports(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="104">Object 'connection' can be disposed more than once in method 'WebForm6.fetchDataPreliminaryReports(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="66">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm6.fetchDataPreliminaryReports(string)' could contain the following variables 'query1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchFinalReportDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="148">Object 'connection' can be disposed more than once in method 'WebForm6.fetchFinalReportDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 148</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="113">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm6.fetchFinalReportDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fetchThesisReportsDB(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="193">Object 'connection' can be disposed more than once in method 'WebForm6.fetchThesisReportsDB(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 193</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\StudentFiles" File="SearchProjects.aspx.cs" Line="155">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'WebForm6.fetchThesisReportsDB(string)' could contain the following variables 'query'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Thesis_project_Repository.Viewer">
+       <Types>
+        <Type Name="UpdateViewerProfile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Viewer" File="UpdateViewerProfile.aspx.cs" Line="85">Object 'connection' can be disposed more than once in method 'UpdateViewerProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 85</Issue>
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Viewer" File="UpdateViewerProfile.aspx.cs" Line="109">Object 'connection' can be disposed more than once in method 'UpdateViewerProfile.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 109</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Viewer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Init(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-04-23 04:38:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\Viewer" File="Viewer.Master.cs" Line="48">Object 'connection' can be disposed more than once in method 'Viewer.Page_Init(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 48</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 48</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implement ISerializable correctly</Name>
+   <Description>If a type is assignable to ISerializable, it should implement GetObjectData. For unsealed types, the GetObjectData method should be callable and overridable by derived types.</Description>
+   <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

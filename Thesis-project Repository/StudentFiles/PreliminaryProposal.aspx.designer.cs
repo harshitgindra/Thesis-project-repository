@@ -22,6 +22,15 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.TextBox projecttitle;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// courseNumber control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.DropDownList committeeChair;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// committeemember control.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,15 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.DropDownList committeemember;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// graduateAdvisor control.
         /// </summary>
         /// <remarks>
@@ -110,6 +137,15 @@ namespace Thesis_project_Repository.StudentFiles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList graduateAdvisor;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// semester control.

@@ -131,7 +131,9 @@
     <Content Include="ViewerHomePage.aspx" />
     <Content Include="Viewer\UpdateViewerProfile.aspx" />
     <Content Include="Viewer\ViewerHome.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>

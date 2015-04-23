@@ -8,15 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
-    <link href="Resources/css/bootstrap-glyphicons.css" rel="stylesheet" />
+    <%--<link href="Resources/css/bootstrap-glyphicons.css" rel="stylesheet" />
     <link href="Resources/css/index.css" rel="stylesheet" />
     <script src="Resources/js/bootstrap.js"></script>
     <link href="Resources/css/bootstrap.min.css" rel="stylesheet" />
     <script src="Resources/js/modernizr-2.6.2.min.js"></script>
-    <script src="Resources/js/jquery.min.js"></script>
+    <script src="Resources/js/jquery.min.js"></script>--%>
 
 
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            position: absolute;
+            left: 12px;
+            top: 531px;
+            width: 655px;
+        }
+    </style>
 </head>
 <body>
     <%--  Login Page--%>
@@ -45,11 +53,8 @@
 
                 <asp:View ID="View1" runat="server">
                     <div class="container">
-                        <img id="mainimage" src="Resources/images/library.jpg" />
-
+                        <%--<img id="mainimage" src="Resources/images/library.jpg" />--%>
                     </div>
-
-
                 </asp:View>
                 <asp:View ID="loginPage" runat="server">
                     <div class="container">
@@ -58,13 +63,15 @@
                                 <tr>
                                     <td>User Name</td>
                                     <td>
-                                        <asp:TextBox runat="server" ID="loginUserName"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="loginUserName" TextMode="Email" ></asp:TextBox>
+                                        <asp:RequiredFieldValidator ControlToValidate="loginUserName" ID="RequiredFieldValidator2" runat="server" ErrorMessage="UserId is Required"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Password</td>
                                     <td>
                                         <asp:TextBox runat="server" TextMode="Password" ID="loginPassword"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ControlToValidate="loginPassword" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Password is Required" ></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -97,7 +104,7 @@
                    
                     <div class="container">
                        
-                        <div class="container defaultviews" style="position:absolute" >
+                        <div class="auto-style1" >
                          <h1>Sign Up Form</h1>
                         <table >
                             <tr>
@@ -110,13 +117,15 @@
                                 <td>Last Name</td>
                                 <td>
                                     <asp:TextBox runat="server" ID="lname"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="lname" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Last Name is Required"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>User name:
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="signUpUsername" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="signUpUsername" runat="server" TextMode="Email"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
                                     <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
@@ -134,24 +143,28 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="signUpPassword2" TextMode="Password" runat="server"></asp:TextBox>
+                                    <asp:CompareValidator ControlToValidate="signUpPassword2" ControlToCompare="signUpPassword" ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Security Question</td>
                                 <td>
                                     <asp:TextBox runat="server" ID="secques"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="secques" ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Security Answer</td>
                                 <td>
                                     <asp:TextBox runat="server" ID="secans"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="secans" ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Phone Number</td>
                                 <td>
-                                    <asp:TextBox runat="server" ID="phoneNumber"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="phoneNumber" TextMode="Phone"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="phoneNumber" ID="RequiredFieldValidator7" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -174,6 +187,7 @@
                                         <asp:ListItem>metro pcs</asp:ListItem>
                                         <asp:ListItem></asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
 
@@ -186,6 +200,7 @@
                                         <asp:ListItem Text="Professor" Value="P" />
                                         <asp:ListItem Text="Viewer" Value="V" />
                                     </asp:RadioButtonList>
+                                    <asp:RequiredFieldValidator ControlToValidate="accType" ID="RequiredFieldValidator9" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -217,7 +232,8 @@
                                 <tr>
                                     <td>Please Enter your Email ID here: </td>
                                     <td>
-                                        <asp:TextBox ID="forgotEmailId" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="forgotEmailId" runat="server" TextMode="Email"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ControlToValidate="forgotEmailId" ID="RequiredFieldValidator10" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -229,6 +245,7 @@
                                             <asp:ListItem Text="Professor" Value="P" />
                                             <asp:ListItem Text="Viewer" Value="V" />
                                         </asp:RadioButtonList>
+                                        <asp:RequiredFieldValidator ControlToValidate="FpAccntType" ID="RequiredFieldValidator11" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -239,6 +256,7 @@
                                             <asp:ListItem Text="Email" Value="E" />
                                             <asp:ListItem Text="Message" Value="M" />
                                         </asp:RadioButtonList>
+                                        <asp:RequiredFieldValidator ControlToValidate="retrievelMethodRadioList" ID="RequiredFieldValidator12" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -269,6 +287,7 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="NewPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ControlToValidate="NewPassword" ID="RequiredFieldValidator13" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -276,7 +295,9 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="CnfrmPassword" runat="server" TextMode="Password"></asp:TextBox>
-                                </td>
+                                    <asp:RequiredFieldValidator ControlToValidate="CnfrmPassword" ID="RequiredFieldValidator14" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                                    <asp:CompareValidator ControlToValidate="CnfrmPassword" ControlToCompare="NewPassword" ID="CompareValidator2" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
+                                     </td>
                             </tr>
                             <tr>
                                 <td>

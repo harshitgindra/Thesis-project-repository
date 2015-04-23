@@ -13,11 +13,12 @@ namespace Thesis_project_Repository.Admin
                 var username = Request.QueryString["username"];
                 var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                        + "Integrated Security=true";
-                //need to make this 
-                var query = "update logininfo set admin_approval = 'Y' where username = '" + username + "';";
+               
+                var query = "update logininfo set admin_approval = 'Y' where username = @username;";
                 using (var connection = new SqlConnection(connectionString))
                 {
                     var command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
                     try
                     {
                         connection.Open();
