@@ -81,7 +81,7 @@
                         type: 'pie',
                         name: 'Download Dashboard',
                         data: [<%=fileNamefromDB%>],
-		                center: [150, 150],
+		                center: [120, 150],
 		                size: 200,
 		                showInLegend: false,
 		                dataLabels: {

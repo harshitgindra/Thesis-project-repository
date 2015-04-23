@@ -16,14 +16,10 @@ namespace Thesis_project_Repository
         {
             var username = Request.QueryString["username"];
             var fileNameFromSearch = Request.QueryString["document_name"];
-             var fileTypeFromSearch ="";
-             var fullFileNameFromSearch = "";
-             if (fileNameFromSearch!=null)
-             {
-                 fileTypeFromSearch = fileNameFromSearch.Substring(0, 1);
-                 fullFileNameFromSearch= fileNameFromSearch.Substring(1);
-             }
-             
+            var fileTypeFromSearch = "";
+            var fullFileNameFromSearch = "";
+            fileTypeFromSearch = fileNameFromSearch.Substring(0, 1);
+            fullFileNameFromSearch = fileNameFromSearch.Substring(1);
             var type = "";
             type = Request.QueryString["file"];
             var fileToDownload = GetAFile(username, type, fileTypeFromSearch);
@@ -74,7 +70,7 @@ namespace Thesis_project_Repository
             var query = "";
             var query2 = "";
 
-            if (type == "P" || fileTypeFromSearch.Equals("P"))
+            if (type == "P" || fileTypeFromSearch == "P")
             {
                 query = "SELECT document FROM PRELIMINARY_PROJECT_SUBMISSION "
                         + "WHERE username=@username";
@@ -82,7 +78,7 @@ namespace Thesis_project_Repository
                 fileLenghtColumnNo = 7;
                 fileNameColumnNo = 8;
             }
-            else if (type == "F" || fileTypeFromSearch.Equals("F"))
+            else if (type == "F" || fileTypeFromSearch == "F")
             {
                 query = "SELECT document FROM FINAL_PROJECT_PROPOSAL "
                         + "WHERE username=@username";
@@ -90,7 +86,7 @@ namespace Thesis_project_Repository
                 fileLenghtColumnNo = 2;
                 fileNameColumnNo = 3;
             }
-            else if (type == "T" || fileTypeFromSearch.Equals("T"))
+            else if (type == "T" || fileTypeFromSearch == "T")
             {
                 query = "SELECT document FROM THESIS_SUBMISSION "
                         + "WHERE username=@username";

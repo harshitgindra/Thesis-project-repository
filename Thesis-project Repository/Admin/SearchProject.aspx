@@ -24,7 +24,7 @@
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 <asp:BoundField DataField="Name" HeaderText="Author" SortExpression="Name" ReadOnly="True" />
-                                <asp:HyperLinkField DataNavigateUrlFields="document_name, username" DataNavigateUrlFormatString="DownloadFile.aspx?document_name={0}&username={1}" DataTextField="document_name" HeaderText="Document Name" />
+                                <asp:HyperLinkField DataNavigateUrlFields="document_name, username" DataNavigateUrlFormatString="../DownloadFile.aspx?document_name={0}&amp;username={1}" DataTextField="document_name" HeaderText="Document Name" />
                                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                                 <asp:BoundField DataField="keywords" HeaderText="Keywords" SortExpression="keywords" />
                                 <asp:BoundField DataField="date_uploaded" HeaderText="Date Uploaded" SortExpression="date_uploaded" />
