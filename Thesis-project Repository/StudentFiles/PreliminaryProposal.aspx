@@ -9,9 +9,6 @@
             <td>
                 <asp:TextBox ID="projecttitle" runat="server"></asp:TextBox>
             </td>
-            <td>
-                <asp:RequiredFieldValidator ControlToValidate="projecttitle" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
         </tr>
         <tr>
             <td>Course Number</td>
@@ -56,9 +53,7 @@
             <td>Committee Chair: </td>
             <td>
                 <asp:DropDownList ID="committeeChair" runat="server"></asp:DropDownList>
-            </td>
-            <td>
-                <asp:RequiredFieldValidator ControlToValidate="committeeChair" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
+                
             </td>
         </tr>
         <tr>
@@ -66,19 +61,12 @@
             <td>
                 <asp:DropDownList ID="committeemember" runat="server"></asp:DropDownList>
             </td>
-            <td>
-                <asp:RequiredFieldValidator ControlToValidate="committeemember" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
         </tr>
         <tr>
             <td>Graduate Advisor: </td>
             <td>
                 <asp:DropDownList ID="graduateAdvisor" runat="server"></asp:DropDownList>
-            </td>
-
-            <td>
-                <asp:RequiredFieldValidator ControlToValidate="graduateAdvisor" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
+            </td>graduateAdvisor
         </tr>
         <tr>
             <td>Semester Completed: </td>

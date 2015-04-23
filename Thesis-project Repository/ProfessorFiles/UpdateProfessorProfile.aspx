@@ -10,7 +10,6 @@
                     <asp:TextBox ID="username" runat="server" ReadOnly ="true"></asp:TextBox>
 
                 </td>
-                  
             </tr>
             <tr>
                 <td>Password: </td>
@@ -18,22 +17,12 @@
                     <asp:TextBox ID="password" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="password" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
-            <td>
-                Confirm Password: </td>
+                <td>Confirm Password: </td>
                 <td>
                     <asp:TextBox ID="cnfrmPassword" runat="server"></asp:TextBox>
 
-                </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="cnfrmPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
-                <td>
-                    <asp:CompareValidator ControlToCompare="password" ControlToValidate="cnfrmPassword" ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -49,19 +38,13 @@
                     <asp:TextBox ID="lname" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="lname" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
                 <td>Phone Number: </td>
                 <td>
-                    <asp:TextBox ID="phnNumber" runat="server" TextMode="Phone"></asp:TextBox>
+                    <asp:TextBox ID="phnNumber" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="phnNumber" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
                 <td>Provider: </td>
@@ -69,9 +52,6 @@
                     <asp:TextBox ID="provider" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="provider" ID="RequiredFieldValidator6" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
                 <td>Security Question: </td>
@@ -79,9 +59,6 @@
                     <asp:TextBox ID="secQuestion" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="secQuestion" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
                 <td>Security Answer: </td>
@@ -89,9 +66,6 @@
                     <asp:TextBox ID="secAnswer" runat="server"></asp:TextBox>
 
                 </td>
-                    <td>
-                <asp:RequiredFieldValidator ControlToValidate="secAnswer" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Project Title is Required"></asp:RequiredFieldValidator>
-            </td>
             </tr>
             <tr>
                 <td></td>
