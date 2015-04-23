@@ -3,12 +3,6 @@ D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-reposito
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
 D:\Users\it4850109\Documents\Visual Studio 2012\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll.config
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
-\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
 H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.dll
@@ -23,3 +17,11 @@ D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll.CodeAnalysisLog.xml
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll.lastcodeanalysissucceeded
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll.config
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.xml
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb

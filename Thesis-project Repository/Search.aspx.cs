@@ -1,17 +1,13 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using Newtonsoft.Json;
 
 namespace Thesis_project_Repository
 {
-    public partial class Search : System.Web.UI.Page
+    public partial class Search : Page
     {
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                                + "Integrated Security=true";
@@ -36,12 +32,12 @@ namespace Thesis_project_Repository
             }
             else
             {
-                string query1 = " SELECT *  FROM PRELIMINARY_PROJECT_SUBMISSION "
-            + " WHERE (USERNAME LIKE '%' + @search + '%') "
-            + " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
-            + " OR (KEYWORDS LIKE '%' + @search+ '%')"
-            + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
-            + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
+                const string query1 = " SELECT *  FROM PRELIMINARY_PROJECT_SUBMISSION "
+                                      + " WHERE (USERNAME LIKE '%' + @search + '%') "
+                                      + " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
+                                      + " OR (KEYWORDS LIKE '%' + @search+ '%')"
+                                      + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
+                                      + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
              //   string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
              //+ " WHERE (USERNAME LIKE '%' + @search + '%') "
@@ -50,12 +46,12 @@ namespace Thesis_project_Repository
              //+ " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
              //+ " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
-                string query3 = " SELECT *  FROM THESIS_SUBMISSION "
-            + " WHERE (USERNAME LIKE '%' + @search + '%') "
-            + " OR (TITLE LIKE '%' + @search+ '%') "
-            + " OR (KEYWORDS LIKE '%' + @search+ '%')"
-            + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
-            + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
+                const string query3 = " SELECT *  FROM THESIS_SUBMISSION "
+                                      + " WHERE (USERNAME LIKE '%' + @search + '%') "
+                                      + " OR (TITLE LIKE '%' + @search+ '%') "
+                                      + " OR (KEYWORDS LIKE '%' + @search+ '%')"
+                                      + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
+                                      + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
                 fetchDataPreliminaryReports(query1);
                 //fetchFinalReportDB(query2);

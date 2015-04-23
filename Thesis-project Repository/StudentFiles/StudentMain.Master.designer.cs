@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
 namespace Thesis_project_Repository.StudentFiles {
     
     
@@ -19,7 +22,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected ContentPlaceHolder head;
         
         /// <summary>
         /// form1 control.
@@ -28,7 +31,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected HtmlForm form1;
         
         /// <summary>
         /// logout control.
@@ -37,7 +40,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logout;
+        protected LinkButton logout;
         
         /// <summary>
         /// student control.
@@ -46,7 +49,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder student;
+        protected ContentPlaceHolder student;
         
         /// <summary>
         /// FooterMultiView control.
@@ -55,7 +58,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView FooterMultiView;
+        protected MultiView FooterMultiView;
         
         /// <summary>
         /// SubscribeView control.
@@ -64,7 +67,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View SubscribeView;
+        protected View SubscribeView;
         
         /// <summary>
         /// SubscribeLink control.
@@ -73,7 +76,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton SubscribeLink;
+        protected LinkButton SubscribeLink;
         
         /// <summary>
         /// UnsubscribeView control.
@@ -82,7 +85,7 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View UnsubscribeView;
+        protected View UnsubscribeView;
         
         /// <summary>
         /// UnSubscribeLink control.
@@ -91,6 +94,6 @@ namespace Thesis_project_Repository.StudentFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UnSubscribeLink;
+        protected LinkButton UnSubscribeLink;
     }
 }

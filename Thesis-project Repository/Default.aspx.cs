@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Net.Mail;
@@ -115,7 +114,7 @@ namespace Thesis_project_Repository
                 SignUpReply.Text = SendEmail(username, "Welcome", EmailBody(randomString))
                     ? "Thank you for sigining up. you will receive an email shortly Sent. Please Check your inbox."
                     : "Something went wrong. Retry";
-                var message = "Thank you for siging up with us!!";
+                const string message = "Thank you for siging up with us!!";
                 SendSms(carrier, phnNumber, message);
             }
             else
@@ -200,8 +199,6 @@ namespace Thesis_project_Repository
         protected void RetrieveForgotPassword(object sender, EventArgs e)
         {
             //    const string query = "SELECT * FROM logininfo WHERE username = @username;";
-            var Carrier = "";
-            var randomString = "";
             var query1 = "";
             using (var connection = new SqlConnection(ConnectionString))
             {
@@ -230,8 +227,8 @@ namespace Thesis_project_Repository
                     {
                         var usernameDb = reader.GetString(0);
                         var phnNumber = reader.GetString(10);
-                        Carrier = reader.GetString(11);
-                        randomString = Path.GetRandomFileName();
+                        var carrier = reader.GetString(11);
+                        var randomString = Path.GetRandomFileName();
                         randomString = randomString.Replace(".", "");
                         _databaseMethods.UpdateLogininfordmstr(usernameDb, randomString);
 
@@ -245,7 +242,7 @@ namespace Thesis_project_Repository
                         else if (retrievelMethodRadioList.SelectedValue.Equals("M"))
                         {
                             var message = "Your Verification code is: " + randomString;
-                            SendSms(Carrier, phnNumber, message);
+                            SendSms(carrier, phnNumber, message);
                             MultiView1.ActiveViewIndex = 4;
                         }
                     }
@@ -266,7 +263,6 @@ namespace Thesis_project_Repository
         {
             var randomString = VerificationCode.Text;
             var password = NewPassword.Text;
-            var result = 0;
             var methods = new DatabaseMethods();
             if (string.IsNullOrEmpty(randomString) || string.IsNullOrWhiteSpace(randomString))
             {
@@ -274,15 +270,8 @@ namespace Thesis_project_Repository
             }
             else
             {
-                result = methods.UpdatePasswordFromSms(randomString, password);
-                if (result == 1)
-                {
-                    UpdatePasswordFromSMSConfirmation.Text = "Your password has been changed successfully";
-                }
-                else
-                {
-                    UpdatePasswordFromSMSConfirmation.Text = "Something went wrong. Please try again later.";
-                }
+                var result = methods.UpdatePasswordFromSms(randomString, password);
+                UpdatePasswordFromSMSConfirmation.Text = result == 1 ? "Your password has been changed successfully" : "Something went wrong. Please try again later.";
             }
         }
 

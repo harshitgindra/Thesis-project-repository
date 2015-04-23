@@ -25,7 +25,6 @@ namespace Thesis_project_Repository
                     var reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        var rdnstring = reader.GetString(3);
                         const string query1 = "UPDATE LOGININFO SET RDM_STR = '' WHERE rdm_str = @randomString;";
                         var command2 = new SqlCommand(query1, connection);
                         command2.Parameters.AddWithValue("@randomString", randomString);

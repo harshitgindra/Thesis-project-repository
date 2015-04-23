@@ -38,11 +38,10 @@ namespace Thesis_project_Repository
         {
             if (fileNameFromDb != null)
             {
-                var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
-                                     + "Integrated Security=true";
-                string queryForGettingCount = "SELECT COUNT FROM DASHBOARD WHERE FILENAME = @FILENAME;";
-                var count1 = 0;
-                string forUpdatingCount = "UPDATE DASHBOARD SET COUNT = @COUNT WHERE FILENAME = @FILENAME2 ;";
+                const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;"
+                                                + "Integrated Security=true";
+                const string queryForGettingCount = "SELECT COUNT FROM DASHBOARD WHERE FILENAME = @FILENAME;";
+                const string forUpdatingCount = "UPDATE DASHBOARD SET COUNT = @COUNT WHERE FILENAME = @FILENAME2 ;";
                 using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -51,7 +50,7 @@ namespace Thesis_project_Repository
                     var reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        count1 = reader.GetInt32(0);
+                        var count1 = reader.GetInt32(0);
                         count1++;
                         var command = new SqlCommand(forUpdatingCount, connection);
                         command.Parameters.AddWithValue("@COUNT", count1);
@@ -65,8 +64,8 @@ namespace Thesis_project_Repository
 
         private byte[] GetAFile(string username, string type, string fileTypeFromSearch)
         {
-            var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                   + "Integrated Security=true";
+            const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                            + "Integrated Security=true";
             var query = "";
             var query2 = "";
 

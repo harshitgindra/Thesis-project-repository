@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository.ProfessorFiles
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class WebForm3 : Page
     {
         string username = "";
-        int profCommentsColumnNo = 0;
+        int profCommentsColumnNo;
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
                                                 + "Integrated Security=true";
         string studentusername = "";
@@ -142,7 +139,7 @@ namespace Thesis_project_Repository.ProfessorFiles
         protected void displayFinalReportDetails()
         {
             const string query = "SELECT * FROM FINAL_PROJECT_PROPOSAL WHERE USERNAME = @studentusername";
-            string query2 = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @studentusername";
+            const string query2 = "SELECT * FROM PRELIMINARY_PROJECT_SUBMISSION WHERE USERNAME = @studentusername";
             using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(query, connection);

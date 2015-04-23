@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI.WebControls;
+
 namespace Thesis_project_Repository.ProfessorFiles {
     
     
@@ -19,7 +21,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView1;
+        protected MultiView MultiView1;
         
         /// <summary>
         /// View1 control.
@@ -28,7 +30,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected View View1;
         
         /// <summary>
         /// stdusername control.
@@ -37,7 +39,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label stdusername;
+        protected Label stdusername;
         
         /// <summary>
         /// projecttitle control.
@@ -46,7 +48,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label projecttitle;
+        protected Label projecttitle;
         
         /// <summary>
         /// LiveLink control.
@@ -55,7 +57,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LiveLink;
+        protected Label LiveLink;
         
         /// <summary>
         /// projectabstract control.
@@ -64,7 +66,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label projectabstract;
+        protected Label projectabstract;
         
         /// <summary>
         /// downloadfile control.
@@ -73,7 +75,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder downloadfile;
+        protected PlaceHolder downloadfile;
         
         /// <summary>
         /// approvalstatus control.
@@ -82,7 +84,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label approvalstatus;
+        protected Label approvalstatus;
         
         /// <summary>
         /// comments control.
@@ -91,7 +93,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label comments;
+        protected Label comments;
         
         /// <summary>
         /// addComments control.
@@ -100,7 +102,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addComments;
+        protected Button addComments;
         
         /// <summary>
         /// View2 control.
@@ -109,7 +111,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected View View2;
         
         /// <summary>
         /// addingcomments control.
@@ -118,7 +120,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addingcomments;
+        protected TextBox addingcomments;
         
         /// <summary>
         /// savecomments control.
@@ -127,7 +129,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button savecomments;
+        protected Button savecomments;
         
         /// <summary>
         /// grantapproval1 control.
@@ -136,7 +138,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button grantapproval1;
+        protected Button grantapproval1;
         
         /// <summary>
         /// goback control.
@@ -145,7 +147,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button goback;
+        protected Button goback;
         
         /// <summary>
         /// savecommentsupdates control.
@@ -154,7 +156,7 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label savecommentsupdates;
+        protected Label savecommentsupdates;
         
         /// <summary>
         /// approvalstatusupdates control.
@@ -163,6 +165,6 @@ namespace Thesis_project_Repository.ProfessorFiles {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label approvalstatusupdates;
+        protected Label approvalstatusupdates;
     }
 }

@@ -11,10 +11,10 @@ namespace Thesis_project_Repository.Admin
             if (Session["username"] != null)
             {
                 var username = Request.QueryString["username"];
-                var connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                       + "Integrated Security=true";
+                const string connectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
+                                                + "Integrated Security=true";
                
-                var query = "update logininfo set admin_approval = 'Y' where username = @username;";
+                const string query = "update logininfo set admin_approval = 'Y' where username = @username;";
                 using (var connection = new SqlConnection(connectionString))
                 {
                     var command = new SqlCommand(query, connection);
