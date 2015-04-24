@@ -8,17 +8,18 @@
             Please select from the above tabs.
         </asp:View>
         <asp:View ID="View2" runat="server">
-            <h2>View 1</h2>
+            
             <asp:SqlDataSource ID="approvalList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT [username], [acctype], admin_approval FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'"></asp:SqlDataSource>
-
-            <asp:GridView ID="approvalwaitinglist" runat="server" AutoGenerateColumns="False" DataSourceID="approvalList" DataKeyNames="username" AllowSorting="True">
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">User Approval List</div>
+            <asp:GridView ID="approvalwaitinglist" CssClass="table table-hover table-striped" runat="server" AutoGenerateColumns="False" DataSourceID="approvalList" DataKeyNames="username" AllowSorting="True" AllowPaging="true">
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
+                    <%--<asp:CommandField ShowSelectButton="True" />--%>
                     <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" ReadOnly="True" />
                     <asp:BoundField DataField="acctype" HeaderText="acctype" SortExpression="acctype" />
                     <asp:BoundField DataField="admin_approval" HeaderText="admin_approval" SortExpression="admin_approval" />
                     <asp:HyperLinkField DataNavigateUrlFields="username, acctype" DataNavigateUrlFormatString="AdminUserApproval.aspx?username={0}&acctype={1}" Text="Approve Account" />
-
                 </Columns>
             </asp:GridView>
            <%-- <asp:SqlDataSource ID="DetailedInfoList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM [logininfo] WHERE ([username] = @username)">
@@ -34,6 +35,7 @@
                 </Fields>
             </asp:DetailsView>--%>
             <asp:Label ID="Label1" runat="server"></asp:Label>
+     </div>
         </asp:View>
     </asp:MultiView>
 </asp:Content>
