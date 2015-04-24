@@ -49,11 +49,11 @@ namespace Thesis_project_Repository.ProfessorFiles
         {
         }
 
-        protected void Logout_Click(object sender, EventArgs e)
-        {
-            Session["username"] = null;
-            Response.Redirect("../Default.aspx", false);
-        }
+        //protected void Logout_Click(object sender, EventArgs e)
+        //{
+        //    Session["username"] = null;
+        //    Response.Redirect("../Default.aspx", false);
+        //}
 
         protected void Subscribe(object sender, EventArgs e)
         {

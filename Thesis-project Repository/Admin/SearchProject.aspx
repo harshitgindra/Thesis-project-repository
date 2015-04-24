@@ -23,9 +23,9 @@
       <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Search Results</div>
-        <table class="table">
+       <%-- <table class="table">
             <tr>
-                <td>
+                <td>--%>
                     <asp:GridView ID="OmniResults" CssClass="table table-hover table-striped" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="DocumentSqlDataSource1" DataKeyNames="username">
                         <Columns>
                             <asp:BoundField DataField="Name" HeaderText="Author" SortExpression="Name" ReadOnly="True" />
@@ -54,7 +54,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                     </asp:SqlDataSource>
                     <br />
 
-                    <asp:FormView ID="FormView1" CssClass="table table-hover table-striped" runat="server" DataKeyNames="document_name,USERNAME" DataSourceID="SqlDataSource1" ForeColor="#333333">
+                    <asp:FormView ID="FormView1" CssClass="table table-hover table-striped" runat="server" DataKeyNames="document_name,USERNAME" DataSourceID="SqlDataSource1">
                         <EditItemTemplate>
                             USERNAME:
                                 <asp:Label ID="USERNAMELabel1" runat="server" Text='<%# Eval("USERNAME") %>' />
@@ -209,9 +209,9 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         </EditItemTemplate>
-                        <EditRowStyle BackColor="#999999" />
-                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <%--<EditRowStyle BackColor="#999999" />--%>
+                       <%-- <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />--%>
                         <InsertItemTemplate>
                             USERNAME:
                                 <asp:TextBox ID="USERNAMETextBox" runat="server" Text='<%# Bind("USERNAME") %>' />
@@ -579,19 +579,19 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                 </tr>
                             </table>
                         </ItemTemplate>
-                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                       <%-- <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />--%>
                     </asp:FormView>
-                </td>
-                <td>
+               <%-- </td>
+                <td>--%>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM SEARCHRESULTS WHERE USERNAME = @USERNAME">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="OmniResults" DefaultValue="" Name="username" PropertyName="SelectedValue" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-                </td>
+               <%-- </td>
             </tr>
-        </table>
+        </table>--%>
     </div>
 
 

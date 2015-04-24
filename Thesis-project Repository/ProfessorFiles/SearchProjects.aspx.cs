@@ -27,7 +27,7 @@ namespace Thesis_project_Repository.ProfessorFiles
             //checking if there is any result generated
             if (OmniResults.Rows.Count == 0)
             {
-                Response.Write("There are no tables to export. Please hit search and generate data.");
+                Label6.Text = "There are no tables to export. Please search and generate data.";
             }
             else
             {
@@ -38,12 +38,12 @@ namespace Thesis_project_Repository.ProfessorFiles
             + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
             + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
-                string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
-             + " WHERE (USERNAME LIKE '%' + @search + '%') "
-             + " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
-             + " OR (KEYWORDS LIKE '%' + @search+ '%')"
-             + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
-             + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
+             //   string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
+             //+ " WHERE (USERNAME LIKE '%' + @search + '%') "
+             //+ " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
+             //+ " OR (KEYWORDS LIKE '%' + @search+ '%')"
+             //+ " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
+             //+ " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
                 string query3 = " SELECT *  FROM THESIS_SUBMISSION "
             + " WHERE (USERNAME LIKE '%' + @search + '%') "

@@ -21,3 +21,9 @@ player that can run that video. We will implement this after prototype
 Not Use Case:
 //Verification Link {done} 
 //Admin Login {done}
+
+Designing:
+1. About Us page for professor, student and viewer
+2. Design for students
+3. Design for viewer
+4. Main Page Design

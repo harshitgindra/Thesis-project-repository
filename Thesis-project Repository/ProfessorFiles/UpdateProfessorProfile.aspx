@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ProfessorTemplate" runat="server">
     <div>
-        <table>
+        <table class="table">
             <tr>
                 <td>UserName: </td>
                 <td>
@@ -70,16 +70,13 @@
             <tr>
                 <td></td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Update" OnClick="UpdateUserProfile" />
+                    <div class="btn-group">
+            <asp:Button class="btn btn-default" ID="Button1" runat="server" Text="Update Profile" OnClick="UpdateUserProfile" />
+        </div>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <asp:Label ID="updateResult" runat="server" Text="Label"></asp:Label>
-                </td>
-                <td></td>
-            </tr>
-        </table>
+             </table>
+       <asp:Label ID="updateResult" ForeColor="Green" runat="server" Text=""></asp:Label>
     </div>
 
 </asp:Content>

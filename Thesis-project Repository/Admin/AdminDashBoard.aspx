@@ -23,7 +23,7 @@
             font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             text-align: justify;
             color: #FFF;
-            height: 500px;
+            height: 460px;
             width: auto;
         }
     </style>
@@ -81,7 +81,7 @@
                         type: 'pie',
                         name: 'Download Dashboard',
                         data: [<%=fileNamefromDB%>],
-		                center: [120, 150],
+		                center: [100, 130],
 		                size: 200,
 		                showInLegend: false,
 		                dataLabels: {

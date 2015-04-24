@@ -41,7 +41,7 @@ namespace Thesis_project_Repository.ProfessorFiles
                     if (reader.HasRows)
                     {
                         tableContent = "<h2>List for Preliminary Project</h2>";
-                        tableContent += "<table  class='table table-striped'><tr><th>username</th><th>Project Title</th><th>Your role</th><th>Your Approval Status</th><th>More Details</th></tr>";
+                        tableContent += "<table  class='table table-hover table-striped'><tr><th>username</th><th>Project Title</th><th>Your role</th><th>Your Approval Status</th><th>More Details</th></tr>";
                     }
 
                     while (reader.Read())
@@ -121,7 +121,7 @@ namespace Thesis_project_Repository.ProfessorFiles
                     if (reader.HasRows)
                     {
                         tableContent = "<h2>List of Final Projects</h2>";
-                        tableContent += "<table class='table table-striped'><tr><th>username</th><th>Report Type</th><th>Your role</th><th>Your Approval Status</th><th>More Details</th></tr>";
+                        tableContent += "<table class='table table-hover table-striped'><tr><th>username</th><th>Report Type</th><th>Your role</th><th>Your Approval Status</th><th>More Details</th></tr>";
                     }
 
                     while (reader.Read())
@@ -199,7 +199,7 @@ namespace Thesis_project_Repository.ProfessorFiles
                     if (reader.HasRows)
                     {
                         tableContent = "<h2>List for Thesis</h2>";
-                        tableContent += "<table class='table table-striped'><tr><th>username</th><th>Project Title</th><th>Your role</th><th>Approval Status</th><th>More Details</th></tr>";
+                        tableContent += "<table class='table table-hover table-striped'><tr><th>username</th><th>Project Title</th><th>Your role</th><th>Approval Status</th><th>More Details</th></tr>";
                     }
 
                     while (reader.Read())
