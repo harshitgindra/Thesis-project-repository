@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,30 +8,25 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Thesis_project_Repository
+namespace Thesis_project_Repository.Viewer
 {
-    public partial class Search : System.Web.UI.Page
+    public partial class SearchProjects : System.Web.UI.Page
     {
         private const string ConnectionString = "Data Source=itksqlexp8;Initial Catalog=it485project;"
-                                               + "Integrated Security=true";
+                                             + "Integrated Security=true";
         JsonObjects jsonattributes = new JsonObjects();
         List<JsonObjects> j = new List<JsonObjects>();
-       // List<string> users;
-
+        // List<string> users;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Redirect("../Default.aspx");
-            }
-        }
 
+        }
         protected void jsonoutput_Click(object sender, EventArgs e)
         {
             //checking if there is any result generated
             if (OmniResults.Rows.Count == 0)
             {
-                Response.Write("There are no tables to export. Please hit search and generate data.");
+                Label6.Text = "There are no tables to export. Please search and generate data.";
             }
             else
             {
@@ -43,12 +37,12 @@ namespace Thesis_project_Repository
             + " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
             + " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
-             //   string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
-             //+ " WHERE (USERNAME LIKE '%' + @search + '%') "
-             //+ " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
-             //+ " OR (KEYWORDS LIKE '%' + @search+ '%')"
-             //+ " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
-             //+ " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
+                //   string query2 = " SELECT *  FROM FINAL_PROJECT_PROPOSAL "
+                //+ " WHERE (USERNAME LIKE '%' + @search + '%') "
+                //+ " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
+                //+ " OR (KEYWORDS LIKE '%' + @search+ '%')"
+                //+ " OR  (SEMESTER_COMPLETED LIKE '%' + @search+ '%')"
+                //+ " OR  (DATE_UPLOADED LIKE '%' + @search+ '%');";
 
                 string query3 = " SELECT *  FROM THESIS_SUBMISSION "
             + " WHERE (USERNAME LIKE '%' + @search + '%') "
@@ -217,6 +211,4 @@ namespace Thesis_project_Repository
 
         }
     }
-
-
 }

@@ -38,3 +38,11 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
+
+.panel-heading {
+background-color: #D74F4F;
+}

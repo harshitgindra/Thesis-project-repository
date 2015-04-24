@@ -124,7 +124,7 @@ namespace Thesis_project_Repository.ProfessorFiles
             UserModels userModels = new UserModels(userName, pass, securityQuestion, seccurityAnswer, firstName, lastName, phoneNumber, carrier);
             DatabaseMethods updateMethods = new DatabaseMethods();
             result = updateMethods.UpdateUserProfile(userModels, _accountType);
-            updateResult.Text = result == 2 ? "Profile has been updated successfully." : "Failed to update the profile.";
+            updateResult.Text = result == 2 ? "Updated successfully!" : "Update Failed!.";
         }
     }
 }

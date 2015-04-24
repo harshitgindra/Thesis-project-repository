@@ -6,20 +6,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Thesis_project_Repository.StudentFiles
+namespace Thesis_project_Repository.Viewer
 {
     public partial class DeleteAccount : System.Web.UI.Page
     {
         private const string ConnectionString =
-        "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +
-        "Integrated Security=true";
+          "Data Source=itksqlexp8;Initial Catalog=it485project;MultipleActiveResultSets=true;" +
+          "Integrated Security=true";
 
         string _accountType = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected int Delete()
         {
 
@@ -118,7 +117,7 @@ namespace Thesis_project_Repository.StudentFiles
         protected void No(object sender, EventArgs e)
         {
 
-            Response.Redirect("StudentHomePage.aspx", false);
+            Response.Redirect("ViewerHome.aspx", false);
 
         }
     }

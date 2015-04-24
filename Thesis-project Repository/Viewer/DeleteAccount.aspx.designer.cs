@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Thesis_project_Repository.StudentFiles {
+namespace Thesis_project_Repository.Viewer {
     
     
-    public partial class WebForm5 {
+    public partial class DeleteAccount {
         
         /// <summary>
-        /// preliminary control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label preliminary;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// thesis control.
+        /// yes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label thesis;
+        protected global::System.Web.UI.WebControls.Button yes;
         
         /// <summary>
-        /// final control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label final;
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// status control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label status;
     }
 }

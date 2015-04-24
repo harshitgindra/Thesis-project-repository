@@ -21,7 +21,7 @@
         <br /><br />
       <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Search Results</div>
+  <div class="panel-heading" style="text-align:center;"><b>Search Results</b></div>
        <%-- <table class="table">
             <tr>
                 <td>--%>

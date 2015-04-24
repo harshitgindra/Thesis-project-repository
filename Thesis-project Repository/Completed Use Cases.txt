@@ -3,11 +3,11 @@
 3. Forgot Password {done}
 4. Admin Approval {done}
 5. Unsubscribe {done} 
-6. Subscribe {done} => Need to test it.
+6. Subscribe {done} 
 7. Update Profile {done} 
 8. SMS web service {done}
 9. Delete Profile User {done}
-10. Search {done} => 
+10. Search {done}
 11. View details of the user {done}
 and provide download link to download the files.
 12. Check approval status {done}
@@ -18,12 +18,11 @@ and provide download link to download the files.
 player that can run that video. We will implement this after prototype
 17. Highlight/Showcase Thesis/Project  {harshit}
 
-Not Use Case:
-//Verification Link {done} 
-//Admin Login {done}
-
 Designing:
-1. About Us page for student and viewer
+1. About Us page for viewer
 2. Design for students
 3. Design for viewer
 4. Main Page Design
+5. Correct Email Subjects and logo
+6. DropDown List for Thesis and pre-populate the fields.
+7. 

@@ -1,65 +1,70 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ProfessorFiles/Professor.Master" AutoEventWireup="true" CodeBehind="MoreProjectDetails.aspx.cs" Inherits="Thesis_project_Repository.ProfessorFiles.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../bootstrap/css/RemoveBorder.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ProfessorTemplate" runat="server">
     <asp:MultiView ID="MultiView1" ActiveViewIndex="1" runat="server">
 
         <asp:View ID="View1" runat="server">
-            <table class="table table-hover table-striped">
-                <tr>
-                    <td>Username: 
-                    </td>
-                    <td>
-                        <asp:Label ID="stdusername" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Project Title
-                    </td>
-                    <td>
-                        <asp:Label ID="projecttitle" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Live Link: 
-                    </td>
-                    <td>
-                        <asp:Label ID="LiveLink" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Abstract
-                    </td>
-                    <td>
-                        <asp:Label ID="projectabstract" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Document
-                    </td>
-                    <td>
-                        <asp:PlaceHolder ID="downloadfile" runat="server"></asp:PlaceHolder>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Your Approval Status:
-                    </td>
-                    <td>
-                        <asp:Label ID="approvalstatus" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Your Comments:
-                    </td>
-                    <td>
-                        <asp:Label ID="comments" runat="server"></asp:Label>
-                    </td>
-                </tr>
-            </table>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" style="text-align: center;"><b>Detailed Information</b></div>
+                <table class="table borderless">
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">UserName</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="stdusername" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Project Title</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="projecttitle" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Live Link</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="LiveLink" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Abstract</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="projectabstract" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Document</span>
+                        </td>
+                        <td>
+                            <asp:PlaceHolder ID="downloadfile" runat="server"></asp:PlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Your Approval Status</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="approvalstatus" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="label label-info" style="font-size: large;">Your Comments</span>
+                        </td>
+                        <td>
+                            <asp:Label ID="comments" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
 
-            <div class="btn-group">
-                <asp:Button class="btn btn-default" ID="addComments" runat="server" OnClick="addComments_Click" Text="Add Comments/Approve" />
+                <div class="btn-group">
+                    <asp:Button class="btn btn-default" ID="addComments" runat="server" OnClick="addComments_Click" Text="Add Comments/Approve" />
+                </div>
             </div>
         </asp:View>
         <asp:View ID="View2" runat="server">

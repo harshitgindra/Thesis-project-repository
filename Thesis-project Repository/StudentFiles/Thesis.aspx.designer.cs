@@ -49,33 +49,6 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.TextBox thesisabstract;
         
         /// <summary>
-        /// thesisupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload thesisupload;
-        
-        /// <summary>
-        /// thesisdocdownload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder thesisdocdownload;
-        
-        /// <summary>
-        /// screencasts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload screencasts;
-        
-        /// <summary>
         /// committeeChair control.
         /// </summary>
         /// <remarks>
@@ -110,6 +83,33 @@ namespace Thesis_project_Repository.StudentFiles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList semester;
+        
+        /// <summary>
+        /// thesisupload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload thesisupload;
+        
+        /// <summary>
+        /// thesisdocdownload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder thesisdocdownload;
+        
+        /// <summary>
+        /// screencasts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload screencasts;
         
         /// <summary>
         /// submit control.

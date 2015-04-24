@@ -26,10 +26,7 @@
                         <li><a href="UpdateStudentProfile.aspx"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;Update Profile</a></li>
                         <li><a href="SearchProjects.aspx"><span class="glyphicon glyphicon-hdd"></span>&nbsp;Search Projects</a></li>
                         <li class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                Dropdown
-    <span class="caret"></span>
-                            </button>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="PreliminaryProposal.aspx">Preliminary Report</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="FinalProposal.aspx">Project Submission</a></li>
@@ -61,7 +58,7 @@
         <br />
         <br />
         <div class="container">
-            <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server" />
+            <asp:ContentPlaceHolder ID="student" runat="server" />
         </div>
         <br />
         <br />
@@ -80,7 +77,7 @@
                                 <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
                             </asp:View>
                         </asp:MultiView>
-                        <h6>Copyright &copy; 2015<br>
+                        <h6>Copyright &copy; 2015<br/>
                             Amitesh Jain, Harshit Gindra and Kaveh Arvand</h6>
                     </div>
                     <div class="col-sm-2">

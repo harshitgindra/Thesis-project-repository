@@ -70,6 +70,7 @@
     <Content Include="Admin\SearchProject.aspx" />
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\css\RemoveBorder.css" />
     <Content Include="bootstrap\css\sticky-footer-navbar.css" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
@@ -100,7 +101,7 @@
     <Content Include="js\TweenLite.min.js" />
     <Content Include="js\TweenMax.min.js" />
     <Content Include="Logout.aspx" />
-    <Content Include="ProfessorFiles\AboutUss.aspx" />
+    <Content Include="ProfessorFiles\AboutUs.aspx" />
     <Content Include="ProfessorFiles\DeleteAccount.aspx" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
@@ -120,6 +121,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="StudentFiles\AboutUs.aspx" />
     <Content Include="StudentFiles\DeleteAccount.aspx" />
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
@@ -130,6 +132,9 @@
     <Content Include="StudentFiles\CheckApprovalStatus.aspx" />
     <Content Include="StudentFiles\SearchProjects.aspx" />
     <Content Include="VerificationLink.aspx" />
+    <Content Include="Viewer\AboutUs.aspx" />
+    <Content Include="Viewer\DeleteAccount.aspx" />
+    <Content Include="Viewer\SearchProjects.aspx" />
     <Content Include="Viewer\UpdateViewerProfile.aspx" />
     <Content Include="Viewer\ViewerHome.aspx" />
     <Content Include="Web.config" />
@@ -221,12 +226,12 @@
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModels.cs" />
-    <Compile Include="ProfessorFiles\AboutUss.aspx.cs">
-      <DependentUpon>AboutUss.aspx</DependentUpon>
+    <Compile Include="ProfessorFiles\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProfessorFiles\AboutUss.aspx.designer.cs">
-      <DependentUpon>AboutUss.aspx</DependentUpon>
+    <Compile Include="ProfessorFiles\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfessorFiles\DeleteAccount.aspx.cs">
       <DependentUpon>DeleteAccount.aspx</DependentUpon>
@@ -287,6 +292,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentFiles\DeleteAccount.aspx.cs">
       <DependentUpon>DeleteAccount.aspx</DependentUpon>
@@ -369,6 +381,27 @@
     </Compile>
     <Compile Include="Admin\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\SearchProjects.aspx.cs">
+      <DependentUpon>SearchProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\SearchProjects.aspx.designer.cs">
+      <DependentUpon>SearchProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viewer\UpdateViewerProfile.aspx.cs">
       <DependentUpon>UpdateViewerProfile.aspx</DependentUpon>

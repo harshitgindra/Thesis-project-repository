@@ -56,11 +56,7 @@ namespace Thesis_project_Repository.Viewer
         }
 
 
-        protected void Logout_Click(object sender, EventArgs e)
-        {
-            Session["username"] = null;
-            Response.Redirect("../Default.aspx", false);
-        }
+      
         protected void Subscribe(object sender, EventArgs e)
         {
             var username = Session["username"].ToString();

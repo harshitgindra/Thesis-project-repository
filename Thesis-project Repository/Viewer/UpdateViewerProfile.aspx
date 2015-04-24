@@ -1,83 +1,101 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Viewer/Viewer.Master" AutoEventWireup="true" CodeBehind="UpdateViewerProfile.aspx.cs" Inherits="Thesis_project_Repository.Viewer.UpdateViewerProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <link href="../bootstrap/css/RemoveBorder.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div>
-        <table>
+<asp:Content ID="Content2" ContentPlaceHolderID="ViewerTemplate" runat="server">
+      <div>
+        <table class="table borderless">
             <tr>
-                <td>UserName: </td>
+                <td><span class="label label-info" style="font-size:large;">UserName</span>
+                </td>
                 <td>
-                    <asp:TextBox ID="username" runat="server" ReadOnly ="true"></asp:TextBox>
+                    <div class="input-group">
+                        <asp:TextBox ID="username" class="form-control" runat="server" aria-describedby="basic-addon1" ReadOnly="true"></asp:TextBox>
+                    </div>
 
                 </td>
             </tr>
             <tr>
-                <td>Password: </td>
+                 <td><span class="label label-info" style="font-size:large;">Password</span>
+                </td>
+                 <td>
+                    <div class="input-group">
+                        <asp:TextBox ID="password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                 <td><span class="label label-info" style="font-size:large;">Confirm Password</span>
+                </td>
+               <td>
+                    <div class="input-group">
+                        <asp:TextBox ID="cnfrmPassword" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                 <td><span class="label label-info" style="font-size:large;">First Name</span>
+                </td>
                 <td>
-                    <asp:TextBox ID="password" runat="server"></asp:TextBox>
+                    <div class="input-group">
+                        <asp:TextBox ID="fname" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                 <td><span class="label label-info" style="font-size:large;">Last Name</span>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <asp:TextBox ID="lname" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
+                </td>
+            </tr>
+            <tr>
 
+                 <td><span class="label label-info" style="font-size:large;">Phone Number</span>
+                </td>
+               <td>
+                    <div class="input-group">
+                        <asp:TextBox ID="phnNumber" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td>Confirm Password: </td>
+                 <td><span class="label label-info" style="font-size:large;">Provider</span>
+                </td>
                 <td>
-                    <asp:TextBox ID="cnfrmPassword" runat="server"></asp:TextBox>
-
+                    <div class="input-group">
+                        <asp:TextBox ID="provider" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td>First Name: </td>
-                <td>
-                    <asp:TextBox ID="fname" runat="server"></asp:TextBox>
-
+                 <td><span class="label label-info" style="font-size:large;">Security Question</span>
+                </td><td>
+                    <div class="input-group">
+                        <asp:TextBox ID="secQuestion" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td>Last Name: </td>
-                <td>
-                    <asp:TextBox ID="lname" runat="server"></asp:TextBox>
-
+                 <td><span class="label label-info" style="font-size:large;">Security Answer</span>
+                </td><td>
+                    <div class="input-group">
+                        <asp:TextBox ID="secAnswer" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td>Phone Number: </td>
+                <td> </td>
                 <td>
-                    <asp:TextBox ID="phnNumber" runat="server"></asp:TextBox>
-
-                </td>
+                    <div class="btn-group">
+                        <asp:Button class="btn btn-default" ID="Button1" runat="server" Text="Update Profile" OnClick="UpdateUserProfile" />
+                    </div>
+                </td> 
             </tr>
-            <tr>
-                <td>Provider: </td>
-                <td>
-                    <asp:TextBox ID="provider" runat="server"></asp:TextBox>
-
-                </td>
-            </tr>
-            <tr>
-                <td>Security Question: </td>
-                <td>
-                    <asp:TextBox ID="secQuestion" runat="server"></asp:TextBox>
-
-                </td>
-            </tr>
-            <tr>
-                <td>Security Answer: </td>
-                <td>
-                    <asp:TextBox ID="secAnswer" runat="server"></asp:TextBox>
-
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <asp:Button ID="Button1" runat="server" Text="Update" OnClick="UpdateUserProfile" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Label ID="updateResult" runat="server" Text="Label"></asp:Label>
-                </td>
-                <td></td>
+            <tr><td></td>
+                <td>  <asp:Label ID="updateResult" ForeColor="Green" runat="server" Text=""></asp:Label></td>
             </tr>
         </table>
     </div>

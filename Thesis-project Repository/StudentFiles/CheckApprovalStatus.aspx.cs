@@ -104,7 +104,7 @@ namespace Thesis_project_Repository.StudentFiles
                 {
                     connection.Close();
                 }
-                preliminaryappstatus.Text = result;
+                preliminary.Text = result;
             }
         }
 
@@ -176,10 +176,10 @@ namespace Thesis_project_Repository.StudentFiles
                             result += "<td>" + reader.GetString(17) + "</td>";
                         else
                             result += "<td>-</td>";
-                        result += "</tr>";
+                 //       result += "</tr>";
                     }
                     reader.Close();
-                    result += "</table>";
+                    result += "</tr></table>";
                 }
                 catch (Exception ex)
                 {
@@ -189,7 +189,7 @@ namespace Thesis_project_Repository.StudentFiles
                 {
                     connection.Close();
                 }
-                finalappstatus.Text = result;
+                final.Text = result;
             }
         }
 
@@ -213,57 +213,57 @@ namespace Thesis_project_Repository.StudentFiles
                     {
                         //committee chair
                         result += "<tr>";
-                        if (!reader.IsDBNull(14))
-                            result += "<td>" + reader.GetString(14) + "</td>";
+                        if (!reader.IsDBNull(13))
+                            result += "<td>" + reader.GetString(13) + "</td>";
                         else
                             result += "<td>No Professor Selected</td>";
                         result += "<td>Committee Chair</td>";
-                        if (!reader.IsDBNull(15))
-                            result += "<td>" + reader.GetString(15) + "</td>";
+                        if (!reader.IsDBNull(14))
+                            result += "<td>" + reader.GetString(14) + "</td>";
                         else
                             result += "<td>N</td>";
-                        if (!reader.IsDBNull(16))
-                            result += "<td>" + reader.GetString(16) + "</td>";
+                        if (!reader.IsDBNull(15))
+                            result += "<td>" + reader.GetString(15) + "</td>";
                         else
                             result += "<td>-</td>";
                         result += "</tr>";
 
                         //committee member
                         result += "<tr>";
-                        if (!reader.IsDBNull(17))
-                            result += "<td>" + reader.GetString(17) + "</td>";
+                        if (!reader.IsDBNull(16))
+                            result += "<td>" + reader.GetString(16) + "</td>";
                         else
                             result += "<td>No Professor Selected</td>";
                         result += "<td>Committee Member</td>";
-                        if (!reader.IsDBNull(18))
-                            result += "<td>" + reader.GetString(18) + "</td>";
+                        if (!reader.IsDBNull(17))
+                            result += "<td>" + reader.GetString(17) + "</td>";
                         else
                             result += "<td>N</td>";
                         if (!reader.IsDBNull(19))
-                            result += "<td>" + reader.GetString(19) + "</td>";
+                            result += "<td>" + reader.GetString(18) + "</td>";
                         else
                             result += "<td>-</td>";
                         result += "</tr>";
 
                         //Department Chair
                         result += "<tr>";
-                        if (!reader.IsDBNull(20))
-                            result += "<td>" + reader.GetString(20) + "</td>";
+                        if (!reader.IsDBNull(19))
+                            result += "<td>" + reader.GetString(19) + "</td>";
                         else
                             result += "<td>No Professor Selected</td>";
                         result += "<td>Department Chair</td>";
+                        if (!reader.IsDBNull(20))
+                            result += "<td>" + reader.GetString(20) + "</td>";
+                        else
+                            result += "<td>N</td>";
                         if (!reader.IsDBNull(21))
                             result += "<td>" + reader.GetString(21) + "</td>";
                         else
-                            result += "<td>N</td>";
-                        if (!reader.IsDBNull(22))
-                            result += "<td>" + reader.GetString(22) + "</td>";
-                        else
                             result += "<td>-</td>";
-                        result += "</tr>";
+                      //  result += "</tr>";
                     }
                     reader.Close();
-                    result += "</table>";
+                    result += "</tr></table>";
                 }
                 catch (Exception ex)
                 {
@@ -273,7 +273,7 @@ namespace Thesis_project_Repository.StudentFiles
                 {
                     connection.Close();
                 }
-                thesisappstatus.Text = result;
+                thesis.Text = result;
             }
         }
 

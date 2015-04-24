@@ -58,33 +58,6 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.TextBox projectabstract;
         
         /// <summary>
-        /// preliminaryreport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload preliminaryreport;
-        
-        /// <summary>
-        /// preliminaryreportdownload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder preliminaryreportdownload;
-        
-        /// <summary>
-        /// screencasts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload screencasts;
-        
-        /// <summary>
         /// committeeChair control.
         /// </summary>
         /// <remarks>
@@ -121,12 +94,39 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.RadioButtonList semester;
         
         /// <summary>
-        /// submit control.
+        /// preliminaryreport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.FileUpload preliminaryreport;
+        
+        /// <summary>
+        /// preliminaryreportdownload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder preliminaryreportdownload;
+        
+        /// <summary>
+        /// screencasts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload screencasts;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

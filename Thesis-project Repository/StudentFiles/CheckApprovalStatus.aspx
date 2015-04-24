@@ -2,13 +2,26 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="student" runat="server">
-    <h2>Preliminary report</h2>    
-    <asp:Label ID="preliminaryappstatus" runat="server" Text=""></asp:Label>
-    <br />
-    <h2>Final report</h2>    
-    <asp:Label ID="finalappstatus" runat="server" Text=""></asp:Label>
-    <br />
-    <h2>Thesis</h2>    
-    <asp:Label ID="thesisappstatus" runat="server" Text=""></asp:Label>
+     <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Check Approval Status</div>
+         <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Preliminary report</div>
+    <asp:Label ID="preliminary" runat="server" Text=""></asp:Label></div>
+
+         <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Thesis</div>       
+    <asp:Label ID="thesis" runat="server" Text=""></asp:Label>
+              </div>
+
+           <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Final report</div>
+         <asp:Label ID="final" runat="server" Text=""></asp:Label>
+       </div>
+         </div>
 </asp:Content>
