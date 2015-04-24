@@ -100,7 +100,7 @@
     <Content Include="js\TweenLite.min.js" />
     <Content Include="js\TweenMax.min.js" />
     <Content Include="Logout.aspx" />
-    <Content Include="MyStyleSheet.css" />
+    <Content Include="ProfessorFiles\AboutUss.aspx" />
     <Content Include="ProfessorFiles\DeleteAccount.aspx" />
     <Content Include="ProfessorFiles\ProfessorHome.aspx" />
     <Content Include="ProfessorFiles\UpdateProfessorProfile.aspx" />
@@ -114,13 +114,13 @@
     <Content Include="Resources\images\kaveh.jpg" />
     <Content Include="Resources\images\library.jpg" />
     <Content Include="Resources\images\logo.jpg" />
-    <Content Include="Search.aspx" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
     <Content Include="Service References\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="StudentFiles\DeleteAccount.aspx" />
     <Content Include="StudentFiles\StudentHomePage.aspx" />
     <Content Include="StudentFiles\PreliminaryProposal.aspx" />
     <Content Include="Completed Use Cases.txt" />
@@ -129,9 +129,7 @@
     <Content Include="StudentFiles\Thesis.aspx" />
     <Content Include="StudentFiles\CheckApprovalStatus.aspx" />
     <Content Include="StudentFiles\SearchProjects.aspx" />
-    <Content Include="UpdateProfile.aspx" />
     <Content Include="VerificationLink.aspx" />
-    <Content Include="ViewerHomePage.aspx" />
     <Content Include="Viewer\UpdateViewerProfile.aspx" />
     <Content Include="Viewer\ViewerHome.aspx" />
     <Content Include="Web.config" />
@@ -223,6 +221,13 @@
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModels.cs" />
+    <Compile Include="ProfessorFiles\AboutUss.aspx.cs">
+      <DependentUpon>AboutUss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfessorFiles\AboutUss.aspx.designer.cs">
+      <DependentUpon>AboutUss.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProfessorFiles\DeleteAccount.aspx.cs">
       <DependentUpon>DeleteAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,17 +283,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Search.aspx.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Search.aspx.designer.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentFiles\StudentMain.Master.cs">
       <DependentUpon>StudentMain.Master</DependentUpon>
@@ -346,13 +351,6 @@
     <Compile Include="StudentFiles\SearchProjects.aspx.designer.cs">
       <DependentUpon>SearchProjects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateProfile.aspx.cs">
-      <DependentUpon>UpdateProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UpdateProfile.aspx.designer.cs">
-      <DependentUpon>UpdateProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -371,13 +369,6 @@
     </Compile>
     <Compile Include="Admin\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewerHomePage.aspx.cs">
-      <DependentUpon>ViewerHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewerHomePage.aspx.designer.cs">
-      <DependentUpon>ViewerHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viewer\UpdateViewerProfile.aspx.cs">
       <DependentUpon>UpdateViewerProfile.aspx</DependentUpon>

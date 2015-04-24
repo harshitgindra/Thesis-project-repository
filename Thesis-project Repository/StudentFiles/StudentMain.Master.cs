@@ -8,8 +8,6 @@ namespace Thesis_project_Repository.StudentFiles
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-          //  Session["username"] = "hgindra@ilstu.edu";
-
             if (Session["username"] == null)
             {
                 Response.Redirect("../Default.aspx");
@@ -52,12 +50,6 @@ namespace Thesis_project_Repository.StudentFiles
 
         protected void Page_Load(object sender, EventArgs e)
         {
-        }
-
-        protected void logout_Click(object sender, EventArgs e)
-        {
-            Session["username"] = null;
-            Response.Redirect("../Default.aspx", false);
         }
 
         protected void Subscribe(object sender, EventArgs e)

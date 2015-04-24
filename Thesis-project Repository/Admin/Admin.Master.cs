@@ -13,13 +13,5 @@ namespace Thesis_project_Repository.Admin
             }
           
         }
-
-        protected void Logout(object sender, EventArgs e)
-        {
-            Session["username"] = null;
-            Response.Redirect("../Default.aspx", false);
-        }
-
-       
     }
 }

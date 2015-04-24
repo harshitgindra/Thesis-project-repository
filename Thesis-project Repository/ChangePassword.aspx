@@ -13,7 +13,7 @@
             <asp:Label ID="TestMessage" runat="server"></asp:Label>
         </asp:View>
         <asp:View ID="View2" runat="server">
-            <table>
+            <table class="table">
                 <tr>
                     <td>
                         New Password:

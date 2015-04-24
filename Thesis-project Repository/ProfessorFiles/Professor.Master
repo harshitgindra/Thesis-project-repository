@@ -74,8 +74,8 @@
                         <h6>Navigation</h6>
                         <ul class="unstyled">
                             <li><a href="home.html">Home</a></li>
-                            <li><a href="members.html">Members</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="AboutUs.aspx">Members</a></li>
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                     <!--end col-sm-2-->
@@ -118,36 +118,3 @@
 </body>
 </html>
 
-<%-- <div class="container" style="padding-bottom: 50px">
-            <div class="navbar navbar-fixed-top">
-              <%--  <div class="visible-sm pager">
-                    <img src="#" alt="Your Logo" />
-                </div>
-                <a class="navbar-brand" href="AdminHomePage.aspx" id="websiteLogo">
-                    img class="hidden-sm" src="../Resources/images/logo.jpg" alt="Your Logo" /></a>
-                    <div class="nav-collapse collapse navbar-responsive-collapse">
-
-                        <ul class="nav navbar-nav  center">
-                         
-                            <li>
-                                <asp:LinkButton class="btn" ID="Logout" OnClick="Logout_Click" runat="server">Log out</asp:LinkButton>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-        </div>
-
-
-        <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server">
-        </asp:ContentPlaceHolder>
-
-        <div class="col-sm-2">
-            <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
-                <asp:View ID="SubscribeView" runat="server">
-                    <asp:LinkButton ID="SubscribeLink" runat="server" OnClick="Subscribe">Subscribe</asp:LinkButton>
-                </asp:View>
-                <asp:View ID="UnsubscribeView" runat="server">
-                    <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
-                </asp:View>
-            </asp:MultiView>
-        </div>--%>
