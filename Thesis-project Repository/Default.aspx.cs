@@ -19,7 +19,7 @@ namespace Thesis_project_Repository
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         protected void Login(object sender, EventArgs e)
@@ -149,7 +149,7 @@ namespace Thesis_project_Repository
         protected Boolean SendEmail(string receiver, string subject, string message)
         {
             var messageFrom = new MailAddress("hgindra@ilstu.edu", "ITDepartment");
-            var emailMessage = new MailMessage {From = messageFrom};
+            var emailMessage = new MailMessage { From = messageFrom };
 
             var messageTo = new MailAddress(receiver);
             emailMessage.To.Add(messageTo.Address);
@@ -178,16 +178,36 @@ namespace Thesis_project_Repository
 
         protected void SignUpLink(object sender, EventArgs e)
         {
+            CLearSignUpPage();
             MultiView1.ActiveViewIndex = 2;
+
+            //  Response.Redirect("Default.aspx");
+
         }
 
+        //need to use this method
+        protected void CLearSignUpPage()
+        {
+            signUpUsername.Text = "";
+            signUpPassword.Text = "";
+            accType.SelectedIndex = -1;
+            secques.Text = "";
+            secans.Text = "";
+            fname.Text = "";
+            lname.Text = "";
+            phoneNumber.Text = "";
+            ntwrkprovider.SelectedIndex = 0;
+
+        }
         protected void ForgotPassword(object sender, EventArgs e)
         {
+
             MultiView1.ActiveViewIndex = 3;
         }
 
         protected void LoginLink(object sender, EventArgs e)
         {
+            //  Response.Redirect("Default.aspx");
             MultiView1.ActiveViewIndex = 1;
         }
 
@@ -285,8 +305,5 @@ namespace Thesis_project_Repository
                 }
             }
         }
-
-
-      
     }
 }

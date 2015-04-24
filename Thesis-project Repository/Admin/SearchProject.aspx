@@ -3,9 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="AdminMaster" runat="server">
 
-
-    
-   
         <div class="container">
             <h2>Omni Search</h2>
             Enter a keyword:<br />
