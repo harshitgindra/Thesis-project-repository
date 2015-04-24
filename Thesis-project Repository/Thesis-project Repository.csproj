@@ -67,6 +67,11 @@
     <Content Include="Admin\AdminDashBoard.aspx" />
     <Content Include="Admin\AdminUserApproval.aspx" />
     <Content Include="Admin\SearchProject.aspx" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\css\sticky-footer-navbar.css" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="css\forms.css" />
     <Content Include="css\gallery.css" />
@@ -81,6 +86,12 @@
     <Content Include="Dll\Newtonsoft.Json.Net20.xml" />
     <Content Include="DownloadFile.aspx" />
     <Content Include="HighChartsJavaScript.csproj.user" />
+    <Content Include="includes\css\bootstrap-glyphicons.css" />
+    <Content Include="includes\css\styles.css" />
+    <Content Include="includes\fonts\glyphiconshalflings-regular.svg" />
+    <Content Include="includes\js\jquery-1.8.2.min.js" />
+    <Content Include="includes\js\modernizr-2.6.2.min.js" />
+    <Content Include="includes\js\script.js" />
     <Content Include="js\exporting.js" />
     <Content Include="js\highcharts-more.js" />
     <Content Include="js\highcharts.js" />
@@ -382,6 +393,10 @@
       <DependentUpon>LoginDS.xsd</DependentUpon>
     </Content>
     <Content Include="Admin\Admin.Master" />
+    <Content Include="includes\fonts\glyphiconshalflings-regular.eot" />
+    <Content Include="includes\fonts\glyphiconshalflings-regular.otf" />
+    <Content Include="includes\fonts\glyphiconshalflings-regular.ttf" />
+    <Content Include="includes\fonts\glyphiconshalflings-regular.woff" />
     <None Include="LoginDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>LoginDS.Designer.cs</LastGenOutput>
