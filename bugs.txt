@@ -1,0 +1,4 @@
+from sign up page - login button not working
+validations done- need to align the error properly
+i feel navbar should be more better
+rest i didnt find any bugs

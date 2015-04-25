@@ -27,17 +27,18 @@
 
     <div class="form-group">
         <label for="committeeChair">Committee Chair:</label>
-        <asp:TextBox ID="committeeChair" class="form-control" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="TcommitteeChair" CssClass="form-control" runat="server"></asp:DropDownList>
+       
     </div>
 
     <div class="form-group">
         <label for="committeemember">Committee Member:</label>
-        <asp:TextBox ID="committeemember" class="form-control" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="Tcommitteemember" CssClass="form-control" runat="server"></asp:DropDownList>      
     </div>
 
     <div class="form-group">
         <label for="deptchair">Department Chair:</label>
-        <asp:TextBox ID="deptchair" class="form-control" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="Tdeptchair" CssClass="form-control" runat="server"></asp:DropDownList>       
     </div>
 
     <div class="form-group">

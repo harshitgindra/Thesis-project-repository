@@ -18,6 +18,7 @@ namespace Thesis_project_Repository.StudentFiles
 
             if (Session["username"] != null)
             {
+                fetchProfessorListFromDB();
                 string username = Session["username"].ToString();
                 if (!Page.IsPostBack)
                 {
@@ -47,15 +48,15 @@ namespace Thesis_project_Repository.StudentFiles
                                 }
                                 if (!reader.IsDBNull(11))
                                 {
-                                    committeeChair.Text = reader.GetString(11);
+                                    TcommitteeChair.SelectedValue = reader.GetString(11);
                                 }
                                 if (!reader.IsDBNull(14))
                                 {
-                                    committeemember.Text = reader.GetString(14);
+                                    Tcommitteemember.SelectedValue = reader.GetString(14);
                                 }
                                 if (!reader.IsDBNull(17))
                                 {
-                                    deptchair.Text = reader.GetString(17);
+                                    Tdeptchair.SelectedValue = reader.GetString(17);
                                 }
                                 if (!reader.IsDBNull(20))
                                 {
@@ -95,6 +96,41 @@ namespace Thesis_project_Repository.StudentFiles
             else
             {
                 Response.Redirect("../Default.aspx");
+            }
+        }
+
+        private void fetchProfessorListFromDB()
+        {
+            TcommitteeChair.Items.Add("Please Select One");
+            Tcommitteemember.Items.Add("Please Select One");
+            Tdeptchair.Items.Add("Please Select One");
+            const string query = "SELECT * FROM FACULTYPROFILE ;";
+
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        TcommitteeChair.Items.Add(reader.GetString(0));
+                        Tcommitteemember.Items.Add(reader.GetString(0));
+                        Tdeptchair.Items.Add(reader.GetString(0));
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
             }
         }
 
@@ -146,9 +182,9 @@ namespace Thesis_project_Repository.StudentFiles
 #pragma warning restore 618
                 command.Parameters.AddWithValue("@screencast_length", screencastLength);
                 command.Parameters.AddWithValue("@screencast_name", screencastName);
-                command.Parameters.AddWithValue("@committee_chair", committeeChair.Text);
-                command.Parameters.AddWithValue("@committee_member", committeemember.Text);
-                command.Parameters.AddWithValue("@dept_chair", deptchair.Text);
+                command.Parameters.AddWithValue("@committee_chair", TcommitteeChair.Text);
+                command.Parameters.AddWithValue("@committee_member", Tcommitteemember.Text);
+                command.Parameters.AddWithValue("@dept_chair", Tdeptchair.Text);
                 command.Parameters.AddWithValue("@semester", semester.Text);
                 command.Parameters.AddWithValue("@date", todaydate);
 

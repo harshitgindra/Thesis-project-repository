@@ -21,7 +21,7 @@
                 </td>
                  <td>
                     <div class="input-group">
-                        <asp:TextBox ID="password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                        <asp:TextBox ID="password" TextMode="Password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
                     </div>
                 </td>
             </tr>
@@ -30,7 +30,7 @@
                 </td>
                <td>
                     <div class="input-group">
-                        <asp:TextBox ID="cnfrmPassword" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                        <asp:TextBox ID="cnfrmPassword" TextMode="Password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
                     </div>
                 </td>
             </tr>

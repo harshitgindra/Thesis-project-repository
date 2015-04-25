@@ -49,31 +49,31 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.TextBox thesisabstract;
         
         /// <summary>
-        /// committeeChair control.
+        /// TcommitteeChair control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox committeeChair;
+        protected global::System.Web.UI.WebControls.DropDownList TcommitteeChair;
         
         /// <summary>
-        /// committeemember control.
+        /// Tcommitteemember control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox committeemember;
+        protected global::System.Web.UI.WebControls.DropDownList Tcommitteemember;
         
         /// <summary>
-        /// deptchair control.
+        /// Tdeptchair control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox deptchair;
+        protected global::System.Web.UI.WebControls.DropDownList Tdeptchair;
         
         /// <summary>
         /// semester control.

@@ -22,15 +22,6 @@ namespace Thesis_project_Repository.StudentFiles {
         protected global::System.Web.UI.WebControls.Label preliminary;
         
         /// <summary>
-        /// thesis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label thesis;
-        
-        /// <summary>
         /// final control.
         /// </summary>
         /// <remarks>
@@ -38,5 +29,14 @@ namespace Thesis_project_Repository.StudentFiles {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label final;
+        
+        /// <summary>
+        /// thesis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label thesis;
     }
 }

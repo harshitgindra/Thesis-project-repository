@@ -23,14 +23,15 @@ namespace Thesis_project_Repository
         {
             int page = Convert.ToInt32(Request.QueryString["ia"]);
 
-            if (page == 1) {
+            if (page == 1)
+            {
                 MultiView1.ActiveViewIndex = 1;
             }
             else if (page == 2)
             {
                 MultiView1.ActiveViewIndex = 2;
             }
-            
+
         }
 
         protected void Login(object sender, EventArgs e)
@@ -190,10 +191,7 @@ namespace Thesis_project_Repository
         protected void SignUpLink(object sender, EventArgs e)
         {
             CLearSignUpPage();
-          //  MultiView1.ActiveViewIndex = 2;
-
-             Response.Redirect("Default.aspx?ia=2");
-
+            Response.Redirect("Default.aspx?ia=2");
         }
 
         //need to use this method
@@ -219,7 +217,7 @@ namespace Thesis_project_Repository
         protected void LoginLink(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx?ia=1");
-           // MultiView1.ActiveViewIndex = 1;
+            // MultiView1.ActiveViewIndex = 1;
         }
 
         protected void SendSms(string provider, string number, string message)
@@ -278,7 +276,7 @@ namespace Thesis_project_Repository
                             var message = "Your Verification code is: " + randomString;
                             SendSms(Carrier, phnNumber, message);
                             UpdatePasswordFromSMSConfirmation.Text = "Verification code has been sent to your mobile.";
-                           
+
                             MultiView1.ActiveViewIndex = 4;
                         }
                     }
@@ -315,6 +313,40 @@ namespace Thesis_project_Repository
                 else
                 {
                     UpdatePasswordFromSMSConfirmation.Text = "Something went wrong. Please try again later.";
+                }
+            }
+        }
+
+
+        protected void checkUserNameAvailability(object sender, EventArgs e)
+        {
+            const string query = "SELECT * FROM LOGININFO WHERE USERNAME = @username";
+
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@username", signUpUsername.Text);
+                try
+                {
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        usernameerror.Text = "Username already taken.";
+                    }
+                    else
+                    {
+                        usernameerror.Text = "Username available";
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
                 }
             }
         }

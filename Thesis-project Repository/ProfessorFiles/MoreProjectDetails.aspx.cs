@@ -84,7 +84,7 @@ namespace Thesis_project_Repository.ProfessorFiles
                                 approvalstatus.Text = "N";
                             }
                         }
-                        if (username.Equals(reader.GetString(15)))
+                        else if (username.Equals(reader.GetString(15)))
                         {
                             //the user is a committee member
                             profrole = "COMMITTEE_MEMBERS";

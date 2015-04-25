@@ -18,8 +18,11 @@ namespace Thesis_project_Repository
             var fileNameFromSearch = Request.QueryString["document_name"];
             var fileTypeFromSearch = "";
             var fullFileNameFromSearch = "";
-            fileTypeFromSearch = fileNameFromSearch.Substring(0, 1);
-            fullFileNameFromSearch = fileNameFromSearch.Substring(1);
+            if (fileNameFromSearch != null)
+            {
+                fileTypeFromSearch = fileNameFromSearch.Substring(0, 1);
+                fullFileNameFromSearch = fileNameFromSearch.Substring(1);
+            }
             var type = "";
             type = Request.QueryString["file"];
             var fileToDownload = GetAFile(username, type, fileTypeFromSearch);
