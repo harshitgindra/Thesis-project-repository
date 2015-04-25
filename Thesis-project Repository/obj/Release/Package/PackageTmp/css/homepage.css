@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/*
+Template Name: PhotoProwess
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Homepage CSS
+*/
+
+#homepage {
+    display: block;
+    line-height: 1.6em;
+    width: 100%;
+}
+
+#homepage .fl_left {
+    display: block;
+    width: 500px;
+}
+
+#homepage #hpage_slider {
+    background-color: #FAFAFA;
+    border: 1px solid #D8D9DE;
+    border-bottom-color: #FAFAFA;
+    color: #999999;
+    display: block;
+    height: 338px;
+    overflow: hidden;
+    width: 498px;
+}
+
+#homepage #hpage_slider div.item {
+    display: block;
+    height: 320px;
+    margin: 9px;
+    position: relative;
+    width: 480px;
+}
+
+/* ----------------------------------------------Slider Navigation Buttons------------------------------------- */
+
+/*
+
+Navigation dynamically created using: jquery.cycle.min.js
+
+HTML Output:
+
+<div id="fsn">
+  <ul id="fs_pagination">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+</div>
+
+*/
+
+#homepage #fsn {
+    background-color: #FAFAFA;
+    border: 1px solid #D8D9DE;
+    border-top-color: #FAFAFA;
+    color: #999999;
+    display: block;
+    height: 18px;
+    margin: 0 0 25px 0;
+    position: relative;
+    text-align: center;
+    width: 498px;
+    z-index: 1000;
+}
+
+#homepage #fsn ul {
+    display: block;
+    height: 10px;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100px;
+}
+
+#homepage #fsn ul li, #homepage #fsn ul li a {
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    width: 10px;
+}
+
+#homepage #fsn ul li a {
+    background: url("images/slide.png") 50% 50% no-repeat;
+    border: none;
+    float: none;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    text-indent: -5000px;
+}
+
+#homepage #fsn ul li a:hover, #homepage #fsn ul li.activeSlide a { background: url("images/slide.png") 0% 50% no-repeat; }
+
+/* ----------------------------------------------Right Column------------------------------------- */
+
+#homepage .fl_right {
+    display: block;
+    width: 400px;
+}
+
+#homepage .fl_right ul, #homepage .fl_right .testimonials p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#homepage .fl_right .testimonials {
+    border-bottom: 1px solid #D8D9DE;
+    display: block;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+#homepage .fl_right .testimonials li {
+    background: url("images/quotemarks.gif") 0 0 no-repeat;
+    margin-bottom: 25px;
+}
+
+#homepage .fl_right .testimonials li.last { margin-bottom: 0; }
+
+#homepage .fl_right .testimonials p.name {
+    margin: 0 0 15px 60px;
+    padding: 15px 0 0 0;
+}
+
+#homepage .fl_right .testimonials blockquote {
+    margin: 0 0 5px 0;
+    padding: 0;
+}

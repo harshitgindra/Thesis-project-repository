@@ -85,7 +85,6 @@
     <Content Include="Dll\Newtonsoft.Json.Net20.dll" />
     <Content Include="Dll\Newtonsoft.Json.Net20.xml" />
     <Content Include="DownloadFile.aspx" />
-    <Content Include="HighChartsJavaScript.csproj.user" />
     <Content Include="includes\css\bootstrap-glyphicons.css" />
     <Content Include="includes\css\styles.css" />
     <Content Include="includes\fonts\glyphiconshalflings-regular.svg" />
@@ -454,6 +453,7 @@
     <Content Include="ProfessorFiles\Professor.Master" />
     <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
     <Content Include="MainMaster.Master" />
+    <None Include="Properties\PublishProfiles\ajain5.pubxml" />
     <None Include="Service References\ServiceReference1\ISUSMS.xsd">
       <SubType>Designer</SubType>
     </None>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*
+Template Name: PhotoProwess
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Tables CSS
+*/
+
+table {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    table-layout: auto;
+    vertical-align: top;
+    width: 100%;
+}
+
+table thead th {
+    background-color: #666666;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    color: #FFFFFF;
+    table-layout: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table tbody td {
+    border-collapse: collapse;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    vertical-align: top;
+}
+
+table thead th, table tbody td {
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table tbody tr.light {
+    background-color: #F7F7F7;
+    color: #666666;
+}
+
+table tbody tr.dark {
+    background-color: #E8E8E8;
+    color: #666666;
+}

@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/*
+Template Name: PhotoProwess
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Navigation CSS
+*/
+
+#topnav {
+    float: right;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 13px;
+    margin-top: 21px;
+}
+
+#topnav ul, #topnav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#topnav li {
+    float: right;
+    margin-right: 30px;
+}
+
+#topnav li li { margin-right: 0; }
+
+#topnav li span {
+    background-color: #202020;
+    color: #666666;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-weight: normal;
+    line-height: normal;
+    margin: 5px 0 0 0;
+    padding: 0;
+    text-transform: lowercase;
+}
+
+#topnav li a:link, #topnav li a:visited, #topnav li a:hover {
+    background-color: #202020;
+    color: #FFFFFF;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#topnav ul ul li a:link, #topnav ul ul li a:visited { border: none; }
+
+#topnav li a:hover, #topnav li.active a {
+    background-color: #202020;
+    color: #FBF8CD;
+}
+
+#topnav li li a:link, #topnav li li a:visited {
+    background-color: #202020;
+    border: none;
+    color: #FFFFFF;
+    float: none;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding: 7px 10px;
+    width: 150px;
+}
+
+#topnav li li a:hover {
+    background-color: #202020;
+    color: #FBF8CD;
+}
+
+#topnav ul ul {
+    border-bottom: 1px solid #666666;
+    border-left: 1px solid #666666;
+    height: auto;
+    left: -999em;
+    position: absolute;
+    width: 170px;
+    z-index: 9999;
+}
+
+#topnav ul ul a { width: 140px; }
+
+#topnav li:hover ul { left: auto; }
+
+#topnav li:hover { position: static; }
+
+#topnav li.last { margin-right: 0; }
+
+/* ----------------------------------------------Column Navigation------------------------------------- */
+
+#column .subnav {
+    background-color: #F7F7F7;
+    display: block;
+    margin-bottom: 30px;
+    padding: 25px;
+    width: 250px;
+}
+
+#column .subnav h2 {
+    background-color: #F7F7F7;
+    border-bottom: 1px dotted #666666;
+    color: #666666;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 20px 0;
+    padding: 0 0 14px 0;
+}
+
+#column .subnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#column .subnav li {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+#column .subnav ul ul, #column .subnav ul ul ul, #column .subnav ul ul ul ul, #column .subnav ul ul ul ul ul {
+    border-top: none;
+    padding-top: 0;
+}
+
+#column .subnav a {
+    background: url("images/pink_file.gif") no-repeat 10px center #F7F7F7;
+    border-bottom: 1px dotted #666666;
+    color: #666666;
+    display: block;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    text-decoration: none;
+}
+
+#column .subnav a:hover {
+    background-color: #F7F7F7;
+    color: #B86365;
+}
+
+#column .subnav ul ul a, #column .subnav ul ul ul a, #column .subnav ul ul ul ul a, #column .subnav ul ul ul ul ul a { background: url("images/black_file.gif") no-repeat #F7F7F7; }
+
+#column .subnav ul ul a {
+    background-position: 30px center;
+    padding-left: 40px;
+}
+
+#column .subnav ul ul ul a {
+    background-position: 40px center;
+    padding-left: 50px;
+}
+
+#column .subnav ul ul ul ul a {
+    background-position: 50px center;
+    padding-left: 60px;
+}
+
+#column .subnav ul ul ul ul ul a {
+    background-position: 60px center;
+    padding-left: 70px;
+}
+
+/* ----------------------------------------------Pagination------------------------------------- */
+
+.pagination {
+    clear: both;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.pagination ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination li { display: inline; }
+
+.pagination .next { margin: 0; }
+
+.pagination a {
+    border: 1px solid #D8D9DE;
+    display: inline-block;
+    margin: 0 2px 0 0;
+    padding: 2px 5px 3px 5px;
+}
+
+.pagination .current, .pagination .splitter {
+    margin: 0 2px 0 0;
+    padding: 6px;
+}
+
+.wrapper .pagination a:hover, .pagination .current, .pagination .splitter {
+    background-color: #FAFAFA;
+    color: #9B9B9B;
+}

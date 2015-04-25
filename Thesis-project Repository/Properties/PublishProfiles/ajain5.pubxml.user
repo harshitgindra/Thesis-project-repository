@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AboutUs.aspx">
+      <publishTime>04/24/2015 19:18:13</publishTime>
+    </File>
+    <File Include="Admin/AboutUs.aspx">
+      <publishTime>04/24/2015 04:47:38</publishTime>
+    </File>
+    <File Include="Admin/Admin.Master">
+      <publishTime>04/24/2015 04:44:12</publishTime>
+    </File>
+    <File Include="Admin/AdminDashBoard.aspx">
+      <publishTime>04/24/2015 01:17:40</publishTime>
+    </File>
+    <File Include="Admin/AdminHomePage.aspx">
+      <publishTime>04/20/2015 15:19:01</publishTime>
+    </File>
+    <File Include="Admin/AdminUserApproval.aspx">
+      <publishTime>04/24/2015 02:30:15</publishTime>
+    </File>
+    <File Include="Admin/SearchProject.aspx">
+      <publishTime>04/24/2015 14:25:54</publishTime>
+    </File>
+    <File Include="Admin/SQL Queries.txt">
+      <publishTime>04/20/2015 00:34:11</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.Net20.dll">
+      <publishTime>04/18/2015 13:24:49</publishTime>
+    </File>
+    <File Include="bin/Thesis-project Repository.dll">
+      <publishTime>04/24/2015 23:01:42</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.css">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.min.css">
+      <publishTime>04/24/2015 14:51:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/RemoveBorder.css">
+      <publishTime>04/24/2015 13:06:48</publishTime>
+    </File>
+    <File Include="bootstrap/css/sticky-footer-navbar.css">
+      <publishTime>04/24/2015 14:46:23</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.js">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.min.js">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="ChangePassword.aspx">
+      <publishTime>04/24/2015 22:14:43</publishTime>
+    </File>
+    <File Include="Completed Use Cases.txt">
+      <publishTime>04/24/2015 16:29:57</publishTime>
+    </File>
+    <File Include="css/forms.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/gallery.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/homepage.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/layout.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/navi.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/portfolio.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="css/tables.css">
+      <publishTime>04/10/2015 17:22:32</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>04/24/2015 19:04:55</publishTime>
+    </File>
+    <File Include="Dll/Newtonsoft.Json.Net20.dll">
+      <publishTime>04/18/2015 13:24:49</publishTime>
+    </File>
+    <File Include="DownloadFile.aspx">
+      <publishTime>04/10/2015 17:22:29</publishTime>
+    </File>
+    <File Include="includes/css/bootstrap-glyphicons.css">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/css/styles.css">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/fonts/glyphiconshalflings-regular.eot">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/fonts/glyphiconshalflings-regular.otf">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/fonts/glyphiconshalflings-regular.svg">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/fonts/glyphiconshalflings-regular.ttf">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/fonts/glyphiconshalflings-regular.woff">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/js/jquery-1.8.2.min.js">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/js/modernizr-2.6.2.min.js">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="includes/js/script.js">
+      <publishTime>04/23/2015 20:34:53</publishTime>
+    </File>
+    <File Include="js/exporting.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="js/highcharts-more.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="js/highcharts.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="js/jquery-1.8.3.min.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="js/TweenLite.min.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="js/TweenMax.min.js">
+      <publishTime>04/17/2015 20:31:37</publishTime>
+    </File>
+    <File Include="LoginDS.xsc">
+      <publishTime>04/10/2015 15:23:44</publishTime>
+    </File>
+    <File Include="LoginDS.xss">
+      <publishTime>04/10/2015 15:23:44</publishTime>
+    </File>
+    <File Include="Logout.aspx">
+      <publishTime>04/23/2015 21:04:49</publishTime>
+    </File>
+    <File Include="MainMaster.Master">
+      <publishTime>04/24/2015 22:22:50</publishTime>
+    </File>
+    <File Include="ProfessorFiles/AboutUs.aspx">
+      <publishTime>04/24/2015 14:15:32</publishTime>
+    </File>
+    <File Include="ProfessorFiles/DeleteAccount.aspx">
+      <publishTime>04/24/2015 04:08:30</publishTime>
+    </File>
+    <File Include="ProfessorFiles/MoreProjectDetails.aspx">
+      <publishTime>04/24/2015 14:43:59</publishTime>
+    </File>
+    <File Include="ProfessorFiles/Professor.Master">
+      <publishTime>04/24/2015 12:30:04</publishTime>
+    </File>
+    <File Include="ProfessorFiles/ProfessorHome.aspx">
+      <publishTime>04/10/2015 17:22:30</publishTime>
+    </File>
+    <File Include="ProfessorFiles/ProjectList.aspx">
+      <publishTime>04/24/2015 14:24:18</publishTime>
+    </File>
+    <File Include="ProfessorFiles/SearchProjects.aspx">
+      <publishTime>04/24/2015 14:25:07</publishTime>
+    </File>
+    <File Include="ProfessorFiles/UpdateProfessorProfile.aspx">
+      <publishTime>04/24/2015 16:30:00</publishTime>
+    </File>
+    <File Include="Properties/Settings.settings">
+      <publishTime>04/10/2015 17:22:30</publishTime>
+    </File>
+    <File Include="Resources/images/amitesh.jpeg">
+      <publishTime>04/20/2015 01:48:38</publishTime>
+    </File>
+    <File Include="Resources/images/bgimage.jpg">
+      <publishTime>04/24/2015 22:54:41</publishTime>
+    </File>
+    <File Include="Resources/images/harshit.jpg">
+      <publishTime>04/20/2015 01:48:38</publishTime>
+    </File>
+    <File Include="Resources/images/HomePageBackground.jpg">
+      <publishTime>04/20/2015 01:48:38</publishTime>
+    </File>
+    <File Include="Resources/images/image.jpg">
+      <publishTime>04/24/2015 20:27:36</publishTime>
+    </File>
+    <File Include="Resources/images/kaveh.jpg">
+      <publishTime>04/20/2015 01:48:38</publishTime>
+    </File>
+    <File Include="Resources/images/library.jpg">
+      <publishTime>04/20/2015 01:48:38</publishTime>
+    </File>
+    <File Include="Resources/images/logo.jpg">
+      <publishTime>04/20/2015 15:19:02</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/configuration.svcinfo">
+      <publishTime>04/15/2015 01:55:11</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/configuration91.svcinfo">
+      <publishTime>04/15/2015 01:55:11</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/ISUSMS.wsdl">
+      <publishTime>04/15/2015 19:53:13</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/Reference.svcmap">
+      <publishTime>04/15/2015 01:55:11</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/Thesis_project_Repository.ServiceReference1.getCarriersResponse.datasource">
+      <publishTime>04/15/2015 01:55:13</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/Thesis_project_Repository.ServiceReference1.sendSMSISUResponse.datasource">
+      <publishTime>04/15/2015 01:55:12</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/Thesis_project_Repository.ServiceReference1.sendSMSResponse.datasource">
+      <publishTime>04/15/2015 01:55:12</publishTime>
+    </File>
+    <File Include="StudentFiles/AboutUs.aspx">
+      <publishTime>04/24/2015 14:16:19</publishTime>
+    </File>
+    <File Include="StudentFiles/CheckApprovalStatus.aspx">
+      <publishTime>04/24/2015 13:57:05</publishTime>
+    </File>
+    <File Include="StudentFiles/DeleteAccount.aspx">
+      <publishTime>04/24/2015 12:39:16</publishTime>
+    </File>
+    <File Include="StudentFiles/FinalProposal.aspx">
+      <publishTime>04/24/2015 16:24:34</publishTime>
+    </File>
+    <File Include="StudentFiles/PreliminaryProposal.aspx">
+      <publishTime>04/24/2015 20:19:57</publishTime>
+    </File>
+    <File Include="StudentFiles/SearchProjects.aspx">
+      <publishTime>04/24/2015 14:25:37</publishTime>
+    </File>
+    <File Include="StudentFiles/StudentHomePage.aspx">
+      <publishTime>04/10/2015 17:22:31</publishTime>
+    </File>
+    <File Include="StudentFiles/StudentMain.Master">
+      <publishTime>04/24/2015 16:49:26</publishTime>
+    </File>
+    <File Include="StudentFiles/Thesis.aspx">
+      <publishTime>04/24/2015 15:40:09</publishTime>
+    </File>
+    <File Include="StudentFiles/UpdateStudentProfile.aspx">
+      <publishTime>04/24/2015 13:21:58</publishTime>
+    </File>
+    <File Include="UserDS.xsc">
+      <publishTime>04/10/2015 15:23:47</publishTime>
+    </File>
+    <File Include="UserDS.xss">
+      <publishTime>04/10/2015 15:23:47</publishTime>
+    </File>
+    <File Include="VerificationLink.aspx">
+      <publishTime>04/11/2015 02:51:54</publishTime>
+    </File>
+    <File Include="Viewer/AboutUs.aspx">
+      <publishTime>04/24/2015 16:39:25</publishTime>
+    </File>
+    <File Include="Viewer/DeleteAccount.aspx">
+      <publishTime>04/24/2015 16:42:57</publishTime>
+    </File>
+    <File Include="Viewer/SearchProjects.aspx">
+      <publishTime>04/24/2015 16:56:29</publishTime>
+    </File>
+    <File Include="Viewer/UpdateViewerProfile.aspx">
+      <publishTime>04/24/2015 16:55:36</publishTime>
+    </File>
+    <File Include="Viewer/Viewer.Master">
+      <publishTime>04/24/2015 16:49:22</publishTime>
+    </File>
+    <File Include="Viewer/ViewerHome.aspx">
+      <publishTime>04/24/2015 16:54:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/24/2015 23:01:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

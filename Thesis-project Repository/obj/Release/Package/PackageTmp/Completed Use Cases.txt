@@ -1,0 +1,28 @@
+﻿1. User SignUp {done}
+2. User Login {done}
+3. Forgot Password {done}
+4. Admin Approval {done}
+5. Unsubscribe {done} 
+6. Subscribe {done} 
+7. Update Profile {done} 
+8. SMS web service {done}
+9. Delete Profile User {done}
+10. Search {done}
+11. View details of the user {done}
+and provide download link to download the files.
+12. Check approval status {done}
+13. Faculty approval for the projects {done}
+14. Export Thesis/Project (to XML/JSON format) {done}
+15. Dashboard that is accessible to admin only. {done} Need to Test it.
+16. Download File {done} => We need to add code that will download the video or there shlould be a
+player that can run that video. We will implement this after prototype
+17. Highlight/Showcase Thesis/Project  {harshit}
+
+Designing:
+1. About Us page for viewer
+2. Design for students
+3. Design for viewer
+4. Main Page Design
+5. Correct Email Subjects and logo
+6. DropDown List for Thesis and pre-populate the fields.
+7. 

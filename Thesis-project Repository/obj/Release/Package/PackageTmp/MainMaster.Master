@@ -1,0 +1,298 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="Thesis_project_Repository.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../includes/css/bootstrap-glyphicons.css" rel="stylesheet" />
+    <link href="../bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url(../Resources/images/bgimage.jpg);">
+    <form id="form2" runat="server">
+        <div class="navbar navbar-fixed-top">
+            <div class="container-container">
+                <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="SignUpLink" Text="Sign Up"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;SignUp</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LoginLink" Text="Log In"><span class="glyphicon glyphicon-hdd"></span>&nbsp;Login</asp:LinkButton></li>
+                    </ul>
+                    <!--end nav-->
+
+                    <!-- end nav pull-right-->
+                </div>
+                <!--end nav-collapse-->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end navbar -->
+        <!-- end navbar -->
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainTemplate" runat="server" />
+        </div>
+
+        <div class="container">
+
+            <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
+
+                <asp:View ID="View1" runat="server">
+                    <div class="container">
+                    </div>
+                </asp:View>
+
+                <asp:View ID="loginPage" runat="server">
+
+                    <div class="container">
+                        <div class="defaultviews">
+                            <div class="input-group" style="width: 240px;">
+                                <asp:TextBox class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="loginUserName"></asp:TextBox>
+
+                            </div>
+                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                <asp:TextBox class="form-control" TextMode="Password" placeholder="Password" aria-describedby="basic-addon1" runat="server" ID="loginPassword"></asp:TextBox>
+
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group" style="float: left; padding-top: 0.5em;">
+                                    <asp:CheckBox ID="CheckBox1" runat="server" />
+
+                                </div>
+                                <div class="input-group" style="float: right; padding-top: 0.5em;">
+                                    Keep me logged in
+                                </div>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                <div class="btn-group" role="group" aria-label="..." style="text-align: center;">
+                                    <asp:Button ID="Button1" class="btn btn-default" runat="server" Text="Login" OnClick="Login" />
+                                </div>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                <asp:LinkButton ID="Button2" class="btn btn-default" runat="server" OnClick="ForgotPassword" Text="Forgot your password?" />
+
+                            </div>
+                            <div class="input-group">
+                                <asp:Label runat="server" ID="loginResult"></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </asp:View>
+
+                <%--  Login Page End--%>
+
+                <%--  SignUp Page Start--%>
+                <asp:View ID="signUpPage" runat="server">
+
+                    <div class="container">
+
+                        <div class="container defaultviews" style="position: relative">
+                            <h1>Sign Up Form</h1>
+                            <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                <asp:TextBox class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="signUpUsername"></asp:TextBox>
+                                <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group" style="float: left; padding-top: 0.5em; padding-right: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Password" TextMode="Password" aria-describedby="basic-addon1" runat="server" ID="signUpPassword">
+                                    </asp:TextBox>
+                                </div>
+                                <div class="input-group " style="float: right; padding-top: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon1" TextMode="Password" runat="server" ID="signUpPassword2"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group" style="float: left; padding-top: 0.5em; padding-right: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="First Name" aria-describedby="basic-addon1" runat="server" ID="fname">
+                                    </asp:TextBox>
+                                </div>
+                                <div class="input-group" style="float: right; padding-top: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" runat="server" ID="lname"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group" style="float: left; padding-top: 0.5em; padding-right: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Security Question" aria-describedby="basic-addon1" runat="server" ID="secques">
+                                    </asp:TextBox>
+                                </div>
+                                <div class="input-group" style="float: right; padding-top: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Security Answer" aria-describedby="basic-addon1" runat="server" ID="secans"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group" style="float: left; padding-top: 0.5em; padding-right: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1" runat="server" ID="phoneNumber">
+                                    </asp:TextBox>
+                                </div>
+                                <div class="dropdown" style="float: right; width: 177px; padding-top: 0.5em;">
+                                    <asp:DropDownList ID="ntwrkprovider" CssClass="form-control" runat="server">
+                                        <asp:ListItem Selected="True">Provider</asp:ListItem>
+                                        <asp:ListItem>boost mobile</asp:ListItem>
+                                        <asp:ListItem>t-mobile</asp:ListItem>
+                                        <asp:ListItem>virgin mobile</asp:ListItem>
+                                        <asp:ListItem>cingular</asp:ListItem>
+                                        <asp:ListItem>sprint nextel</asp:ListItem>
+                                        <asp:ListItem>verizon</asp:ListItem>
+                                        <asp:ListItem>nextel</asp:ListItem>
+                                        <asp:ListItem>us cellular</asp:ListItem>
+                                        <asp:ListItem>suncom</asp:ListItem>
+                                        <asp:ListItem>powertel</asp:ListItem>
+                                        <asp:ListItem>att cingular</asp:ListItem>
+                                        <asp:ListItem>alltel</asp:ListItem>
+                                        <asp:ListItem>metro pcs</asp:ListItem>
+                                        <asp:ListItem></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="input-group" style="text-align: center; padding-top: 0.5em;">
+                                <asp:RadioButtonList ID="accType" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Text="Student" Value="S" />
+                                    <asp:ListItem Text="Professor" Value="P" />
+                                    <asp:ListItem Text="Viewer" Value="V" />
+                                </asp:RadioButtonList>
+                            </div>
+
+                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                <asp:Button Text="Submit" class="btn btn-default" ID="signUp" runat="server" OnClick="SignUp"></asp:Button>
+                            </div>
+                            <div>
+                                <asp:Label ID="SignUpReply" ForeColor="Green" runat="server" Text=""></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </asp:View>
+                <%--  SignUp Page End--%>
+
+                <%--  SignUp Page Start--%>
+                <asp:View ID="forgotPasswordPage" runat="server">
+                    <div class="container">
+                        <div class="defaultviews">
+                            <div class="defaultviews">
+                                <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                    <asp:TextBox class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="forgotEmailId"></asp:TextBox>
+
+                                </div>
+                                <div class="defaultviews">
+                                    <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                        <asp:RadioButtonList ID="FpAccntType" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem Text="Student" Value="S" />
+                                            <asp:ListItem Text="Professor" Value="P" />
+                                            <asp:ListItem Text="Viewer" Value="V" />
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                        <asp:RadioButtonList ID="retrievelMethodRadioList" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem Text="Email" Value="E" />
+                                            <asp:ListItem Text="Message" Value="M" />
+                                        </asp:RadioButtonList>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                        <asp:Button ID="Button3" class="btn btn-default" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword" />
+                                    </div>
+
+                                    <asp:Label ID="confirationMessage" ForeColor="Green" runat="server"></asp:Label>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </asp:View>
+
+                <asp:View ID="changePasswordMessage" runat="server">
+                    <div class="defaultviews container">
+                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                            <asp:TextBox class="form-control" placeholder="Verification Code" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="VerificationCode"></asp:TextBox>
+                        </div>
+                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                            <asp:TextBox class="form-control" TextMode="Password" placeholder="New Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="NewPassword"></asp:TextBox>
+                        </div>
+                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                            <asp:TextBox class="form-control" TextMode="Password" placeholder="Confirm Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="CnfrmPassword"></asp:TextBox>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                            <asp:Button Text="Change Password" class="btn btn-default" ID="UpdatePass" runat="server" OnClick="UpdatePasswordUsingSms"></asp:Button>
+
+                        </div> <br />
+                        <asp:Label ID="UpdatePasswordFromSMSConfirmation" runat="server" Text=""></asp:Label>
+
+                    </div>
+                </asp:View>
+
+                <%--  SignUp Page End--%>
+            </asp:MultiView>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+
+                        <h6>Copyright &copy; 2015<br>
+                            Amitesh Jain, Harshit Gindra and Kaveh Arvand</h6>
+                    </div>
+                    <div class="col-sm-2">
+                        <h6>Navigation</h6>
+                        <ul class="unstyled">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="#">Members</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!--end col-sm-2-->
+                    <div class="col-sm-3">
+                        <h6>Follow Us</h6>
+
+                        <ul class="unstyled">
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Google Plus</a></li>
+                        </ul>
+                    </div>
+                    <!--end col-sm-2-->
+
+
+                    <div class="col-sm-4">
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <h4><span class="glyphicon glyphicon-map-marker"></span>Our Location</h4>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.3579346515926!2d-88.99331399999998!3d40.51157900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71719478bc73%3A0x10e5c15e5fb62c34!2sIllinois+State+University!5e0!3m2!1sen!2sus!4v1422582211246" width="300" height="100" width="100px" frameborder="0" style="border: 0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-sm-2-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </footer>
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+        <script>window.jQuery || document.write('<script src="../includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+        <!-- Bootstrap JS -->
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    </form>
+</body>
+</html>
