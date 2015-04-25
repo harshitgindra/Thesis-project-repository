@@ -10,16 +10,7 @@
 namespace Thesis_project_Repository {
     
     
-    public partial class ChangePassword {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class ChangePassword1 {
         
         /// <summary>
         /// MultiView1 control.
@@ -85,15 +76,6 @@ namespace Thesis_project_Repository {
         protected global::System.Web.UI.WebControls.Button UpdatePass;
         
         /// <summary>
-        /// View3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View3;
-        
-        /// <summary>
         /// result control.
         /// </summary>
         /// <remarks>
@@ -101,14 +83,5 @@ namespace Thesis_project_Repository {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label result;
-        
-        /// <summary>
-        /// LoginPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LoginPage;
     }
 }

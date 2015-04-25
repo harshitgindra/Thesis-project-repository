@@ -32,7 +32,7 @@
     <div class="form-group">
         <label for="committeeChair">Committee Chair:</label>
         <div class="dropdown">
-            <asp:DropDownList ID="committeeChair" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="committeeChair" CssClass="form-control" runat="server"></asp:DropDownList>
 
         </div>
     </div>
@@ -40,14 +40,14 @@
     <div class="form-group">
         <label for="committeemember">Committee Member:</label>
         <div class="dropdown">
-            <asp:DropDownList ID="committeemember" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="committeemember" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
     </div>
 
     <div class="form-group">
         <label for="deptchair">Graduate Advisor:</label>
         <div class="dropdown">
-            <asp:DropDownList  ID="graduateAdvisor" runat="server"></asp:DropDownList>
+            <asp:DropDownList  ID="graduateAdvisor" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
     </div>
 

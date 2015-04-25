@@ -63,7 +63,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.aspx" />
     <Content Include="Admin\AboutUs.aspx" />
     <Content Include="Admin\AdminDashBoard.aspx" />
     <Content Include="Admin\AdminUserApproval.aspx" />
@@ -83,7 +82,6 @@
     <Content Include="css\portfolio.css" />
     <Content Include="css\tables.css" />
     <Content Include="Default.aspx" />
-    <Content Include="DeleteProfile.aspx" />
     <Content Include="Dll\Newtonsoft.Json.Net20.dll" />
     <Content Include="Dll\Newtonsoft.Json.Net20.xml" />
     <Content Include="DownloadFile.aspx" />
@@ -110,8 +108,10 @@
     <Content Include="ProfessorFiles\MoreProjectDetails.aspx" />
     <Content Include="ProfessorFiles\SearchProjects.aspx" />
     <Content Include="Resources\images\amitesh.jpeg" />
+    <Content Include="Resources\images\bgimage.jpg" />
     <Content Include="Resources\images\harshit.jpg" />
     <Content Include="Resources\images\HomePageBackground.jpg" />
+    <Content Include="Resources\images\image.jpg" />
     <Content Include="Resources\images\kaveh.jpg" />
     <Content Include="Resources\images\library.jpg" />
     <Content Include="Resources\images\logo.jpg" />
@@ -131,6 +131,7 @@
     <Content Include="StudentFiles\Thesis.aspx" />
     <Content Include="StudentFiles\CheckApprovalStatus.aspx" />
     <Content Include="StudentFiles\SearchProjects.aspx" />
+    <Content Include="AboutUs.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="Viewer\AboutUs.aspx" />
     <Content Include="Viewer\DeleteAccount.aspx" />
@@ -141,13 +142,6 @@
     <Content Include="Admin\AdminHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +155,20 @@
     </Compile>
     <Compile Include="Admin\SearchProject.aspx.designer.cs">
       <DependentUpon>SearchProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="JsonObjects.cs" />
     <Compile Include="Admin\Admin.Master.cs">
@@ -184,28 +192,7 @@
     <Compile Include="Admin\AdminUserApproval.aspx.designer.cs">
       <DependentUpon>AdminUserApproval.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.aspx.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ChangePassword.aspx.designer.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseMethods.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteProfile.aspx.cs">
-      <DependentUpon>DeleteProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DeleteProfile.aspx.designer.cs">
-      <DependentUpon>DeleteProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DownloadFile.aspx.cs">
       <DependentUpon>DownloadFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +211,13 @@
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModels.cs" />
     <Compile Include="ProfessorFiles\AboutUs.aspx.cs">
@@ -363,6 +357,13 @@
     <Compile Include="StudentFiles\SearchProjects.aspx.designer.cs">
       <DependentUpon>SearchProjects.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -452,6 +453,7 @@
     </Content>
     <Content Include="ProfessorFiles\Professor.Master" />
     <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
+    <Content Include="MainMaster.Master" />
     <None Include="Service References\ServiceReference1\ISUSMS.xsd">
       <SubType>Designer</SubType>
     </None>

@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Thesis_project_Repository
 {
-    public partial class ChangePassword : Page
+    public partial class ChangePassword1 : System.Web.UI.Page
     {
         private const string ConnectionString =
             "Data Source=itksqlexp8;Initial Catalog=it485project;" + "Integrated Security=true";
@@ -57,8 +61,8 @@ namespace Thesis_project_Repository
                     connection.Close();
                 }
             }
-        }
 
+        }
         protected void UpdatePassword(object sender, EventArgs e)
         {
             var newPassword = NewPassword.Text;
@@ -78,7 +82,7 @@ namespace Thesis_project_Repository
                     command.ExecuteNonQuery();
                     result.Text =
                         "Your password has been changed successfully. Please click on the login button to login to your account.";
-                    MultiView1.ActiveViewIndex = 2;
+                   // MultiView1.ActiveViewIndex = 2;
                 }
                 catch (Exception ex)
                 {
@@ -88,9 +92,6 @@ namespace Thesis_project_Repository
             }
         }
 
-        protected void loginPage(object sender, EventArgs e)
-        {
-            Response.Redirect("Default.aspx");
-        }
+       
     }
 }

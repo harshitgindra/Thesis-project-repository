@@ -1,21 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Thesis_project_Repository.AboutUs" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>About Us</title>
-       <link href="Resources/css/index.css" rel="stylesheet" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="Resources/js/index.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Thesis_project_Repository.Test" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainTemplate" runat="server">
     <div data-role="content">
         <table class="ui-responsive">
             <tr>
@@ -58,6 +44,4 @@
         </table>
     
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
