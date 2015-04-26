@@ -23,16 +23,16 @@
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li ><a href="ProfessorHome.aspx"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
-                        <li ><a href="UpdateProfessorProfile.aspx"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;Update Profile</a></li>
-                        <li><a href="SearchProjects.aspx"><span class="glyphicon glyphicon-hdd"></span>&nbsp;Search Projects</a></li>
-                         <li><a href="ProjectList.aspx"><span class="glyphicon glyphicon-search"></span>&nbsp;Project Lists</a></li>
-                         <li><a href="DeleteAccount.aspx"><span class="glyphicon glyphicon-search"></span>&nbsp;Delete Profile</a></li>
+                        <li ><a href="UpdateProfessorProfile.aspx"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Update Profile</a></li>
+                        <li><a href="SearchProjects.aspx"><span class="glyphicon glyphicon-search"></span>&nbsp;Search Projects</a></li>
+                         <li><a href="ProjectList.aspx"><span class="glyphicon glyphicon-th-list"></span>&nbsp;Project Lists</a></li>
+                         <li><a href="DeleteAccount.aspx"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Profile</a></li>
                     </ul>
                     <!--end nav-->
 
                     <ul class="nav navbar-nav pull-right">
                         <li>
-                            <a href="../Logout.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;Log Out</a>
+                            <a href="../Logout.aspx"><span class="glyphicon glyphicon-off"></span>&nbsp;Log Out</a>
                         </li>
                     </ul>
                     <!-- end nav pull-right-->

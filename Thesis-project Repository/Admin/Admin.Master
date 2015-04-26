@@ -32,7 +32,7 @@
 
                     <ul class="nav navbar-nav pull-right">
                         <li>
-                            <a href="../Logout.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;Log Out</a>
+                            <a href="../Logout.aspx"><span class="glyphicon glyphicon-off"></span>&nbsp;Log Out</a>
                         </li>
                     </ul>
                     <!-- end nav pull-right-->

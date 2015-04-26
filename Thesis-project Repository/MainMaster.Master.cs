@@ -188,17 +188,18 @@ namespace Thesis_project_Repository
             return true;
         }
 
-        protected void SignUpLink(object sender, EventArgs e)
-        {
-            CLearSignUpPage();
-            Response.Redirect("Default.aspx?ia=2");
-        }
+        //protected void SignUpLink(object sender, EventArgs e)
+        //{
+        //    CLearSignUpPage();
+        //    Response.Redirect("Default.aspx?ia=2");
+        //}
 
         //need to use this method
         protected void CLearSignUpPage()
         {
             signUpUsername.Text = "";
             signUpPassword.Text = "";
+            signUpPassword2.Text = "";
             accType.SelectedIndex = -1;
             secques.Text = "";
             secans.Text = "";
@@ -214,11 +215,21 @@ namespace Thesis_project_Repository
             MultiView1.ActiveViewIndex = 3;
         }
 
-        protected void LoginLink(object sender, EventArgs e)
-        {
-            Response.Redirect("Default.aspx?ia=1");
-            // MultiView1.ActiveViewIndex = 1;
-        }
+        //protected void LoginLink(object sender, EventArgs e)
+        //{
+        //    //signUpUsername.Text = "a@a.com";
+        //    //signUpPassword.Text = "aaaaa";
+        //    //signUpPassword2.Text = "aaaaa";
+        //    //accType.SelectedIndex = 1;
+        //    //secques.Text = "aaaaa";
+        //    //secans.Text = "aaaaa";
+        //    //fname.Text = "aaaaa";
+        //    //lname.Text = "aaaaa";
+        //    //phoneNumber.Text = "123456789";
+        //    //ntwrkprovider.SelectedIndex = 1;
+        //    Response.Redirect("Default.aspx?ia=1");
+        //    // MultiView1.ActiveViewIndex = 1;
+        //}
 
         protected void SendSms(string provider, string number, string message)
         {
