@@ -143,6 +143,7 @@
     <Content Include="StudentFiles\CheckApprovalStatus.aspx" />
     <Content Include="StudentFiles\SearchProjects.aspx" />
     <Content Include="AboutUs.aspx" />
+    <Content Include="StudentFiles\SchedulePresentation.aspx" />
     <Content Include="VerificationLink.aspx" />
     <Content Include="Viewer\AboutUs.aspx" />
     <Content Include="Viewer\DeleteAccount.aspx" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFiles\SchedulePresentation.aspx.cs">
+      <DependentUpon>SchedulePresentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFiles\SchedulePresentation.aspx.designer.cs">
+      <DependentUpon>SchedulePresentation.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserDS.Designer.cs">
       <AutoGen>True</AutoGen>

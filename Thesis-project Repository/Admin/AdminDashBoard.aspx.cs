@@ -57,7 +57,7 @@ namespace Thesis_project_Repository.Admin
 
             using (var connection = new SqlConnection(ConnectionString))
             {
-                string query2 = "select * from dashboard;";
+                string query2 = "select TOP 2 * from dashboard;";
                 var command1 = new SqlCommand(query2, connection);
                 try
                 {

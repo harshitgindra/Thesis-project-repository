@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                         <li><a href="CheckApprovalStatus.aspx"><span class="glyphicon glyphicon-ok"></span>&nbsp;Check approval</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>&nbsp;Schedule a presentation</a></li>
+                        <li><a href="SchedulePresentation.aspx"><span class="glyphicon glyphicon-calendar"></span>&nbsp;Schedule a presentation</a></li>
                         <li><a href="DeleteAccount.aspx"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Profile</a></li>
                     </ul>
                     <!--end nav-->
