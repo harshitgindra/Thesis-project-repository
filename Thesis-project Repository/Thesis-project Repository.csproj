@@ -111,6 +111,7 @@
     <Content Include="Resources\css\bootstrap.min.css" />
     <Content Include="Resources\css\index.css" />
     <Content Include="Resources\css\styles.css" />
+    <Content Include="Resources\images\a.jpg" />
     <Content Include="Resources\images\amitesh.jpeg" />
     <Content Include="Resources\images\bgimage.jpg" />
     <Content Include="Resources\images\harshit.jpg" />

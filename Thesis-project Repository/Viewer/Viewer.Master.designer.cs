@@ -49,39 +49,39 @@ namespace Thesis_project_Repository.Viewer {
         protected global::System.Web.UI.WebControls.MultiView FooterMultiView;
         
         /// <summary>
-        /// View1 control.
+        /// SubscribeView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected global::System.Web.UI.WebControls.View SubscribeView;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// SubscribeLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton SubscribeLink;
         
         /// <summary>
-        /// View2 control.
+        /// UnsubscribeView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.View UnsubscribeView;
         
         /// <summary>
-        /// LinkButton2 control.
+        /// UnSubscribeLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.LinkButton UnSubscribeLink;
     }
 }

@@ -3,19 +3,43 @@
     width: 100%;
 }
 
+#navbarHeader {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Raavi;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#studentBody {
+    background-color: lemonchiffon;
+    /*background-image:url('../images/a.jpg');*/
+
+}
+
+#navbarFooter {
+    background-color:lightgray;
+     font-weight: bold;
+    position: absolute;
+    font-family: Raavi;
+    font-size: 15px;
+    padding-top: 10px;
+}
 
 
 
 .footer {
-  position: relative;
-  margin-top: -20px; /* negative value of footer height */
-  height: 150px;
-  clear:both;
-  padding-top:20px;
+    position: relative;
+    margin-top: -20px; /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    padding-top: 20px;
 }
 
 .defaultviews {
     padding-top: 120px;
-    padding-left:300px;
-    position:absolute;
+    padding-left: 300px;
+    position: absolute;
 }
