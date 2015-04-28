@@ -3,6 +3,16 @@
     width: 100%;
 }
 
+#navbarHeaderHome {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Raavi;
+    font-size: 19px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #navbarHeader {
     padding-left: 15px;
     padding-right: 15px;
@@ -16,19 +26,16 @@
 #studentBody {
     background-color: lemonchiffon;
     /*background-image:url('../images/a.jpg');*/
-
 }
 
 #navbarFooter {
-    background-color:lightgray;
-     font-weight: bold;
+    background-color: lightgray;
+    font-weight: bold;
     position: absolute;
     font-family: Raavi;
     font-size: 15px;
     padding-top: 10px;
 }
-
-
 
 .footer {
     position: relative;
@@ -38,8 +45,26 @@
     padding-top: 20px;
 }
 
+#innerContainer {
+    background-color: red;
+}
+
 .defaultviews {
-    padding-top: 120px;
+    /*padding-top: 120px;
     padding-left: 300px;
-    position: absolute;
+    position: absolute;*/
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.signUpFormHighLight {
+    text-align: center;
+    background-color: snow;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 25px;
 }
