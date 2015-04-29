@@ -21,18 +21,29 @@
                 </td>
                  <td>
                     <div class="input-group">
-                        <asp:TextBox ID="password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                       <div style="float:left;">
+                        <asp:TextBox ID="password" TextMode="Password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
                     </div>
-                </td>
+                <div style="float:right;">
+                    <asp:RequiredFieldValidator ControlToValidate="password" ID="RequiredFieldValidator1" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                </div></div>
+                     </td>
             </tr>
             <tr>
                  <td><span class="label label-info" style="font-size:large;">Confirm Password</span>
                 </td>
                <td>
                     <div class="input-group">
-                        <asp:TextBox ID="cnfrmPassword" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
-                    </div>
-                </td>
+                        <div style="float:left;">
+                        <asp:TextBox ID="cnfrmPassword" TextMode="Password" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                  </div>
+                        <div style="float:right;">
+                             <asp:RequiredFieldValidator ControlToValidate="cnfrmPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                   <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords do not match!" ControlToCompare="password" ControlToValidate="cnfrmpassword" ></asp:CompareValidator>
+              
+                         </div></div>
+                
+                     </td>
             </tr>
             <tr>
                  <td><span class="label label-info" style="font-size:large;">First Name</span>
@@ -58,7 +69,7 @@
                 </td>
                <td>
                     <div class="input-group">
-                        <asp:TextBox ID="phnNumber" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
+                        <asp:TextBox ID="phnNumber" TextMode="Number" class="form-control" runat="server" aria-describedby="basic-addon1"></asp:TextBox>
                     </div>
                 </td>
             </tr>

@@ -7,38 +7,38 @@
     <h3>Thesis Submissions</h3>
     <div class="form-group">
         <label for="thesistitle">Thesis Title:</label>
-        <asp:TextBox ID="thesistitle" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="thesistitle" class="form-control" Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="courseNumber">Course Number:</label>
-        <asp:TextBox ID="courseNumber" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="courseNumber" class="form-control" Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="keywords">Keywords:</label>
-        <asp:TextBox ID="keywords" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="keywords" class="form-control" Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="thesisabstract">Abstract:</label>
-        <asp:TextBox ID="thesisabstract" TextMode="multiline" class="form-control" runat="server" Rows="5"></asp:TextBox>
+        <asp:TextBox ID="thesisabstract" TextMode="multiline" Width="250px" class="form-control" runat="server" Rows="5"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="committeeChair">Committee Chair:</label>
-        <asp:DropDownList ID="TcommitteeChair" CssClass="form-control" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="TcommitteeChair" CssClass="form-control" Width="250px" runat="server"></asp:DropDownList>
        
     </div>
 
     <div class="form-group">
         <label for="committeemember">Committee Member:</label>
-        <asp:DropDownList ID="Tcommitteemember" CssClass="form-control" runat="server"></asp:DropDownList>      
+        <asp:DropDownList ID="Tcommitteemember" CssClass="form-control"  Width="250px" runat="server"></asp:DropDownList>      
     </div>
 
     <div class="form-group">
         <label for="deptchair">Department Chair:</label>
-        <asp:DropDownList ID="Tdeptchair" CssClass="form-control" runat="server"></asp:DropDownList>       
+        <asp:DropDownList ID="Tdeptchair" Width="250px" CssClass="form-control" runat="server"></asp:DropDownList>       
     </div>
 
     <div class="form-group">
@@ -67,5 +67,5 @@
     <div class="btn-group">
         <asp:Button class="btn btn-default" ID="submit" runat="server" Text="Submit" OnClick="submit_Click" />
     </div>
-
+    <br /><br /><br />
 </asp:Content>

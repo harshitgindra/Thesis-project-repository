@@ -21,8 +21,7 @@
     </asp:ContentPlaceHolder>
 </head>
 
-<body style="background-image: url(../Resources/images/bgimage.jpg);">
-
+<body style="background-image: url(../Resources/images/bgimage.jpg); background-repeat:no-repeat; background-size:cover;">
     <form id="form2" runat="server">
         <p></p>
         <div class="container">
@@ -35,7 +34,10 @@
                             <a href="Default.aspx?ia=2" onclick="SignUpPageImage();"><span class="glyphicon glyphicon-user"></span>&nbsp;SignUp</a></li>
                         <li>
                             <a href="Default.aspx?ia=1"><span class="glyphicon glyphicon-user"></span>&nbsp;Login</a></li>
-                    </ul>
+                    <li>
+                            <a href="AboutUs.aspx"><span class="glyphicon glyphicon-font"></span>boutUs</a></li>
+                   
+                          </ul>
                 </div>
             </nav>
         </div>
@@ -93,7 +95,7 @@
 
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label runat="server" ID="loginResult"></asp:Label>
+                                                <asp:Label runat="server" ID="loginResult" ForeColor="Red"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -123,12 +125,13 @@
                                                 <h2>Sign Up Form</h2>
                                             </div>
                                             <div class="input-group" style="width: 374px; padding-top: 0.3em;">
+                                                 <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                                </asp:ScriptManager>
                                                 <asp:TextBox TextMode="Email" onkeyup="RefreshUpdatePanel();" OnTextChanged="checkUserNameAvailability" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="signUpUsername"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server"  ErrorMessage="**"></asp:RequiredFieldValidator>
                                                 <%--<asp:RegularExpressionValidator ControlToValidate="signUpUsername" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email ID"></asp:RegularExpressionValidator>--%>
 
-                                                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                                                </asp:ScriptManager>
+                                               
                                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True" ViewStateMode="Enabled">
                                                     <ContentTemplate>
                                                         <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
@@ -172,13 +175,13 @@
                                             </div>
                                             <div class="input-group">
                                                 <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
-                                                    <asp:TextBox class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1" runat="server" ID="phoneNumber">
+                                                    <asp:TextBox class="form-control" TextMode="Number" placeholder="Phone Number" aria-describedby="basic-addon1" runat="server" ID="phoneNumber">
                                                     </asp:TextBox>
                                                     <asp:RequiredFieldValidator ControlToValidate="phoneNumber" ID="RequiredFieldValidator7" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
                                                 </div>
                                                 <div class="dropdown" style="float: right; width: 187px; padding-top: 0.3em;">
                                                     <asp:DropDownList ID="ntwrkprovider" CssClass="form-control" runat="server">
-                                                        <asp:ListItem Selected="True">Provider</asp:ListItem>
+                                                        <asp:ListItem Selected="True">Choose Provider</asp:ListItem>
                                                         <asp:ListItem>boost mobile</asp:ListItem>
                                                         <asp:ListItem>t-mobile</asp:ListItem>
                                                         <asp:ListItem>virgin mobile</asp:ListItem>
@@ -192,9 +195,9 @@
                                                         <asp:ListItem>att cingular</asp:ListItem>
                                                         <asp:ListItem>alltel</asp:ListItem>
                                                         <asp:ListItem>metro pcs</asp:ListItem>
-                                                        <asp:ListItem></asp:ListItem>
+                                                       
                                                     </asp:DropDownList>
-                                                    <asp:RequiredFieldValidator ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                                    <asp:RequiredFieldValidator InitialValue="Choose Provider" ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
                                                 </div>
                                             </div>
                                             <div class="input-group" style="text-align: center; padding-top: 0.3em;">
@@ -330,26 +333,23 @@
          <div class="container">
             <nav class="navbar navbar-default navbar-fixed-bottom" id="navbarFooter">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4">
+                    <div class="row" style="text-align:center;">
+                       
                             
                       
                         
-                        </div>
+                    
                         <!--end col-sm-2-->
-                        <div class="col-sm-4">
-                            <h5 class="footerText">Copyright &copy; 2015<br />
+                       
+                            <h5 class="footerText">Copyright &copy; 2015
                                 Amitesh Jain, Harshit Gindra and Kaveh Arvand</h5>
                               
-                        </div>
+                            </div>
                         <!--end col-sm-2-->
 
                         <!--end col-sm-2-->
-                     <div class="col-sm-4">
-                         <a href="AboutUs.aspx">About Us</a>
-                         
-                    </div>
-                    </div>
+                   
+                    
                     <!--end row-->
                 </div>
                 <!--end container-->

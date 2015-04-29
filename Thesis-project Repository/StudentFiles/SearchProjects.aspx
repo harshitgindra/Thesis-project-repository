@@ -17,7 +17,7 @@
         <div class="btn-group">
             <asp:Button class="btn btn-default" ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click" />
         </div>
-        <asp:Label ForeColor="Red" ID="Label6" runat="server" />
+       <asp:Label ForeColor="Red" ID="Label6" runat="server" ViewStateMode="Disabled" />
         <br /><br />
       <div class="panel panel-default">
   <!-- Default panel contents -->
@@ -374,7 +374,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                     </td>
                                     <td><b>Final Project Proposal Document:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="FPP_DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("FPP_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "FPP_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="FPP_DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("FPP_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "FPP_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
                                     </td>
                                 </tr>
 
@@ -385,7 +385,7 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                     </td>
                                     <td><b>Screen Cast:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="FPP_SCREENCAST_NAMELink" runat="server" Text='<%# Bind("FPP_SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="FPP_SCREENCAST_NAMELink" runat="server" Text='<%# Bind("FPP_SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
                                     </td>
                                 </tr>
 
@@ -465,23 +465,23 @@ or  (OMNISEARCHRESULTSVIEW.username LIKE '%' + @username+ '%')">
                                 <tr>
                                     <td><b>Preliminary Project Document:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="DOCUMENT_NAMELINK" runat="server" Text='<%# Bind("DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
                                     </td>
                                     <td><b>Thesis Document:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="TS_DOCUMENT_NAMELink" runat="server" Text='<%# Bind("TS_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "TS_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="TS_DOCUMENT_NAMELink" runat="server" Text='<%# Bind("TS_DOCUMENT_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "TS_DOCUMENT_NAME"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><b>Screen Cast:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="SCREENCAST_NAMELink" runat="server" Text='<%# Bind("SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="SCREENCAST_NAMELink" runat="server" Text='<%# Bind("SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
 
                                         <%--<asp:Label ID="SCREENCAST_LENGTHLabel" runat="server" Text='<%# Bind("SCREENCAST_LENGTH") %>' />--%>
                                     </td>
                                     <td><b>Screen Cast:</b></td>
                                     <td>
-                                        <asp:HyperLink ID="TS_SCREENCAST_NAMELink" runat="server" Text='<%# Bind("TS_SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
+                                        <asp:HyperLink ID="TS_SCREENCAST_NAMELink" runat="server" Text='<%# Bind("TS_SCREENCAST_NAME") %>' NavigateUrl='<%# String.Format("../DownloadFile.aspx?document_name={0}&username={1}", DataBinder.Eval(Container.DataItem, "Document_name"), DataBinder.Eval(Container.DataItem, "username"))%>'></asp:HyperLink>
                                     </td>
                                 </tr>
                                 <tr>

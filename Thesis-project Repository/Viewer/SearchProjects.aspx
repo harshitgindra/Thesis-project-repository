@@ -18,7 +18,7 @@
         <div class="btn-group">
             <asp:Button class="btn btn-default" ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click" />
         </div>
-        <asp:Label ForeColor="Red" ID="Label6" runat="server" />
+      <asp:Label ForeColor="Red" ID="Label6" runat="server" ViewStateMode="Disabled" />
         <br />
         <br />
         <div class="panel panel-default">

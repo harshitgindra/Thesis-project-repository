@@ -90,6 +90,9 @@ namespace Thesis_project_Repository
                         }
                         Session["username"] = loginUserName.Text;
                     }
+                    else {
+                        loginResult.Text = "Invalid Login!!";
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -344,10 +347,12 @@ namespace Thesis_project_Repository
                     if (reader.HasRows)
                     {
                         usernameerror.Text = "Username already taken.";
+                        usernameerror.ForeColor = System.Drawing.Color.Red;
                     }
                     else
                     {
                         usernameerror.Text = "Username available";
+                        usernameerror.ForeColor = System.Drawing.Color.Green;
                     }
                     reader.Close();
                 }

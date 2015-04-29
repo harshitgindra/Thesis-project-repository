@@ -31,7 +31,7 @@ namespace Thesis_project_Repository.Admin
             }
             else
             {
-                string query1 = " SELECT *  FROM PRELIMINARY_PROJECT_SUBMISSION "
+                  string query1 = " SELECT *  FROM PRELIMINARY_PROJECT_SUBMISSION "
             + " WHERE (USERNAME LIKE '%' + @search + '%') "
             + " OR (PROJECT_TITLE LIKE '%' + @search+ '%') "
             + " OR (KEYWORDS LIKE '%' + @search+ '%')"

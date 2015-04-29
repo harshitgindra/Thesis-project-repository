@@ -14,9 +14,7 @@
 </head>
 <body>
     <form id="form2" runat="server">
-
-
-        <div class="container">
+         <div class="container">
             <nav role="navigation" class="navbar navbar-inverse" id="navbarHeader">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -30,12 +28,8 @@
                 </div>
             </nav>
         </div>
-
-
         <!-- end navbar -->
         <!-- end navbar -->
-        <br />
-        <br />
         <br />
         <br />
         <div class="container">
@@ -73,7 +67,6 @@
                         <!--end col-sm-2-->
                         <div class="col-sm-3">
                             <h6>Follow Us</h6>
-
                             <ul class="unstyled">
                                 <li><a href="#">Twitter</a></li>
                                 <li><a href="#">Facebook</a></li>
@@ -81,14 +74,12 @@
                             </ul>
                         </div>
                         <!--end col-sm-2-->
-
-
                         <div class="col-sm-4">
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab1">
                                     <h4><span class="glyphicon glyphicon-map-marker"></span>Our Location <small>More like our favourite</small></h4>
 
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.3579346515926!2d-88.99331399999998!3d40.51157900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71719478bc73%3A0x10e5c15e5fb62c34!2sIllinois+State+University!5e0!3m2!1sen!2sus!4v1422582211246" height="100" width="100px" frameborder="0" style="border: 0"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.3579346515926!2d-88.99331399999998!3d40.51157900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71719478bc73%3A0x10e5c15e5fb62c34!2sIllinois+State+University!5e0!3m2!1sen!2sus!4v1422582211246" height="100" width="300px" frameborder="0" style="border: 0"></iframe>
                                 </div>
                             </div>
                         </div>
