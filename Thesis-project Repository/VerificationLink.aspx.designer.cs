@@ -7,22 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-
 namespace Thesis_project_Repository {
     
     
-    public partial class VerificationLink {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected HtmlForm form1;
+    public partial class VerificationLink1 {
         
         /// <summary>
         /// verificationstatus control.
@@ -31,7 +19,7 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected Label verificationstatus;
+        protected global::System.Web.UI.WebControls.Label verificationstatus;
         
         /// <summary>
         /// TakeToLogin control.
@@ -40,6 +28,6 @@ namespace Thesis_project_Repository {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected LinkButton TakeToLogin;
+        protected global::System.Web.UI.WebControls.LinkButton TakeToLogin;
     }
 }
