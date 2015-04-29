@@ -14,14 +14,16 @@
 
          <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Thesis</div>       
-    <asp:Label ID="thesis" runat="server" Text=""></asp:Label>
-              </div>
-
-           <div class="panel panel-default">
-  <!-- Default panel contents -->
   <div class="panel-heading">Final report</div>
          <asp:Label ID="final" runat="server" Text=""></asp:Label>
        </div>
          </div>
+
+         <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Thesis</div>       
+    <asp:Label ID="thesis" runat="server" Text=""></asp:Label>
+              </div>
+
+           
 </asp:Content>

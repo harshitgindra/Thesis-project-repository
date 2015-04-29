@@ -71,22 +71,25 @@ namespace Thesis_project_Repository
                                 var acctype = reader.GetString(2);
                                 if (acctype.Equals("P"))
                                 {
-                                    Response.Redirect("/ProfessorFiles/ProfessorHome.aspx", false);
+                                    Response.Redirect("ProfessorFiles/ProfessorHome.aspx", false);
+                                 //   Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/ProfessorFiles/ProfessorHome.aspx", false);
                                 }
                                 else if (acctype.Equals("S"))
                                 {
-                                    Response.Redirect("/StudentFiles/StudentHomePage.aspx", false);
+                                    Response.Redirect("StudentFiles/StudentHomePage.aspx", false);
+                                  //  Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/StudentFiles/StudentHomePage.aspx", false);
                                 }
                                 else if (acctype.Equals("V"))
                                 {
-                                    Response.Redirect("/Viewer/ViewerHome.aspx", false);
+                                    Response.Redirect("Viewer/ViewerHome.aspx", false);
+                             //       Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/Viewer/ViewerHome.aspx", false);
                                 }
                             }
                         }
                         else
                         {
                             //What is the use of false here?
-                            Response.Redirect("/Admin/AdminHomePage.aspx", false);
+                            Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/Admin/AdminHomePage.aspx", false);
                         }
                         Session["username"] = loginUserName.Text;
                     }
@@ -141,21 +144,21 @@ namespace Thesis_project_Repository
 
         protected string EmailBody(string rdmString)
         {
-            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+            var message = "<html> <img src=\"http://www.cwu.edu/~jacobsend/book-green.jpg\" width=\"90\" height=\"90\" /> "
                           +
                           " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-                          + "<a href='http://localhost:60443/VerificationLink.aspx?verify=" + rdmString +
+                          + "<a href='http://iis.it.ilstu.edu/485spr15/it4850105/App9/VerificationLink.aspx?verify=" + rdmString +
                           "' >Click Here</a>"
                           + "<h3>Thank you</h3>";
             return message;
         }
-
+    //    http://iis.it.ilstu.edu/485spr15/it4850105/App3/VerificationLink.aspx?verify=
         protected string EmailBodyForChangePassword(string rdmString)
         {
-            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+            var message = "<html> <img src=\"http://www.cwu.edu/~jacobsend/book-green.jpg\" width=\"90\" height=\"90\" /> "
                           +
-                          " <h2>Thank you for signing up. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-                          + "<a href='http://localhost:60443/ChangePassword.aspx?verify=" + rdmString +
+                          " <h2><p>Please click on the link to verify the email id</p></h2><br />"
+                          + "<a href='http://iis.it.ilstu.edu/485spr15/it4850105/App9/ChangePassword.aspx?verify=" + rdmString +
                           "' >Click Here</a>"
                           + "<h3>Thank you</h3>";
             return message;

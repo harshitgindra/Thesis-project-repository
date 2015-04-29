@@ -6,9 +6,17 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Home</title>
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../includes/css/bootstrap-glyphicons.css" rel="stylesheet" />
-    <link href="../bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <link href="../bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />--%>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <%--<a href="Content/bootstrap.css.map">Content/bootstrap.css.map</a>
+     <a href="Content/bootstrap-theme.css.map">Content/bootstrap-theme.css.map</a>--%>
     <link href="Resources/css/index.css" rel="stylesheet" />
     <script src="Resources/js/index.js"></script>
     <script type="text/javascript">
@@ -21,7 +29,7 @@
     </asp:ContentPlaceHolder>
 </head>
 
-<body style="background-image: url(../Resources/images/bgimage.jpg); background-repeat:no-repeat; background-size:cover;">
+<body style="background-image: url(../Resources/images/bgimage.jpg); background-repeat: no-repeat; background-size: cover;">
     <form id="form2" runat="server">
         <p></p>
         <div class="container">
@@ -34,10 +42,9 @@
                             <a href="Default.aspx?ia=2" onclick="SignUpPageImage();"><span class="glyphicon glyphicon-user"></span>&nbsp;SignUp</a></li>
                         <li>
                             <a href="Default.aspx?ia=1"><span class="glyphicon glyphicon-user"></span>&nbsp;Login</a></li>
-                    <li>
-                            <a href="AboutUs.aspx"><span class="glyphicon glyphicon-font"></span>boutUs</a></li>
-                   
-                          </ul>
+                        <li>
+                            <a href="AboutUs.aspx"><span class="glyphicon glyphicon-font"></span>bout Us</a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -46,12 +53,13 @@
             <asp:ContentPlaceHolder ID="MainTemplate" runat="server" />
         </div>
 
-        <div class="container">
+       
             <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
 
                 <asp:View ID="View1" runat="server">
                     <div class="container">
-                    </div>
+                        
+                        </div>
                 </asp:View>
 
                 <asp:View ID="loginPage" runat="server">
@@ -111,11 +119,7 @@
 
                 <%--  SignUp Page Start--%>
                 <asp:View ID="signUpPage" runat="server">
-
-                    <div class="container">
-
-                        <div class="container" style="position: relative">
-
+                        <div class="container" >
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-3"></div>
@@ -125,13 +129,13 @@
                                                 <h2>Sign Up Form</h2>
                                             </div>
                                             <div class="input-group" style="width: 374px; padding-top: 0.3em;">
-                                                 <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                                <asp:ScriptManager ID="ScriptManager1" runat="server">
                                                 </asp:ScriptManager>
                                                 <asp:TextBox TextMode="Email" onkeyup="RefreshUpdatePanel();" OnTextChanged="checkUserNameAvailability" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="signUpUsername"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server"  ErrorMessage="**"></asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
                                                 <%--<asp:RegularExpressionValidator ControlToValidate="signUpUsername" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email ID"></asp:RegularExpressionValidator>--%>
 
-                                               
+
                                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True" ViewStateMode="Enabled">
                                                     <ContentTemplate>
                                                         <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
@@ -195,7 +199,7 @@
                                                         <asp:ListItem>att cingular</asp:ListItem>
                                                         <asp:ListItem>alltel</asp:ListItem>
                                                         <asp:ListItem>metro pcs</asp:ListItem>
-                                                       
+
                                                     </asp:DropDownList>
                                                     <asp:RequiredFieldValidator InitialValue="Choose Provider" ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
                                                 </div>
@@ -222,9 +226,7 @@
                                 <div class="col-lg-4"></div>
                             </div>
                         </div>
-                    </div>
-
-
+                   
                 </asp:View>
                 <%--  SignUp Page End--%>
 
@@ -241,36 +243,36 @@
                                             <div class="page-header">
                                                 <h2>Forgot Password</h2>
                                             </div>
-                                                <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-                                                    <asp:TextBox TextMode="Email" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="forgotEmailId"></asp:TextBox>
-                                                     
-                                                    <asp:RequiredFieldValidator ControlToValidate="forgotEmailId" ID="RequiredFieldValidator10" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                                <asp:TextBox TextMode="Email" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="forgotEmailId"></asp:TextBox>
 
-                                                </div>
-                                                <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                                <asp:RequiredFieldValidator ControlToValidate="forgotEmailId" ID="RequiredFieldValidator10" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
 
-                                                    <asp:RadioButtonList ID="FpAccntType" runat="server" RepeatDirection="Horizontal">
-                                                        <asp:ListItem Text="Student" Value="S" />
-                                                        <asp:ListItem Text="Professor" Value="P" />
-                                                        <asp:ListItem Text="Viewer" Value="V" />
-                                                    </asp:RadioButtonList>
-                                                     
-                                                    <asp:RequiredFieldValidator ControlToValidate="FpAccntType" ID="RequiredFieldValidator12" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                                <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-                                                    <asp:RadioButtonList ID="retrievelMethodRadioList" runat="server" RepeatDirection="Horizontal">
-                                                        <asp:ListItem Text="Email" Value="E" />
-                                                        <asp:ListItem Text="Message" Value="M" />
-                                                    </asp:RadioButtonList>
-                                                </div>
+                                            </div>
+                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
 
-                                               
-                                                    <asp:RequiredFieldValidator ControlToValidate="retrievelMethodRadioList" ID="RequiredFieldValidator11" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                                <asp:RadioButtonList ID="FpAccntType" runat="server" RepeatDirection="Horizontal">
+                                                    <asp:ListItem Text="Student" Value="S" />
+                                                    <asp:ListItem Text="Professor" Value="P" />
+                                                    <asp:ListItem Text="Viewer" Value="V" />
+                                                </asp:RadioButtonList>
 
-                                                <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                                                    <asp:Button ID="Button3" class="btn btn-default" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword" />
-                                                </div>
-                                                <asp:Label ID="confirationMessage" ForeColor="Green" runat="server"></asp:Label>
+                                                <asp:RequiredFieldValidator ControlToValidate="FpAccntType" ID="RequiredFieldValidator12" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                            </div>
+                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                                <asp:RadioButtonList ID="retrievelMethodRadioList" runat="server" RepeatDirection="Horizontal">
+                                                    <asp:ListItem Text="Email" Value="E" />
+                                                    <asp:ListItem Text="Message" Value="M" />
+                                                </asp:RadioButtonList>
+                                            </div>
+
+
+                                            <asp:RequiredFieldValidator ControlToValidate="retrievelMethodRadioList" ID="RequiredFieldValidator11" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+
+                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                                <asp:Button ID="Button3" class="btn btn-default" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword" />
+                                            </div>
+                                            <asp:Label ID="confirationMessage" ForeColor="Green" runat="server"></asp:Label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -279,7 +281,7 @@
                             </div>
                         </div>
                     </div>
-               
+
                 </asp:View>
 
                 <asp:View ID="changePasswordMessage" runat="server">
@@ -287,69 +289,59 @@
                     <div class="container">
 
                         <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-3"></div>
-                                    <div class="col-lg-5">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-5">
 
-                                        <div class="signUpFormHighLight" style="opacity: 0.9">
-                                            <div class="page-header">
-                                                <h2>Change Password</h2>
-                                            </div>
-                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                            <asp:TextBox class="form-control" placeholder="Verification Code" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="VerificationCode"></asp:TextBox>
-                        </div>
-                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                            <asp:TextBox class="form-control" TextMode="Password" placeholder="New Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="NewPassword"></asp:TextBox>
-                        </div>
-                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                            <asp:TextBox class="form-control" TextMode="Password" placeholder="Confirm Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="CnfrmPassword"></asp:TextBox>
-                            <asp:CompareValidator ID="CompareValidator2" ControlToValidate="CnfrmPassword" ControlToCompare="NewPassword" runat="server" ErrorMessage="**"></asp:CompareValidator>
-                        </div>
-                        <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                            <asp:Button Text="Change Password" class="btn btn-default" ID="UpdatePass" runat="server" OnClick="UpdatePasswordUsingSms"></asp:Button>
-
-                        </div>
-                        <br />
-                        <asp:Label ID="UpdatePasswordFromSMSConfirmation" runat="server" Text=""></asp:Label>
-
-                    </div>
+                                    <div class="signUpFormHighLight" style="opacity: 0.9">
+                                        <div class="page-header">
+                                            <h2>Change Password</h2>
                                         </div>
-                                    <div class="col-lg-3"></div>
+                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                            <asp:TextBox class="form-control" placeholder="Verification Code" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="VerificationCode"></asp:TextBox>
+                                        </div>
+                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                            <asp:TextBox class="form-control" TextMode="Password" placeholder="New Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="NewPassword"></asp:TextBox>
+                                        </div>
+                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                            <asp:TextBox class="form-control" TextMode="Password" placeholder="Confirm Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="CnfrmPassword"></asp:TextBox>
+                                            <asp:CompareValidator ID="CompareValidator2" ControlToValidate="CnfrmPassword" ControlToCompare="NewPassword" runat="server" ErrorMessage="**"></asp:CompareValidator>
+                                        </div>
+                                        <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                            <asp:Button Text="Change Password" class="btn btn-default" ID="UpdatePass" runat="server" OnClick="UpdatePasswordUsingSms"></asp:Button>
+
+                                        </div>
+                                        <br />
+                                        <asp:Label ID="UpdatePasswordFromSMSConfirmation" runat="server" Text=""></asp:Label>
+
                                     </div>
+                                </div>
+                                <div class="col-lg-3"></div>
                             </div>
                         </div>
-                   
+                    </div>
+
                 </asp:View>
 
                 <%--  SignUp Page End--%>
             </asp:MultiView>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-         <div class="container">
+ 
+       
+        <div class="container">
             <nav class="navbar navbar-default navbar-fixed-bottom" id="navbarFooter">
                 <div class="container">
-                    <div class="row" style="text-align:center;">
-                       
-                            
-                      
-                        
-                    
-                        <!--end col-sm-2-->
-                       
-                            <h5 class="footerText">Copyright &copy; 2015
-                                Amitesh Jain, Harshit Gindra and Kaveh Arvand</h5>
-                              
-                            </div>
+                    <div class="row" style="text-align: center;">
                         <!--end col-sm-2-->
 
-                        <!--end col-sm-2-->
-                   
-                    
+                        <h5 class="footerText">Copyright &copy; 2015
+                                Amitesh Jain, Harshit Gindra and Kaveh Arvand</h5>
+
+                    </div>
+                    <!--end col-sm-2-->
+
+                    <!--end col-sm-2-->
+
+
                     <!--end row-->
                 </div>
                 <!--end container-->

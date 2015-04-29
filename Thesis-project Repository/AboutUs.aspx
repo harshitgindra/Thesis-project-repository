@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td><img src="Resources/images/kaveh.jpg" width ="100" height="125" /></td>
-                <td>Kaveh</td>
+                <td>Kaveh Arvand</td>
                 <td><ul>
                         <li>IT graduate Student at ISU</li>
                         <li>Graduate Assistant at School of IT</li>

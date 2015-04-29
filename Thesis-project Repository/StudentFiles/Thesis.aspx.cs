@@ -209,7 +209,7 @@ namespace Thesis_project_Repository.StudentFiles
                             }
 
                         }
-                        Response.Write("Successfully updated the DB");
+
                     }
                 }
                 catch (Exception ex)
@@ -234,10 +234,9 @@ namespace Thesis_project_Repository.StudentFiles
 
         protected string EmailBody()
         {
-            var message = "<html> <img src=\"http://www.underconsideration.com/brandnew/archives/dropbox_logo_detail.png\" width=\"90\" height=\"90\" /> "
+            var message = "<html> <img src=\"http://www.cwu.edu/~jacobsend/book-green.jpg\" width=\"90\" height=\"90\" /> "
                           + reportNameFromUser +
-                          " <h2>New Document has been added to the Preliminary Proposal. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
-                          + "' >Click Here</a>"
+                          " <h2>A new Thesis report has been added. </h2> <br /><p>Please click on the link to verify the email id</p><br />"
                           + "<h3>Thank you</h3>";
             return message;
         }

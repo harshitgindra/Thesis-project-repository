@@ -6,33 +6,33 @@
     <h3>Preliminary Submissions</h3>
     <div class="form-group">
         <label for="projecttitle">Project Title:</label>
-        <asp:TextBox ID="projecttitle" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="projecttitle" class="form-control"  Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="courseNumber">Course Number:</label>
-        <asp:TextBox ID="courseNumber" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="courseNumber" class="form-control" runat="server" Width="250px"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="livelink">Live Link:</label>
-        <asp:TextBox ID="livelink" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="livelink" class="form-control"  Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="keywords">Keywords:</label>
-        <asp:TextBox ID="keywords" class="form-control" runat="server"></asp:TextBox>
+        <asp:TextBox ID="keywords" class="form-control" Width="250px" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="projectabstract">Abstract:</label>
-        <asp:TextBox ID="projectabstract" TextMode="multiline" class="form-control" runat="server" Rows="5"></asp:TextBox>
+        <asp:TextBox ID="projectabstract" TextMode="multiline" Width="250px" class="form-control" runat="server" Rows="5"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="committeeChair">Committee Chair:</label>
         <div class="dropdown">
-            <asp:DropDownList ID="committeeChair" CssClass="form-control" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="committeeChair" Width="250px" CssClass="form-control" runat="server"></asp:DropDownList>
 
         </div>
     </div>
@@ -40,14 +40,14 @@
     <div class="form-group">
         <label for="committeemember">Committee Member:</label>
         <div class="dropdown">
-            <asp:DropDownList ID="committeemember" CssClass="form-control" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="committeemember" Width="250px" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
     </div>
 
     <div class="form-group">
         <label for="deptchair">Graduate Advisor:</label>
         <div class="dropdown">
-            <asp:DropDownList  ID="graduateAdvisor" CssClass="form-control" runat="server"></asp:DropDownList>
+            <asp:DropDownList  ID="graduateAdvisor" Width="250px" CssClass="form-control" runat="server"></asp:DropDownList>
         </div>
     </div>
 
@@ -79,5 +79,5 @@
     <div class="btn-group">
         <asp:Button class="btn btn-default" ID="Button1" runat="server" Text="Submit" OnClick="submit_Click" />
     </div>
-   
+    <br /><br /><br />
 </asp:Content>

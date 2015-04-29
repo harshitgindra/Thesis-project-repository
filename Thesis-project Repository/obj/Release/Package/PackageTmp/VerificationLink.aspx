@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VerificationLink.aspx.cs" Inherits="Thesis_project_Repository.VerificationLink" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-<form id="form1" runat="server">
-    <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.Master" AutoEventWireup="true" CodeBehind="VerificationLink.aspx.cs" Inherits="Thesis_project_Repository.VerificationLink1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainTemplate" runat="server">
+      <div>
         <table>
             <tr>
                 <td>
@@ -23,6 +17,4 @@
         </table>
 
     </div>
-</form>
-</body>
-</html>
+</asp:Content>

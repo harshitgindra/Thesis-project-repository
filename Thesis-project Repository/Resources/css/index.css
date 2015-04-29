@@ -33,20 +33,7 @@
     font-weight: bold;
     position: absolute;
     font-family: Raavi;
-    font-size: 15px;
-    padding-top: 10px;
-}
-
-.footer {
-    position: relative;
-    margin-top: -20px; /* negative value of footer height */
-    height: 150px;
-    clear: both;
-    padding-top: 20px;
-}
-
-#innerContainer {
-    background-color: red;
+    font-size: 15px;  
 }
 
 .defaultviews {
@@ -61,7 +48,6 @@
 }
 
 .signUpFormHighLight {
-    text-align: center;
     background-color: snow;
     padding-left: 30px;
     padding-top: 10px;

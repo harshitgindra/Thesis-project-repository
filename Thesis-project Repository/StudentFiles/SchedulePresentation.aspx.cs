@@ -48,7 +48,7 @@ namespace Thesis_project_Repository.StudentFiles
 
         private void getPresentationDateFromDB(string username)
         {
-            
+
             const string query = "SELECT * FROM PRESENTATION_SCHEDULE WHERE USERNAME = @username ;";
             using (var connection = new SqlConnection(ConnectionString))
             {
@@ -81,7 +81,7 @@ namespace Thesis_project_Repository.StudentFiles
                     connection.Close();
                 }
             }
-          
+
         }
 
         protected Boolean fetchFinalappStatus(string username)
@@ -99,34 +99,23 @@ namespace Thesis_project_Repository.StudentFiles
 
                     if (reader.Read())
                     {
-                        //committee chair
-                        if (!reader.IsDBNull(10))
+
+                        if ((!reader.IsDBNull(10)) && (!reader.IsDBNull(13)) && (!reader.IsDBNull(16)))
                         {
-                            if (reader.GetString(10).Equals("Y"))
+                            if ((reader.GetString(10).Equals("Y")) && (reader.GetString(13).Equals("Y")) && (reader.GetString(16).Equals("Y")))
+                            {
                                 returnvalue = true;
+                            }
+                            else
+                            {
+                                returnvalue = false;
+                            }
                         }
                         else
-                            returnvalue = false;
-
-                        //committee member
-
-                        if (!reader.IsDBNull(13))
                         {
-                            if (reader.GetString(13).Equals("Y"))
-                                returnvalue = true;
-                        }
-                        else
                             returnvalue = false;
-
-                        //graduate advisor
-
-                        if (!reader.IsDBNull(16))
-                        {
-                            if (reader.GetString(16).Equals("Y"))
-                                returnvalue = true;
                         }
-                        else
-                            returnvalue = false;
+
                     }
                     reader.Close();
                 }
@@ -159,34 +148,22 @@ namespace Thesis_project_Repository.StudentFiles
 
                     if (reader.Read())
                     {
-                        //committee chair
-                        if (!reader.IsDBNull(14))
+
+                        if ((!reader.IsDBNull(14)) && (!reader.IsDBNull(17)) && (!reader.IsDBNull(20)))
                         {
-                            if (reader.GetString(14).Equals("Y"))
+                            if ((reader.GetString(14).Equals("Y")) && (reader.GetString(17).Equals("Y")) && (reader.GetString(20).Equals("Y")))
+                            {
                                 returnvalue = true;
+                            }
+                            else
+                            {
+                                returnvalue = false;
+                            }
                         }
                         else
-                            returnvalue = false;
-
-                        //committee member
-
-                        if (!reader.IsDBNull(17))
                         {
-                            if (reader.GetString(17).Equals("Y"))
-                                returnvalue = true;
-                        }
-                        else
                             returnvalue = false;
-
-                        //department Chair
-
-                        if (!reader.IsDBNull(20))
-                        {
-                            if (reader.GetString(20).Equals("Y"))
-                                returnvalue = true;
                         }
-                        else
-                            returnvalue = false;
                     }
                     reader.Close();
 
@@ -208,7 +185,7 @@ namespace Thesis_project_Repository.StudentFiles
         protected void BookSlot_Click(object sender, EventArgs e)
         {
             //DB smalldatetime format : YYYY-MM-DD hh:mm:ss
-           
+
             if (!presentationTable(username))
             {
                 if (repType.Equals("P"))
@@ -234,13 +211,13 @@ namespace Thesis_project_Repository.StudentFiles
             dateInput = dateInput.Replace('T', ' ');
             Boolean result = false;
             const string query = "UPDATE  PRESENTATION_SCHEDULE " +
-                " SET PRESENTATION_DATE = @presentation_date, ROOM_SCHEDULER =  @room_scheduler WHERE USERNAME = @username"; 
+                " SET PRESENTATION_DATE = @presentation_date, ROOM_SCHEDULER =  @room_scheduler WHERE USERNAME = @username";
             using (var connection = new SqlConnection(ConnectionString))
             {
                 var command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", username);              
+                command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@room_scheduler", roomScheduler.Text);
-                command.Parameters.AddWithValue("@presentation_date", dateInput);                
+                command.Parameters.AddWithValue("@presentation_date", dateInput);
                 try
                 {
                     connection.Open();
@@ -265,10 +242,10 @@ namespace Thesis_project_Repository.StudentFiles
 
         private Boolean insertRecordForProject(string data, string username)
         {
-           
+
             string[] dataArray = data.Split('/');
             string dateInput = dateTimeinput.Value;
-            dateInput=  dateInput.Replace('T', ' ');
+            dateInput = dateInput.Replace('T', ' ');
             Boolean result = false;
             const string query = "INSERT INTO PRESENTATION_SCHEDULE " +
                " (USERNAME, TYPE, PRESENTATION_DATE, COMMITTEE_CHAIR, COMMITTEE_CHAIR_APPROVAL, COMMITTEE_MEMBER, COMMITTEE_MEMBER_APPROVAL, GRADUATE_ADVISOR, GRADUATE_ADVISOR_APPROVAL, ROOM_SCHEDULER, ROOM_SCHEDULER_APPROVAL) " +

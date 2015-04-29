@@ -74,6 +74,10 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\forms.css" />
     <Content Include="css\gallery.css" />
     <Content Include="css\homepage.css" />
@@ -85,6 +89,8 @@
     <Content Include="Dll\Newtonsoft.Json.Net20.dll" />
     <Content Include="Dll\Newtonsoft.Json.Net20.xml" />
     <Content Include="DownloadFile.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icon.png" />
     <Content Include="includes\css\bootstrap-glyphicons.css" />
     <Content Include="includes\css\styles.css" />
     <Content Include="includes\fonts\glyphiconshalflings-regular.svg" />
@@ -127,6 +133,19 @@
     <Content Include="Resources\js\jquery-1.8.2.min.js" />
     <Content Include="Resources\js\jquery.min.js" />
     <Content Include="Resources\js\modernizr-2.6.2.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
     <Content Include="Service References\ServiceReference1\Reference.svcmap">
@@ -475,6 +494,8 @@
     <Content Include="Service References\ServiceReference1\ISUSMS.wsdl" />
     <Content Include="MainMaster.Master" />
     <None Include="Properties\PublishProfiles\ajain5.pubxml" />
+    <None Include="Properties\PublishProfiles\isurepo.pubxml" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Service References\ServiceReference1\ISUSMS.xsd">
       <SubType>Designer</SubType>
     </None>

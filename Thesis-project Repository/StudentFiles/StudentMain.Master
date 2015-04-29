@@ -22,11 +22,11 @@
                 <div class="navbar-header">
                     <ul class="nav nav-tabs nav-justified">
                         <li><a href="StudentHomePage.aspx"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
-                        <li><a href="UpdateStudentProfile.aspx"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Update Profile</a></li>
+                        <li><a href="UpdateStudentProfile.aspx"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Profile</a></li>
                         <li><a href="SearchProjects.aspx"><span class="glyphicon glyphicon-search"></span>&nbsp;Search</a></li>
 
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Reports<b class="caret"></b></a>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Submit Reports<b class="caret"></b></a>
                             <ul role="menu" class="dropdown-menu">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="PreliminaryProposal.aspx">Preliminary Report</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="FinalProposal.aspx">Project Submission</a></li>
