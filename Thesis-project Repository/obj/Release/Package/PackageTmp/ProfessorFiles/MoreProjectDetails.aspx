@@ -7,7 +7,7 @@
     <asp:MultiView ID="MultiView1" ActiveViewIndex="1" runat="server">
 
         <asp:View ID="View1" runat="server">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <!-- Default panel contents -->
                 <div class="panel-heading" style="text-align: center;"><b>Detailed Information</b></div>
                 <table class="table borderless">
@@ -63,7 +63,7 @@
                 </table>
 
                 <div class="btn-group">
-                    <asp:Button class="btn btn-default" ID="addComments" runat="server" OnClick="addComments_Click" Text="Add Comments/Approve" />
+                    <asp:Button class="btn btn-success btn-lg" ID="addComments" runat="server" OnClick="addComments_Click" Text="Add Comments/Approve" />
                 </div>
             </div>
         </asp:View>
@@ -77,10 +77,10 @@
             <br />
 
             <div class="input-group-btn">
-                <asp:Button class="btn btn-default" ID="savecomments" runat="server" Text="Post Comments" OnClick="savecomments_Click" />&nbsp;&nbsp;        
+                <asp:Button class="btn btn-primary" ID="savecomments" runat="server" Text="Post Comments" OnClick="savecomments_Click" />&nbsp;&nbsp;        
             <br />
                 <br />
-                <asp:Button class="btn btn-default" ID="grantapproval1" runat="server" OnClick="grantapproval_Click" Text="Approve Proposal" />&nbsp;&nbsp;                        
+                <asp:Button class="btn btn-success" ID="grantapproval1" runat="server" OnClick="grantapproval_Click" Text="Approve Proposal" />&nbsp;&nbsp;                        
             <br />
                 <br />
                 <asp:Button class="btn btn-default" ID="goback" runat="server" OnClick="goback_Click" Text="Back" />

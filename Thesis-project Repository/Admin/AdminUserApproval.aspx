@@ -10,9 +10,13 @@
         <asp:View ID="View2" runat="server">
             
             <asp:SqlDataSource ID="approvalList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT [username], [acctype], admin_approval FROM [logininfo] WHERE [ADMIN_APPROVAL] = 'N'"></asp:SqlDataSource>
- <div class="panel panel-default">
+ 
   <!-- Default panel contents -->
-  <div class="panel-heading">User Approval List</div>
+     <div class="page-header" style="text-align: center;">
+            <h2><b class="label label-danger">Approval Needed</b></h2>
+        </div>
+
+  <div class="panel panel-default">
             <asp:GridView ID="approvalwaitinglist" CssClass="table table-hover table-striped" runat="server" AutoGenerateColumns="False" DataSourceID="approvalList" DataKeyNames="username" AllowSorting="True" AllowPaging="true">
                 <Columns>
                     <%--<asp:CommandField ShowSelectButton="True" />--%>
@@ -22,18 +26,7 @@
                     <asp:HyperLinkField DataNavigateUrlFields="username, acctype" DataNavigateUrlFormatString="AdminUserApproval.aspx?username={0}&acctype={1}" Text="Approve Account" />
                 </Columns>
             </asp:GridView>
-           <%-- <asp:SqlDataSource ID="DetailedInfoList" runat="server" ConnectionString="<%$ ConnectionStrings:it485projectConnectionString %>" SelectCommand="SELECT * FROM [logininfo] WHERE ([username] = @username)">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="approvalwaitinglist" Name="username" PropertyName="SelectedValue" Type="String" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-            <asp:DetailsView ID="DetailedInfoApprovalAccount" runat="server" AutoGenerateRows="False" DataSourceID="DetailedInfoList" Height="50px" Width="125px">
-                <Fields>
-                    <asp:BoundField DataField="username" HeaderText="firstname" SortExpression="firstname" />
-                    <asp:BoundField DataField="acctype" HeaderText="lastname" SortExpression="lastname" />
-
-                </Fields>
-            </asp:DetailsView>--%>
+           
             <asp:Label ID="Label1" runat="server"></asp:Label>
      </div>
         </asp:View>

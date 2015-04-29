@@ -6,13 +6,13 @@
 <head runat="server">
     <title>Professor</title>
     <!-- Bootstrap CSS -->
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../includes/css/bootstrap-glyphicons.css" rel="stylesheet" />
     <link href="../bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
     <link href="../Resources/css/index.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server" />
 </head>
-<body>
+<body id="professorBody">
     <form id="form1" runat="server">
 
         <p></p>
@@ -29,27 +29,18 @@
                         <li>
                             <a href="../Logout.aspx"><span class="glyphicon glyphicon-off"></span>&nbsp;Log Out</a>
                         </li>
-
-
                     </ul>
-
                 </div>
             </nav>
         </div>
-       
-        <br />
         <br />
         <div class="container">
             <asp:ContentPlaceHolder ID="ProfessorTemplate" runat="server" />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div class="container">
             <nav class="navbar navbar-default navbar-fixed-bottom" id="navbarFooter">
-                <div class="container">
+                <div class="container" style="padding-top: 5px;">
                     <div class="row">
                         <div class="col-sm-3">
                             <asp:MultiView ID="FooterMultiView" runat="server" ActiveViewIndex="0">
@@ -60,40 +51,13 @@
                                     <asp:LinkButton ID="UnSubscribeLink" runat="server" OnClick="UnSubscribe">UnSubscribe</asp:LinkButton>
                                 </asp:View>
                             </asp:MultiView>
-                            <h6>Copyright &copy; 2015<br />
-                                Amitesh Jain, Harshit Gindra and Kaveh Arvand</h6>
                         </div>
-                        <div class="col-sm-2">
-                            <h6>Navigation</h6>
-                            <ul class="unstyled">
-                                <li><a href="ProfessorHome.aspx">Home</a></li>
-                                <li><a href="AboutUs.aspx">Members</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
+                        <div class="col-sm-2"></div>
                         <!--end col-sm-2-->
                         <div class="col-sm-3">
-                            <h6>Follow Us</h6>
-
-                            <ul class="unstyled">
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Google Plus</a></li>
-                            </ul>
+                            <h6 class="footerText">Copyright &copy; 2015<br />
+                                Amitesh Jain, Harshit Gindra and Kaveh Arvand</h6>
                         </div>
-                        <!--end col-sm-2-->
-
-
-                        <div class="col-sm-4">
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tab1">
-                                    <h4><span class="glyphicon glyphicon-map-marker"></span>Our Location <small>More like our favourite</small></h4>
-
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.3579346515926!2d-88.99331399999998!3d40.51157900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71719478bc73%3A0x10e5c15e5fb62c34!2sIllinois+State+University!5e0!3m2!1sen!2sus!4v1422582211246" height="100" width="300px" frameborder="0" style="border: 0"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end col-sm-2-->
                     </div>
                     <!--end row-->
                 </div>

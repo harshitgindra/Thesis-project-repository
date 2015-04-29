@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="student" runat="server">
-    <h1>Student Home</h1>
+    <h1><span class="label label-default">Student Home</span></h1>
 </asp:Content>

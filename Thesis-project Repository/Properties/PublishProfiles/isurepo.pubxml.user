@@ -11,25 +11,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AboutUs.aspx">
-      <publishTime>04/25/2015 03:40:18</publishTime>
+      <publishTime>04/29/2015 05:15:55</publishTime>
     </File>
     <File Include="Admin/AboutUs.aspx">
       <publishTime>04/25/2015 03:40:19</publishTime>
     </File>
     <File Include="Admin/Admin.Master">
-      <publishTime>04/28/2015 19:47:10</publishTime>
+      <publishTime>04/29/2015 08:10:18</publishTime>
     </File>
     <File Include="Admin/AdminDashBoard.aspx">
       <publishTime>04/25/2015 03:40:20</publishTime>
     </File>
     <File Include="Admin/AdminHomePage.aspx">
-      <publishTime>04/20/2015 03:48:22</publishTime>
+      <publishTime>04/29/2015 06:19:27</publishTime>
     </File>
     <File Include="Admin/AdminUserApproval.aspx">
-      <publishTime>04/25/2015 03:40:20</publishTime>
+      <publishTime>04/29/2015 08:14:22</publishTime>
     </File>
     <File Include="Admin/SearchProject.aspx">
-      <publishTime>04/28/2015 19:47:10</publishTime>
+      <publishTime>04/29/2015 08:15:59</publishTime>
     </File>
     <File Include="Admin/SQL Queries.txt">
       <publishTime>04/27/2015 02:15:15</publishTime>
@@ -38,7 +38,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/15/2015 04:33:04</publishTime>
     </File>
     <File Include="bin/Thesis-project Repository.dll">
-      <publishTime>04/28/2015 20:43:57</publishTime>
+      <publishTime>04/29/2015 08:38:34</publishTime>
     </File>
     <File Include="bootstrap/css/bootstrap.css">
       <publishTime>04/25/2015 03:40:31</publishTime>
@@ -188,7 +188,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2015 03:40:21</publishTime>
     </File>
     <File Include="MainMaster.Master">
-      <publishTime>04/28/2015 20:42:53</publishTime>
+      <publishTime>04/29/2015 08:35:06</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>04/28/2015 20:26:27</publishTime>
@@ -197,25 +197,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2015 03:40:21</publishTime>
     </File>
     <File Include="ProfessorFiles/DeleteAccount.aspx">
-      <publishTime>04/25/2015 03:40:21</publishTime>
+      <publishTime>04/29/2015 07:02:02</publishTime>
     </File>
     <File Include="ProfessorFiles/MoreProjectDetails.aspx">
-      <publishTime>04/25/2015 03:40:21</publishTime>
+      <publishTime>04/29/2015 07:58:52</publishTime>
     </File>
     <File Include="ProfessorFiles/Professor.Master">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 07:56:02</publishTime>
     </File>
     <File Include="ProfessorFiles/ProfessorHome.aspx">
-      <publishTime>04/15/2015 05:00:17</publishTime>
+      <publishTime>04/29/2015 06:19:24</publishTime>
     </File>
     <File Include="ProfessorFiles/ProjectList.aspx">
-      <publishTime>04/25/2015 05:31:07</publishTime>
+      <publishTime>04/29/2015 07:01:53</publishTime>
     </File>
     <File Include="ProfessorFiles/SearchProjects.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 07:42:43</publishTime>
     </File>
     <File Include="ProfessorFiles/UpdateProfessorProfile.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 06:31:25</publishTime>
     </File>
     <File Include="Properties/Settings.settings">
       <publishTime>04/15/2015 05:00:17</publishTime>
@@ -230,13 +230,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/20/2015 02:09:14</publishTime>
     </File>
     <File Include="Resources/css/index.css">
-      <publishTime>04/28/2015 20:43:17</publishTime>
+      <publishTime>04/29/2015 08:27:32</publishTime>
     </File>
     <File Include="Resources/css/styles.css">
       <publishTime>04/20/2015 02:09:13</publishTime>
     </File>
     <File Include="Resources/images/a.jpg">
       <publishTime>04/27/2015 23:49:27</publishTime>
+    </File>
+    <File Include="Resources/images/AdminImage.jpg">
+      <publishTime>04/29/2015 08:45:12</publishTime>
     </File>
     <File Include="Resources/images/amitesh.jpeg">
       <publishTime>04/20/2015 01:33:30</publishTime>
@@ -264,6 +267,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Resources/images/logo.jpg">
       <publishTime>04/20/2015 03:03:21</publishTime>
+    </File>
+    <File Include="Resources/images/ProfessorImage.jpg">
+      <publishTime>04/29/2015 05:33:46</publishTime>
+    </File>
+    <File Include="Resources/images/studentHome.jpg">
+      <publishTime>04/29/2015 08:47:52</publishTime>
+    </File>
+    <File Include="Resources/images/Viewer.jpg">
+      <publishTime>04/29/2015 05:34:02</publishTime>
     </File>
     <File Include="Resources/js/bootstrap.js">
       <publishTime>04/20/2015 02:09:14</publishTime>
@@ -326,34 +338,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2015 03:40:30</publishTime>
     </File>
     <File Include="StudentFiles/CheckApprovalStatus.aspx">
-      <publishTime>04/25/2015 05:03:30</publishTime>
+      <publishTime>04/29/2015 07:49:57</publishTime>
     </File>
     <File Include="StudentFiles/DeleteAccount.aspx">
-      <publishTime>04/25/2015 03:40:31</publishTime>
+      <publishTime>04/29/2015 07:04:08</publishTime>
     </File>
     <File Include="StudentFiles/FinalProposal.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 08:01:00</publishTime>
     </File>
     <File Include="StudentFiles/PreliminaryProposal.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 08:00:45</publishTime>
     </File>
     <File Include="StudentFiles/SchedulePresentation.aspx">
-      <publishTime>04/27/2015 03:21:48</publishTime>
+      <publishTime>04/29/2015 07:21:12</publishTime>
     </File>
     <File Include="StudentFiles/SearchProjects.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 07:40:48</publishTime>
     </File>
     <File Include="StudentFiles/StudentHomePage.aspx">
-      <publishTime>04/15/2015 05:00:27</publishTime>
+      <publishTime>04/29/2015 06:18:43</publishTime>
     </File>
     <File Include="StudentFiles/StudentMain.Master">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 08:00:01</publishTime>
     </File>
     <File Include="StudentFiles/Thesis.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 08:01:07</publishTime>
     </File>
     <File Include="StudentFiles/UpdateStudentProfile.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 07:34:45</publishTime>
     </File>
     <File Include="UserDS.xsc">
       <publishTime>04/06/2015 05:04:40</publishTime>
@@ -368,22 +380,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2015 03:40:31</publishTime>
     </File>
     <File Include="Viewer/DeleteAccount.aspx">
-      <publishTime>04/25/2015 03:40:31</publishTime>
+      <publishTime>04/29/2015 07:52:53</publishTime>
     </File>
     <File Include="Viewer/SearchProjects.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 06:36:11</publishTime>
     </File>
     <File Include="Viewer/UpdateViewerProfile.aspx">
-      <publishTime>04/28/2015 19:47:12</publishTime>
+      <publishTime>04/29/2015 06:30:51</publishTime>
     </File>
     <File Include="Viewer/Viewer.Master">
-      <publishTime>04/28/2015 19:47:13</publishTime>
+      <publishTime>04/29/2015 07:54:02</publishTime>
     </File>
     <File Include="Viewer/ViewerHome.aspx">
-      <publishTime>04/25/2015 03:40:31</publishTime>
+      <publishTime>04/29/2015 06:19:29</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/28/2015 20:44:07</publishTime>
+      <publishTime>04/29/2015 08:48:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

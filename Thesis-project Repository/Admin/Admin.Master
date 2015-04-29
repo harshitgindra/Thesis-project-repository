@@ -6,18 +6,15 @@
 <head runat="server">
     <title>Admin</title>
     <!-- Bootstrap CSS -->
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../includes/css/bootstrap-glyphicons.css" rel="stylesheet" />
     <link href="../bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
     <link href="../Resources/css/index.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server" />
 
 </head>
-<body id="studentBody">
+<body id="AdminBody">
     <form id="form1" runat="server">
-
-
-
         <p></p>
         <div class="container">
             <nav role="navigation" class="navbar navbar-inverse" id="navbarHeader">
@@ -36,40 +33,20 @@
                 </div>
             </nav>
         </div>
-        <br />
-        <br />
-      
+       <br />
+
         <div class="container">
             <asp:ContentPlaceHolder ID="AdminMaster" runat="server" />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+       
         <div class="container">
             <nav class="navbar navbar-default navbar-fixed-bottom" id="navbarFooter">
                 <div class="container">
-                    <div class="row" style="text-align:center;">
-                       
-                            
-                      
-                        
-                    
-                        <!--end col-sm-2-->
-                       
-                            <h5 class="footerText">Copyright &copy; 2015
+                    <div class="row" style="text-align: center;">
+                        <h5 class="footerText">Copyright &copy; 2015
                                 Amitesh Jain, Harshit Gindra and Kaveh Arvand</h5>
-                              
-                            </div>
-                        <!--end col-sm-2-->
-
-                        <!--end col-sm-2-->
-                   
-                    
-                    <!--end row-->
+                    </div>
                 </div>
-                <!--end container-->
             </nav>
         </div>
         <script src="http://code.jquery.com/jquery.js"></script>

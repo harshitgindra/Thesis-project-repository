@@ -117,7 +117,7 @@
     <Content Include="Resources\css\bootstrap.min.css" />
     <Content Include="Resources\css\index.css" />
     <Content Include="Resources\css\styles.css" />
-    <Content Include="Resources\images\a.jpg" />
+    <Content Include="Resources\images\AdminImage.jpg" />
     <Content Include="Resources\images\amitesh.jpeg" />
     <Content Include="Resources\images\bgimage.jpg" />
     <Content Include="Resources\images\harshit.jpg" />
@@ -127,6 +127,9 @@
     <Content Include="Resources\images\kaveh.jpg" />
     <Content Include="Resources\images\library.jpg" />
     <Content Include="Resources\images\logo.jpg" />
+    <Content Include="Resources\images\ProfessorImage.jpg" />
+    <Content Include="Resources\images\studentHome.jpg" />
+    <Content Include="Resources\images\Viewer.jpg" />
     <Content Include="Resources\js\bootstrap.js" />
     <Content Include="Resources\js\bootstrap.min.js" />
     <Content Include="Resources\js\index.js" />

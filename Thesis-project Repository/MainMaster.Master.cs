@@ -71,18 +71,18 @@ namespace Thesis_project_Repository
                                 var acctype = reader.GetString(2);
                                 if (acctype.Equals("P"))
                                 {
-                                    Response.Redirect("ProfessorFiles/ProfessorHome.aspx", false);
-                                 //   Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/ProfessorFiles/ProfessorHome.aspx", false);
+                                  //  Response.Redirect("ProfessorFiles/ProfessorHome.aspx", false);
+                                   Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/ProfessorFiles/ProfessorHome.aspx", false);
                                 }
                                 else if (acctype.Equals("S"))
                                 {
-                                    Response.Redirect("StudentFiles/StudentHomePage.aspx", false);
-                                  //  Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/StudentFiles/StudentHomePage.aspx", false);
+                                   // Response.Redirect("StudentFiles/StudentHomePage.aspx", false);
+                                    Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/StudentFiles/StudentHomePage.aspx", false);
                                 }
                                 else if (acctype.Equals("V"))
                                 {
-                                    Response.Redirect("Viewer/ViewerHome.aspx", false);
-                             //       Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/Viewer/ViewerHome.aspx", false);
+                               //     Response.Redirect("Viewer/ViewerHome.aspx", false);
+                                   Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/Viewer/ViewerHome.aspx", false);
                                 }
                             }
                         }
@@ -90,6 +90,7 @@ namespace Thesis_project_Repository
                         {
                             //What is the use of false here?
                             Response.Redirect("http://iis.it.ilstu.edu/485spr15/it4850105/App9/Admin/AdminHomePage.aspx", false);
+                          //  Response.Redirect("Admin/AdminHomePage.aspx", false);
                         }
                         Session["username"] = loginUserName.Text;
                     }

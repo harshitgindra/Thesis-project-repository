@@ -16,10 +16,3 @@ D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
 D:\Users\it4850109\Documents\Visual Studio 2012\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
-H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.dll
-H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Thesis-project Repository.pdb
-H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.dll
-H:\Project\Thesis-project-repository\Thesis-project Repository\bin\Newtonsoft.Json.Net20.xml
-H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.dll
-H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.pdb
-H:\Project\Thesis-project-repository\Thesis-project Repository\obj\Debug\Thesis-project Repository.csprojResolveAssemblyReference.cache

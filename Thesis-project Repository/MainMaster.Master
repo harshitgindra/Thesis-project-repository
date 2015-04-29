@@ -29,14 +29,15 @@
     </asp:ContentPlaceHolder>
 </head>
 
-<body style="background-image: url(../Resources/images/bgimage.jpg); background-repeat: no-repeat; background-size: cover;">
+<body id="homepagebody">
     <form id="form2" runat="server">
         <p></p>
         <div class="container">
             <nav role="navigation" class="navbar navbar-inverse" id="navbarHeaderHome">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <ul class="nav nav-tabs nav-justified">
+
+                    <ul class="nav nav-justified">
                         <li><a href="Default.aspx" onclick="HomePageImage();" id="menulink"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
                         <li>
                             <a href="Default.aspx?ia=2" onclick="SignUpPageImage();"><span class="glyphicon glyphicon-user"></span>&nbsp;SignUp</a></li>
@@ -53,282 +54,283 @@
             <asp:ContentPlaceHolder ID="MainTemplate" runat="server" />
         </div>
 
-       
-            <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
 
-                <asp:View ID="View1" runat="server">
-                    <div class="container">
-                        
-                        </div>
-                </asp:View>
+        <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
 
-                <asp:View ID="loginPage" runat="server">
+            <asp:View ID="View1" runat="server">
+                <div class="container">
+                </div>
+            </asp:View>
 
-                    <div class="container">
-                        <div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-3"></div>
-                                    <div class="col-lg-5">
+            <asp:View ID="loginPage" runat="server">
 
-                                        <div class="signUpFormHighLight" style="opacity: 0.8">
-                                            <div class="page-header">
-                                                <h2>Login Page</h2>
-                                            </div>
-
-                                            <div class="input-group" style="width: 240px;">
-                                                <asp:TextBox class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="loginUserName"></asp:TextBox>
-
-                                            </div>
-                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-                                                <asp:TextBox class="form-control" TextMode="Password" placeholder="Password" aria-describedby="basic-addon1" runat="server" ID="loginPassword"></asp:TextBox>
-
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group" style="float: left; padding-top: 0.5em;">
-                                                    <asp:CheckBox ID="CheckBox1" runat="server" />
-
-                                                </div>
-                                                <div class="input-group" style="float: right; padding-top: 0.5em;">
-                                                    Keep me logged in
-                                                </div>
-                                            </div>
-                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                                                <div class="btn-group" role="group" aria-label="..." style="text-align: center;">
-                                                    <asp:Button ID="Button1" class="btn btn-default" runat="server" Text="Login" OnClick="Login" />
-                                                </div>
-                                            </div>
-                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                                                <asp:LinkButton ID="Button2" class="btn btn-default" runat="server" OnClick="ForgotPassword" Text="Forgot your password?" />
-
-                                            </div>
-                                            <div class="input-group">
-                                                <asp:Label runat="server" ID="loginResult" ForeColor="Red"></asp:Label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </asp:View>
-
-                <%--  Login Page End--%>
-
-                <%--  SignUp Page Start--%>
-                <asp:View ID="signUpPage" runat="server">
-                        <div class="container" >
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-3"></div>
-                                    <div class="col-lg-5">
-                                        <div class="signUpFormHighLight" style="opacity: 0.85">
-                                            <div class="page-header">
-                                                <h2>Sign Up Form</h2>
-                                            </div>
-                                            <div class="input-group" style="width: 374px; padding-top: 0.3em;">
-                                                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                                                </asp:ScriptManager>
-                                                <asp:TextBox TextMode="Email" onkeyup="RefreshUpdatePanel();" OnTextChanged="checkUserNameAvailability" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="signUpUsername"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                <%--<asp:RegularExpressionValidator ControlToValidate="signUpUsername" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email ID"></asp:RegularExpressionValidator>--%>
-
-
-                                                <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True" ViewStateMode="Enabled">
-                                                    <ContentTemplate>
-                                                        <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
-                                                    </ContentTemplate>
-                                                    <Triggers>
-                                                        <asp:AsyncPostBackTrigger ControlID="signUpUsername" />
-                                                    </Triggers>
-                                                </asp:UpdatePanel>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
-                                                    <asp:TextBox class="form-control" placeholder="Password" TextMode="Password" aria-describedby="basic-addon1" runat="server" ID="signUpPassword">
-                                                    </asp:TextBox><asp:RequiredFieldValidator ControlToValidate="signUpPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                                <div class="input-group " style="float: right; width: 187px; padding-top: 0.3em;">
-                                                    <asp:TextBox class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon1" TextMode="Password" runat="server" ID="signUpPassword2"></asp:TextBox>
-                                                    <asp:CompareValidator ControlToValidate="signUpPassword2" ControlToCompare="signUpPassword" ID="CompareValidator1" runat="server" ErrorMessage="Passwords do not match"></asp:CompareValidator>
-                                                </div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
-                                                    <asp:TextBox class="form-control" placeholder="First Name" aria-describedby="basic-addon1" runat="server" ID="fname">
-                                                    </asp:TextBox>
-                                                    <asp:RequiredFieldValidator ControlToValidate="fname" ID="RequiredFieldValidator3" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                                <div class="input-group" style="float: right; width: 187px; padding-top: 0.3em;">
-                                                    <asp:TextBox class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" runat="server" ID="lname"></asp:TextBox>
-                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="lname" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
-                                                    <asp:TextBox class="form-control" placeholder="Security Question" aria-describedby="basic-addon1" runat="server" ID="secques">
-                                                    </asp:TextBox>
-                                                    <asp:RequiredFieldValidator ControlToValidate="secques" ID="RequiredFieldValidator5" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                                <div class="input-group" style="float: right; width: 187px; padding-top: 0.3em;">
-                                                    <asp:TextBox class="form-control" placeholder="Security Answer" aria-describedby="basic-addon1" runat="server" ID="secans"></asp:TextBox>
-                                                    <asp:RequiredFieldValidator ControlToValidate="secans" ID="RequiredFieldValidator6" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
-                                                    <asp:TextBox class="form-control" TextMode="Number" placeholder="Phone Number" aria-describedby="basic-addon1" runat="server" ID="phoneNumber">
-                                                    </asp:TextBox>
-                                                    <asp:RequiredFieldValidator ControlToValidate="phoneNumber" ID="RequiredFieldValidator7" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                                <div class="dropdown" style="float: right; width: 187px; padding-top: 0.3em;">
-                                                    <asp:DropDownList ID="ntwrkprovider" CssClass="form-control" runat="server">
-                                                        <asp:ListItem Selected="True">Choose Provider</asp:ListItem>
-                                                        <asp:ListItem>boost mobile</asp:ListItem>
-                                                        <asp:ListItem>t-mobile</asp:ListItem>
-                                                        <asp:ListItem>virgin mobile</asp:ListItem>
-                                                        <asp:ListItem>cingular</asp:ListItem>
-                                                        <asp:ListItem>sprint nextel</asp:ListItem>
-                                                        <asp:ListItem>verizon</asp:ListItem>
-                                                        <asp:ListItem>nextel</asp:ListItem>
-                                                        <asp:ListItem>us cellular</asp:ListItem>
-                                                        <asp:ListItem>suncom</asp:ListItem>
-                                                        <asp:ListItem>powertel</asp:ListItem>
-                                                        <asp:ListItem>att cingular</asp:ListItem>
-                                                        <asp:ListItem>alltel</asp:ListItem>
-                                                        <asp:ListItem>metro pcs</asp:ListItem>
-
-                                                    </asp:DropDownList>
-                                                    <asp:RequiredFieldValidator InitialValue="Choose Provider" ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                                </div>
-                                            </div>
-                                            <div class="input-group" style="text-align: center; padding-top: 0.3em;">
-                                                <asp:RadioButtonList ID="accType" runat="server" RepeatDirection="Horizontal">
-                                                    <asp:ListItem Text="Student" Value="S" />
-                                                    <asp:ListItem Text="Professor" Value="P" />
-                                                    <asp:ListItem Text="Viewer" Value="V" />
-                                                </asp:RadioButtonList>
-                                                &nbsp;&nbsp;
-                                <asp:RequiredFieldValidator ControlToValidate="accType" ID="RequiredFieldValidator9" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                            </div>
-
-                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.3em;">
-                                                <asp:Button Text="Submit" class="btn btn-default" ID="signUp" runat="server" OnClick="SignUp"></asp:Button>
-                                            </div>
-                                            <div>
-                                                <asp:Label ID="SignUpReply" ForeColor="Green" runat="server" Text=""></asp:Label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4"></div>
-                            </div>
-                        </div>
-                   
-                </asp:View>
-                <%--  SignUp Page End--%>
-
-                <%--  Forgot Password page Start--%>
-                <asp:View ID="forgotPasswordPage" runat="server">
-                    <div class="container">
-                        <div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-3"></div>
-                                    <div class="col-lg-5">
-
-                                        <div class="signUpFormHighLight" style="opacity: 0.9">
-                                            <div class="page-header">
-                                                <h2>Forgot Password</h2>
-                                            </div>
-                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-                                                <asp:TextBox TextMode="Email" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="forgotEmailId"></asp:TextBox>
-
-                                                <asp:RequiredFieldValidator ControlToValidate="forgotEmailId" ID="RequiredFieldValidator10" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-
-                                            </div>
-                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-
-                                                <asp:RadioButtonList ID="FpAccntType" runat="server" RepeatDirection="Horizontal">
-                                                    <asp:ListItem Text="Student" Value="S" />
-                                                    <asp:ListItem Text="Professor" Value="P" />
-                                                    <asp:ListItem Text="Viewer" Value="V" />
-                                                </asp:RadioButtonList>
-
-                                                <asp:RequiredFieldValidator ControlToValidate="FpAccntType" ID="RequiredFieldValidator12" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-                                            </div>
-                                            <div class="input-group" style="width: 240px; padding-top: 0.5em;">
-                                                <asp:RadioButtonList ID="retrievelMethodRadioList" runat="server" RepeatDirection="Horizontal">
-                                                    <asp:ListItem Text="Email" Value="E" />
-                                                    <asp:ListItem Text="Message" Value="M" />
-                                                </asp:RadioButtonList>
-                                            </div>
-
-
-                                            <asp:RequiredFieldValidator ControlToValidate="retrievelMethodRadioList" ID="RequiredFieldValidator11" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
-
-                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                                                <asp:Button ID="Button3" class="btn btn-default" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword" />
-                                            </div>
-                                            <asp:Label ID="confirationMessage" ForeColor="Green" runat="server"></asp:Label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </asp:View>
-
-                <asp:View ID="changePasswordMessage" runat="server">
-
-                    <div class="container">
-
+                <div class="container">
+                    <div>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-5">
 
-                                    <div class="signUpFormHighLight" style="opacity: 0.9">
+                                    <div class="jumbotron signUpFormHighLight" style="opacity: 1">
                                         <div class="page-header">
-                                            <h2>Change Password</h2>
+                                            <h2>Login Page</h2>
                                         </div>
-                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                                            <asp:TextBox class="form-control" placeholder="Verification Code" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="VerificationCode"></asp:TextBox>
+
+                                        <div class="input-group" style="width: 240px;">
+                                            <asp:TextBox class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="loginUserName"></asp:TextBox>
+
                                         </div>
-                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                                            <asp:TextBox class="form-control" TextMode="Password" placeholder="New Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="NewPassword"></asp:TextBox>
+                                        <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                            <asp:TextBox class="form-control" TextMode="Password" placeholder="Password" aria-describedby="basic-addon1" runat="server" ID="loginPassword"></asp:TextBox>
+
                                         </div>
-                                        <div class="input-group" style="width: 361px; padding-top: 0.5em;">
-                                            <asp:TextBox class="form-control" TextMode="Password" placeholder="Confirm Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="CnfrmPassword"></asp:TextBox>
-                                            <asp:CompareValidator ID="CompareValidator2" ControlToValidate="CnfrmPassword" ControlToCompare="NewPassword" runat="server" ErrorMessage="**"></asp:CompareValidator>
+                                        <div class="input-group">
+                                            <div class="input-group" style="float: left; padding-top: 0.5em;">
+                                                <asp:CheckBox ID="CheckBox1" runat="server" />
+
+                                            </div>
+                                            <div class="input-group" style="float: right; padding-top: 0.5em;">
+                                                Keep me logged in
+                                            </div>
                                         </div>
                                         <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
-                                            <asp:Button Text="Change Password" class="btn btn-default" ID="UpdatePass" runat="server" OnClick="UpdatePasswordUsingSms"></asp:Button>
+                                            <div class="btn-group" role="group" aria-label="..." style="text-align: center;">
+                                                <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Login" OnClick="Login" />
+                                            </div>
+                                        </div>
+                                        <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                            <asp:LinkButton ID="Button2" class="btn btn-warning" runat="server" OnClick="ForgotPassword" Text="Forgot your password?" />
 
                                         </div>
-                                        <br />
-                                        <asp:Label ID="UpdatePasswordFromSMSConfirmation" runat="server" Text=""></asp:Label>
-
+                                        <div class="input-group">
+                                            <asp:Label runat="server" ID="loginResult" ForeColor="Red"></asp:Label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3"></div>
+                                <div class="col-lg-4">
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </asp:View>
 
-                </asp:View>
+            <%--  Login Page End--%>
 
-                <%--  SignUp Page End--%>
-            </asp:MultiView>
- 
-       
-        <div class="container">
-            <nav class="navbar navbar-default navbar-fixed-bottom" id="navbarFooter">
+            <%--  SignUp Page Start--%>
+            <asp:View ID="signUpPage" runat="server">
+                <div class="container" id="outerFrame">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-6">
+                                <div class="jumbotron signUpFormHighLight" style="opacity: 1">
+                                    <div class="page-header">
+                                        <h2>Sign Up Form</h2>
+                                    </div>
+                                    <div class="input-group" style="width: 374px; padding-top: 0.3em;">
+                                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                        </asp:ScriptManager>
+                                        <asp:TextBox TextMode="Email" onkeyup="RefreshUpdatePanel();" OnTextChanged="checkUserNameAvailability" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="signUpUsername"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ControlToValidate="signUpUsername" ID="RequiredFieldValidator1" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        <%--<asp:RegularExpressionValidator ControlToValidate="signUpUsername" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email ID"></asp:RegularExpressionValidator>--%>
+
+
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True" ViewStateMode="Enabled">
+                                            <ContentTemplate>
+                                                <asp:Label ID="usernameerror" runat="server" Text=""></asp:Label>
+                                            </ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="signUpUsername" />
+                                            </Triggers>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
+                                            <asp:TextBox class="form-control" placeholder="Password" TextMode="Password" aria-describedby="basic-addon1" runat="server" ID="signUpPassword">
+                                            </asp:TextBox><asp:RequiredFieldValidator ControlToValidate="signUpPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="input-group " style="float: right; width: 187px; padding-top: 0.3em;">
+                                            <asp:TextBox class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon1" TextMode="Password" runat="server" ID="signUpPassword2"></asp:TextBox>
+                                            <asp:CompareValidator ControlToValidate="signUpPassword2" ControlToCompare="signUpPassword" ID="CompareValidator1" runat="server" ErrorMessage="Passwords do not match"></asp:CompareValidator>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
+                                            <asp:TextBox class="form-control" placeholder="First Name" aria-describedby="basic-addon1" runat="server" ID="fname">
+                                            </asp:TextBox>
+                                            <asp:RequiredFieldValidator ControlToValidate="fname" ID="RequiredFieldValidator3" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="input-group" style="float: right; width: 187px; padding-top: 0.3em;">
+                                            <asp:TextBox class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" runat="server" ID="lname"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="lname" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
+                                            <asp:TextBox class="form-control" placeholder="Security Question" aria-describedby="basic-addon1" runat="server" ID="secques">
+                                            </asp:TextBox>
+                                            <asp:RequiredFieldValidator ControlToValidate="secques" ID="RequiredFieldValidator5" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="input-group" style="float: right; width: 187px; padding-top: 0.3em;">
+                                            <asp:TextBox class="form-control" placeholder="Security Answer" aria-describedby="basic-addon1" runat="server" ID="secans"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ControlToValidate="secans" ID="RequiredFieldValidator6" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group" style="float: left; width: 187px; padding-top: 0.3em; padding-right: 0.5em;">
+                                            <asp:TextBox class="form-control" TextMode="Number" placeholder="Phone Number" aria-describedby="basic-addon1" runat="server" ID="phoneNumber">
+                                            </asp:TextBox>
+                                            <asp:RequiredFieldValidator ControlToValidate="phoneNumber" ID="RequiredFieldValidator7" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="dropdown" style="float: right; width: 187px; padding-top: 0.3em;">
+                                            <asp:DropDownList ID="ntwrkprovider" CssClass="form-control" runat="server">
+                                                <asp:ListItem Selected="True">Choose Provider</asp:ListItem>
+                                                <asp:ListItem>boost mobile</asp:ListItem>
+                                                <asp:ListItem>t-mobile</asp:ListItem>
+                                                <asp:ListItem>virgin mobile</asp:ListItem>
+                                                <asp:ListItem>cingular</asp:ListItem>
+                                                <asp:ListItem>sprint nextel</asp:ListItem>
+                                                <asp:ListItem>verizon</asp:ListItem>
+                                                <asp:ListItem>nextel</asp:ListItem>
+                                                <asp:ListItem>us cellular</asp:ListItem>
+                                                <asp:ListItem>suncom</asp:ListItem>
+                                                <asp:ListItem>powertel</asp:ListItem>
+                                                <asp:ListItem>att cingular</asp:ListItem>
+                                                <asp:ListItem>alltel</asp:ListItem>
+                                                <asp:ListItem>metro pcs</asp:ListItem>
+
+                                            </asp:DropDownList>
+                                            <asp:RequiredFieldValidator InitialValue="Choose Provider" ControlToValidate="ntwrkprovider" ID="RequiredFieldValidator8" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                    </div>
+                                    <div class="input-group" style="text-align: center; padding-top: 0.3em;">
+                                        <asp:RadioButtonList ID="accType" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem Text="Student" Value="S" />
+                                            <asp:ListItem Text="Professor" Value="P" />
+                                            <asp:ListItem Text="Viewer" Value="V" />
+                                        </asp:RadioButtonList>
+                                        &nbsp;&nbsp;
+                                <asp:RequiredFieldValidator ControlToValidate="accType" ID="RequiredFieldValidator9" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                    </div>
+
+                                    <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.3em;">
+                                        <asp:Button Text="Submit" class="btn btn-primary" ID="signUp" runat="server" OnClick="SignUp"></asp:Button>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="SignUpReply" ForeColor="Green" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                </div>
+                <br />
+            </asp:View>
+            <%--  SignUp Page End--%>
+
+            <%--  Forgot Password page Start--%>
+            <asp:View ID="forgotPasswordPage" runat="server">
+                <div class="container">
+                    <div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-5">
+
+                                    <div class="jumbotron signUpFormHighLight" style="opacity: 1.0">
+                                        <div class="page-header">
+                                            <h2>Forgot Password</h2>
+                                        </div>
+                                        <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                            <asp:TextBox TextMode="Email" class="form-control" placeholder="UserName" aria-describedby="basic-addon1" runat="server" ID="forgotEmailId"></asp:TextBox>
+
+                                            <asp:RequiredFieldValidator ControlToValidate="forgotEmailId" ID="RequiredFieldValidator10" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+
+                                        </div>
+                                        <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+
+                                            <asp:RadioButtonList ID="FpAccntType" runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem Text="Student" Value="S" />
+                                                <asp:ListItem Text="Professor" Value="P" />
+                                                <asp:ListItem Text="Viewer" Value="V" />
+                                            </asp:RadioButtonList>
+
+                                            <asp:RequiredFieldValidator ControlToValidate="FpAccntType" ID="RequiredFieldValidator12" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="input-group" style="width: 240px; padding-top: 0.5em;">
+                                            <asp:RadioButtonList ID="retrievelMethodRadioList" runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem Text="Email" Value="E" />
+                                                <asp:ListItem Text="Message" Value="M" />
+                                            </asp:RadioButtonList>
+                                        </div>
+
+
+                                        <asp:RequiredFieldValidator ControlToValidate="retrievelMethodRadioList" ID="RequiredFieldValidator11" runat="server" ErrorMessage="**"></asp:RequiredFieldValidator>
+
+                                        <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                            <asp:Button ID="Button3" class="btn btn-primary" runat="server" Text="Retrieve Password" OnClick="RetrieveForgotPassword" />
+                                        </div>
+                                        <asp:Label ID="confirationMessage" ForeColor="Green" runat="server"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </asp:View>
+
+            <asp:View ID="changePasswordMessage" runat="server">
+
+                <div class="container">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-5">
+
+                                <div class="jumbotron signUpFormHighLight" style="opacity: 0.9">
+                                    <div class="page-header">
+                                        <h2>Change Password</h2>
+                                    </div>
+                                    <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                        <asp:TextBox class="form-control" placeholder="Verification Code" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="VerificationCode"></asp:TextBox>
+                                    </div>
+                                    <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                        <asp:TextBox class="form-control" TextMode="Password" placeholder="New Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="NewPassword"></asp:TextBox>
+                                    </div>
+                                    <div class="input-group" style="width: 361px; padding-top: 0.5em;">
+                                        <asp:TextBox class="form-control" TextMode="Password" placeholder="Confirm Password" EnableViewState="false" aria-describedby="basic-addon1" runat="server" ID="CnfrmPassword"></asp:TextBox>
+                                        <asp:CompareValidator ID="CompareValidator2" ControlToValidate="CnfrmPassword" ControlToCompare="NewPassword" runat="server" ErrorMessage="**"></asp:CompareValidator>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="..." style="text-align: center; padding-top: 0.5em;">
+                                        <asp:Button Text="Change Password" class="btn btn-default" ID="UpdatePass" runat="server" OnClick="UpdatePasswordUsingSms"></asp:Button>
+
+                                    </div>
+                                    <br />
+                                    <asp:Label ID="UpdatePasswordFromSMSConfirmation" runat="server" Text=""></asp:Label>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </asp:View>
+
+            <%--  SignUp Page End--%>
+        </asp:MultiView>
+        <br />
+
+
+
+        <div class="container" id="navbarFooter">
+            <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container">
                     <div class="row" style="text-align: center;">
                         <!--end col-sm-2-->

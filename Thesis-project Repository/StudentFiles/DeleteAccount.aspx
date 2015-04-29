@@ -1,21 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentFiles/StudentMain.Master" AutoEventWireup="true" CodeBehind="DeleteAccount.aspx.cs" Inherits="Thesis_project_Repository.StudentFiles.DeleteAccount" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="student" runat="server">
-     <div>
+    <div>
         <div class="alert alert-danger" role="alert">
-            <asp:Label ID="Label1" runat="server" Text="Label">Are you sure you want to delete the account?
-            </asp:Label>
+            <h3>
+                <asp:Label ID="Label1" runat="server" Text="">Are you sure you want to delete the account?
+                </asp:Label>
+            </h3>
         </div>
-        <div class="btn-group">
-            <asp:Button class="btn btn-default" ID="yes" runat="server" Text="Yes" OnClick="Yes" />
-        </div>
+        <div style="text-align: center">
+            <div class="btn-group">
+                <asp:Button class="btn btn-danger btn-lg" ID="yes" runat="server" Text="Yes" OnClick="Yes" />
+            </div>
 
-         <div class="btn-group">
-            <asp:Button class="btn btn-default" ID="Button1" runat="server" Text="No" OnClick="No" />
+            <div class="btn-group">
+                <asp:Button class="btn btn-primary btn-lg" ID="Button1" runat="server" Text="No" OnClick="No" />
+            </div>
         </div>
-<div>
-        <asp:Label ForeColor="Red" ID="status" runat="server" Text=""></asp:Label>
-</div>    
-</div>
+        <div>
+            <asp:Label ForeColor="Red" ID="status" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
 </asp:Content>

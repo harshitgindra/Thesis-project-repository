@@ -11,22 +11,21 @@
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius:40px;
+    border:thin;
 }
 
 #navbarHeader {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: Raavi;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
+     border-radius:30px;
 }
 
-#studentBody {
-    background-color: lemonchiffon;
-    /*background-image:url('../images/a.jpg');*/
-}
 
 #navbarFooter {
     background-color: lightgray;
@@ -36,21 +35,48 @@
     font-size: 15px;  
 }
 
-.defaultviews {
-    /*padding-top: 120px;
-    padding-left: 300px;
-    position: absolute;*/
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
 .signUpFormHighLight {
     background-color: snow;
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 20px;
-    border-radius: 25px;
+    border-radius: 50px;
 }
+
+#homepagebody {
+    background-image:url(../images/bgimage.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#studentBody {
+     background-image:url(../images/studentHome.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:20px;
+}
+
+#professorBody {
+     background-image:url(../images/ProfessorImage.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:20px;
+
+}
+
+#viewerBody {
+    background-image:url(../images/Viewer.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:20px;
+}
+
+#AdminBody {
+    background-image:url(../images/AdminImage.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:20px;
+}
+
+
+

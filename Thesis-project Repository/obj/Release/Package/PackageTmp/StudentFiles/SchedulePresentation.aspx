@@ -12,13 +12,18 @@
     <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
         <asp:View ID="View1" runat="server">
 
-            <h2>Schedule Presentation</h2>
+            <h2 class="page-header" style="text-align: center;"><span class="label label-primary">Schedule Presentation</span></h2>
             <asp:Label runat="server" ID="type"></asp:Label>
-            Room Scheduler<asp:TextBox ID="roomScheduler" runat="server" Text="XYZ"></asp:TextBox>
-            Select Date:
-            <input type="datetime-local" name="bday" id="dateTimeinput" runat="server" />
-            <asp:Button ID="BookSlot" OnClick="BookSlot_Click" Text="Book The Slot" runat="server" />
-            <asp:Label ID="timeSelected" runat="server"></asp:Label>
+            <div class="form-group">
+                <label for="roomScheduler">Room Scheduler</label>
+                <asp:TextBox ID="roomScheduler" runat="server" Text="XYZ"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="dateTimeinput">Select Date and Time:</label>
+                <input type="datetime-local" name="bday" id="dateTimeinput" runat="server" />
+            </div>
+            <asp:Button class="btn btn-primary" ID="BookSlot" OnClick="BookSlot_Click" Text="Book The Slot" runat="server" />
+            <h1><asp:Label ID="timeSelected" runat="server"></asp:Label></h1>
         </asp:View>
         <asp:View ID="View2" runat="server">
             <h2>You need to get your project/thesis approved from your professors to book a slot.</h2>

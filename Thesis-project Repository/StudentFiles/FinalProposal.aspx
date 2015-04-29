@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="student" runat="server">
-
+    <div class="container">
     <h3>Final Proposal Submissions</h3>
     <div class="form-group">
         <label for="projecttitle">Project Title:</label>
@@ -66,7 +66,7 @@
     </div>
 
     <div class="btn-group">
-        <asp:Button class="btn btn-default" ID="Button1" runat="server" Text="Submit" OnClick="submit_Click" />
+        <asp:Button class="btn btn-primary btn-lg" ID="Button1" runat="server" Text="Submit" OnClick="submit_Click" />
     </div>
-     <br /><br /><br />
+   </div>
 </asp:Content>

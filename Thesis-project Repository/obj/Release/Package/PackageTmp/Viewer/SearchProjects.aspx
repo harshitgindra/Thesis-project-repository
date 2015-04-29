@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ViewerTemplate" runat="server">
     <div class="container">
-        <h2 style="text-align: center;">Omni Search</h2>
+        <h2 style="text-align:center;"><span class="label label-default">Omni Search</span></h2>
         <br />
         <div class="col-lg-6">
             <div class="input-group">
@@ -16,14 +16,14 @@
             </div>
         </div>
         <div class="btn-group">
-            <asp:Button class="btn btn-default" ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click" />
+            <asp:Button class="btn btn-primary btn-lg btn-block" ID="jsonoutput" runat="server" Text="Export to JSON" OnClick="jsonoutput_Click" />
         </div>
       <asp:Label ForeColor="Red" ID="Label6" runat="server" ViewStateMode="Disabled" />
         <br />
         <br />
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading" style="text-align: center;"><b>Search Results</b></div>
+            <div class="panel-heading" style="text-align: center; background-color:lightgray;"><b>Search Results</b></div>
             <%-- <table class="table">
             <tr>
                 <td>--%>

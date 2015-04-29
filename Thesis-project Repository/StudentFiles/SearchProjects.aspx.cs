@@ -27,7 +27,7 @@ namespace Thesis_project_Repository.StudentFiles
             //checking if there is any result generated
             if (OmniResults.Rows.Count == 0)
             {
-                Response.Write("There are no tables to export. Please hit search and generate data.");
+                Label6.Text = "There are no tables to export. Please hit search and generate data.";
             }
             else
             {
